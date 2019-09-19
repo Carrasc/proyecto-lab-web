@@ -7,6 +7,7 @@ import classNames from "classnames";
 // material-ui core components
 import { List, ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import logo from '../logos/LogoMedu1.png';
 
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
@@ -14,6 +15,12 @@ import Favorite from "@material-ui/icons/Favorite";
 import styles from "../styles/footerStyle.js";
 
 const useStyles = makeStyles(styles);
+
+const style = { 
+  width: "40%", 
+  height: "40%",
+  "object-fit": "contain" 
+  };
 
 export default function Footer(props) {
   const classes = useStyles();
@@ -31,16 +38,19 @@ export default function Footer(props) {
       <div className={classes.container}>
         <div className={classes.left}>
           <List className={classes.list}>
+          
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                CONTÁCTANOS
-              </a>
+              <img src={logo} alt= "logo" style = {style}/>
+              
             </ListItem>
             <ListItem className={classes.inlineBlock}>
+              <a
+                  href="https://www.creative-tim.com/?ref=mkr-footer"
+                  className={classes.block}
+                  target="_blank"
+                >
+                  CONTÁCTANOS
+              </a>
               <a
                 href="https://www.creative-tim.com/presentation?ref=mkr-footer"
                 className={classes.block}
@@ -48,8 +58,6 @@ export default function Footer(props) {
               >
                 TÉRMINOS Y CONDICIONES
               </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
               <a
                 href="http://blog.creative-tim.com/?ref=mkr-footer"
                 className={classes.block}
@@ -57,16 +65,25 @@ export default function Footer(props) {
               >
                 AVISO DE PRIVACIDAD
               </a>
-            
             </ListItem>
            
           </List>
         </div>
         <div className={classes.right}>
-          &copy; 2018, Medu S.A de C.V{" "}  
+          &copy; 2018, Medu S.A de C.V.{" "} 
           <div>
-            AGAP
-          </div>       
+            Lago Victoria #52
+          </div> 
+          <div>
+            Col. Granda, Del. Miguel Hidalgo, C.P. 11520
+        
+          </div> 
+          <div>
+            Ciudad de México. México. 
+          </div>
+          <div>
+          contacto@medu.mx
+          </div>   
           
         </div>
       </div>

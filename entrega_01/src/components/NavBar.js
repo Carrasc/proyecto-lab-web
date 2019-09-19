@@ -15,12 +15,14 @@ import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
 // core components
 import styles from "../styles/headerStyle";
+import logo from '../logos/Logo2.png';
 
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  /*
   React.useEffect(() => {
     if (props.changeColorOnScroll) {
       window.addEventListener("scroll", headerColorChange);
@@ -31,9 +33,11 @@ export default function Header(props) {
       }
     };
   });
+  */
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+  /*
   const headerColorChange = () => {
     const { color, changeColorOnScroll } = props;
     const windowsScrollTop = window.pageYOffset;
@@ -53,6 +57,14 @@ export default function Header(props) {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
+  */
+  const style = { 
+    width: "5%", 
+    height: "5%",
+    "object-fit": "contain" ,
+    "text-align": "right"
+    };
+
   const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
@@ -60,7 +72,7 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  const brandComponent = <img style={style} alt= "Logo"src={logo}/>;
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>

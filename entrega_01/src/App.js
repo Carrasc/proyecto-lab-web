@@ -13,7 +13,7 @@ function App(props) {
   return (
     <div className="App" >
       <NavBar
-        color="rose"
+        color="white"
         routes={dashboardRoutes}
         brand="Material Kit React"
         rightLinks={<HeaderLinks />}
