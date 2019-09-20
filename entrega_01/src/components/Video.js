@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { PrismCode } from 'react-prism';
+//import { PrismCode } from 'react-prism';
 import { Player, ControlBar } from 'video-react';
-import { Button } from 'reactstrap';
+//import { Button } from 'reactstrap';
 import  '../styles/videoReact.css';
 
 const sources = {
@@ -98,7 +98,7 @@ export default class Video extends Component {
   render() {
     return (
         
-      <div style={{height:'1000px', width:'1000px', margin:'auto', paddingTop:'5em'}}>
+      <div style={{height:'700px', width:'1000px', margin:'auto', paddingTop:'5em'}}>
         <Player 
           ref={player => {
             this.player = player;
@@ -109,9 +109,6 @@ export default class Video extends Component {
           <source src={this.state.source} />
           <ControlBar autoHide={false} />
         </Player>
-        <div className="py-3">
-          
-        </div>
        
       </div>
     );

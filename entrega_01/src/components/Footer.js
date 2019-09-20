@@ -19,7 +19,7 @@ const useStyles = makeStyles(styles);
 const style = { 
   width: "40%", 
   height: "40%",
-  "object-fit": "contain" 
+  objectFit: "contain" 
   };
 
 export default function Footer(props) {

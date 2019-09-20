@@ -5,55 +5,54 @@ function Reviews() {
 //url(" + "../images/1.jpg" + ")
 
     const style = { 
-        backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
-         height:'450px',
+        backgroundImage: 'linear-gradient(to bottom, rgba(0,0,255,1), rgba(32,178,170,0.5))',
+         height:'30em',
          'backgroundSize': 'cover',
-         padding: '50px 0 0 0',
-         margin: '0 0 50px 0'
-        };
+         padding: '3em 0 0 0',
+         margin: '2em 0 3em 0'
+    };
     
     var container = {
         //width: '80%',
-        padding: '100px 100px 0 100px'
+        padding: '1em 5em 0 5em'
     }
     
-    var textDiv = {
-        'text-align': 'left',
-        position: 'absolute',
-        top: '40%',
-        left: '30%',
-        transform: 'translate(-50%, -50%)',
-    };
-
     var text = {
 
         color: 'white',
-        'font-size':'40px'
+        fontSize:'40px'
     };
 
-    var text2 = {
 
-        color: 'white',
-        'font-size':'24px'
-    };
     var text3 = {
 
         color: 'white',
-        'font-size':'14px'
+        fontSize:'14px'
     };
     var text4 = {
-
         color: 'white',
-        'font-size':'14px'
+        fontSize:'18px',
+        width:'80%',
+        margin:'auto',
+        marginTop:'5%'
     };
     return (
         <div style ={container}>
             <div style={style}>
                 <div>
                     <p style={text4}>Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma”</p>
-                    <h1 style={text}>El Pais </h1>
+                    <h1 style={text}>El PAÍS </h1>
                     <p style={text3}>Videoclases en línea con los contenidos médicos más relevantes. </p>
-                    <p style={text4}>Más de 300 horas en video con 19 + instructores de alta calidad.</p>
+                    <hr style= {{margin:'auto',width:'80%'}}/>
+                    <table style={text4}>
+                        <tbody>
+                            <tr>
+                                <td><b> 300 + lecciones</b><br/> PROMEDIO POR CLASE </td>
+                                <td><b>19 + clases</b> <br/>con los mejores médicos</td>
+                                <td><b>10 Minutos</b><br/>  por subtema de lección</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
