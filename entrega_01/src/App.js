@@ -40,7 +40,6 @@ function App(props) {
       <LoginPage/>
       <Video/>
       <Footer/>
-      */}
     </div>
   );
 }
