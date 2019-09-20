@@ -1,22 +1,16 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Fab from '@material-ui/core/Fab';
 
 
-
-function Introduction() {
+function Reviews() {
 //url(" + "../images/1.jpg" + ")
 
-    const imageFilePath = '../images/1.jpg';
     const style = { 
-        backgroundImage: `url(${require('../images/1.jpg')})`,
-         height:'600px',
+        backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
+         height:'450px',
          'backgroundSize': 'cover',
+         padding: '50px 0 0 0',
+         margin: '0 0 50px 0'
         };
-
-    var gradiant = {
-        backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))'
-    }
     
     var container = {
         //width: '80%',
@@ -33,37 +27,33 @@ function Introduction() {
 
     var text = {
 
-        color: 'blue',
+        color: 'white',
         'font-size':'40px'
     };
 
     var text2 = {
 
-        color: 'gray',
+        color: 'white',
         'font-size':'24px'
     };
     var text3 = {
 
-        color: 'gray',
+        color: 'white',
         'font-size':'14px'
     };
     var text4 = {
 
-        color: 'gray',
+        color: 'white',
         'font-size':'14px'
     };
     return (
         <div style ={container}>
             <div style={style}>
-                <div style={textDiv}>
-                    <h1 style={text}>Medu Lectures</h1>
-                    <h3 style={text2}>Aprende medicina con los mejores médicos </h3>
+                <div>
+                    <p style={text4}>Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma”</p>
+                    <h1 style={text}>El Pais </h1>
                     <p style={text3}>Videoclases en línea con los contenidos médicos más relevantes. </p>
                     <p style={text4}>Más de 300 horas en video con 19 + instructores de alta calidad.</p>
-                    <h3 style={{'font-size':'28px', color:'blue'}}>Por solo $199.00 al mes.</h3>
-                    <Button variant="outlined" color="primary">
-                        Iniciar ahora
-                    </Button>
                 </div>
             </div>
         </div>
@@ -71,6 +61,6 @@ function Introduction() {
     );
 
 }
-export default Introduction;
+export default Reviews;
 
 

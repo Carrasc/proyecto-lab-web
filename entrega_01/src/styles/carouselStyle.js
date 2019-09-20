@@ -6,6 +6,8 @@ const carouselStyle = {
   },
   container,
   marginAuto: {
+    'min-height': "0",
+    'min-width': "0",
     marginLeft: "auto !important",
     marginRight: "auto !important"
   }

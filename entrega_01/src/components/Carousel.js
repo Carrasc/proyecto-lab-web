@@ -10,11 +10,11 @@ import GridContainer from "./GridContainer.js";
 import GridItem from "./GridItem.js";
 import Card from "./Card.js";
 
-import image1 from "../images/1.jpg";
-import image2 from "../images/1.jpg";
-import image3 from "../images/1.jpg";
+import image1 from "../images/bg.jpg";
+import image2 from "../images/bg2.jpg";
+import image3 from "../images/bg3.jpg";
 
-import styles from "./styles/carouselStyle.js";
+import styles from "../styles/carouselStyle.js";
 
 const useStyles = makeStyles(styles);
 
@@ -32,11 +32,11 @@ export default function SectionCarousel() {
     <div className={classes.section}>
       <div className={classes.container}>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
+          <GridItem xs={12} sm={12} md={8} col={12} className={classes.marginAuto}>
             <Card carousel>
               <Carousel {...settings}>
                 <div>
-                  <img src={image1} alt="First slide" className="slick-image" />
+                  <img src="../images/1.jpg" alt="First slide" className="slick-image" />
                   <div className="slick-caption">
                     <h4>
                       <LocationOn className="slick-icons" />
@@ -46,7 +46,7 @@ export default function SectionCarousel() {
                 </div>
                 <div>
                   <img
-                    src={image2}
+                    src="../images/1.jpg"
                     alt="Second slide"
                     className="slick-image"
                   />
@@ -58,7 +58,7 @@ export default function SectionCarousel() {
                   </div>
                 </div>
                 <div>
-                  <img src={image3} alt="Third slide" className="slick-image" />
+                  <img src="../images/1.jpg" alt="Third slide" className="slick-image" />
                   <div className="slick-caption">
                     <h4>
                       <LocationOn className="slick-icons" />

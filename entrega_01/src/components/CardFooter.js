@@ -8,29 +8,25 @@ import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 
 // core components
-import styles from "../styles/cardStyle";
+import styles from "../styles/cardFooterStyle";
 
 const useStyles = makeStyles(styles);
 
-export default function Card(props) {
+export default function CardFooter(props) {
   const classes = useStyles();
-  const { className, children, plain, carousel, ...rest } = props;
-  const cardClasses = classNames({
-    [classes.card]: true,
-    [classes.cardPlain]: plain,
-    [classes.cardCarousel]: carousel,
+  const { className, children, ...rest } = props;
+  const cardFooterClasses = classNames({
+    [classes.cardFooter]: true,
     [className]: className !== undefined
   });
   return (
-    <div className={cardClasses} {...rest}>
+    <div className={cardFooterClasses} {...rest}>
       {children}
     </div>
   );
 }
 
-Card.propTypes = {
+CardFooter.propTypes = {
   className: PropTypes.string,
-  plain: PropTypes.bool,
-  carousel: PropTypes.bool,
   children: PropTypes.node
 };
