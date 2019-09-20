@@ -16,6 +16,7 @@ const dashboardRoutes = [];
 
 function App(props) {
   const { ...rest } = props;
+
   return (
     <div className="App" >
     
