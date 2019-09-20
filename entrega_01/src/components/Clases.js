@@ -4,14 +4,14 @@ function Clases(props) {
 
     var clases = {
         height:'1000px',
-        width:'auto',
+        width:'90%',
         padding:'0 5em 5em 5em',
-        margin:'0'
+        margin:'0 5em 5em 0'
     }
     var clase = {
-        padding: '0 20px 0 0',
+        padding: '0 2em 2em 0',
         height:'33%',
-        width:'48%',
+        width:'47%',
         float:'right'
     }
 
