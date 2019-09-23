@@ -46,7 +46,8 @@ function App(props) {
         }}
         {...rest}
       />
-      <Introduction/>
+      <Introduction />
+      <SectionCarousel/>
       <Reviews/>
       <Clases/>
       <LoginPage/>

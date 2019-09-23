@@ -9,9 +9,6 @@ import { List, ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import logo from '../logos/LogoMedu1.png';
 
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-
 import styles from "../styles/footerStyle.js";
 
 const useStyles = makeStyles(styles);

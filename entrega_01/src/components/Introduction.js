@@ -1,6 +1,9 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
+import global from "../styles/global.js";
+
+
 function Introduction() {
 //url(" + "../images/1.jpg" + ")
 
@@ -12,7 +15,6 @@ function Introduction() {
 
 
     var container = {
-        //width: '80%',
         padding: '5em 5em 0 5em'
     }
     
