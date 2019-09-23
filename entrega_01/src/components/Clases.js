@@ -1,12 +1,13 @@
 import React from "react";
+import global from "../styles/global.js";
+
 
 function Clases(props) {
 
     var clases = {
         height:'1000px',
         width:'90%',
-        padding:'0 5em 5em 5em',
-        margin:'0 5em 5em 0'
+        margin:'2.5em 5em 5em 5em'
     }
     var clase = {
         padding: '0 2em 2em 0',
