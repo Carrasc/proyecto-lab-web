@@ -10,10 +10,11 @@ import HeaderLinks from "./components/HeaderLinks.js";
 //import "node_modules/video-react/dist/video-react.css"; // import css
 import Video from './components/Video.js';
 import LoginPage from './components/LoginPage'
-import Carousel from './components/SectionCarousel'
+import Carousel from './components/Carousel'
 import styles from "./styles/components";
 import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
+import Home from './views/Home'
 
 
 const useStyles = makeStyles(styles);
@@ -28,32 +29,10 @@ function App(props) {
 
   return (
    
-    <div className={classNames(classes.main, classes.mainRaised)}>
-
-      <Carousel/>
-   
-
+    <div className={classNames(classes.main, classes.mainRaised)}>	
+		<Home/>
       
-    {/*  <NavBar
-        color="white"
-        routes={dashboardRoutes}
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      />
-      <Introduction />
-      <SectionCarousel/>
-      <Reviews/>
-      <Clases/>
-      <LoginPage/>
-      <Video/>
-      <Footer/>*/}
-       </div>
+    </div>
   );
 }
 

@@ -17,11 +17,8 @@
     "react-slick": "^0.25.2",
     "reactstrap": "^8.0.1",
     "redux": "^4.0.4",
-<<<<<<< HEAD
     "typeface-nunito": "0.0.72",
-=======
     "semantic-ui-react": "^0.88.1",
->>>>>>> f5d73e4b78ec0f68b813161b98a0b8c92dc9809b
     "video-react": "^0.14.1"
   },
   "scripts": {

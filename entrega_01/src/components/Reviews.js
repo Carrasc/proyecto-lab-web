@@ -2,8 +2,10 @@ import React from 'react';
 
 import global from "../styles/global.js";
 
+import Grid from '@material-ui/core/Grid';
+
+
 function Reviews() {
-//url(" + "../images/1.jpg" + ")
 
     const style = { 
         backgroundImage: 'linear-gradient(to bottom, rgba(0,0,255,1), rgba(32,178,170,0.5))',
@@ -36,19 +38,22 @@ function Reviews() {
         <div style ={global.mainContainer}>
             <div style={style}>
                 <div>
-                    <p style={text4}>Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma”</p>
-                    <h1 style={text}>El PAÍS </h1>
-                    <p style={text3}>Videoclases en línea con los contenidos médicos más relevantes. </p>
-                    <hr style= {{margin:'auto',width:'80%'}}/>
-                    <table style={text4}>
-                        <tbody>
-                            <tr>
-                                <td><b> 300 + lecciones</b><br/> PROMEDIO POR CLASE </td>
-                                <td><b>19 + clases</b> <br/>con los mejores médicos</td>
-                                <td><b>10 Minutos</b><br/>  por subtema de lección</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <Grid container= {true}>
+                        <p style={text4}>Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma”</p>
+                        <h1 style={text}>El PAÍS </h1>
+                        <p style={text3}>Videoclases en línea con los contenidos médicos más relevantes. </p>
+                        <hr style= {{margin:'auto',width:'80%'}}/>
+                        <table style={text4}>
+                            <tbody>
+                                <tr>
+                                    <td><b> 300 + lecciones</b><br/> PROMEDIO POR CLASE </td>
+                                    <td><b>19 + clases</b> <br/>con los mejores médicos</td>
+                                    <td><b>10 Minutos</b><br/>  por subtema de lección</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </Grid>
+                    
                 </div>
             </div>
         </div>
