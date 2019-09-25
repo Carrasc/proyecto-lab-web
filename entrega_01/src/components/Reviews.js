@@ -6,7 +6,7 @@ function Reviews() {
 //url(" + "../images/1.jpg" + ")
 
     const style = { 
-        backgroundImage: 'linear-gradient(to bottom, rgba(0,0,255,1), rgba(32,178,170,0.5))',
+        backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
          height:'30em',
          'backgroundSize': 'cover',
          padding: '3em 0 0 0',

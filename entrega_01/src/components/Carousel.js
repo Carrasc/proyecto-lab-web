@@ -1,16 +1,10 @@
 import React from "react";
-// react component for creating beautiful carousel
-//import Carousel from "react-slick";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
 
 import Carousel from "react-multi-carousel";
 import { Image } from "semantic-ui-react";
 import 'react-multi-carousel/lib/styles.css';
 
-
 import global from "../styles/global.js";
-
 
 const responsive = {
   desktop: {
@@ -31,8 +25,8 @@ const responsive = {
 };
 const images = [
   "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-  "https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-  "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+  require('../images/1.jpg'),
+  require('../images/doc.jpg'),
   "https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   "https://images.unsplash.com/photo-1550223640-23097fc71cb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
@@ -52,18 +46,18 @@ export default function SectionCarousel() {
       itemClass="image-item"
       infinite={true}
       autoPlay={true}
-      autoPlaySpeed={10000}
+      autoPlaySpeed={5000}
       responsive={responsive}
       focusOnSelect={false}
       itemClass=""
       showDots={true}
-      centerMode
+      //centerMode
 >
       {images.slice(0, 5).map(image => {
         return (
           <Image
             draggable={false}
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "90%", height: "100%" }}
             src={image}
           />
         );
