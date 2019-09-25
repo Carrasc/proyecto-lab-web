@@ -14,9 +14,6 @@ function Introduction() {
     };
 
 
-    var container = {
-        padding: '5em 5em 0 5em'
-    }
     
     var textDiv = {
         textAlign: 'left',
@@ -49,7 +46,7 @@ function Introduction() {
         fontSize:'14px'
     };
     return (
-        <div style ={container}>
+        <div style ={global.mainContainer}>
             <div style={style}>
                 <div style={textDiv}>
                     <h1 style={text}>Medu Lectures</h1>

@@ -19,6 +19,7 @@ import Home from './views/Home'
 
 const useStyles = makeStyles(styles);
 
+// className={classNames(classes.main, classes.mainRaised)}
 
 const dashboardRoutes = [];
 
@@ -29,7 +30,7 @@ function App(props) {
 
   return (
    
-    <div className={classNames(classes.main, classes.mainRaised)}>	
+    <div >	
 		<Home/>
       
     </div>
