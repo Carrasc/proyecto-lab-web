@@ -8,6 +8,7 @@
     "classnames": "^2.2.6",
     "prismjs": "^1.17.1",
     "react": "^16.9.0",
+    "react-awesome-slider": "^1.0.1",
     "react-dom": "^16.9.0",
     "react-multi-carousel": "^2.2.6",
     "react-prism": "^4.3.2",
@@ -16,6 +17,7 @@
     "react-slick": "^0.25.2",
     "reactstrap": "^8.0.1",
     "redux": "^4.0.4",
+    "typeface-nunito": "0.0.72",
     "semantic-ui-react": "^0.88.1",
     "video-react": "^0.14.1"
   },

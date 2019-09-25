@@ -59,6 +59,7 @@ export default function Header(props) {
   };
   */
   const style = { 
+    
     width: "5%", 
     height: "5%",
     objectFit: "contain" ,
@@ -72,7 +73,7 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent = <img style={style} alt= "Logo"src={logo}/>;
+  const brandComponent = <img style={style} alt= "Logo"src={logo} href={"google.com"}/>;
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
