@@ -3,6 +3,8 @@ import React from 'react';
 import global from "../styles/global.js";
 
 import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import { textAlign } from '@material-ui/system';
 
 
 function Reviews() {
@@ -18,7 +20,8 @@ function Reviews() {
     var text = {
 
         color: 'white',
-        fontSize:'40px'
+        fontSize:'40px',
+        textAlign:'center'
     };
 
 
@@ -36,11 +39,15 @@ function Reviews() {
     };
     return (
         <div style ={global.mainContainer}>
-            <div style={style}>
-                <div>
-                    <Grid container= {true}>
-                        <p style={text4}>Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma”</p>
-                        <h1 style={text}>El PAÍS </h1>
+         
+                    <Grid container= {true}  justify="center" style ={style}>
+                        <Grid item xs = {12}  justify="center" style = {text}>
+                            Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma”
+                        </Grid>
+                        <Grid item md = {12}  justify="center">
+                            El PAÍS
+                        </Grid>
+                        
                         <p style={text3}>Videoclases en línea con los contenidos médicos más relevantes. </p>
                         <hr style= {{margin:'auto',width:'80%'}}/>
                         <table style={text4}>
@@ -54,8 +61,7 @@ function Reviews() {
                         </table>
                     </Grid>
                     
-                </div>
-            </div>
+               
         </div>
 
     );

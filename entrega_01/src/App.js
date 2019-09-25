@@ -29,10 +29,10 @@ function App(props) {
 
   return (
    
-    <div className={classNames(classes.main, classes.mainRaised)}>	
+    
 		<Home/>
       
-    </div>
+ 
   );
 }
 
