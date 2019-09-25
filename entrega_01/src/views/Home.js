@@ -27,7 +27,7 @@ function Home(props) {
 
   return (
    
-    <div className={classNames(classes.main, classes.mainRaised)}>
+    <div >
 
         <NavBar
             color="white"
