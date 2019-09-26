@@ -29,32 +29,41 @@ const images = [
   "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 
 ];
+const links = [
+  "https://medu.mx", "https://medu.mx", "https://medu.mx"
+]
 
 export default function SectionCarousel() {
   return (
     <div style={global.mainContainer}>
-      
+      <div style={{'text-align':"center"}}>
       <Carousel
         itemClass="image-item"
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={2000}
+        autoPlaySpeed={5000}
         responsive={responsive}
         focusOnSelect={false}
         itemClass=""
         showDots={true}
+        arrows={true}
         
-  >
+        >
+
         {images.slice(0, 5).map(image => {
           return (
             <Image
+            
               draggable={false}
-              style={{ width: "95%", height: "100%" }}
+              style={{ width: "90%", height: "100%" }}
               src={image}
+             
+              
             />
           );
         })}
       </Carousel>
+      </div>
     </div>
   );
 }

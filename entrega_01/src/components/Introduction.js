@@ -9,6 +9,10 @@ function Introduction() {
 
     const style = { 
         backgroundImage: `url(${require('../images/1.jpg')})`,
+        backgroundPosition:'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        
         height:'35em',
         backgroundSize: 'cover',
     };

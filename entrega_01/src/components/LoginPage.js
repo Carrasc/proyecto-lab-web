@@ -35,11 +35,8 @@ export default function LoginPage(props) {
   const { ...rest } = props;
   return (
     <div>
-     
       <div
-        className={classes.pageHeader}
-        
-      >
+        className={classes.pageHeader}>
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={4}>

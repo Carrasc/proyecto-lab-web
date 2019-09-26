@@ -5,23 +5,34 @@ import global from "../styles/global.js";
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { textAlign } from '@material-ui/system';
+import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
+import OndemandVideoOutlinedIcon from '@material-ui/icons/OndemandVideoOutlined';
+import WatchLaterOutlinedIcon from '@material-ui/icons/WatchLaterOutlined';
 
 
 function Reviews() {
 
     const style = { 
         backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
-         height:'30em',
+         height:'100%',
          'backgroundSize': 'cover',
          padding: '3em 0 0 0',
          
     };
     
     var text = {
-
         color: 'white',
-        fontSize:'40px',
-        textAlign:'center'
+        fontSize:'1em',
+        textAlign:'center',
+        marginTop: '1em'
+    };
+    var text2 = {
+        marginTop: '1em',
+        marginBottom: '1.5em',
+        color: 'white',
+        fontSize:'1.5em',
+        textAlign:'center',
+        fontWeight: 'bold'
     };
 
 
@@ -31,35 +42,48 @@ function Reviews() {
         fontSize:'14px'
     };
     var text4 = {
+        textAlign: 'center',
         color: 'white',
         fontSize:'18px',
         width:'80%',
         margin:'auto',
-        marginTop:'5%'
+        marginTop:'5%',
+        marginBottom:'5%'
     };
+    var icons = {
+        textAlign: 'left',
+    };
+
     return (
         <div style ={global.mainContainer}>
-         
-                    <Grid container= {true}  justify="center" style ={style}>
-                        <Grid item xs = {12}  justify="center" style = {text}>
-                            Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma”
-                        </Grid>
-                        <Grid item md = {12}  justify="center">
-                            El PAÍS
-                        </Grid>
-                        
-                        <p style={text3}>Videoclases en línea con los contenidos médicos más relevantes. </p>
-                        <hr style= {{margin:'auto',width:'80%'}}/>
-                        <table style={text4}>
-                            <tbody>
-                                <tr>
-                                    <td><b> 300 + lecciones</b><br/> PROMEDIO POR CLASE </td>
-                                    <td><b>19 + clases</b> <br/>con los mejores médicos</td>
-                                    <td><b>10 Minutos</b><br/>  por subtema de lección</td>
-                                </tr>
-                            </tbody>
-                        </table>
+    
+            <Grid container= {true}  justify="center" style ={style}>
+                <Grid item xs = {12}  justify="center" style = {text}>
+                    "Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma"
+                </Grid>
+                <Grid item xs = {12}  justify="center" style = {text2}>
+                    El PAÍS
+                </Grid>
+                
+                
+                <hr style= {{margin:'auto',width:'80%'}}/>
+
+                <Grid container= {true}  justify="center" style ={text4}>
+                    
+                    <Grid item xs = {12} sm = {4}  justify="center">
+                    <LibraryBooksOutlinedIcon style = {icons} fontSize="large"/><br/>
+                        <b> 300 + lecciones</b><br/> promedio por clase 
                     </Grid>
+                    <Grid item  xs = {12} sm = {4}  justify="center">
+                    <OndemandVideoOutlinedIcon fontSize="large"/><br/>
+                        <b>19 + clases</b> <br/>con los mejores médicos 
+                    </Grid>
+                    <Grid item  xs = {12} sm = {4}  justify="center">
+                    <WatchLaterOutlinedIcon fontSize="large"/><br/>
+                        <b>10 Minutos</b><br/>  por subtema de lección
+                    </Grid>
+                </Grid> 
+            </Grid>
                     
                
         </div>

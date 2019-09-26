@@ -103,7 +103,7 @@ export default class Video extends Component {
           ref={player => {
             this.player = player;
           }}
-          autoPlay
+          //autoPlay
           fluid='false'
         >
           <source src={this.state.source} />
