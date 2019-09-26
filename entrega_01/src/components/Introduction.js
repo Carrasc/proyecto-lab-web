@@ -8,14 +8,24 @@ function Introduction() {
 //url(" + "../images/1.jpg" + ")
 
     const style = { 
-        backgroundImage: `url(${require('../images/1.jpg')})`,
+        backgroundImage: `url(${require('../images/info.jpg')})`,
         backgroundPosition:'center center',
         backgroundRepeat: 'no-repeat',
+        //
         backgroundAttachment: 'fixed',
         
         height:'35em',
         backgroundSize: 'cover',
     };
+
+    const buttonStyle = {
+        backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
+        height:'100%',
+         'backgroundSize': 'cover',
+         borderRadius: '12px',
+         color: 'white',
+         
+    }
 
 
     
@@ -58,7 +68,7 @@ function Introduction() {
                     <p style={text3}>Videoclases en línea con los contenidos médicos más relevantes. </p>
                     <p style={text4}>Más de 300 horas en video con 19 + instructores de alta calidad.</p>
                     <h3 style={{fontSize:'28px', color:'blue'}}>Por solo $199.00 al mes.</h3>
-                    <Button variant="outlined" color="primary">
+                    <Button size="large" style={buttonStyle}>
                         Iniciar ahora
                     </Button>
                 </div>

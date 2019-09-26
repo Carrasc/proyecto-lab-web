@@ -15,7 +15,7 @@ import styles from "./styles/components";
 import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
 import Home from './views/Home';
-import GoogleFontLoader from 'react-google-font-loader';
+//import GoogleFontLoader from 'react-google-font-loader';
 
 
 

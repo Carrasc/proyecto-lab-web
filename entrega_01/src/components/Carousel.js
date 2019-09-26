@@ -7,6 +7,24 @@ import 'react-multi-carousel/lib/styles.css';
 import Popup from "reactjs-popup"; //for the popup image in carrousel
 
 import global from "../styles/global.js";
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
+}));
 
 const responsive = {
   desktop: {
@@ -26,9 +44,12 @@ const responsive = {
   }
 };
 const images = [
-  "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-  "https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-  "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+  require("../images/2.jpg"),
+  require("../images/3.jpg"),
+  require("../images/4.jpg"),
+  //"https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+  //"https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  //"https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 
 ];
 const links = [
@@ -37,6 +58,18 @@ const links = [
 
 export default function SectionCarousel() {
 
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
   var handleShowDialog = () => {
     this.setState({ isOpen: !this.state.isOpen });
     console.log("cliked");
@@ -44,6 +77,7 @@ export default function SectionCarousel() {
   return (
     <div style={global.mainContainer}>
       <div style={{'text-align':"center"}}>
+        
       <Carousel
         itemClass="image-item"
         infinite={true}
@@ -54,52 +88,45 @@ export default function SectionCarousel() {
         itemClass=""
         showDots={true}
         arrows={true}
-        
         >
-
+          
         {images.slice(0, 5).map(image => {
           return (
-            <Popup trigger={<Image
+            <div onClick={handleOpen}>
+            
+            <Image
             
               draggable={false}
               style={{ width: "90%", height: "100%" }}
-              src={image}
-              //href='https://www.google.com'
-              onclick="window.open(https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);"
-              />}
-              closeOnEscape
-              modal>
-                {close => (
-      <div className="modal" style={{position:"fixed", height:"10000em"}}>
-        <a className="close" onClick={close}> 
-          &times;
-        </a>
-        <div className="header"> Modal Title </div>
-        <div className="content">
-          
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
-          commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
-          explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
-        </div>
-        <div className="actions">
+              src={image} 
               
-              <button
-                className="button"
-                onClick={() => {
-                  console.log("modal closed ");
-                  close();
+              />
+              <Modal
+                aria-labelledby="transition-modal-title"
+                aria-describedby="transition-modal-description"
+                className={classes.modal}
+                open={open}
+                transparent={true}
+
+                onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                  timeout: 500,
                 }}
               >
-                close modal
-              </button>
-            </div>
-          </div>
-        )}
-            </Popup>
+                <Fade in={open}>
+                  <div className={classes.paper}>
+                    <h2 id="transition-modal-title">Transition modal</h2>
+                    <p id="transition-modal-description">react-transiton-group animates me.</p>
+                  </div>
+                </Fade>
+              </Modal>
+              </div>
+              
           );
         })}
       </Carousel>
-      
       </div>
     </div>
     

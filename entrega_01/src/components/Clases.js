@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import global from "../styles/global.js";
 import Grid from '@material-ui/core/Grid';
 
+import Video from '../components/Video';
+import Popup from "reactjs-popup";
+
 const STYLE = {
     clase : {
         padding: '0 2em 2em 0',
@@ -39,6 +42,8 @@ const STYLE = {
     }
 }
 
+
+
 class Clases extends Component {
 
     constructor(props){
@@ -46,14 +51,44 @@ class Clases extends Component {
     }
 
     
+    
+
+    
 render(){
     return (
-              
+        <Popup trigger={
         <Grid item justify="center" style = {STYLE.img} >
             <div style={STYLE.textDiv}>
                 <h2 style={STYLE.titulo}>{this.props.row}</h2>
             </div>
-        </Grid>  
+        </Grid>
+        } 
+        closeOnEscape
+        modal
+        >
+        {close => (
+          <div className="modal">
+            <a className="close" onClick={close}>
+              &times;
+            </a>
+            <div className="header"> Soy {this.props.row} y soy puto.</div>
+            <div className="content">
+              <Video></Video>
+            </div>
+            <div className="actions">
+              <button
+                className="button"
+                onClick={() => {
+                  console.log("modal closed ");
+                  close();
+                }}
+              >
+                close modal
+              </button>
+            </div>
+          </div>
+        )}
+      </Popup>
     );
     }
 }
