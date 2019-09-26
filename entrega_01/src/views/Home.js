@@ -20,7 +20,7 @@ import global from "../styles/global.js";
 const STYLE = {
   clase : {
       padding: '0 1em 2em 1em',
-      height:'30em',
+      height:'25vw',
       width:'100%'
   },
 }
@@ -29,9 +29,9 @@ const STYLE = {
 const useStyles = makeStyles(styles);
 
 var data = [
-  ['Luis Fernando Carrasco'],
-  ['Mauricio Peon'],
-  ['Alexandro Marcelo'],
+  ['Luis Fernando Carrasco','Urólogo'],
+  ['Mauricio Peon','Ginecólogo'],
+  ['Alexandro Marcelo','Dios'],
 
 ]
 
@@ -70,7 +70,11 @@ function Home(props) {
             {data.map((data) =>{
                 return(
                   
+<<<<<<< HEAD
                   <Grid item xs = {12} sm={6}  justify="center" style = {STYLE.clase} >
+=======
+                  <Grid item xs = {12} sm={6} style = {STYLE.clase} >
+>>>>>>> be7e89b9f827f3b9c8ade53b9688ef52a3191173
                     <Clases row = {data} ></Clases>
                   </Grid>
                     
