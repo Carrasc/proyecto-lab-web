@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import { PrismCode } from 'react-prism';
-import { Player, ControlBar } from 'video-react';
+import { Player, ControlBar, BigPlayButton } from 'video-react';
 //import { Button } from 'reactstrap';
 import  '../styles/videoReact.css';
 
@@ -98,7 +98,7 @@ export default class Video extends Component {
   render() {
     return (
         
-      <div style={{height:'100%', width:'100%', paddingTop:'5em', textAlign:"center"}}>
+      <div style={{height:'100%', width:'100%', paddingTop:'1em', textAlign:"center"}}>
         <Player 
           ref={player => {
             this.player = player;
@@ -106,8 +106,9 @@ export default class Video extends Component {
           //autoPlay
           fluid='false'
         >
-          <source src={this.state.source} />
-          <ControlBar autoHide={false} />
+          <source src={this.props.source} />
+          <BigPlayButton position="center" />
+          <ControlBar autoHide={true} />
         </Player>
        
       </div>

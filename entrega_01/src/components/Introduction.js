@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 
 import global from "../styles/global.js";
-
+import Grid from '@material-ui/core/Grid';
 
 function Introduction() {
 //url(" + "../images/1.jpg" + ")
@@ -11,11 +11,11 @@ function Introduction() {
         backgroundImage: `url(${require('../images/info.jpg')})`,
         backgroundPosition:'center center',
         backgroundRepeat: 'no-repeat',
-        //
         backgroundAttachment: 'fixed',
         
         height:'35em',
         backgroundSize: 'cover',
+        backgroundColor: '#999'
     };
 
     const buttonStyle = {
@@ -24,19 +24,29 @@ function Introduction() {
          'backgroundSize': 'cover',
          borderRadius: '12px',
          color: 'white',
-         
+         fontWeight: 'bold'
     }
 
 
     
     var textDiv = {
-        textAlign: 'left',
-        position: 'absolute',
-        top: '40%',
-        left: '30%',
-        transform: 'translate(-50%, -50%)',
+        position: 'absolute', 
+        top: '20%', 
+        left: '15%',
         
     };
+
+    var gradiantDiv = {
+        padding:'0 0 0 2em',
+        display: 'flex',
+        alignItems: 'flex-end',
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        width:'95%',
+        height:'50%',
+        background:'linear-gradient(to top, rgba(255,255,255, 0), rgba(255,255,255, 1))',
+    }
 
     var text = {
 
@@ -61,18 +71,20 @@ function Introduction() {
     };
     return (
         <div style ={global.mainContainer}>
-            <div style={style}>
-                <div style={textDiv}>
-                    <h1 style={text}>Medu Lectures</h1>
-                    <h3 style={text2}>Aprende medicina con los mejores médicos </h3>
-                    <p style={text3}>Videoclases en línea con los contenidos médicos más relevantes. </p>
-                    <p style={text4}>Más de 300 horas en video con 19 + instructores de alta calidad.</p>
-                    <h3 style={{fontSize:'28px', color:'blue'}}>Por solo $199.00 al mes.</h3>
-                    <Button size="large" style={buttonStyle}>
-                        Iniciar ahora
-                    </Button>
-                </div>
-            </div>
+            <Grid container= {true} justify="center" style = {style}>
+                <Grid item xs = {12} sm = {12} justify="center" style = {gradiantDiv}>
+                    <Grid item xs = {12} sm = {12} justify="center" style = {textDiv}>
+                        <h1 style={text}>Medu Lectures</h1>
+                        <h3 style={text2}>Aprende medicina con los mejores médicos </h3>
+                        <p style={text3}>Videoclases en línea con los contenidos médicos más relevantes. </p>
+                        <p style={text4}>Más de 300 horas en video con 19 + instructores de alta calidad.</p>
+                        <h3 style={{fontSize:'28px', color:'blue'}}>Por solo $199.00 al mes.</h3>
+                        <Button size="large" style={buttonStyle}>
+                            Iniciar ahora
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Grid>
         </div>
 
     );
