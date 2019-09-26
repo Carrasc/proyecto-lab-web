@@ -8,7 +8,7 @@ import { textAlign } from '@material-ui/system';
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import OndemandVideoOutlinedIcon from '@material-ui/icons/OndemandVideoOutlined';
 import WatchLaterOutlinedIcon from '@material-ui/icons/WatchLaterOutlined';
-
+import StarIcon from '@material-ui/icons/Star';
 
 function Reviews() {
 
@@ -58,6 +58,12 @@ function Reviews() {
         <div style ={global.mainContainer}>
     
             <Grid container= {true}  justify="center" style ={style}>
+                <StarIcon style={{color:'white'}}></StarIcon>
+                <StarIcon style={{color:'white'}}></StarIcon>
+                <StarIcon style={{color:'white'}}></StarIcon>
+                <StarIcon style={{color:'white'}}></StarIcon>
+                <StarIcon style={{color:'white'}}></StarIcon>
+                
                 <Grid item xs = {12}  justify="center" style = {text}>
                     "Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma"
                 </Grid>
@@ -72,11 +78,11 @@ function Reviews() {
                     
                     <Grid item xs = {12} sm = {4}  justify="center">
                     <LibraryBooksOutlinedIcon style = {icons} fontSize="large"/><br/>
-                        <b> 300 + lecciones</b><br/> promedio por clase 
+                        <strong> 300 + lecciones</strong><br/> promedio por clase 
                     </Grid>
                     <Grid item  xs = {12} sm = {4}  justify="center">
                     <OndemandVideoOutlinedIcon fontSize="large"/><br/>
-                        <b>19 + clases</b> <br/>con los mejores médicos 
+                        <strong>19 + clases</strong> <br/>con los mejores médicos 
                     </Grid>
                     <Grid item  xs = {12} sm = {4}  justify="center">
                     <WatchLaterOutlinedIcon fontSize="large"/><br/>

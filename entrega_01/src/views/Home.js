@@ -63,13 +63,14 @@ function Home(props) {
         <Introduction />
         <Carousel/>
         <Reviews/>
+        
         <div style={global.mainContainer}>
           <div style={{'text-align':"center"}}>
             <Grid container = {true} >
             {data.map((data) =>{
                 return(
                   
-                  <Grid item xs = {12} xs={6}  justify="center" style = {STYLE.clase} >
+                  <Grid item xs = {12} sm={6}  justify="center" style = {STYLE.clase} >
                     <Clases row = {data} ></Clases>
                   </Grid>
                     
@@ -79,7 +80,7 @@ function Home(props) {
           </div>
         </div>
 
-        <Footer/>
+        <Footer />
       
     </div>
   );
