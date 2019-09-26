@@ -4,6 +4,8 @@ import Carousel from "react-multi-carousel";
 import { Image } from "semantic-ui-react";
 import 'react-multi-carousel/lib/styles.css';
 
+import Popup from "reactjs-popup"; //for the popup image in carrousel
+
 import global from "../styles/global.js";
 
 const responsive = {
@@ -34,6 +36,11 @@ const links = [
 ]
 
 export default function SectionCarousel() {
+
+  var handleShowDialog = () => {
+    this.setState({ isOpen: !this.state.isOpen });
+    console.log("cliked");
+  };
   return (
     <div style={global.mainContainer}>
       <div style={{'text-align':"center"}}>
@@ -52,18 +59,49 @@ export default function SectionCarousel() {
 
         {images.slice(0, 5).map(image => {
           return (
-            <Image
+            <Popup trigger={<Image
             
               draggable={false}
               style={{ width: "90%", height: "100%" }}
               src={image}
-             
+              //href='https://www.google.com'
+              onclick="window.open(https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);"
+              />}
+              closeOnEscape
+              modal>
+                {close => (
+      <div className="modal" style={{position:"fixed", height:"10000em"}}>
+        <a className="close" onClick={close}> 
+          &times;
+        </a>
+        <div className="header"> Modal Title </div>
+        <div className="content">
+          
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
+          commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
+          explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
+        </div>
+        <div className="actions">
               
-            />
+              <button
+                className="button"
+                onClick={() => {
+                  console.log("modal closed ");
+                  close();
+                }}
+              >
+                close modal
+              </button>
+            </div>
+          </div>
+        )}
+            </Popup>
           );
         })}
       </Carousel>
+      
       </div>
     </div>
+    
   );
 }
