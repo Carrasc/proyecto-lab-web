@@ -14,24 +14,36 @@ import Carousel from './components/Carousel'
 import styles from "./styles/components";
 import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
-import Home from './views/Home'
+import Home from './views/Home';
+import GoogleFontLoader from 'react-google-font-loader';
+
+
+
+
 
 
 const useStyles = makeStyles(styles);
+
 
 // className={classNames(classes.main, classes.mainRaised)}
 
 const dashboardRoutes = [];
 
 function App(props) {
+  
+  
   const classes = useStyles();
 
   const { ...rest } = props;
 
   return (
+    <div  >	
+    
    
-    <div >	
-		<Home/>
+      <div style={{ fontFamily: "Nunito, sans-serif" }}>
+      <Home  />
+      </div>
+		 
 		</div>
       
  

@@ -65,18 +65,18 @@ function Home(props) {
         <Reviews/>
         <div style={global.mainContainer}>
           <div style={{'text-align':"center"}}>
-        <Grid container = {true} >
-        {data.map((data) =>{
-              return(
-                
-                <Grid item xs = {12} xs={6}  justify="center" style = {STYLE.clase} >
-                  <Clases row = {data} ></Clases>
-                </Grid>
-                
-              )
-        })}
-        </Grid>
-        </div>
+            <Grid container = {true} >
+            {data.map((data) =>{
+                return(
+                  
+                  <Grid item xs = {12} xs={6}  justify="center" style = {STYLE.clase} >
+                    <Clases row = {data} ></Clases>
+                  </Grid>
+                    
+                )
+            })}
+            </Grid>   
+          </div>
         </div>
 
         <Footer/>
