@@ -3,8 +3,6 @@ import React from 'react';
 import global from "../styles/global.js";
 
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import { textAlign } from '@material-ui/system';
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import OndemandVideoOutlinedIcon from '@material-ui/icons/OndemandVideoOutlined';
 import WatchLaterOutlinedIcon from '@material-ui/icons/WatchLaterOutlined';
@@ -35,12 +33,6 @@ function Reviews() {
         fontWeight: 'bold'
     };
 
-
-    var text3 = {
-
-        color: 'white',
-        fontSize:'14px'
-    };
     var text4 = {
         textAlign: 'center',
         color: 'white',
@@ -67,7 +59,7 @@ function Reviews() {
                 <Grid item xs = {12}  style = {text}>
                     "Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma"
                 </Grid>
-                <Grid item xs = {12}  justify="center" style = {text2}>
+                <Grid item xs = {12}  style = {text2}>
                     El PAÍS
                 </Grid>
                 
@@ -76,15 +68,15 @@ function Reviews() {
 
                 <Grid container= {true}  justify="center" style ={text4}>
                     
-                    <Grid item xs = {12} sm = {4}  justify="center">
+                    <Grid item xs = {12} sm = {4}>
                     <LibraryBooksOutlinedIcon style = {icons} fontSize="large"/><br/>
                         <strong> 300 + lecciones</strong><br/> promedio por clase 
                     </Grid>
-                    <Grid item  xs = {12} sm = {4}  justify="center">
+                    <Grid item  xs = {12} sm = {4}>
                     <OndemandVideoOutlinedIcon fontSize="large"/><br/>
                         <strong>19 + clases</strong> <br/>con los mejores médicos 
                     </Grid>
-                    <Grid item  xs = {12} sm = {4}  justify="center">
+                    <Grid item  xs = {12} sm = {4}>
                     <WatchLaterOutlinedIcon fontSize="large"/><br/>
                         <b>10 Minutos</b><br/>  por subtema de lección
                     </Grid>

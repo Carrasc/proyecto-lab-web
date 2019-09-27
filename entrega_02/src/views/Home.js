@@ -5,17 +5,9 @@ import Reviews from '../components/Reviews';
 import Clases from '../components/Clases';
 import Footer from '../components/Footer';
 import HeaderLinks from "../components/HeaderLinks.js";
-//import SectionCarousel from "./components/Carousel";
-//import "node_modules/video-react/dist/video-react.css"; // import css
-import Video from '../components/Video.js';
-import LoginPage from '../components/LoginPage'
-import Carousel from '../components/Carousel'
-import styles from "../styles/components";
-import { makeStyles } from "@material-ui/core/styles";
-import classNames from "classnames";
+import Carousel from '../components/Carousel';
 import Grid from '@material-ui/core/Grid';
 import global from "../styles/global.js";
-import BackgroundImage from '../images/doc.jpg'
 
 
 const STYLE = {
@@ -27,12 +19,10 @@ const STYLE = {
 }
 
 
-const useStyles = makeStyles(styles);
-
 var data = [
-  ['Luis Fernando Carrasco','Urólogo', '../images/doc.jpg' ],
-  ['Mauricio Peon','Ginecólogo', '../images/doc.jpg'],
-  ['Alexandro Marcelo','Dios', '../images/doc.jpg'],
+  ['Luis Fernando Carrasco','Urólogo'],
+  ['Mauricio Peon','Ginecólogo'],
+  ['Alexandro Marcelo','Dios'],
 
 ]
 
@@ -40,7 +30,6 @@ var data = [
 const dashboardRoutes = [];
 
 function Home(props) {
-  const classes = useStyles();
 
   const { ...rest } = props;
 

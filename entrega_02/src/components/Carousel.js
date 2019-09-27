@@ -1,11 +1,7 @@
 import React from "react";
-
 import Carousel from "react-multi-carousel";
 import { Image } from "semantic-ui-react";
 import 'react-multi-carousel/lib/styles.css';
-
-import Popup from "reactjs-popup"; //for the popup image in carrousel
-
 import global from "../styles/global.js";
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -52,9 +48,7 @@ const images = [
   //"https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 
 ];
-const links = [
-  "https://medu.mx", "https://medu.mx", "https://medu.mx"
-]
+
 
 export default function SectionCarousel() {
 
@@ -70,10 +64,6 @@ export default function SectionCarousel() {
   };
 
 
-  var handleShowDialog = () => {
-    this.setState({ isOpen: !this.state.isOpen });
-    console.log("cliked");
-  };
   return (
     <div style={global.mainContainer}>
       <div style={{textAlign:"center"}}>
@@ -85,7 +75,6 @@ export default function SectionCarousel() {
         autoPlaySpeed={5000}
         responsive={responsive}
         focusOnSelect={false}
-        itemClass=""
         showDots={true}
         arrows={true}
         >
