@@ -15,6 +15,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
 import Grid from '@material-ui/core/Grid';
 import global from "../styles/global.js";
+import BackgroundImage from '../images/doc.jpg'
 
 
 const STYLE = {
@@ -29,9 +30,9 @@ const STYLE = {
 const useStyles = makeStyles(styles);
 
 var data = [
-  ['Luis Fernando Carrasco','Urólogo'],
-  ['Mauricio Peon','Ginecólogo'],
-  ['Alexandro Marcelo','Dios'],
+  ['Luis Fernando Carrasco','Urólogo', '../images/doc.jpg' ],
+  ['Mauricio Peon','Ginecólogo', '../images/doc.jpg'],
+  ['Alexandro Marcelo','Dios', '../images/doc.jpg'],
 
 ]
 
@@ -66,16 +67,12 @@ function Home(props) {
         
         <div style={global.mainContainer}>
           <div style={{'text-align':"center"}}>
-            <Grid container = {true} >
+            <Grid container = {true}  >
             {data.map((data) =>{
                 return(
                   
-<<<<<<< HEAD
-                  <Grid item xs = {12} sm={6}  justify="center" style = {STYLE.clase} >
-=======
                   <Grid item xs = {12} sm={6} style = {STYLE.clase} >
->>>>>>> be7e89b9f827f3b9c8ade53b9688ef52a3191173
-                    <Clases row = {data} ></Clases>
+                    <Clases row = {data} backgroundImage = {BackgroundImage}></Clases>
                   </Grid>
                     
                 )

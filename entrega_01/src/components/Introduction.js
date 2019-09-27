@@ -46,6 +46,7 @@ function Introduction() {
         width:'95%',
         height:'50%',
         background:'linear-gradient(to top, rgba(255,255,255, 0), rgba(255,255,255, 1))',
+        
     }
 
     var text = {

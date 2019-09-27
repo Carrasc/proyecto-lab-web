@@ -16,19 +16,7 @@ const STYLE = {
         width:'100%'
     },
 
-    img : { 
-        'backgroundImage':
-        //'linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73))',
-        `url(${require('../images/info.jpg')})`,
-        height:'100%',
-        width:'100%',
-        backgroundPosition:'center center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        position: 'relative',
-        cursor: 'pointer'
-        },
-
+   
     textDiv : {
         padding:'0 0 0 2em',
         position: 'absolute',
@@ -67,12 +55,30 @@ class Clases extends Component {
 
     constructor(props){
         super(props);
+      
     }
     
+
+
+
+
+    
 render(){
+  
+  console.log("kjheklhj",this.props.row[2]);
     return (
         <Popup trigger={
-        <Grid item justify="center" style = {STYLE.img} >
+        <Grid item justify="center" style = {{ 
+          backgroundImage: `url(${this.props.backgroundImage})`,
+                                              height:'100%',
+                                              width:'100%',
+                                              backgroundPosition:'center center',
+                                              backgroundRepeat: 'no-repeat',
+                                              backgroundSize: 'cover',
+                                              position: 'relative',
+                                              cursor: 'pointer'
+                                              }} 
+          >
             <div style={STYLE.gradiantDiv}>
                 <div style={STYLE.textDiv}>
                     <h2 style={STYLE.titulo}>{this.props.row[0]}</h2>
@@ -91,7 +97,7 @@ render(){
             <a className="close" onClick={close}>
               &times;
             </a>
-            <div className="header"> Soy {this.props.nombre} y soy puto.</div>
+            <div className="header"> Soy {this.props.row[0]} y soy puto.</div>
             <div className="content">
               <Video source={sources[0]}></Video>
             </div>
