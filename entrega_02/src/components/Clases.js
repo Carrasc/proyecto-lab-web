@@ -90,7 +90,7 @@ render(){
         >
         {close => (
           <div className="modal">
-            <a className="close" onClick={close}>
+            <a className="close" onClick={close} href='/#'>
               &times;
             </a>
             <div className="header"> Soy {this.props.nombre} y soy puto.</div>

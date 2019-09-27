@@ -60,10 +60,10 @@ function Home(props) {
         <div style={global.mainContainer}>
           <div style={{textAlign:"center"}}>
             <Grid container = {true} >
-            {data.map((data) =>{
+            {data.map((data,index) =>{
                 return(
-                  <Grid item xs = {12} sm={6} style = {STYLE.clase} >
-                    <Clases row = {data}  ></Clases>
+                  <Grid item xs = {12} sm={6} style = {STYLE.clase} key= {index} >
+                    <Clases row = {data} ></Clases>
                   </Grid>
                     
                 )
