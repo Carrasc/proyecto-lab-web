@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Video from '../components/Video';
 import Popup from "reactjs-popup";
 
+
 const sources = [
     ['http://media.w3.org/2010/05/sintel/trailer.mp4']
 ];
@@ -15,18 +16,7 @@ const STYLE = {
         width:'100%'
     },
 
-    img : { 
-        'backgroundImage':
-        //'linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73))',
-        `url(${require('../images/info.jpg')})`,
-        height:'100%',
-        width:'100%',
-        backgroundPosition:'center center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        position: 'relative',
-        cursor: 'pointer'
-        },
+    
 
     textDiv : {
         padding:'0 0 0 2em',
@@ -63,12 +53,28 @@ const STYLE = {
 }
 
 class Clases extends Component {
+  
+  constructor(props){
+    super(props);
+  }
 
+  img = { 
+    backgroundImage: `url(${this.props.row[2]})`,
+    height:'100%',
+    width:'100%',
+    backgroundPosition:'center center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    position: 'relative',
+    cursor: 'pointer',
+    };
     
 render(){
+  console.log(`url(${this.props.backgroundImage})`);
+
     return (
         <Popup trigger={
-        <Grid item style = {STYLE.img} >
+        <Grid item style = {this.img} >
             <div style={STYLE.gradiantDiv}>
                 <div style={STYLE.textDiv}>
                     <h2 style={STYLE.titulo}>{this.props.row[0]}</h2>

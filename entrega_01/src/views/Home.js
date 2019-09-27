@@ -30,9 +30,9 @@ const STYLE = {
 const useStyles = makeStyles(styles);
 
 var data = [
-  ['Luis Fernando Carrasco','Urólogo', '../images/doc.jpg' ],
-  ['Mauricio Peon','Ginecólogo', '../images/doc.jpg'],
-  ['Alexandro Marcelo','Dios', '../images/doc.jpg'],
+  ['../images/doc.jpg','Urólogo', 'wow',1],
+  ['Mauricio Peon','Ginecólogo', 'wow2',2],
+  ['Alexandro Marcelo','Dios', 'wow3',3],
 
 ]
 
@@ -71,7 +71,7 @@ function Home(props) {
             {data.map((data) =>{
                 return(
                   <Grid item xs = {12} sm={6} style = {STYLE.clase} >
-                    <Clases row = {data} ></Clases>
+                    <Clases row = {data} BackgroundImage= {BackgroundImage} ></Clases>
                   </Grid>
                     
                 )
