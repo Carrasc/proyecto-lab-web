@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import global from "../styles/global.js";
 import Grid from '@material-ui/core/Grid';
 
 import Video from '../components/Video';
@@ -65,14 +64,11 @@ const STYLE = {
 
 class Clases extends Component {
 
-    constructor(props){
-        super(props);
-    }
     
 render(){
     return (
         <Popup trigger={
-        <Grid item justify="center" style = {STYLE.img} >
+        <Grid item style = {STYLE.img} >
             <div style={STYLE.gradiantDiv}>
                 <div style={STYLE.textDiv}>
                     <h2 style={STYLE.titulo}>{this.props.row[0]}</h2>

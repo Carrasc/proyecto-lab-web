@@ -43,12 +43,12 @@ export default function Footer(props) {
 		<hr/>
      <Grid container = {true} style={global.footerContainer} >
 	
-		<Grid item xs = {12} sm = {3} justify="center"  >
+		<Grid item xs = {12} sm = {3}>
 			<div >
 				<img src={logo} alt= "logo" style = {style}/>
 			</div>
 		</Grid>
-		<Grid item xs = {12} sm = {4} justify="center"  >
+		<Grid item xs = {12} sm = {4} >
 			<div style = {text}>
 				<ListItem className={classes.inlineBlock} >
 				<a
@@ -75,7 +75,7 @@ export default function Footer(props) {
 				</ListItem>
 			</div>
 		</Grid>
-		<Grid xs = {12} sm = {5}item alignItems="flex-start"  >
+		<Grid xs = {12} sm = {5}item >
 			<div style={{textAlign:"justify"}}>
 			&copy; 2018, Medu S.A de C.V.{" "} 
 				<br/>

@@ -1,4 +1,3 @@
-import { container, primaryColor } from "./material-kit-react.js";
 
 const global = {
   mainContainer: {
