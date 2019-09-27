@@ -54,9 +54,9 @@ const STYLE = {
 
 class Clases extends Component {
   
-  constructor(props){
+  /*constructor(props){
     super(props);
-  }
+  }*/
 
   img = { 
     backgroundImage: `url(${this.props.row[2]})`,
