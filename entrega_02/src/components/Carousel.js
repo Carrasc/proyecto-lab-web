@@ -79,9 +79,9 @@ export default function SectionCarousel() {
         arrows={true}
         >
           
-        {images.slice(0, 5).map(image => {
+        {images.slice(0, 5).map((image,index) => {
           return (
-            <div onClick={handleOpen}>
+            <div onClick={handleOpen} key = {index}>
             
             <Image
             

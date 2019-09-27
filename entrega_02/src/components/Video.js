@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-//import { PrismCode } from 'react-prism';
 import { Player, ControlBar, BigPlayButton } from 'video-react';
-//import { Button } from 'reactstrap';
 import  '../styles/videoReact.css';
 
 const sources = {
@@ -104,7 +102,7 @@ export default class Video extends Component {
             this.player = player;
           }}
           //autoPlay
-          fluid='false'
+          fluid={'false'}
         >
           <source src={this.props.source} />
           <BigPlayButton position="center" />
