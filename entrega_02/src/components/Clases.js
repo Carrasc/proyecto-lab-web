@@ -54,9 +54,14 @@ const STYLE = {
 
 class Clases extends Component {
   
-  /*constructor(props){
+  constructor (props){
     super(props);
-  }*/
+    this.state = {
+        blur: "rgba(0, 0, 0, 0)"
+    };
+    this.overClass = this.overClass.bind(this);
+    this.outClass = this.outClass.bind(this);
+  }
 
   img = { 
     backgroundImage: `url(${this.props.row[2]})`,
@@ -68,19 +73,38 @@ class Clases extends Component {
     position: 'relative',
     cursor: 'pointer',
     };
+
+  
+  outClass(e){
+    this.setState({
+      blur: "rgba(0, 0, 0, 0)"
+    });
+  }
+  overClass(e){
+    this.setState({
+        blur: "rgba(0, 0, 0, 0.35)"
+  });
+  }
     
 render(){
   console.log(`url(${this.props.backgroundImage})`);
-
+  var blurOverImage = {
+    position: 'absolute',
+    width:'100%',
+    height:'100%',
+    backgroundColor: this.state.blur
+  } 
     return (
         <Popup trigger={
-        <Grid item style = {this.img} >
+        <Grid item style = {this.img}>
+          <div style={blurOverImage} onMouseOver={this.overClass.bind(this)} onMouseOut={this.outClass.bind(this)}>
             <div style={STYLE.gradiantDiv}>
                 <div style={STYLE.textDiv}>
                     <h2 style={STYLE.titulo}>{this.props.row[0]}</h2>
                     <p style={STYLE.especialidad}>{this.props.row[1]}</p>
                 </div>
             </div>
+          </div>
         </Grid>
         } 
         lockScroll
