@@ -4,10 +4,13 @@ import Introduction from '../components/Introduction.js';
 import Reviews from '../components/Reviews';
 import Clases from '../components/Clases';
 import Footer from '../components/Footer';
-import HeaderLinks from "../components/HeaderLinks.js";
 import Carousel from '../components/Carousel';
 import Grid from '@material-ui/core/Grid';
 import global from "../styles/global.js";
+import Classes_Info from '../components/Classes_Info';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import User_NavBar from '../components/User_NavBar';
+import Topics from '../components/Classes/Classes_Topics';
 
 
 const STYLE = {
@@ -30,6 +33,7 @@ var data = [
   ['Luis Fernando Carrasco','Urólogo', 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='],
   ['Mauricio Peon','Ginecólogo', images['2.jpg']],
   ['Alexandro Marcelo','Dios', images['5.jpg']],
+  ['Romeo Varela','Caca', images['6.jpg']],
 
 ]
 
@@ -40,24 +44,13 @@ const dashboardRoutes = [];
 function Home(props) {
 
   const { ...rest } = props;
+  const matches = useMediaQuery('(min-width:600px)');
 
   return (
    
     <div >
 
-        <NavBar
-            color="white"
-            routes={dashboardRoutes}
-            brand="Material Kit React"
-            rightLinks={<HeaderLinks />}
-            fixed
-            changeColorOnScroll={{
-            height: 400,
-            color: "dark"
-            }}
-            {...rest}
-        />
-            
+        <NavBar />
         <Introduction />
         <Carousel/>
         <Reviews/>
@@ -68,7 +61,7 @@ function Home(props) {
             {data.map((data,index) =>{
                 return(
                   <Grid item xs = {12} sm={6} style = {STYLE.clase} key= {index} >
-                    <Clases row = {data} ></Clases>
+                    <Clases row = {data} size={STYLE.clase.height}></Clases>
                   </Grid>
                     
                 )
@@ -76,8 +69,11 @@ function Home(props) {
             </Grid>   
           </div>
         </div>
-
+        <Classes_Info/>
+        <User_NavBar/>
+        <Topics/>
         <Footer />
+        
       
     </div>
   );

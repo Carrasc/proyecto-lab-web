@@ -9,14 +9,11 @@ const sources = [
     ['http://media.w3.org/2010/05/sintel/trailer.mp4']
 ];
 
-const STYLE = {
-    clase : {
-        padding: '0 2em 2em 0',
-        height:'20em',
-        width:'100%'
-    },
+const thumbnail = [
+  ['https://media.istockphoto.com/photos/skilled-in-saving-lives-picture-id592647638?k=6&m=592647638&s=612x612&w=0&h=r9OPxixQe4qrZ9_4WCepXCBpqtQRqtTmvffB0jpXGfQ=']
+];
 
-    
+const STYLE = {
 
     textDiv : {
         padding:'0 0 0 2em',
@@ -54,9 +51,14 @@ const STYLE = {
 
 class Clases extends Component {
   
-  /*constructor(props){
+  constructor (props){
     super(props);
-  }*/
+    this.state = {
+        blur: "rgba(0, 0, 0, 0)"
+    };
+    this.overClass = this.overClass.bind(this);
+    this.outClass = this.outClass.bind(this);
+  }
 
   img = { 
     backgroundImage: `url(${this.props.row[2]})`,
@@ -68,19 +70,38 @@ class Clases extends Component {
     position: 'relative',
     cursor: 'pointer',
     };
+
+  
+  outClass(e){
+    this.setState({
+      blur: "rgba(0, 0, 0, 0)"
+    });
+  }
+  overClass(e){
+    this.setState({
+        blur: "rgba(0, 0, 0, 0.35)"
+  });
+  }
     
 render(){
   console.log(`url(${this.props.backgroundImage})`);
-
+  var blurOverImage = {
+    position: 'absolute',
+    width:'100%',
+    height:'100%',
+    backgroundColor: this.state.blur
+  } 
     return (
         <Popup trigger={
-        <Grid item style = {this.img} >
+        <Grid item style = {this.img}>
+          <div style={blurOverImage} onMouseOver={this.overClass.bind(this)} onMouseOut={this.outClass.bind(this)}>
             <div style={STYLE.gradiantDiv}>
                 <div style={STYLE.textDiv}>
                     <h2 style={STYLE.titulo}>{this.props.row[0]}</h2>
                     <p style={STYLE.especialidad}>{this.props.row[1]}</p>
                 </div>
             </div>
+          </div>
         </Grid>
         } 
         lockScroll
@@ -95,7 +116,7 @@ render(){
             </a>
             <div className="header"> Soy {this.props.nombre} y soy puto.</div>
             <div className="content">
-              <Video source={sources[0]}></Video>
+              <Video source={sources[0]} thumbnail = {thumbnail[0]}></Video>
             </div>
             <div className="actions">
               <button

@@ -64,7 +64,7 @@ function Reviews() {
                 </Grid>
                 
                 
-                <hr style= {{margin:'auto',width:'80%'}}/>
+                <hr  style= {{margin:'auto',width:'80%'}}/>
 
                 <Grid container= {true}  justify="center" style ={text4}>
                     
