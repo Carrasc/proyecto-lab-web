@@ -55,8 +55,9 @@ const global = {
   bSecondaryTitleFont: {
     margin: 0,
     padding: 0,
-    fontSize: '1.5em',
-    //textShadow: '0px 1px, 1px 0px, 1px 1px',
+    fontSize: '1.6em',
+    textShadow: '0px 1px, 1px 0px, 1px 1px',
+    letterSpacing: '0.0625em',
     color: 'blue'
   },
   wSecondaryTitleFont: {
@@ -65,9 +66,16 @@ const global = {
     fontSize: '1.5em',
     color: 'white',
     //textShadow: '0px 1px, 1px 0px, 1px 1px',
-
   },
 
+  gNumberTopic: {
+    margin: 0,
+    padding: 0,
+    fontSize: '3em',
+    fontWeight: '900',
+    textShadow: '0px 2px, 2px 0px, 2px 2px',
+    color: 'gray',
+  },
 
   //content
   wlFont: {
@@ -139,6 +147,8 @@ const global = {
 
   // Button Styles 
   gradientButtonStyle : {
+    fontWeight:"light", 
+    fontFamily: "Nunito",
     backgroundImage: 'linear-gradient(to right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
     height:'100%',
      'backgroundSize': 'cover',
@@ -146,19 +156,22 @@ const global = {
      color: 'white',
      fontWeight: 'bold',
      boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
-},
+  },
 
-solidButtonStyle : {
-  background: '#0070DF',
-  height:'5em',
-  width:'17em',
-   'backgroundSize': 'cover',
-   borderRadius: '20px',
-   color: 'white',
-   fontWeight: 'bold',
-   boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
-}
+  solidButtonStyle : {
+    fontWeight:"light", 
+      fontFamily: "Nunito",
+    background: '#0070DF',
+    height:'5em',
+    width:'60%',
+    'backgroundSize': 'cover',
+    borderRadius: '20px',
+    color: 'white',
+    fontWeight: 'bold',
+    boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+  },
   
+  //personalized styles
   
   
 

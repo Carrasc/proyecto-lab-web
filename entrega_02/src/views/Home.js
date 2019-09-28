@@ -37,8 +37,6 @@ var data = [
 
 ]
 
-
-
 const dashboardRoutes = [];
 
 function Home(props) {
@@ -69,9 +67,9 @@ function Home(props) {
             </Grid>   
           </div>
         </div>
-        <Classes_Info/>
-        <User_NavBar/>
-        <Topics/>
+
+        
+        
         <Footer />
         
       

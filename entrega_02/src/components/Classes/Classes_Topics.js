@@ -1,35 +1,45 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 
 //Styles
 import global from "../../styles/global";
+
+//Icons
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+
+
 
 class Classes_Topics extends Component {
 
     STYLE = {
         backgroundColor: 'rgba(248, 248, 255, 1)',
-        padding: '1em',
+        //padding: '5em',
         textAlign: 'center'
     }
     topicStyle = {
-        width:'100%',
+        width:'80%',
+        margin:'3em 0',
         borderBottom: '1px solid gray',
     }
+    
 
     render(){
         return(
             <div style={global.mainContainer}>
                 <div style={this.STYLE}>
+                    <div>
+                        <h1 style={global.gNumberTopic}>TOPICS:</h1>
+                    </div>
                     <Grid container = {true} justify = "space-around" direction="row" justify="center" alignItems="center">
                         <div style={this.topicStyle}></div>
-                        <Grid item xs = {3} justify = "center" direction="row" justify="center" >
-                            <h1>
+                        <Grid item xs = {3} alignItems = "center" direction="row" justify="center" >
+                            <h1 style={global.gNumberTopic}>
                                 01
                             </h1>
                         </Grid>
                         <Grid item xs = {6}>
-                            <div style={{textAlign: 'left'}}>
+                            <div style={{textAlign: 'left', verticalAlign:'center'}}>
                                 <h1 style={global.gSecondaryTitleFont}>
                                     Hemisferios Cerebrales
                                 </h1>
@@ -39,14 +49,12 @@ class Classes_Topics extends Component {
                             </div>
                         </Grid>
                         <Grid item xs = {3}>
-                            <h1>
-                                %
-                            </h1>
+                            <CheckCircleIcon fontSize="large" htmlColor="blue" />
                         </Grid>
                         <div style={this.topicStyle}></div>
-                        <Grid item xs = {3} justify = "center" direction="row" justify="center" >
-                            <h1>
-                                01
+                        <Grid item xs = {3} alignItems = "center" direction="row" justify="center" >
+                            <h1 style={global.gNumberTopic}>
+                                02
                             </h1>
                         </Grid>
                         <Grid item xs = {6}>
@@ -60,14 +68,12 @@ class Classes_Topics extends Component {
                             </div>
                         </Grid>
                         <Grid item xs = {3}>
-                            <h1>
-                                %
-                            </h1>
+                            <CheckCircleOutlineIcon fontSize="large" htmlColor="gray"/>
                         </Grid>
                         <div style={this.topicStyle}></div>
-                        <Grid item xs = {3} justify = "center" direction="row" justify="center" >
-                            <h1>
-                                01
+                        <Grid item xs = {3} alignItems = "center" direction="row" justify="center" >
+                            <h1 style={global.gNumberTopic}>
+                                03
                             </h1>
                         </Grid>
                         <Grid item xs = {6}>
@@ -81,10 +87,9 @@ class Classes_Topics extends Component {
                             </div>
                         </Grid>
                         <Grid item xs = {3}>
-                            <h1>
-                                %
-                            </h1>
+                            <CheckCircleOutlineIcon fontSize="large" htmlColor="gray"/>
                         </Grid>
+                        <div style={this.topicStyle}></div>
                     </Grid>
                 </div>
             </div>
