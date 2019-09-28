@@ -3,6 +3,7 @@ import './App.css';
 import Home from './views/Home';
 //import GoogleFontLoader from 'react-google-font-loader';
 
+import global from './styles/global.js';
 
 
 
@@ -15,7 +16,7 @@ function App(props) {
     <div  >	
     
    
-      <div style={{ fontFamily: "Nunito, sans-serif" }}>
+      <div style= {global.mainFont}>
       <Home  />
       </div>
 		 

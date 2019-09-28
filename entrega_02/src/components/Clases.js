@@ -9,14 +9,11 @@ const sources = [
     ['http://media.w3.org/2010/05/sintel/trailer.mp4']
 ];
 
-const STYLE = {
-    clase : {
-        padding: '0 2em 2em 0',
-        height:'20em',
-        width:'100%'
-    },
+const thumbnail = [
+  ['https://media.istockphoto.com/photos/skilled-in-saving-lives-picture-id592647638?k=6&m=592647638&s=612x612&w=0&h=r9OPxixQe4qrZ9_4WCepXCBpqtQRqtTmvffB0jpXGfQ=']
+];
 
-    
+const STYLE = {
 
     textDiv : {
         padding:'0 0 0 2em',
@@ -119,7 +116,7 @@ render(){
             </a>
             <div className="header"> Soy {this.props.nombre} y soy puto.</div>
             <div className="content">
-              <Video source={sources[0]}></Video>
+              <Video source={sources[0]} thumbnail = {thumbnail[0]}></Video>
             </div>
             <div className="actions">
               <button

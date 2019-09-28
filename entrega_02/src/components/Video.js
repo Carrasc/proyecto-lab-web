@@ -103,6 +103,7 @@ export default class Video extends Component {
           }}
           //autoPlay
           fluid={'false'}
+          poster = {this.props.thumbnail}
         >
           <source src={this.props.source} />
           <BigPlayButton position="center" />
