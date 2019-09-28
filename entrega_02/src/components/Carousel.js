@@ -88,6 +88,8 @@ export default function SectionCarousel() {
               draggable={false}
               style={{ width: "90%", height: "100%" }}
               src={image} 
+             
+              
               
               />
               <Modal
