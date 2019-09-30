@@ -1,15 +1,19 @@
 
 const global = {
   //MARGINS AND PADDINGS FOR THE CORRECT FORMAT OF THE APP
-  mainFont: { 
-    fontWeight:"light", 
-    fontFamily: "Nunito" 
+  mainFont: {
+    fontWeight: "light",
+    fontFamily: "Nunito"
   },
   mainContainer: {
     'margin': '2.5% 5% 0 5%',
   },
   footerContainer: {
     'margin': '0% 10% 0 10%',
+  },
+  videoContainer: {
+    'margin': '0% 5% 0% 5%',
+    height:'50%'
   },
 
   //FONTS
@@ -100,7 +104,7 @@ const global = {
     color: 'blue'
   },
 
-  
+
   wmFont: {
     margin: 0,
     padding: 0,
@@ -146,34 +150,34 @@ const global = {
   },
 
   // Button Styles 
-  gradientButtonStyle : {
-    fontWeight:"light", 
+  gradientButtonStyle: {
+    fontWeight: "light",
     fontFamily: "Nunito",
     backgroundImage: 'linear-gradient(to right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
-    height:'100%',
-     'backgroundSize': 'cover',
-     borderRadius: '12px',
-     color: 'white',
-     fontWeight: 'bold',
-     boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+    height: '100%',
+    'backgroundSize': 'cover',
+    borderRadius: '12px',
+    color: 'white',
+    fontWeight: 'bold',
+    boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
   },
 
-  solidButtonStyle : {
-    fontWeight:"light", 
-      fontFamily: "Nunito",
+  solidButtonStyle: {
+    fontWeight: "light",
+    fontFamily: "Nunito",
     background: '#0070DF',
-    height:'5em',
-    width:'60%',
+    height: '5em',
+    width: '60%',
     'backgroundSize': 'cover',
     borderRadius: '20px',
     color: 'white',
     fontWeight: 'bold',
     boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
   },
-  
+
   //personalized styles
-  
-  
+
+
 
 };
 export default global;

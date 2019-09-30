@@ -102,11 +102,15 @@ export default class Video extends Component {
             this.player = player;
           }}
           //autoPlay
-          fluid={'false'}
+          fluid={true}
           poster = {this.props.thumbnail}
+          //aspectRatio ={'5:2'}
+      
+         
         >
           <source src={this.props.source} />
           <BigPlayButton position="center" />
+
           <ControlBar autoHide={true} />
         </Player>
        
