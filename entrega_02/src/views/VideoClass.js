@@ -15,8 +15,8 @@ class VideoClass extends Component {
         return (
             <div>
                 <User_NavBar />
-                <Grid container alignItems='center' justify='center'  >
-                    <Grid item xs={10} md={8} lg = {6}>
+                <Grid container alignItems='center' justify='center' style ={global.mainContainer} >
+                    <Grid item xs={12} >
                         <Video source={'http://media.w3.org/2010/05/sintel/trailer.mp4'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
                     </Grid>
                 </Grid>
