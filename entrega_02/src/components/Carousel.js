@@ -52,18 +52,6 @@ const images = [
 
 export default function SectionCarousel() {
 
-  const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-
   return (
     <div style={global.mainContainer}>
       <div style={{textAlign:"center"}}>
@@ -80,41 +68,15 @@ export default function SectionCarousel() {
         >
           
         {images.slice(0, 5).map((image,index) => {
-          return (
-            <div onClick={handleOpen} key = {index}>
-            
+          return (            
             <Image
             
               draggable={false}
               style={{ width: "90%", height: "100%" }}
               src={image} 
-             
-              
               
               />
-              <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
-                className={classes.modal}
-                open={open}
-                transparent={true}
-
-                onClose={handleClose}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                  timeout: 500,
-                }}
-              >
-                <Fade in={open}>
-                  <div className={classes.paper}>
-                    <h2 id="transition-modal-title">Transition modal</h2>
-                    <p id="transition-modal-description">react-transiton-group animates me.</p>
-                  </div>
-                </Fade>
-              </Modal>
-              </div>
-              
+                            
           );
         })}
       </Carousel>

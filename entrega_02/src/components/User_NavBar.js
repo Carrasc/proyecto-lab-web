@@ -15,28 +15,21 @@ function User_NavBar() {
     return (
         <div style ={global.mainContainer}>
     
-            <Grid container= {true}  justify="space-around" style ={style}>
-                <Grid  itesm md = {2} style= {{padding:'5em 3em 5em 3em', textAlign: 'center'}}>
-                    <div style = {{display: 'inline-block'}}>
+            <Grid container= {true} style ={style}>
+                <Grid  item md = {2} sm={12} style= {{padding:'5em 3em 5em 3em', textAlign: 'center'}}>
+                    <div >
                         <h1  style = {global.wMainTitleFont} >MEDU</h1>
                         <p style= {global.wmFont}>DASHBOARD</p>
                     </div>
                 </Grid>
-                <Grid itesm md = {4} style= {{padding:'5em 3em 5em 3em', textAlign: 'right'}}>
-                    <div style = {{display: 'inline-block',}}>
+                <Grid item md = {8} sm={12} style= {{padding:'5em 3em 5em 3em', textAlign: 'right', display: 'inline-block'}}>
+                    <div style={{width:'70%'}}>
                         <h1  style = {global.wSecondaryTitleFont} >Luis Fernando Carrasco</h1>
                         <p style= {global.wmFont}>Mi cuenta   Cerrar Sesion</p>
                     </div>
                 </Grid>
-                <Grid tesm md = {1} style= {{paddingTop:'3em', textAlign:'center'}}>
-                    <div style= {{width: '5em', height: '5em', borderRadius: '50%', backgroundColor: 'gray', textAlign:'center'}}></div>
-    
-                </Grid>
-                <Grid itesm md = {1} style= {{padding:'5em 3em 5em 3em', textAlign:'center'}}>
-                    <div  style = {{display: 'inline-block'}}>
-                        <p style= {global.wMainTitleFont}>99</p>  
-                        <p style= {global.wmFont}>PERCENTIL</p>  
-                    </div> 
+                <Grid style={{padding:'2em 0 2em 0'}}>
+                    <div style= {{width: '10em', height: '10em', borderRadius: '50%', backgroundColor: 'gray', textAlign:'center', }}></div>
                 </Grid>
                 
             </Grid>

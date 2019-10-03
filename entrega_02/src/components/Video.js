@@ -96,7 +96,7 @@ export default class Video extends Component {
   render() {
     return (
         
-      <div style={{height:'100%', width:'100%', paddingTop:'1em', textAlign:"center"}}>
+      <div class = "div1" style ={global.mainContainer}>
         <Player 
           ref={player => {
             this.player = player;
