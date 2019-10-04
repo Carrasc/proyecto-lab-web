@@ -18,7 +18,7 @@ function App(props) {
     
    
       <div style= {global.mainFont}>
-        <VideoClass  />
+        <Home  />
       </div>
 		 
 		</div>

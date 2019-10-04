@@ -41,7 +41,10 @@ class VideoClass extends Component {
                 </Grid>
 
                 <Classes_Info title={titles} />
-                <Subclass classes={classes} />
+                <div style = {global.mainContainer}>
+                    <Subclass classes={classes} />
+                </div>
+               
 
 
                 <div style={global.mainContainer}>

@@ -43,7 +43,6 @@ class Classes_Topics extends Component {
                                 </h1>
                                 <p style={global.gmFont}>
                                     {this.props.classes[2]}
-                                    
                                 </p>
                             </div>
                         </Grid>

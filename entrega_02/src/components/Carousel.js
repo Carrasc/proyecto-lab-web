@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Carousel from "react-multi-carousel";
 import { Image } from "semantic-ui-react";
 import 'react-multi-carousel/lib/styles.css';
@@ -49,10 +49,25 @@ const images = [
 
 ];
 
+/*
+<Image
+            
+              draggable={false}
+              style={{ width: "90%", height: "100%" }}
+              src={image} 
+              
+              />
+*/
+export default class SectionCarousel extends Component {
 
-export default function SectionCarousel() {
+    constructor (props){
+      super(props);
+    }
+    
 
+  render(){
   return (
+
     <div style={global.mainContainer}>
       <div style={{textAlign:"center"}}>
         
@@ -68,14 +83,10 @@ export default function SectionCarousel() {
         >
           
         {images.slice(0, 5).map((image,index) => {
-          return (            
-            <Image
-            
-              draggable={false}
-              style={{ width: "90%", height: "100%" }}
-              src={image} 
-              
-              />
+          return (
+            <div>            
+              {this.props.component}
+            </div>
                             
           );
         })}
@@ -83,5 +94,5 @@ export default function SectionCarousel() {
       </div>
     </div>
     
-  );
+  )}
 }

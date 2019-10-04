@@ -7,11 +7,10 @@ import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
 import Grid from '@material-ui/core/Grid';
 import global from "../styles/global.js";
-import Classes_Info from '../components/Classes_Info';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import User_NavBar from '../components/User_NavBar';
-import Topics from '../components/Classes/Classes_Topics';
 
+import { Image } from "semantic-ui-react";
+import Subclass from '../components/Classes/Subclass';
 
 const STYLE = {
   clase : {
@@ -37,6 +36,16 @@ var data = [
 
 ]
 
+const imagesCarousel = [
+  require("../images/2.jpg"),
+  require("../images/3.jpg"),
+  require("../images/4.jpg"),
+  //"https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+  //"https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  //"https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+
+];
+
 const dashboardRoutes = [];
 
 function Home(props) {
@@ -50,7 +59,9 @@ function Home(props) {
 
         <NavBar />
         <Introduction />
-        <Carousel/>
+        <Carousel component = {
+          <Subclass completed={'57'} number_topics={'143'} title={'BASES NEUROANATOMICAS'}  subtitle={'DEL SISTEMA NERVIOSO'} src={imagesCarousel}/>
+          } />
         <Reviews/>
         
         <div style={global.mainContainer}>
