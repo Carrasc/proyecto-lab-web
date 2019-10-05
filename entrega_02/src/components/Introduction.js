@@ -4,6 +4,13 @@ import Button from '@material-ui/core/Button';
 import global from "../styles/global.js";
 import Grid from '@material-ui/core/Grid';
 
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import VideoClass from '../views/VideoClass';
+import { NavLink } from 'react-router-dom'
+
+
+
+
 function Introduction() {
 //url(" + "../images/1.jpg" + ")
 
@@ -38,9 +45,23 @@ function Introduction() {
                         <br></br>
                         <br></br>
                         <h3 style={{fontSize: '1.5em', fontWeight: '1em',color: 'blue'}}>Por solo $199.00 al mes.</h3>
-                        <Button size="large" style={global.gradientButtonStyle}>
+                       
+                        <NavLink size="large"style={global.gradientButtonStyle} to="/video_class"> Iniciar Ahora</NavLink>
+                        {
+                            /*
+                            <Button size="large" style={global.gradientButtonStyle}>
                             Iniciar ahora
-                        </Button>
+                            <Route path="/video_class" component={VideoClass} ></Route>
+                        </Button>*/ 
+                        }
+                        
+                            
+                                
+                           
+                        
+      
+                      
+                        
                     </Grid>
             </Grid>
         </div>

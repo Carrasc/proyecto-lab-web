@@ -9,8 +9,11 @@ import Grid from '@material-ui/core/Grid';
 import global from "../styles/global.js";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
+
 import { Image } from "semantic-ui-react";
 import Subclass from '../components/Classes/Subclass';
+
+
 
 const STYLE = {
   clase : {
