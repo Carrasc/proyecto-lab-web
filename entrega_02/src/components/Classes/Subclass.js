@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 //import img from '../../images/1.jpg';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -9,7 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import img from '../../images/1.jpg'
-
+import global from '../../styles/global'
 
 
 import Carousel from "react-multi-carousel";
@@ -28,36 +28,43 @@ const images = [
     //"https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   
   ];
-  const useStyles = makeStyles({
-    card: {
-      maxWidth: 345,
-      height: '30em'
-    },
-  });
 
-  export default function Subclass(props) {
-    const classes = useStyles();
+
+ class Subclass extends Component{
+      constructor (props){
+          super(props);
+          console.log(this.props);
+          //console.log(this.props.pene);
+          console.log("EL CACAS")
+
+         
+      }
+     card = {
+        maxWidth: 345,
+        height: '30em'
+      }
+      render(){
+        //console.log("props",this.props.comps);
         return (
-            <Card className={classes.card}>
+            <Card style={this.card}>
                 <CardActionArea>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                            Completadas {props.completed} de {props.number_topics}
+                            <h1 style={global.gsFont}>Completadas {this.props.data[0]} de {this.props.data[1]}</h1>
                         </Typography>
                     </CardContent>
                     <CardMedia
                     component="img"
-                    alt="Contemplative Reptile"
-                    height="200"
-                    image={props.src}
+                    height="300"
+                    image={this.props.data[2]}
                     title="Contemplative Reptile"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                            {props.title}
+                        <h1 style={global.bmFont}>{this.props.data[3]}</h1>
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            {props.subtitle}
+                        <h1 style={global.gmFont}>{this.props.data[4]}</h1>
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -72,7 +79,8 @@ const images = [
                 </CardActions>*/
                 }
             </Card>
-        )
+        );
+            }
     }
 
-
+export default Subclass;

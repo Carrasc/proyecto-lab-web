@@ -11,9 +11,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 
 import { Image } from "semantic-ui-react";
-import Subclass from '../components/Classes/Subclass';
-
-
 
 const STYLE = {
   clase : {
@@ -49,6 +46,8 @@ const imagesCarousel = [
 
 ];
 
+ 
+
 const dashboardRoutes = [];
 
 function Home(props) {
@@ -63,7 +62,16 @@ function Home(props) {
         <NavBar />
         <Introduction />
         <Carousel component = {
-          <Subclass completed={'57'} number_topics={'143'} title={'BASES NEUROANATOMICAS'}  subtitle={'DEL SISTEMA NERVIOSO'} src={imagesCarousel}/>
+          imagesCarousel.map((img,index) =>{
+            return (
+              <Image
+              draggable={false}
+              style={{ width: "90%", height: "100%" }}
+              src={img} 
+              />
+            
+              )})
+            
           } />
         <Reviews/>
         
@@ -82,7 +90,19 @@ function Home(props) {
           </div>
         </div>
 
-        
+        <Carousel component = {
+            imagesCarousel.map((img,index) =>{
+              return (
+                <Image
+                draggable={false}
+                spaced={'left'}
+                centerMode={true}
+                style={{ width: "90%", height: "100%" }}
+                src={img} 
+                />
+              
+                )})
+            } />
         
         <Footer />
         

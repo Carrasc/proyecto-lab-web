@@ -8,6 +8,9 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import { makeStyles } from '@material-ui/core/styles';
 
+import Subclass from './Classes/Subclass';
+
+
 const useStyles = makeStyles(theme => ({
   modal: {
     display: 'flex',
@@ -80,16 +83,9 @@ export default class SectionCarousel extends Component {
         focusOnSelect={false}
         showDots={true}
         arrows={true}
-        >
-          
-        {images.slice(0, 5).map((image,index) => {
-          return (
-            <div>            
-              {this.props.component}
-            </div>
-                            
-          );
-        })}
+        centerMode={true}
+        >       
+        {this.props.component}
       </Carousel>
       </div>
     </div>

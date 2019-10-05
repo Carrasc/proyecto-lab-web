@@ -46,21 +46,13 @@ function Introduction() {
                         <br></br>
                         <h3 style={{fontSize: '1.5em', fontWeight: '1em',color: 'blue'}}>Por solo $199.00 al mes.</h3>
                        
-                        <NavLink size="large"style={global.gradientButtonStyle} to="/video_class"> Iniciar Ahora</NavLink>
-                        {
-                            /*
-                            <Button size="large" style={global.gradientButtonStyle}>
-                            Iniciar ahora
-                            <Route path="/video_class" component={VideoClass} ></Route>
-                        </Button>*/ 
-                        }
                         
-                            
-                                
-                           
                         
-      
-                      
+                        <Button size="large" style={global.gradientButtonStyle}>
+                          <Link style={global.linkStyle} to="/video_class">
+                              Iniciar ahora
+                          </Link>    
+                        </Button> 
                         
                     </Grid>
             </Grid>
