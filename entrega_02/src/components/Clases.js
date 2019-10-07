@@ -114,7 +114,7 @@ render(){
             <a className="close" onClick={close} href='/#'>
               &times;
             </a>
-            <div className="header"> Soy {this.props.nombre} y soy puto.</div>
+            <div className="header"> Soy {this.props.nombre} y soy gay.</div>
             <div className="content">
               <Video source={sources[0]} thumbnail = {thumbnail[0]}></Video>
             </div>

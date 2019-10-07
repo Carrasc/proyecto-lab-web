@@ -31,26 +31,26 @@ class Classes_Topics extends Component {
     render(){
         return(
             <Grid container = {true}  direction="row" justify="center" alignItems="center">
-                        <Grid item xs = {3} alignItems = "center" direction="row" justify="center" >
-                            <h1 style={global.gNumberTopic}>
-                                {this.props.classes[0]}
-                            </h1>
-                        </Grid>
-                        <Grid item xs = {6}>
-                            <div style={{textAlign: 'left', verticalAlign:'center'}}>
-                                <h1 style={global.gSecondaryTitleFont}>
-                                    {this.props.classes[1]}
-                                </h1>
-                                <p style={global.gmFont}>
-                                    {this.props.classes[2]}
-                                </p>
-                            </div>
-                        </Grid>
-                        <Grid item xs = {3}>
-                            <CheckCircleIcon fontSize="large" htmlColor="blue" />
-                        </Grid>
-                        <div style={this.topicStyle}></div>
-                    </Grid>
+                <Grid item xs = {3} alignItems = "center" direction="row" justify="center" >
+                    <h1 style={global.gNumberTopic}>
+                        {this.props.classes[0]}
+                    </h1>
+                </Grid>
+                <Grid item xs = {6}>
+                    <div style={{textAlign: 'left', verticalAlign:'center'}}>
+                        <h1 style={global.gSecondaryTitleFont}>
+                            {this.props.classes[1]}
+                        </h1>
+                        <p style={global.gmFont}>
+                            {this.props.classes[2]}
+                        </p>
+                    </div>
+                </Grid>
+                <Grid item xs = {3}>
+                    <CheckCircleIcon fontSize="large" htmlColor="blue" />
+                </Grid>
+                <div style={this.topicStyle}></div>
+            </Grid>
                         
         );
     }

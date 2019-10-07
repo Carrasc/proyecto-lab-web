@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 import Carousel from "react-multi-carousel";
-import { Image } from "semantic-ui-react";
 import 'react-multi-carousel/lib/styles.css';
 import global from "../styles/global.js";
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Subclass from './Classes/Subclass';
 
 
 const useStyles = makeStyles(theme => ({
@@ -83,7 +78,8 @@ export default class SectionCarousel extends Component {
         focusOnSelect={false}
         showDots={true}
         arrows={true}
-        centerMode={true}
+        //centerMode={true}
+        //partialVisbile
         >       
         {this.props.component}
       </Carousel>
