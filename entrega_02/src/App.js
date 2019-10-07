@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './views/Home';
 import VideoClass from './views/VideoClass';
+import Example from './components/Example'
 
 import { BrowserRouter, Route, Link } from "react-router-dom";
 //import GoogleFontLoader from 'react-google-font-loader';
@@ -17,15 +18,17 @@ function App(props) {
   
 
   return (
-    <BrowserRouter>
-      <div>
-        <Link to="/"></Link>
-        <Link to="/video_class"></Link>
+    <Example/>
+
+    // <BrowserRouter>
+    //   <div>
+    //     <Link to="/"></Link>
+    //     <Link to="/video_class"></Link>
       
-        <Route exact path="/" component={Home} />
-        <Route exact path="/video_class" component={VideoClass} />
-      </div>
-    </BrowserRouter>
+    //     <Route exact path="/" component={VideoClass} />
+    //     <Route exact path="/video_class" component={VideoClass} />
+    //   </div>
+    // </BrowserRouter>
       
  
   );
