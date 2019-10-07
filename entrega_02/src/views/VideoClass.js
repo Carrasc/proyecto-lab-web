@@ -37,6 +37,12 @@ class VideoClass extends Component {
         margin:'3em 0',
         borderBottom: '1px solid rgba(248, 248, 255, 1)',
     }
+    const classes = useStyles();
+    const [open, setOpen] = React.useState(true);
+  
+    const handleClick = () => {
+      setOpen(!open);
+    };
     render() {        
         return (
 
