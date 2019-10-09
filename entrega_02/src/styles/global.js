@@ -145,9 +145,9 @@ const global = {
   gsFont: {
     margin: 0,
     padding: 0,
-    fontSize: '.5em',
-    fontWeight: '1em',
-    color: 'gray'
+    fontSize: '13px',
+    fontWeight: '10em',
+    color: 'gray',
   },
   bsFont: {
     margin: 0,

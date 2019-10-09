@@ -17,8 +17,8 @@ import styles from "../styles/footerStyle.js";
 const useStyles = makeStyles(styles);
 
 const style = { 
-  width: "80%", 
-  height: "80%",
+  width: "60%", 
+  height: "60%",
   objectFit: "contain" 
   };
 
@@ -39,18 +39,19 @@ export default function Footer(props) {
   });
   return (
 	
-    <footer className={footerClasses}>
-		<hr/>
-     <Grid container = {true} style={global.footerContainer} >
-	
+    <footer style={global.footerContainer}>
+     <hr style={{backgroundColor:'red'}}/>
+	 <Grid container = {true} style={global.footerContainer} >
+	 
 		<Grid item xs = {12} sm = {3}>
 			<div >
 				<img src={logo} alt= "logo" style = {style}/>
 			</div>
 		</Grid>
 		<Grid item xs = {12} sm = {4} >
-			<div style = {text}>
-				<ListItem className={classes.inlineBlock} >
+			<div style ={global.gsFont}>
+		<List  >
+				<ListItem >
 				<a
 					href="https://www.creative-tim.com/?ref=mkr-footer"
 					className={classes.block}
@@ -58,6 +59,8 @@ export default function Footer(props) {
 					>
 					CONTÁCTANOS
 				</a>
+				</ListItem>
+				<ListItem>
 				<a
 					href="https://www.creative-tim.com/presentation?ref=mkr-footer"
 					className={classes.block}
@@ -65,6 +68,8 @@ export default function Footer(props) {
 				>
 					TÉRMINOS Y CONDICIONES
 				</a>
+				</ListItem>
+				<ListItem>
 				<a
 					href="http://blog.creative-tim.com/?ref=mkr-footer"
 					className={classes.block}
@@ -73,11 +78,12 @@ export default function Footer(props) {
 					AVISO DE PRIVACIDAD
 				</a>
 				</ListItem>
+			</List>
 			</div>
 		</Grid>
-		<Grid xs = {12} sm = {5}item >
-			<div style={{textAlign:"justify"}}>
-			&copy; 2018, Medu S.A de C.V.{" "} 
+		<Grid xs = {12} sm = {5}item style ={global.gmFont} >
+			<div style={{textAlign:"justify", }}>
+			&copy; <strong>2018, Medu S.A de C.V.</strong>{" "} 
 				<br/>
 				Lago Victoria #52
 			
@@ -86,6 +92,8 @@ export default function Footer(props) {
 			
 				<br/>
 				Ciudad de México. México. 
+				<br/>
+				<br/>
 				<br/>
 			contacto@medu.mx
 			

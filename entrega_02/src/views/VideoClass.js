@@ -53,7 +53,7 @@ function VideoClass () {
                
                 
                 <Grid style ={global.mainContainer}>
-                    <Video source={'http://media.w3.org/2010/05/sintel/trailer.mp4'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
+                    <Video source={'http://media.w3.org/2010/05/video/movie_300.webm'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
                 </Grid>
 
                 <Classes_Info title={titles} />
@@ -63,7 +63,7 @@ function VideoClass () {
                     
                     data.map((data, index) =>{
                         return (
-                        <div>    
+                        <div onClick={() => alert("Hello from here")}>    
                         <Subclass data={data} />
                         
                         </div>
@@ -71,23 +71,6 @@ function VideoClass () {
                         )})
                         
                 } />
-                <>
-                <Button
-                    onClick={(e) => setOpen(!open) ,console.log("skdhakl")}
-                    aria-controls="example-fade-text"
-                    aria-expanded={open}
-                >
-                    Toggle text
-                </Button>
-                <Fade in={open}>
-                    <div id="example-fade-text">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                    terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-                    labore wes anderson cred nesciunt sapiente ea proident.
-                    </div>
-                </Fade>
-                </>
-                   
          
 
                 <div style={global.mainContainer}>
