@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Player, ControlBar, BigPlayButton } from 'video-react';
-import  '../styles/videoReact.css';
+import '../styles/videoReact.css';
 
 const sources = {
   sintelTrailer: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
@@ -95,25 +95,25 @@ export default class Video extends Component {
 
   render() {
     return (
-        
-      <div class = "div1" style ={global.mainContainer}>
+
+      <div class="div1" style={global.mainContainer}>
         <Player 
           ref={player => {
             this.player = player;
           }}
           //autoPlay
           fluid={true}
-          poster = {this.props.thumbnail}
-          //aspectRatio ={'5:2'}
-      
-         
+          poster={this.props.thumbnail}
+          aspectRatio ={'16:9'}
+
+
         >
           <source src={this.props.source} />
           <BigPlayButton position="center" />
 
           <ControlBar autoHide={true} />
         </Player>
-       
+
       </div>
     );
   }

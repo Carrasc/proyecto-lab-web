@@ -6,11 +6,14 @@ import Clases from '../components/Clases';
 import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
 import Grid from '@material-ui/core/Grid';
+import Comments from '../components/Comments';
 import global from "../styles/global.js";
+import IntroVideo from '../components/IntroVideo'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 
 import { Image } from "semantic-ui-react";
+import Tendencies from '../components/Tendencies';
 
 const STYLE = {
   clase : {
@@ -55,13 +58,7 @@ function Home(props) {
   const { ...rest } = props;
   const matches = useMediaQuery('(min-width:600px)');
 
-  return (
-   
-    <div >
-
-        <NavBar />
-        <Introduction />
-        <Carousel component = {
+  /*<Carousel component = {
           imagesCarousel.map((img,index) =>{
             return (
               <Image
@@ -72,7 +69,19 @@ function Home(props) {
             
               )})
             
-          } />
+          } /> */
+  return (
+   
+    <div >
+
+        <NavBar />
+       
+
+
+        <Introduction />
+        <IntroVideo/>
+        
+          <Tendencies></Tendencies>
         <Reviews/>
         
         <div style={global.mainContainer}>
@@ -90,21 +99,22 @@ function Home(props) {
           </div>
         </div>
 
-        <Carousel component = {
-            imagesCarousel.map((img,index) =>{
-              return (
-                <Image
-                draggable={false}
-                spaced={'left'}
-                centerMode={true}
-                style={{ width: "90%", height: "100%" }}
-                src={img} 
-                />
-              
-                )})
-            } />
         
+           
+
         <Footer />
+		
+        <Grid style = {global.mainContainer} container={true}  justify="space-around"  alignItems="center" >
+			<Grid item xs = {12} sm = {4}>
+				<Comments/>
+			</Grid>
+			<Grid item xs = {12} sm = {4}>
+				<Comments/>
+			</Grid>
+			<Grid item xs = {12} sm = {4}>
+				<Comments/>
+			</Grid>
+        </Grid>
         
       
     </div>

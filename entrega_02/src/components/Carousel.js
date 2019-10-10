@@ -67,7 +67,7 @@ export default class SectionCarousel extends Component {
   return (
 
     <div style={global.mainContainer}>
-      <div style={{textAlign:"center"}}>
+      <div style={{textAlign:"center",}}>
         
       <Carousel
         itemClass="image-item"

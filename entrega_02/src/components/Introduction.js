@@ -19,16 +19,15 @@ function Introduction() {
         backgroundPosition:'center center',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
-        backgroundSize: 'cover',        
-        height:'35em',
+        backgroundSize: 'cover',      
     };
 
   
     
     var textDiv = {
-        position: 'absolute', 
-        top: '15%', 
-        left: '15%',
+        margin: 'auto',
+        textAlign: 'left',
+        padding: '5em 0 5em 5em',
         
     };
     return (
@@ -38,7 +37,7 @@ function Introduction() {
                         <h1 style={global.bMainTitleFont}>Medu Lectures</h1>
                         <h3 style={global.gSecondaryTitleFont}>Aprende medicina con los mejores médicos </h3>
                         
-                        <hr style= {{margin:'auto',width:'100%'}}/><br></br><br></br>
+                        <hr style= {{float: 'left', width:'40%'}}/><br></br><br></br>
 
                         <p style={global.bPFont}>Videoclases en línea con los contenidos médicos más relevantes. </p>
                         <p style={global.bPFont}>Más de 300 horas en video con 19 + instructores de alta calidad.</p>

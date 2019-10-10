@@ -11,31 +11,17 @@ import StarIcon from '@material-ui/icons/Star';
 function Reviews() {
 
     const style = { 
-        backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
+        //backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
          height:'100%',
          'backgroundSize': 'cover',
-         padding: '3em 0 0 0',
+         color: 'black'
          
     };
     
-    var text = {
-        color: 'white',
-        fontSize:'1em',
-        textAlign:'center',
-        marginTop: '1em'
-    };
-    var text2 = {
-        marginTop: '1em',
-        marginBottom: '1.5em',
-        color: 'white',
-        fontSize:'1.5em',
-        textAlign:'center',
-        fontWeight: 'bold'
-    };
 
-    var text4 = {
+    var text = {
         textAlign: 'center',
-        color: 'white',
+        color: 'blue',
         fontSize:'18px',
         width:'80%',
         margin:'auto',
@@ -44,29 +30,16 @@ function Reviews() {
     };
     var icons = {
         textAlign: 'left',
+        color:'blue'
     };
 
     return (
         <div style ={global.mainContainer}>
     
             <Grid container= {true}  justify="center" style ={style}>
-                <StarIcon style={{color:'white'}}></StarIcon>
-                <StarIcon style={{color:'white'}}></StarIcon>
-                <StarIcon style={{color:'white'}}></StarIcon>
-                <StarIcon style={{color:'white'}}></StarIcon>
-                <StarIcon style={{color:'white'}}></StarIcon>
                 
-                <Grid item xs = {12}  style = {text}>
-                    "Medu Lectures es la mejor plataforma de educación médica en español. Los mejores médicos, los mejores contenidos, la mejor plataforma"
-                </Grid>
-                <Grid item xs = {12}  style = {text2}>
-                    El PAÍS
-                </Grid>
-                
-                
-                <hr  style= {{margin:'auto',width:'80%'}}/>
 
-                <Grid container= {true}  justify="center" style ={text4}>
+                <Grid container= {true}  justify="center" style ={text}>
                     
                     <Grid item xs = {12} sm = {4}>
                     <LibraryBooksOutlinedIcon style = {icons} fontSize="large"/><br/>
