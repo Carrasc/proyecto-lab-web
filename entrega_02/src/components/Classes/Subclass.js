@@ -33,20 +33,11 @@ const images = [
  class Subclass extends Component{
       constructor (props){
           super(props);
-          console.log(this.props);
-          //console.log(this.props.pene);
-          console.log("EL CACAS")
-
-         
-      }
-     card = {
-        maxWidth: 345,
-        height: '30em'
       }
       render(){
         //console.log("props",this.props.comps);
         return (
-            <Card style={this.card}>
+            <Card>
                 <CardActionArea>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">

@@ -15,6 +15,8 @@ import Button from 'react-bootstrap/Button';
 import Fade from 'react-bootstrap/Fade';
 
 
+import NewCarousel from '../components/newCarousel'
+
 const titles = ['45 + CLASES', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ', '327 LECCIONES', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.'
 ]
 const classes = [
@@ -43,9 +45,7 @@ function VideoClass () {
         margin:'3em 0',
         borderBottom: '1px solid rgba(248, 248, 255, 1)',
     }
-   
-     
-        
+    
         return (
 
             <div>
@@ -53,7 +53,7 @@ function VideoClass () {
                
                 
                 <Grid style ={global.mainContainer}>
-                    <Video source={'http://media.w3.org/2010/05/video/movie_300.webm'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
+                    <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
                 </Grid>
 
                 <Classes_Info title={titles} />
@@ -85,7 +85,7 @@ function VideoClass () {
                         })}
                     </div>
                 </div>
-                
+                <NewCarousel/>
                 <Footer />
                 
             </div>

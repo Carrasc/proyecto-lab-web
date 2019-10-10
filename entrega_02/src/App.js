@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Home from './views/Home';
 import VideoClass from './views/VideoClass';
+import Footer from './components/Footer';
+
 //import Example from './components/Example'
 
 import { BrowserRouter, Route, Link } from "react-router-dom";
@@ -24,9 +26,11 @@ function App(props) {
       <div style={{fontFamily:'Nunito'}}>
         <Link to="/"></Link>
         <Link to="/video_class"></Link>
+        <Link to="/footer"></Link>
       
         <Route exact path="/" component={Home} />
         <Route exact path="/video_class" component={VideoClass} />
+        <Route exact path="/footer" component={Footer} />
       </div>
     </BrowserRouter>
       
