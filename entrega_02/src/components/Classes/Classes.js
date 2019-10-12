@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Grid from '@material-ui/core/Grid';
 
-import Video from '../components/Video';
+import Video from '../Videos/Video';
 import Popup from "reactjs-popup";
 
 
@@ -49,7 +49,7 @@ const STYLE = {
     }
 }
 
-class Clases extends Component {
+class Classes extends Component {
   
   constructor (props){
     super(props);
@@ -136,4 +136,4 @@ render(){
     }
 }
 
-export default Clases;
+export default Classes;

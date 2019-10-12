@@ -1,3 +1,89 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import Slider from "react-slick";
+
+class ReactSlickDemo extends React.Component {
+  render() {
+    var settings = {
+      dots: true
+    };
+
+    const containere = {
+      padding: '40px',
+      background: '#419be0'
+    }
+    
+    
+
+    return (
+      <div style={containere}>
+        <Slider {...settings}>
+          <div>
+            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+          </div>
+          <div>
+            <img style={{margin:'auto'}}src="http://placekitten.com/g/400/200" />
+          </div>
+          <div>
+            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+          </div>
+          <div>
+            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+          </div>
+        </Slider>
+      </div>
+    );
+  }
+}
+
+export default ReactSlickDemo;
+
+
+
+
+/*
+
+import React from "react";
+import ReactDOM from "react-dom";
+import Slider from "react-slick";
+
+class ReactSlickDemo extends React.Component {
+  render() {
+    var settings = {
+      dots: true
+    };
+
+    const containere = {
+      padding: '40px',
+      background: '#419be0'
+    }
+    
+    
+
+    return (
+      <div style={containere}>
+        <Slider {...settings}>
+          <div>
+            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+          </div>
+          <div>
+            <img style={{margin:'auto'}}src="http://placekitten.com/g/400/200" />
+          </div>
+          <div>
+            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+          </div>
+          <div>
+            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+          </div>
+        </Slider>
+      </div>
+    );
+  }
+}
+
+export default ReactSlickDemo;
+
+
 import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
 import uuidv4 from "uuid";
@@ -137,3 +223,5 @@ export default class Example extends Component {
     );
   }
 }
+
+*/

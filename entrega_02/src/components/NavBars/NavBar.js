@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/NavBar.scss';
-import Logo from '../logos/Logo2.png'
-import global from '../styles/global';
+import '../../styles/NavBar.scss';
+import Logo from '../../logos/Logo2.png'
+import global from '../../styles/global';
 import { HashLink as Link } from 'react-router-hash-link';
 
 
@@ -33,8 +33,6 @@ function NavBar() {
               <li>
                 <a href="#">Precios</a>
               </li>
-
-
               <li style={{ float: 'right', padding: '0 5em 0 0' }}>
                 <a href="#">Iniciar Sesión</a>
               </li>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import global from "../styles/global.js";
+import global from "../../styles/global.js";
 import Button from '@material-ui/core/Button';
 import PlayCircleFilledWhiteOutlinedIcon from '@material-ui/icons/PlayCircleFilledWhiteOutlined';
 import Divider from '@material-ui/core/Divider';

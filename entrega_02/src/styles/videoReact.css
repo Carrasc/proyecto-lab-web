@@ -214,16 +214,30 @@
   width: 100%;
   max-width: 100%;
   height: 0;
+  border-radius: 2em;
+  
+
+
 }
 .video-react.video-react-16-9 {
   padding-top: 56.25%;
+  border-radius: 2em;
+
+
+
 }
 .video-react.video-react-4-3 {
   padding-top: 75%;
+  border-radius: 2em;
+
+
 }
 .video-react.video-react-fill {
   width: 100%;
   height: 100%;
+  border-radius: 2em;
+
+
 }
 .video-react .video-react-video {
   position: absolute;
@@ -231,11 +245,15 @@
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 2em;
+
+
 }
 .video-react.video-react-fullscreen {
   width: 100% !important;
   height: 100% !important;
   padding-top: 0 !important;
+
 }
 .video-react.video-react-fullscreen.video-react-user-inactive {
   cursor: none;
@@ -250,7 +268,7 @@ body.video-react-full-window {
 body.video-react-full-window .video-react-fullscreen {
   position: fixed;
   overflow: hidden;
-  z-index: 1000;
+  z-index: -10;
   left: 0;
   top: 0;
   bottom: 0;
@@ -531,6 +549,7 @@ body.video-react-full-window .video-react-fullscreen {
 }
 .video-react-no-flex .video-react-menu-button-inline:hover, .video-react-no-flex .video-react-menu-button-inline:focus, .video-react-no-flex .video-react-menu-button-inline.video-react-slider-active {
   width: auto;
+
 }
 
 .video-react .video-react-poster {
@@ -539,7 +558,7 @@ body.video-react-full-window .video-react-fullscreen {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
-  background-color: #000000;
+  background-color: transparent;
   cursor: pointer;
   margin: 0;
   padding: 0;
@@ -549,6 +568,8 @@ body.video-react-full-window .video-react-fullscreen {
   bottom: 0;
   left: 0;
   height: 100%;
+  border-radius: 2em;
+
 }
 .video-react .video-react-poster img {
   display: block;
@@ -755,7 +776,7 @@ body.video-react-full-window .video-react-fullscreen {
 .video-react .video-react-time-tooltip,
 .video-react .video-react-play-progress:before,
 .video-react .video-react-play-progress:after {
-  z-index: 1;
+  z-index: -10;
 }
 
 .video-react .video-react-progress-control .video-react-keep-tooltips-inside:after {
@@ -794,11 +815,11 @@ body.video-react-full-window .video-react-fullscreen {
   width: 1px;
   height: 100%;
   background-color: #000;
-  z-index: 1;
+  z-index: -10;
 }
 
 .video-react-no-flex .video-react-progress-control .video-react-mouse-display {
-  z-index: 0;
+  z-index: -10;
 }
 
 .video-react .video-react-progress-control:hover .video-react-mouse-display {
@@ -850,7 +871,7 @@ body.video-react-full-window .video-react-fullscreen {
   top: 0;
   bottom: 0;
   right: 0;
-  z-index: 9999;
+  z-index: -10;
 }
 
 .video-react .video-react-time-control {
@@ -991,7 +1012,7 @@ body.video-react-full-window .video-react-fullscreen {
   top: 50%;
   width: 52px;
   height: 52px;
-  z-index: 17;
+  z-index: -17;
   margin-left: -26px;
   margin-top: -26px;
   background: rgba(0, 0, 0, 0.5);
