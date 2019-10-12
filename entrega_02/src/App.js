@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './views/Home';
 import VideoClass from './views/VideoClass';
+import Dashboard from './views/Dashboard';
 import Footer from './components/Footer';
 
 //import Example from './components/Example'
@@ -27,9 +28,11 @@ function App(props) {
         <Link to="/"></Link>
         <Link to="/video_class"></Link>
         <Link to="/footer"></Link>
+        <Link to="/dashboard"></Link>
       
         <Route exact path="/" component={Home} />
         <Route exact path="/video_class" component={VideoClass} />
+        <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/footer" component={Footer} />
       </div>
     </BrowserRouter>

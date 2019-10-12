@@ -11,6 +11,9 @@ const global = {
   footerContainer: {
     'margin': '0% 10% 0 10%',
   },
+  cardContainer: {
+    'margin': '5% 20% 5% 20%',
+  },
   videoContainer: {
     'margin': '0% 5% 0% 5%',
     height:'50%'
@@ -162,7 +165,7 @@ const global = {
     fontWeight: "light",
     fontFamily: "Nunito",
     backgroundImage: 'linear-gradient(to right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
-    height: '100%',
+    height: '70px',
     'backgroundSize': 'cover',
     borderRadius: '12px',
     color: 'white',
