@@ -15,6 +15,10 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import {Image} from 'semantic-ui-react';
+import img from '../images/tendencies.jpg';
+
+import global from '../styles/global';
 
 const useStyles = makeStyles(theme => ({
    
@@ -24,9 +28,9 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 const cardStyle = {
-    backgroundImage: 'linear-gradient(to bottom right, #0A14FF,70%, #00FAAA)',
-    borderRadius: '5em',
-    //padding: '3%',
+    backgroundImage: 'linear-gradient(141deg, #0A14FF 20%, #00FAAA 100%)',
+    borderRadius: '3em',
+    padding: '10%',
 }
 
 export default function RecipeReviewCard() {
@@ -41,16 +45,16 @@ export default function RecipeReviewCard() {
         <Card className={classes.card} style={cardStyle}>
             <CardHeader
                 avatar={
-                    <Avatar aria-label="recipe" className={classes.avatar}>
-                        R
-          </Avatar>
+                    <Avatar >
+                        <Image src={img} ></Image>                    
+                    </Avatar>
                 }
-
+                style = {global.wmFont}
                 title="Jessica Ramirez"
                 subheader="Tijuana, MEX"
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography style = {global.wsFont}>
                     EL CURSO DE LA DRA. MARIANA BILBAO ME ENCANTÓ.
             MUY BUENAS CLASES, MUY BUEN CONTENIDO Y, SOBRE
             TODO, UNA DOCTORA LLENA DE ENTUSIASMO Y GANAS DE

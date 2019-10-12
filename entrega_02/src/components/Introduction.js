@@ -12,48 +12,48 @@ import { NavLink } from 'react-router-dom'
 
 
 function Introduction() {
-//url(" + "../images/1.jpg" + ")
+    //url(" + "../images/1.jpg" + ")
 
-    const style = { 
+    const style = {
         background: `linear-gradient(to bottom, rgba(255,255,255,1), rgba(0,0,0,0) 50%), url(${require('../images/info.jpg')})`,
-        backgroundPosition:'center center',
+        backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
-        backgroundSize: 'cover',      
+        backgroundSize: 'cover',
     };
 
-  
-    
+
+
     var textDiv = {
         margin: 'auto',
         textAlign: 'left',
         padding: '5em 0 5em 5em',
-        
+
     };
     return (
-        <div style ={global.mainContainer}>
-            <Grid container= {true} justify="center" style = {style}>                    
-                    <Grid item xs = {12} sm = {12}  style = {textDiv}>
-                        <h1 style={global.bMainTitleFont}>Medu Lectures</h1>
-                        <h3 style={global.gSecondaryTitleFont}>Aprende medicina con los mejores médicos </h3>
-                        
-                        <hr style= {{float: 'left', width:'40%'}}/><br></br><br></br>
+        <div style={global.mainContainer}>
+            <Grid container={true} justify="center" style={style}>
+                <Grid item xs={12} sm={12} style={textDiv}>
+                    <h1 style={global.bMainTitleFont}>Medu Lectures</h1>
+                    <h3 style={global.gSecondaryTitleFont}>Aprende medicina con los mejores médicos </h3>
 
-                        <p style={global.bPFont}>Videoclases en línea con los contenidos médicos más relevantes. </p>
-                        <p style={global.bPFont}>Más de 300 horas en video con 19 + instructores de alta calidad.</p>
-                        <br></br>
-                        <br></br>
-                        <h3 style={{fontSize: '1.5em', fontWeight: '1em',color: 'blue'}}>Por solo $199.00 al mes.</h3>
-                       
-                        
-                        
-                        <Button size="large" style={global.gradientButtonStyle}>
-                          <Link style={global.linkStyle} to="/video_class">
-                              Iniciar ahora
-                          </Link>    
-                        </Button> 
-                        
-                    </Grid>
+                    <hr style={{ float: 'left', width: '40%' }} /><br></br><br></br>
+
+                    <p style={global.bPFont}>Videoclases en línea con los contenidos médicos más relevantes. </p>
+                    <p style={global.bPFont}>Más de 300 horas en video con 19 + instructores de alta calidad.</p>
+                    <br></br>
+                    <br></br>
+                    <h3 style={{ fontSize: '1.5em', fontWeight: '1em', color: 'blue' }}>Por solo $199.00 al mes.</h3>
+
+
+
+                    <Button size="large" style={global.gradientButtonStyle}>
+                        <Link style={global.linkStyle} to="/video_class">
+                            Iniciar ahora
+                          </Link>
+                    </Button>
+
+                </Grid>
             </Grid>
         </div>
 

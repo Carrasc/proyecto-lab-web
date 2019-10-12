@@ -98,24 +98,38 @@ function Home(props) {
             </Grid>   
           </div>
         </div>
+		<div style = {global.mainContainer}>
+			<h1 style={ {textAlign: 'center', color: 'blue', fontSize: '1em',}}>LOS ESTUDIANTES COMENTAN</h1>
+		</div>
 
-        
+		{/*Comments*/}
+        <div style = {global.cardContainer} >
+			<Grid container={true}  justify="space-around"  alignItems="center" spacing={3} >
+				<Grid item xs = {12} sm = {6} md = {4} width='1%'>
+					<Comments/>
+				</Grid>
+				<Grid item xs = {12} sm = {6} md = {4} width='1%'>
+					<Comments/>
+				</Grid>
+				<Grid item xs = {12} sm = {6} md = {4} width='1%'>
+					<Comments/>
+				</Grid>
+				<Grid item xs = {12} sm = {6} md = {4} width='1%'>
+					<Comments/>
+				</Grid>
+				<Grid item xs = {12} sm = {6} md = {4} width='1%'>
+					<Comments/>
+				</Grid>
+				<Grid item xs = {12} sm = {6} md = {4} width='1%'>
+					<Comments/>
+				</Grid>
+			</Grid>
+        </div>
            
 
         <Footer />
 		
-        <Grid style = {global.mainContainer} container={true}  justify="space-around"  alignItems="center" >
-			<Grid item xs = {12} sm = {4}>
-				<Comments/>
-			</Grid>
-			<Grid item xs = {12} sm = {4}>
-				<Comments/>
-			</Grid>
-			<Grid item xs = {12} sm = {4}>
-				<Comments/>
-			</Grid>
-        </Grid>
-        
+		
       
     </div>
   );
