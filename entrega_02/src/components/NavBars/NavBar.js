@@ -10,8 +10,8 @@ function NavBar() {
     position: "absolute",
     left: "50%",
     top: "10%",
-    width: "3%",
-    height: "auto"
+    width: "45px",
+    height: "45px"
   };
 
   return (
