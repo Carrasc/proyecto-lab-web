@@ -119,7 +119,9 @@ render(){
               &times;
             </a>*/}
             <div className="content" >
-              <Video source={sources[0]} thumbnail = {thumbnail[0]}></Video>
+              <div style = {{boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '2em'}}>
+                <Video source={sources[0]} thumbnail = {thumbnail[0]}></Video>
+              </div>
             </div>
             
           </div>
