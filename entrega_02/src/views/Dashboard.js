@@ -8,7 +8,8 @@ import { Image } from "semantic-ui-react";
 import Grid from '@material-ui/core/Grid';
 import Clases from '../components/Classes/Classes';
 import Footer from '../components/Footer';
-import { StickyContainer, Sticky } from 'react-sticky';
+import Sticky from 'react-sticky-el';
+import '../styles/sticky.css';
 
 
 
@@ -46,13 +47,14 @@ const imagesCarousel = [
   
   ]
 
+
 function Dashboard(props) {
   return (   
     <div >
 		<User_NavBar />
 		
-		<StickyContainer  style={{'z-index':1000000}}>
-  			<Sticky>{({ style }) => <div style={style}><Dashboard_NavBar/></div>}</Sticky>
+		
+  			<Sticky style = {{zIndex: 10001}}><Dashboard_NavBar/></Sticky>
 	  	
 		<div style= {global.mainContainer}>
 			<h1 style={global.bMainTitleFont}>Medu Lectures</h1>
@@ -89,7 +91,6 @@ function Dashboard(props) {
             </Grid>   
           </div>
         </div>
-		</StickyContainer>
 		<Footer/>
   
       

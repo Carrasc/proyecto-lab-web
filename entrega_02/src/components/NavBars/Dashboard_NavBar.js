@@ -14,6 +14,7 @@ function Dashboard_NavBar() {
     'margin': '0 5% 0 5%',
     backgroundColor: 'rgba(248, 248, 255, 1)',
     height:'3em',
+    zIndex:10001
   }
   const menu = {
     width: 'auto',
@@ -21,6 +22,7 @@ function Dashboard_NavBar() {
     flexDirection: 'column',
     'overflow-y': 'scroll',
     height:'12em',
+    zIndex:10001
     
   }
   const menuSub = {
@@ -29,12 +31,14 @@ function Dashboard_NavBar() {
     flexDirection: 'column',
     'overflow-y': 'scroll',
     height:'20em',
+    zIndex:10001
   }
   const menuItem ={
     cursor: 'pointer',
     padding: '1em',
     width: 'auto',
     borderBottom: '1px solid rgb(187, 187, 187)',
+    zIndex:10001
   }
   return (
 
