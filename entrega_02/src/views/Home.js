@@ -121,8 +121,8 @@ function Home(props) {
             </Grid>
         </div>
            
-
-        <Footer />
+        <a id="footer">  <Footer /></a>
+      
 		
 		
       

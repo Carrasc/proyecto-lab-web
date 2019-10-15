@@ -9,7 +9,6 @@ import Grid from '@material-ui/core/Grid';
 import Clases from '../components/Classes/Classes';
 import Footer from '../components/Footer';
 import Sticky from 'react-sticky-el';
-import '../styles/sticky.css';
 
 
 

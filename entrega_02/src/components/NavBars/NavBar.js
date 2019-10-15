@@ -23,7 +23,7 @@ function NavBar() {
             <img src={Logo} style={imageStyle}></img>
             <div>
               <li>
-                <Link to="/footer">Footer</Link>
+                <Link smooth to="/#footer">Footer</Link>
               </li>
 
               <li>
