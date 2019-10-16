@@ -10,7 +10,6 @@ import Email from "@material-ui/icons/Email";
 import Lock from '@material-ui/icons/Lock';
 
 // core components
-import Header from "./NavBar";
 import Footer from "./Footer.js";
 import GridContainer from "./GridContainer.js";
 import GridItem from "./GridItem.js";
