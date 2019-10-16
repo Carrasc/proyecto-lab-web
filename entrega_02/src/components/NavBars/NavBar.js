@@ -26,7 +26,7 @@ function NavBar() {
               <img src={Logo} style={imageStyle}></img>
               <div>
                 <li>
-                  <Link smooth to="/#footer">Footer</Link>
+                  <Link smooth to="/#contenidos">Contenidos</Link>
                 </li>
 
                 <li>
@@ -37,7 +37,7 @@ function NavBar() {
                   <a href="#">Precios</a>
                 </li>
                 <li style={{ float: 'right', padding: '0 5em 0 0' }}>
-                  <a onClick={() => setModalShow(true)}>Iniciar Sesión</a>
+                  <a href="#" onClick={() => setModalShow(true)}>Iniciar Sesión</a>
                 </li>
                 <li style={{ float: 'right',}}>
                   <a href="#">Registrar</a>

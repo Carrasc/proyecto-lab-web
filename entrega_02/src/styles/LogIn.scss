@@ -172,17 +172,26 @@
 
 .login_content{
     padding: 1rem;
-    text-align: center;
+    text-align: center; 
 
 }
 
-.login_content h4{
+.login_content h2{
     margin-block-start: 1em;
     margin-bottom: 2em;
+    font-family: Nunito;
+    color: blue;
 }
 
-.login_margin{
-    margin-bottom: 2em;
+.login_content img{
+    width: 45px;
+    height: 45px;
+}
+
+.login_content p{
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 2.2rem;
 }
 
 .login_modal{

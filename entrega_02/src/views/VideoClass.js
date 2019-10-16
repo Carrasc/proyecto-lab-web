@@ -49,7 +49,7 @@ function VideoClass () {
                 <User_NavBar />
                
                 
-                <Grid style ={global.mainContainer}>
+                <Grid item style ={global.mainContainer}>
                     <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
                 </Grid>
 

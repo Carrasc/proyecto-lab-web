@@ -13,9 +13,18 @@ import Lock from '@material-ui/icons/Lock';
 import Footer from "./Footer.js";
 import GridContainer from "./GridContainer.js";
 import GridItem from "./GridItem.js";
+import Logo from '../logos/Logo2.png'
 
 //Styles
 import '../styles/LogIn.scss';
+
+const imageStyle = {
+  position: "absolute",
+  left: "50%",
+  top: "10%",
+  width: "45px",
+  height: "45px"
+};
 
 
 export default function LoginPage(props) {  
@@ -28,7 +37,10 @@ export default function LoginPage(props) {
       >
         
         <div className="login_content">
-            <h4>Log In</h4>
+            <div className="login_margin">
+              <img src={Logo}></img>
+            </div>
+            <h2>Iniciar Sesión</h2>
             <div className="login_margin">
                 <TextField
                     id="email-input"
@@ -69,21 +81,21 @@ export default function LoginPage(props) {
             </div>
             <div className="login_margin">
                 <Button variant="contained" color="primary" fullWidth size="large">
-                    LOG IN
+                  Iniciar Sesión
                 </Button>
             </div>
             <p className="login_margin">
-                Need an account? <a>Sign up</a>
+                ¿No tienes una cuenta Medu? <a>Registrar</a>
             </p>
             <p className="login_margin">
-                <a>Forgot your password?</a>
+                <a>¿Olvidaste la contraseña?</a>
             </p>
             <p className="login_margin"> By logging in, you agree to our
                 <span>
-                    <a> Privacy Policy </a>
+                    <a> Aviso de privacidad </a>
                         and
-                        <a> Terms of Service</a>
-                    </span>
+                    <a> Términos y Condiciones</a>
+                </span>
             </p>
     
             

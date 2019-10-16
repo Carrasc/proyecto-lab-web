@@ -4,6 +4,7 @@ import Introduction from '../components/Introduction.js';
 import Reviews from '../components/Reviews';
 import Clases from '../components/Classes/Classes';
 import Footer from '../components/Footer';
+import Plan from '../components/Plan';
 import Grid from '@material-ui/core/Grid';
 import Comments from '../components/Comments';
 import global from "../styles/global.js";
@@ -80,23 +81,26 @@ function Home(props) {
         <Reviews/>
 
         {/*Classes*/}
-        <div style={global.mainContainer}>
-            <div style={{textAlign:"center"}}>
-                <Grid container = {true} >
-                {data.map((data,index) =>{
-                    return(
-                      <Grid item xs = {12} sm={6} style = {STYLE.clase} key= {index} >
-                        <Clases  row = {data} size={STYLE.clase.height}></Clases>
-                      </Grid>
-                        
-                    )
-                })}
-                </Grid>   
-            </div>
-        </div>
-
+        <a id="contenidos"> 	
+        </a>
+          <div style={global.mainContainer}>
+              <div style={{textAlign:"center"}}>
+			  	<h1 style={global.bMainTitleFont}>Especialidades</h1>
+                  <Grid container = {true} >
+                  {data.map((data,index) =>{
+                      return(
+                        <Grid item xs = {12} sm={6} style = {STYLE.clase} key= {index} >
+                          <Clases  row = {data} size={STYLE.clase.height}></Clases>
+                        </Grid>
+                          
+                      )
+                  })}
+                  </Grid>   
+              </div>
+          </div>
+       
         
-
+        <Plan/>
 		{/*Comments*/}
         <div style = {global.cardContainer} >
             <Grid container={true}  justify="space-around"  alignItems="center" spacing={3} >
@@ -121,7 +125,7 @@ function Home(props) {
             </Grid>
         </div>
            
-        <a id="footer">  <Footer /></a>
+        <Footer />
       
 		
 		
