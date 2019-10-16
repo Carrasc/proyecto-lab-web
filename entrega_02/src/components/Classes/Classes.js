@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Grid from '@material-ui/core/Grid';
 
-import Video from '../components/Video';
+import Video from '../Videos/Video';
 import Popup from "reactjs-popup";
 
 
@@ -10,7 +10,7 @@ const sources = [
 ];
 
 const thumbnail = [
-  ['https://media.istockphoto.com/photos/skilled-in-saving-lives-picture-id592647638?k=6&m=592647638&s=612x612&w=0&h=r9OPxixQe4qrZ9_4WCepXCBpqtQRqtTmvffB0jpXGfQ=']
+['https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg']
 ];
 
 const STYLE = {
@@ -46,10 +46,13 @@ const STYLE = {
     },
     st : {
         width: '70%',
+        background: 'rgba(255,255,255,0)',
+        borderStyle: 'none',
+        
     }
 }
 
-class Clases extends Component {
+class Classes extends Component {
   
   constructor (props){
     super(props);
@@ -111,24 +114,16 @@ render(){
         >
         {close => (
           <div className="modal">
+            {/*
             <a className="close" onClick={close} href='/#'>
               &times;
-            </a>
-            <div className="header"> Soy {this.props.nombre} y soy gay.</div>
+            </a>*/}
             <div className="content" >
-              <Video source={sources[0]} thumbnail = {thumbnail[0]}></Video>
+              <div style = {{boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '2em'}}>
+                <Video source={sources[0]} thumbnail = {thumbnail[0]}></Video>
+              </div>
             </div>
-            <div className="actions">
-              <button
-                className="button"
-                onClick={() => {
-                  console.log("modal closed ");
-                  close();
-                }}
-              >
-                Cerrar
-              </button>
-            </div>
+            
           </div>
         )}
       </Popup>
@@ -136,4 +131,4 @@ render(){
     }
 }
 
-export default Clases;
+export default Classes;

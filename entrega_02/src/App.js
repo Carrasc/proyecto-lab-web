@@ -27,13 +27,11 @@ function App(props) {
       <div style={{fontFamily:'Nunito'}}>
         <Link to="/"></Link>
         <Link to="/video_class"></Link>
-        <Link to="/footer"></Link>
         <Link to="/dashboard"></Link>
       
         <Route exact path="/" component={Home} />
         <Route exact path="/video_class" component={VideoClass} />
         <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/footer" component={Footer} />
       </div>
     </BrowserRouter>
       

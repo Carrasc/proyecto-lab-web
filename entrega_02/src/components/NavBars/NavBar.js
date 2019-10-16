@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/NavBar.scss';
-import Logo from '../logos/Logo2.png'
-import global from '../styles/global';
+import '../../styles/NavBar.scss';
+import Logo from '../../logos/Logo2.png'
+import global from '../../styles/global';
 import { HashLink as Link } from 'react-router-hash-link';
-import Login from '../components/LoginPage';
+import Login from '../LoginPage';
 
 
 function NavBar() {
@@ -13,8 +13,8 @@ function NavBar() {
     position: "absolute",
     left: "50%",
     top: "10%",
-    width: "3%",
-    height: "auto"
+    width: "45px",
+    height: "45px"
   };
 
   return (
@@ -26,7 +26,7 @@ function NavBar() {
               <img src={Logo} style={imageStyle}></img>
               <div>
                 <li>
-                  <Link to="/footer">Footer</Link>
+                  <Link smooth to="/#footer">Footer</Link>
                 </li>
 
                 <li>
@@ -36,8 +36,6 @@ function NavBar() {
                 <li>
                   <a href="#">Precios</a>
                 </li>
-
-
                 <li style={{ float: 'right', padding: '0 5em 0 0' }}>
                   <a onClick={() => setModalShow(true)}>Iniciar Sesión</a>
                 </li>
@@ -49,9 +47,10 @@ function NavBar() {
           </nav>
         </header>
       </div>
+
       <Login
-        show={modalShow}
-        onHide={() => setModalShow(false)}
+      show={modalShow}
+      onHide={() => setModalShow(false)}
       />
     </>
 

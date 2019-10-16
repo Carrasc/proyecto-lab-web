@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Player, ControlBar, BigPlayButton } from 'video-react';
-import '../styles/videoReact.css';
+import '../../styles/videoReact.css';
 
 const sources = {
   sintelTrailer: 'http://media.w3.org/2010/05/sintel/trailer.mp4',

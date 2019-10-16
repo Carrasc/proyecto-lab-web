@@ -1,5 +1,5 @@
 import React from 'react';
-import global from "../styles/global.js";
+import global from "../../styles/global.js";
 import Grid from '@material-ui/core/Grid';
 
 function User_NavBar() {

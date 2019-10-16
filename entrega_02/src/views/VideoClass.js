@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
 import { useState } from 'react';
 import Footer from '../components/Footer';
-import Classes_Info from '../components/Classes_Info';
+import Classes_Info from '../components/Classes/Classes_Info';
 import global from '../styles/global'
-import Video from '../components/Video'
-import User_NavBar from '../components/User_NavBar';
+import Video from '../components/Videos/Video'
+import User_NavBar from '../components/NavBars/User_NavBar';
 import Topics from '../components/Classes/Classes_Topics';
 import Grid from '@material-ui/core/Grid';
 import Subclass from '../components/Classes/Subclass';
-import Carousel from '../components/Carousel';
+import Carousel from '../components/Carousels/Carousel';
 import Collapse from 'react-bootstrap/Collapse';
-
 import Button from 'react-bootstrap/Button';
 import Fade from 'react-bootstrap/Fade';
-
-
-import NewCarousel from '../components/newCarousel'
+import ReactSlickDemo from '../components/Carousels/newCarousel';
 
 const titles = ['45 + CLASES', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ', '327 LECCIONES', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.'
 ]
@@ -85,7 +82,7 @@ function VideoClass () {
                         })}
                     </div>
                 </div>
-                <NewCarousel/>
+                <ReactSlickDemo/>
                 <Footer />
                 
             </div>
