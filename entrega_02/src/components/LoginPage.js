@@ -10,31 +10,20 @@ import Email from "@material-ui/icons/Email";
 import Lock from '@material-ui/icons/Lock';
 
 // core components
-import Footer from "./Footer.js";
-import GridContainer from "./GridContainer.js";
-import GridItem from "./GridItem.js";
 import Logo from '../logos/Logo2.png'
 
 //Styles
-//import '../styles/LogIn.scss';
+import '../styles/LogIn.scss';
 
-const imageStyle = {
-  position: "absolute",
-  left: "50%",
-  top: "10%",
-  width: "45px",
-  height: "45px"
-};
-
-
-export default function LoginPage(props) {  
+export default function LoginPage(props) 
+{  
   return (
     <Modal
         dialogClassName="login_modal"
         {...props}
         centered
-        aria-labelledby="example-custom-modal-styling-title"
-      >
+        aria-labelledby="login_modal"
+    >
         
         <div className="login_content">
             <div className="login_margin">
@@ -96,9 +85,7 @@ export default function LoginPage(props) {
             <p className="login_margin">     
                 <a>Términos y Condiciones</a>    
             </p>  
-        </div>
-        
-        
+        </div>  
       </Modal>
   );
 }

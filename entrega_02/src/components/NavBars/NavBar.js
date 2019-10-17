@@ -19,7 +19,7 @@ function NavBar() {
 
   return (
     <>
-      <div style={{ padding: '0 0 0 5em' }} class="container">
+      <div style={{ padding: '0 0 0 5em' }} className="container">
         <header  >
           <nav id="navbar">
             <ul style={{ fontSize: '0.7em'}}>

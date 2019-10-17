@@ -113,7 +113,7 @@ render(){
         contentStyle={STYLE.st}
         >
         {close => (
-          <div className="modal">
+          <div className="">
             {/*
             <a className="close" onClick={close} href='/#'>
               &times;
