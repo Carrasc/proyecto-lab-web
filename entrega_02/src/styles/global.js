@@ -165,7 +165,7 @@ const global = {
     fontWeight: "light",
     fontFamily: "Nunito",
     backgroundImage: 'linear-gradient(to right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
-    height: '70px',
+    //height: '70px',
     'backgroundSize': 'cover',
     borderRadius: '12px',
     color: 'white',

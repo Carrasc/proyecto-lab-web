@@ -6,11 +6,11 @@ import Popup from "reactjs-popup";
 
 
 const sources = [
-    ['http://media.w3.org/2010/05/sintel/trailer.mp4']
+    'http://media.w3.org/2010/05/sintel/trailer.mp4'
 ];
 
 const thumbnail = [
-['https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg']
+'https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg'
 ];
 
 const STYLE = {

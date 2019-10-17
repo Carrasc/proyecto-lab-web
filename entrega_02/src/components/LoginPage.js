@@ -16,7 +16,7 @@ import GridItem from "./GridItem.js";
 import Logo from '../logos/Logo2.png'
 
 //Styles
-import '../styles/LogIn.scss';
+//import '../styles/LogIn.scss';
 
 const imageStyle = {
   position: "absolute",
@@ -44,7 +44,7 @@ export default function LoginPage(props) {
             <div className="login_margin">
                 <TextField
                     id="email-input"
-                    label="Email"  
+                    label="Correo"  
                     type="email"
                     name="email"
                     autoComplete="email"
@@ -63,7 +63,7 @@ export default function LoginPage(props) {
             <div className="login_margin">
                 <TextField
                     id="password-input"
-                    label="Password"  
+                    label="Contraseña"  
                     type="password"
                     name="password"
                     autoComplete="password"
@@ -90,15 +90,12 @@ export default function LoginPage(props) {
             <p className="login_margin">
                 <a>¿Olvidaste la contraseña?</a>
             </p>
-            <p className="login_margin"> By logging in, you agree to our
-                <span>
-                    <a> Aviso de privacidad </a>
-                        and
-                    <a> Términos y Condiciones</a>
-                </span>
+            <p className="login_margin">   
+                <a>Aviso de privacidad</a>    
             </p>
-    
-            
+            <p className="login_margin">     
+                <a>Términos y Condiciones</a>    
+            </p>  
         </div>
         
         

@@ -199,6 +199,7 @@
 .video-react *:before,
 .video-react *:after {
   box-sizing: inherit;
+  border-radius: 2em;
 }
 .video-react ul {
   font-family: inherit;

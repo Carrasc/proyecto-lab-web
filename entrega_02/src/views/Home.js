@@ -11,8 +11,6 @@ import global from "../styles/global.js";
 import IntroVideo from '../components/Videos/IntroVideo';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-
-import { Image } from "semantic-ui-react";
 import Tendencies from '../components/Tendencies';
 
 

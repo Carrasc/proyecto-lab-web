@@ -3,15 +3,12 @@ import './App.css';
 import Home from './views/Home';
 import VideoClass from './views/VideoClass';
 import Dashboard from './views/Dashboard';
-import Footer from './components/Footer';
 
 //import Example from './components/Example'
 
 import { BrowserRouter, Route, Link } from "react-router-dom";
 //import GoogleFontLoader from 'react-google-font-loader';
 
-import global from './styles/global.js';
-import { height, fontFamily } from '@material-ui/system';
 
 
 
