@@ -19,34 +19,36 @@ function NavBar() {
 
   return (
     <>
-      <div style={{ padding: '0 0 0 5em' }} className="container">
-        <header  >
-          <nav id="navbar">
-            <ul style={{ fontSize: '0.7em'}}>
-              <img src={Logo} style={imageStyle}></img>
-              <div>
-                <li>
-                  <Link smooth to="/#contenidos">Contenidos</Link>
-                </li>
+      <div className='body_navbar'>
+          <div style={{ padding: '0 0 0 5em' }} className="container">
+            <header className='header_navbar' >
+              <nav id="navbar">
+                <ul className='ul_navbar' style={{ fontSize: '0.7em'}}>
+                  <img src={Logo} style={imageStyle}></img>
+                  <div>
+                    <li className='li_navbar'>
+                      <Link className='a_navbar' smooth to="/#contenidos">Contenidos</Link>
+                    </li>
 
-                <li>
-                  <a href="#">Funciones</a>
-                </li>
+                    <li className='li_navbar'>
+                      <a className='a_navbar' href="#">Funciones</a>
+                    </li>
 
-                <li>
-                  <a href="#">Precios</a>
-                </li>
-                <li style={{ float: 'right', padding: '0 5em 0 0' }}>
-                  <a href="#" onClick={() => setModalShow(true)}>Iniciar Sesión</a>
-                </li>
-                <li style={{ float: 'right',}}>
-                  <a href="#">Registrar</a>
-                </li>
-              </div>
-            </ul>
-          </nav>
-        </header>
-      </div>
+                    <li className='li_navbar'>
+                      <a className='a_navbar' href="#">Precios</a>
+                    </li>
+                    <li className='li_navbar' style={{ float: 'right', padding: '0 5em 0 0' }}>
+                      <a className='a_navbar' href="#" onClick={() => setModalShow(true)}>Iniciar Sesión</a>
+                    </li>
+                    <li className='li_navbar' style={{ float: 'right',}}>
+                      <a className='a_navbar' href="#">Registrar</a>
+                    </li>
+                  </div>
+                </ul>
+              </nav>
+            </header>
+          </div>
+        </div>
 
       <Login
       show={modalShow}

@@ -749,7 +749,7 @@ body.video-react-full-window .video-react-fullscreen {
 }
 
 .video-react .video-react-play-progress {
-  background-color: #fff;
+  background-color: rgb(0, 214, 196);
 }
 .video-react .video-react-play-progress:before {
   position: absolute;
@@ -789,7 +789,7 @@ body.video-react-full-window .video-react-fullscreen {
 
 .video-react .video-react-load-progress {
   background: #bfc7d3;
-  background: rgba(115, 133, 159, 0.5);
+  background: rgba(93, 160, 160, 0.5);
 }
 
 .video-react .video-react-load-progress div {

@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
-
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 }
 
-body {
+.body_navbar {
 	letter-spacing: 1px;
 	-webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
+	 -moz-osx-font-smoothing: grayscale;
+	 
 }
 
 .container {
@@ -23,7 +22,7 @@ body {
 	//background-color: transparent;
 }
 
-header {
+.header_navbar {
 	text-align: left;
 	padding: 0.5rem 0 5rem;
 	font-size: 1.25rem;
@@ -31,17 +30,17 @@ header {
 	
 }
 
-ul {
+.ul_navbar {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-li {
+.li_navbar {
 	display: inline-flex;
 }
 
-a {
+.a_navbar {
 	position: relative;
 	padding: 1rem 0 0.5rem;
 	margin: 0 1.5rem;

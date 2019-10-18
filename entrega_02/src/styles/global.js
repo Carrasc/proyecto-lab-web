@@ -55,10 +55,11 @@ const global = {
     margin: 0,
     padding: 0,
     fontSize: '1.5em',
-    //fontWeight: '900',
-    //textShadow: '0px 1px, 1px 0px, 1px 1px',
+    fontWeight:'1em',
+    letterSpacing: '1px',
     color: 'gray'
   },
+  
   bSecondaryTitleFont: {
     margin: 0,
     padding: 0,
@@ -162,27 +163,27 @@ const global = {
 
   // Button Styles 
   gradientButtonStyle: {
-    fontWeight: "light",
     fontFamily: "Nunito",
-    backgroundImage: 'linear-gradient(to right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
-    //height: '70px',
-    'backgroundSize': 'cover',
-    borderRadius: '12px',
-    color: 'white',
     fontWeight: 'bold',
+    fontSize: '12px',
+    background: 'linear-gradient(to bottom right, rgba(0,0,255), rgba(32,178,170))',
+    borderRadius: '1.5em',
+    color: 'white',
     boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+    padding: '1.2em 4em',
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    letterSpacing: '1px'
   },
 
   solidButtonStyle: {
-    fontWeight: "light",
     fontFamily: "Nunito",
-    background: '#0070DF',
-    height: '5em',
-    width: '60%',
-    'backgroundSize': 'cover',
-    borderRadius: '20px',
-    color: 'white',
     fontWeight: 'bold',
+    fontSize: '12px',
+    background: '#0070DF',
+    width: '60%',
+    borderRadius: '1em',
+    color: 'white',
     boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
   },
 

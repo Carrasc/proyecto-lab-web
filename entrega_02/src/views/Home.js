@@ -83,7 +83,6 @@ function Home(props) {
         </a>
           <div style={global.mainContainer}>
               <div style={{textAlign:"center"}}>
-			  	<h1 style={global.bMainTitleFont}>Especialidades</h1>
                   <Grid container = {true} >
                   {data.map((data,index) =>{
                       return(
