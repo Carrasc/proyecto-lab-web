@@ -13,6 +13,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import Tendencies from '../components/Tendencies';
 
+import Zoom from 'react-reveal/Zoom';
+
 
 
 const STYLE = {
@@ -76,7 +78,10 @@ function Home(props) {
         <Introduction />
         <IntroVideo />
         <Tendencies/>
-        <Reviews/>
+        
+        <Zoom>
+          <Reviews/>
+        </Zoom>
 
         {/*Classes*/}
         <a id="contenidos"> 	
