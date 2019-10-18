@@ -87,7 +87,6 @@ class Classes extends Component {
   }
     
 render(){
-  console.log(`url(${this.props.backgroundImage})`);
   var blurOverImage = {
     position: 'absolute',
     width:'100%',

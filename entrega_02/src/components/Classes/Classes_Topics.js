@@ -5,17 +5,11 @@ import Grid from '@material-ui/core/Grid';
 import global from "../../styles/global";
 
 //Icons
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
 
 
 class Classes_Topics extends Component {
-
-    constructor (props){
-        super(props);
-      }
-
    
       STYLE = {
         backgroundColor: 'rgba(248, 248, 255, 1)',

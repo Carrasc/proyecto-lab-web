@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styles/NavBar.scss';
-import { HashLink as Link } from 'react-router-hash-link';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 
 //popup
@@ -9,7 +8,7 @@ import Popup from "reactjs-popup";
 //styles
 import global from '../../styles/global'
 
-function Dashboard_NavBar() {
+function DashboardNavBar() {
   const barStyle={
     'margin': '0 5% 0 5%',
     backgroundColor: 'rgba(248, 248, 255, 1)',
@@ -47,27 +46,27 @@ function Dashboard_NavBar() {
         <nav id="navbar">
           <div style={global.bmFont}>
           <li style={{ float: 'left',}}>
-              <a href="#">Medu lectures</a>
+              <a href="/">Medu lectures</a>
             </li>
             <li style={{ float: 'right' }}>
-              <a href="#">ENARM</a>
+              <a href="/">ENARM</a>
             </li>
             <li style={{ float: 'right'}}>
-              <a href="#">MEDUTALKS</a>
+              <a href="/">MEDUTALKS</a>
             </li>
             <li style={{ float: 'right',}}>
-              <a href="#">MIS CLASES</a>
+              <a href="/">MIS CLASES</a>
             </li>
             <li style={{ float: 'right',}}>
               <Popup
-                trigger={ <a href="#">CATEGORÍAS</a>}
+                trigger={ <a href="/">CATEGORÍAS</a>}
                 position="bottom center"
                 on="hover"
                 contentStyle={{ padding: "0px", border: "none", width:'auto', boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '2em', }}
               >
                 <div style={menu}>
                   <Popup
-                    trigger={<a href="#" style={menuItem}>Urología</a>}
+                    trigger={<a href="/" style={menuItem}>Urología</a>}
                     position="right top"
                     on="hover"
                     closeOnDocumentClick
@@ -77,34 +76,34 @@ function Dashboard_NavBar() {
                     arrow={true}
                   >
                     <div style={menuSub} >
-                      <a href="#" style={menuItem}>Pene</a>
-                      <a href="#" style={menuItem}>Testículos</a>
-                      <a href="#" style={menuItem}>Vasos SanguíneosSanguíneosSanguíneos</a>
-                      <a href="#" style={menuItem}>Pene</a>
-                      <a href="#" style={menuItem}>Testículos</a>
-                      <a href="#" style={menuItem}>Vasos Sanguíneos</a>
-                      <a href="#" style={menuItem}>Pene</a>
-                      <a href="#" style={menuItem}>Testículos</a>
-                      <a href="#" style={menuItem}>Vasos Sanguíneos</a>
-                      <a href="#" style={menuItem}>Pene</a>
-                      <a href="#" style={menuItem}>Testículos</a>
-                      <a href="#" style={menuItem}>Vasos Sanguíneos</a>
-                      <a href="#" style={menuItem}>Pene</a>
-                      <a href="#" style={menuItem}>Testículos</a>
-                      <a href="#" style={menuItem}>Vasos Sanguíneos</a>
-                      <a href="#" style={menuItem}>Pene</a>
-                      <a href="#" style={menuItem}>Testículos</a>
-                      <a href="#" style={menuItem}>Vasos Sanguíneos</a>
-                      <a href="#" style={menuItem}>Pene</a>
-                      <a href="#" style={menuItem}>Testículos</a>
-                      <a href="#" style={menuItem}>Vasos Sanguíneos</a>
-                      <a href="#" style={menuItem}>Pene</a>
-                      <a href="#" style={menuItem}>Testículos</a>
-                      <a href="#" style={menuItem}>Vasos Sanguíneos</a>
+                      <a href="/" style={menuItem}>Pene</a>
+                      <a href="/" style={menuItem}>Testículos</a>
+                      <a href="/" style={menuItem}>Vasos SanguíneosSanguíneosSanguíneos</a>
+                      <a href="/" style={menuItem}>Pene</a>
+                      <a href="/" style={menuItem}>Testículos</a>
+                      <a href="/" style={menuItem}>Vasos Sanguíneos</a>
+                      <a href="/" style={menuItem}>Pene</a>
+                      <a href="/" style={menuItem}>Testículos</a>
+                      <a href="/" style={menuItem}>Vasos Sanguíneos</a>
+                      <a href="/" style={menuItem}>Pene</a>
+                      <a href="/" style={menuItem}>Testículos</a>
+                      <a href="/" style={menuItem}>Vasos Sanguíneos</a>
+                      <a href="/" style={menuItem}>Pene</a>
+                      <a href="/" style={menuItem}>Testículos</a>
+                      <a href="/" style={menuItem}>Vasos Sanguíneos</a>
+                      <a href="/" style={menuItem}>Pene</a>
+                      <a href="/" style={menuItem}>Testículos</a>
+                      <a href="/" style={menuItem}>Vasos Sanguíneos</a>
+                      <a href="/" style={menuItem}>Pene</a>
+                      <a href="/" style={menuItem}>Testículos</a>
+                      <a href="/" style={menuItem}>Vasos Sanguíneos</a>
+                      <a href="/" style={menuItem}>Pene</a>
+                      <a href="/" style={menuItem}>Testículos</a>
+                      <a href="/" style={menuItem}>Vasos Sanguíneos</a>
                     </div>
                   </Popup>
                   <Popup
-                    trigger={<a href="#" style={menuItem}>Cardiología</a>}
+                    trigger={<a href="/" style={menuItem}>Cardiología</a>}
                     position="right top"
                     on="hover"
                     closeOnDocumentClick
@@ -114,13 +113,13 @@ function Dashboard_NavBar() {
                     arrow={true}
                   >
                     <div style={menuSub}>
-                      <a href="#" style={menuItem}>Corazón</a>
-                      <a href="#" style={menuItem}>Válvulas</a>
-                      <a href="#" style={menuItem}>Ahorta</a>
+                      <a href="/" style={menuItem}>Corazón</a>
+                      <a href="/" style={menuItem}>Válvulas</a>
+                      <a href="/" style={menuItem}>Ahorta</a>
                     </div>
                   </Popup>
                   <Popup
-                    trigger={<a href="#" style={menuItem}>Ginecología</a>}
+                    trigger={<a href="/" style={menuItem}>Ginecología</a>}
                     position="right top"
                     on="hover"
                     closeOnDocumentClick
@@ -130,9 +129,9 @@ function Dashboard_NavBar() {
                     arrow={true}
                   >
                     <div style={menuSub}>
-                      <a href="#" style={menuItem}>Ginecología Obstétrica</a>
-                      <a href="#" style={menuItem}>Ginecología Pediátrica</a>
-                      <a href="#" style={menuItem}>Ginecología Obstétrica</a>
+                      <a href="/" style={menuItem}>Ginecología Obstétrica</a>
+                      <a href="/" style={menuItem}>Ginecología Pediátrica</a>
+                      <a href="/" style={menuItem}>Ginecología Obstétrica</a>
                     </div>
                   </Popup>
                 </div> 
@@ -140,7 +139,7 @@ function Dashboard_NavBar() {
               
             </li>
             <li style={{ float: 'right'}}>              
-              <a href="#"><SearchOutlinedIcon>BUSCAR</SearchOutlinedIcon></a>
+              <a href="/"><SearchOutlinedIcon>BUSCAR</SearchOutlinedIcon></a>
             </li>
           </div>
         </nav>
@@ -150,7 +149,7 @@ function Dashboard_NavBar() {
   );
 
 }
-export default Dashboard_NavBar;
+export default DashboardNavBar;
 
 
 
@@ -185,7 +184,7 @@ export default Dashboard_NavBar;
 
 
             <Popup
-                trigger={ <a href="#">CATEGORÍAS</a>}
+                trigger={ <a href="/">CATEGORÍAS</a>}
                 position="bottom center"
                 on="hover"
               >

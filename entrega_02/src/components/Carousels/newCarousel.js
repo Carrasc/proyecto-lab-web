@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Slider from "react-slick";
 
 class ReactSlickDemo extends React.Component {
@@ -19,16 +18,16 @@ class ReactSlickDemo extends React.Component {
       <div style={containere}>
         <Slider {...settings}>
           <div>
-            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+            <img alt = '' style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
           </div>
           <div>
-            <img style={{margin:'auto'}}src="http://placekitten.com/g/400/200" />
+            <img  alt = '' style={{margin:'auto'}}src="http://placekitten.com/g/400/200" />
           </div>
           <div>
-            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+            <img  alt = '' style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
           </div>
           <div>
-            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+            <img  alt = '' style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
           </div>
         </Slider>
       </div>

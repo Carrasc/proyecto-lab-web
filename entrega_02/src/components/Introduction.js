@@ -29,7 +29,7 @@ function Introduction() {
     };
     return (
         <div style={global.mainContainer}>
-            <Grid container={true} justify="left" style={style}>
+            <Grid container={true} justify="flex-start" style={style}>
                 <Grid item xs={8} sm={7} style={textDiv}>
                     <h1 style={global.bMainTitleFont}>Medu Lectures</h1>
                     <p style={global.gSecondaryTitleFont}>Aprende medicina con los mejores médicos </p>
