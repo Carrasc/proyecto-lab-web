@@ -1,74 +1,102 @@
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+@import '~antd/dist/antd.css';
+
+.menuBar{
+  padding: 0 20px;
+  top: 0;
+  width:100%;
+  background: #FFFFFF;
+  box-shadow: 0 0 30px #f3f1f1;
+  position: fixed;
+  z-index:20;
+}
+.logo{
+  width: 150px;
+  float: left;
+}
+.logo a{
+  display: inline-block;
+  font-size: 20px;
+  padding: 19px 20px;
+  text-transform: capitalize;
+  color: blue;
+  font-weight: bold;
+}
+.menuCon{
+  width: calc(100% - 150px);
+  float: left;
+}
+.menuCon .ant-menu-item{
+  padding: 0px 5px;
+}
+.menuCon .ant-menu-submenu-title{
+  padding: 10px 20px;
+}
+.menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a{
+  padding: 10px 15px;
+}
+.menuCon .ant-menu-horizontal{
+  border-bottom: none;
+}
+.menuCon .leftMenu{
+  float: left;
+}
+.menuCon .rightMenu{
+  float: right;
+}
+.barsMenu{
+  float: right;
+  height: 32px;
+  padding: 6px;
+  margin-top: 8px;
+  display: none;
+  background: none;
+}
+.barsBtn{
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: blue;
+  position: relative;
+}
+.barsBtn:after,.barsBtn:before{
+  content: attr(x);
+  width: 20px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 2px;
+  background: blue;
+}
+.barsBtn:after{
+  top: auto;
+  bottom: -6px;
+}
+.ant-drawer-body{
+  padding: 0;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item, .ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu{
+  display: inline-block;
+  width: 100%;
+}
+.ant-drawer-body .ant-menu-horizontal{
+  border-bottom: none;
 }
 
-.body_navbar {
-	letter-spacing: 1px;
-	-webkit-font-smoothing: antialiased;
-	 -moz-osx-font-smoothing: grayscale;
-	 
+
+@media(max-width: 767px){
+  .barsMenu{
+    display: inline-block;
+  }
+  .leftMenu,.rightMenu{
+    display: none;
+  }
+  .logo a{
+    margin-left: -20px;
+  }
+  .menuCon .ant-menu-item, .menuCon .ant-menu-submenu-title{
+    padding: 1px 20px;
+  }
+  .logo a{
+    padding: 10px 20px;
+  }
 }
-
-.container {
-	top: 0;
-	position: fixed;
-	flex-direction: column;
-    width: 100%;
-	z-index: 1;
-	background-color:white;
-	height: 4em;
-	//background-color: transparent;
-}
-
-.header_navbar {
-	text-align: left;
-	padding: 0.5rem 0 5rem;
-	font-size: 1.25rem;
-	font-weight: bold;
-	
-}
-
-.ul_navbar {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.li_navbar {
-	display: inline-flex;
-}
-
-.a_navbar {
-	position: relative;
-	padding: 1rem 0 0.5rem;
-	margin: 0 1.5rem;
-	color: blue;
-	text-decoration: none;
-	text-transform: uppercase;
-
-	
-	&::after {
-		content: '';
-		position: absolute;
-		left: 50%;
-		bottom: 0;
-		transform: translateX(-50%) scaleX(0);
-		transform-origin: 50% 50%;
-		width: 100%;
-		height: 1px;
-		background-color: #00FAAA;
-		transition: transform 250ms;
-	}
-	
-	&:hover {
-		
-		&::after {
-			transform: translateX(-50%) scaleX(1);
-		}
-		
-	}
-	
-}
-

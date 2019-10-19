@@ -10,12 +10,8 @@ import Comments from '../components/Comments';
 import global from "../styles/global.js";
 import IntroVideo from '../components/Videos/IntroVideo';
 import Tendencies from '../components/Tendencies';
-<<<<<<< HEAD
-
-
-=======
-import Zoom from 'react-reveal/Zoom';
->>>>>>> b321e3112794d2352f1fe0634f032764b4e024e5
+import antdCarousel from '../components/Carousels/antdCarousel';
+import CNavbar from '../components/NavBars/CNavBar';
 
 const STYLE = {
 	clase : {
@@ -39,7 +35,9 @@ function Home(props) {
    
     <div >
 
-        <NavBar />
+        
+
+        <CNavbar></CNavbar>
         <Introduction />
         <IntroVideo />
         <Tendencies/>
@@ -47,12 +45,7 @@ function Home(props) {
         <Reviews/>
 
         {/*Classes*/}
-<<<<<<< HEAD
-        
-        <a id="contenidos"> 	
-=======
         <a href = '/'id="contenidos"> 	
->>>>>>> b321e3112794d2352f1fe0634f032764b4e024e5
         </a>
           <div style={global.mainContainer}>
               <div style={{textAlign:"center"}}>
@@ -94,12 +87,8 @@ function Home(props) {
                 </Grid>
             </Grid>
         </div>
-           
         <Footer />
-      
-		
-		
-      
+		<antdCarousel />
     </div>
   );
 }

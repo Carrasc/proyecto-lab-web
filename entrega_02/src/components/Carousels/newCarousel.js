@@ -1,33 +1,77 @@
 import React from "react";
 import Slider from "react-slick";
 
+import "slick-carousel/slick/slick.css";
+
+import "slick-carousel/slick/slick-theme.css";
+
+import styles from "./StyleCarousel.css"
+
 class ReactSlickDemo extends React.Component {
   render() {
+    const imagesCarousel = [
+      require("../../images/2.jpg"),
+      require("../../images/3.jpg"),
+      require("../../images/4.jpg"),
+      //"https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      //"https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      //"https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      
+    ];
     var settings = {
-      dots: true
+      centerMode: true,
+
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        variableWidth: true,
+        variableHeight: true,
+  centerPadding: '60px',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+}
+  
+    const design = {
+      margin: '0 auto',
+      paddingTop: "5em"
+    };
+    const designImg = {
+      width:"100%",
+      //paddingTop: "5em"
     };
 
-    const containere = {
-      padding: '40px',
-      background: '#419be0'
-    }
-    
-    
-
     return (
-      <div style={containere}>
+      <div style={{ padding:"5em", width:"100%"}} >
         <Slider {...settings}>
-          <div>
-            <img alt = '' style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+          <div style={designImg}>
+            <img alt = ''  src="http://placekitten.com/g/400/200" style={design}/>
           </div>
-          <div>
-            <img  alt = '' style={{margin:'auto'}}src="http://placekitten.com/g/400/200" />
+          <div style={designImg} >
+            <img  alt = '' src="http://placekitten.com/g/400/200" style={design}/>
           </div>
-          <div>
-            <img  alt = '' style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+          <div style={designImg}>
+            <img  alt = '' src="http://placekitten.com/g/400/200" style={design}/>
           </div>
-          <div>
-            <img  alt = '' style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
+          <div style={designImg}>
+            <img  alt = '' src="http://placekitten.com/g/400/200" style={design}/>
           </div>
         </Slider>
       </div>

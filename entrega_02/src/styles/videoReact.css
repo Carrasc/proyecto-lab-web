@@ -423,9 +423,6 @@ body.video-react-full-window .video-react-fullscreen {
 .video-react:hover .video-react-big-play-button,
 .video-react .video-react-big-play-button:focus {
   outline: 0;
-  border-color: #fff;
-  background-color: #73859f;
-  background-color: rgba(0, 68, 163, 0.5);
   -webkit-transition: all 0s;
   -moz-transition: all 0s;
   -o-transition: all 0s;
