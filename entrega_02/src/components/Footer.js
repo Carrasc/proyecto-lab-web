@@ -10,6 +10,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import logo from '../logos/LogoMedu1.png';
 import Grid from '@material-ui/core/Grid';
 import global from "../styles/global.js";
+import TwitterIcon from '@material-ui/icons/Twitter';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import { spacing } from '@material-ui/system';
+import '../styles/footerStyle.css'
+
 
 
 import styles from "../styles/footerStyle.js";
@@ -40,63 +47,57 @@ export default function Footer(props) {
   return (
 	
     <footer style={global.footerContainer}>
-     <hr style={{backgroundColor:'red'}}/>
-	 <Grid container = {true} style={global.footerContainer} >
+     <hr />
+	 <Grid
+		container
+		direction="row"
+		justify="flex-start"
+		alignItems="center"
+		spacing={1}
+		style={global.footerContainer} >
 	 
-		<Grid item xs = {12} sm = {3}>
-			<div >
+		<Grid item xs = {10} sm = {3}  >
+			<div className= 'textFooter'>
 				<img src={logo} alt= "logo" style = {style}/>
 			</div>
 		</Grid>
-		<Grid item xs = {12} sm = {4} >
-			<div style ={global.gsFont}>
-		<List  >
-				<ListItem >
-				<a
-					href="https://www.creative-tim.com/?ref=mkr-footer"
-					className={classes.block}
-					target="_blank"
-					>
-					CONTÁCTANOS
+		<Grid item xs = {10} sm = {3}  >
+			<div className= 'textFooter' style ={global.gmFont}>
+				<a href="/" target="_blank">
+					<strong>CONTÁCTANOS</strong>
 				</a>
-				</ListItem>
-				<ListItem>
-				<a
-					href="https://www.creative-tim.com/presentation?ref=mkr-footer"
-					className={classes.block}
-					target="_blank"
-				>
-					TÉRMINOS Y CONDICIONES
+				<br/>
+				<br/>
+				<a href="/" target="_blank">
+					<strong>TÉRMINOS Y CONDICIONES</strong>
 				</a>
-				</ListItem>
-				<ListItem>
-				<a
-					href="http://blog.creative-tim.com/?ref=mkr-footer"
-					className={classes.block}
-					target="_blank"
-				>
-					AVISO DE PRIVACIDAD
-				</a>
-				</ListItem>
-			</List>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<a href="/twitter" target="_blank">< TwitterIcon /></a>	
+				<a href="/twitter" target="_blank"><FacebookIcon/></a>
+				<a href="/twitter" target="_blank"><YouTubeIcon/></a>
+				<a href="/twitter" target="_blank"><InstagramIcon/></a>	
+				
 			</div>
 		</Grid>
-		<Grid xs = {12} sm = {5}item style ={global.gmFont} >
-			<div style={{textAlign:"justify", }}>
+		<Grid xs = {10} sm = {5} item style ={global.gmFont} >
+			<div className= 'textFooter' >
 			&copy; <strong>2018, Medu S.A de C.V.</strong>{" "} 
 				<br/>
-				Lago Victoria #52
+				<br/>
+				<strong>Lago Victoria #52</strong>
 			
 				<br/>
-				Col. Granda, Del. Miguel Hidalgo, C.P. 11520
+				<strong>Col. Granda, Del. Miguel Hidalgo, C.P. 11520</strong>
 			
 				<br/>
-				Ciudad de México. México. 
+				<strong>Ciudad de México. México. </strong>
 				<br/>
 				<br/>
 				<br/>
 			contacto@medu.mx
-			
 			
 			</div>
 		</Grid>

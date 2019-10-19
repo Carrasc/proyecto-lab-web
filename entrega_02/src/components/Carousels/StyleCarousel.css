@@ -4,9 +4,17 @@
 
 }
 .slick-current img{
-    width: 650px !important;
-    padding-top: 0px !important;
+    width: 420px !important;
+    padding: 0px !important;
+    z-index: 1000;
+
   }
+.slick-list {
+  padding: 0px 2em 2em 2em !important;
+  overflow-y: visible !important;
+
+  margin:auto !important;
+}
   
   .tile-container{
     padding: 50px;
