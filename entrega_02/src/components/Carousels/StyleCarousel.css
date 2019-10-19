@@ -1,0 +1,32 @@
+.slick-container
+{
+ position: relative;
+
+}
+.slick-current img{
+    width: 650px !important;
+    padding-top: 0px !important;
+  }
+  
+  .tile-container{
+    padding: 50px;
+  }
+  
+
+  
+  .slick-arrow{
+    background-color: black;
+    height: 62px;
+    width: 83px;
+    z-index: 3;
+    &:hover{
+      background-color: black;
+   
+    }
+    &:focus{
+      background-color: black;
+    }
+    &:active{
+      background-color: black;
+    }
+  }

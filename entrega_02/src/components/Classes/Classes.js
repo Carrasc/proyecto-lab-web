@@ -5,6 +5,7 @@ import Video from '../Videos/Video';
 import Popup from "reactjs-popup";
 
 
+
 const sources = [
     'http://media.w3.org/2010/05/sintel/trailer.mp4'
 ];
@@ -95,6 +96,7 @@ render(){
   } 
     return (
         <Popup trigger={
+        
         <Grid item style = {this.img}>
           <div style={blurOverImage} onMouseOver={this.overClass.bind(this)} onMouseOut={this.outClass.bind(this)}>
             <div style={STYLE.gradiantDiv}>
@@ -105,7 +107,8 @@ render(){
             </div>
           </div>
         </Grid>
-        } 
+        
+        }
         lockScroll
         closeOnEscape
         modal

@@ -4,16 +4,12 @@ import React from 'react';
 import global from "../styles/global.js";
 import Grid from '@material-ui/core/Grid';
 
-import {Link } from "react-router-dom";
 
 
-
-
-
-function Introduction() {
+class Introduction extends React.Component{
     //url(" + "../images/1.jpg" + ")
 
-    const style = {
+    style = {
         background: `linear-gradient(to bottom, rgba(255,255,255,1), rgba(0,0,0,0) 50%), url(${require('../images/info.jpg')})`,
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
@@ -23,14 +19,16 @@ function Introduction() {
 
 
 
-    var textDiv = {
+    textDiv = {
         padding: '5em 0 5em 5em',
 
     };
+
+    render(){
     return (
         <div style={global.mainContainer}>
-            <Grid container={true} justify="flex-start" style={style}>
-                <Grid item xs={8} sm={7} style={textDiv}>
+            <Grid container={true} justify="flex-start" style={this.style}>
+                <Grid item xs={8} sm={7} style={this.textDiv}>
                     <h1 style={global.bMainTitleFont}>Medu Lectures</h1>
                     <p style={global.gSecondaryTitleFont}>Aprende medicina con los mejores médicos </p>
 
@@ -42,15 +40,16 @@ function Introduction() {
                     <br></br>
                     <h3 style={{ fontSize: '1.5em', fontWeight: '1em', color: 'blue', letterSpacing: '1px'}}>Por solo $199.00 al mes.</h3>
 
-                        <Link style={global.gradientButtonStyle} to="/video_class">
-                            Iniciar ahora
-                        </Link>
+                    <button style={global.gradientButtonStyle} onClick={this.handleClick}>
+                        Iniciar ahora
+                    </button>
 
                 </Grid>
             </Grid>
         </div>
 
     );
+    }
 
 }
 export default Introduction;

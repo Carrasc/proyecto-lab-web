@@ -17,7 +17,7 @@ import 'react-multi-carousel/lib/styles.css';
             <Card>
                 <CardActionArea>
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
+                        <Typography gutterBottom variant="p" component="h2">
                             <h1 style={global.gsFont}>Completadas {this.props.data[0]} de {this.props.data[1]}</h1>
                         </Typography>
                     </CardContent>
