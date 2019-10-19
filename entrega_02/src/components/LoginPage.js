@@ -27,7 +27,7 @@ export default function LoginPage(props)
         
         <div className="login_content">
             <div className="login_margin">
-              <img src={Logo}></img>
+              <img alt = '' src={Logo}></img>
             </div>
             <h2>Iniciar Sesión</h2>
             <div className="login_margin">
@@ -74,16 +74,16 @@ export default function LoginPage(props)
                 </Button>
             </div>
             <p className="login_margin">
-                ¿No tienes una cuenta Medu? <a>Registrar</a>
+                ¿No tienes una cuenta Medu? <a href='/'>Registrar</a>
             </p>
             <p className="login_margin">
-                <a>¿Olvidaste la contraseña?</a>
+                <a href='/'>¿Olvidaste la contraseña?</a>
             </p>
             <p className="login_margin">   
-                <a>Aviso de privacidad</a>    
+                <a href='/'>Aviso de privacidad</a>    
             </p>
             <p className="login_margin">     
-                <a>Términos y Condiciones</a>    
+                <a href='/'>Términos y Condiciones</a>    
             </p>  
         </div>  
       </Modal>

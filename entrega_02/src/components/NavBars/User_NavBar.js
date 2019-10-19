@@ -2,7 +2,7 @@ import React from 'react';
 import global from "../../styles/global.js";
 import Grid from '@material-ui/core/Grid';
 
-function User_NavBar() {
+function UserNavBar() {
 
     const style = { 
         backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
@@ -40,6 +40,6 @@ function User_NavBar() {
     );
 
 }
-export default User_NavBar;
+export default UserNavBar;
 
 

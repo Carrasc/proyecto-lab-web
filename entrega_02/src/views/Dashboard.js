@@ -1,8 +1,7 @@
 import React from 'react';
 import global from "../styles/global.js";
-import User_NavBar from '../components/NavBars/User_NavBar';
-import NavBar from '../components/NavBars/NavBar';
-import Dashboard_NavBar from '../components/NavBars/Dashboard_NavBar.js';
+import UserNavBar from '../components/NavBars/User_NavBar';
+import DashboardNavBar from '../components/NavBars/Dashboard_NavBar.js';
 import Carousel from '../components/Carousels/Carousel';
 import { Image } from "semantic-ui-react";
 import Grid from '@material-ui/core/Grid';
@@ -30,19 +29,12 @@ const imagesCarousel = [
   
   ];
 
-  function importAll(r) {
-	let images = {};
-	r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-	return images;
-  }
-  
-  const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
-  
+ 
   var data = [
 	['Luis Fernando Carrasco','Urologí', 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='],
-	['Mauricio Peon','Ginecología', images['2.jpg']],
-	['Alexandro Marcelo','Neurología', images['5.jpg']],
-	['Romeo Varela','Cardiología', images['6.jpg']],
+	['Mauricio Peon','Ginecología', 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='],
+	['Alexandro Marcelo','Neurología','https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='],
+	['Romeo Varela','Cardiología', 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='],
   
   ]
 
@@ -50,10 +42,10 @@ const imagesCarousel = [
 function Dashboard(props) {
   return (   
     <div >
-		<User_NavBar />
+		<UserNavBar/>
 		
 		
-  			<Sticky style = {{zIndex: 10001}}><Dashboard_NavBar/></Sticky>
+  		<Sticky style = {{zIndex: 10001}}><DashboardNavBar/></Sticky>
 	  	
 		<div style= {global.mainContainer}>
 			<h1 style={global.bMainTitleFont}>Medu Lectures</h1>
