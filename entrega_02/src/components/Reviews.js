@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import OndemandVideoOutlinedIcon from '@material-ui/icons/OndemandVideoOutlined';
 import WatchLaterOutlinedIcon from '@material-ui/icons/WatchLaterOutlined';
-import StarIcon from '@material-ui/icons/Star';
+import Fade from 'react-reveal/Fade';
 
 function Reviews() {
 
@@ -35,12 +35,12 @@ function Reviews() {
 
     return (
         <div style ={global.mainContainer}>
-    
+        <Fade up delay={100}>
             <Grid container= {true}  justify="center" style ={style}>
                 
-
+            
                 <Grid container= {true}  justify="center" style ={text}>
-                    
+                
                     <Grid item xs = {12} sm = {4}>
                     <LibraryBooksOutlinedIcon style = {icons} fontSize="large"/><br/>
                         <strong> 300 + lecciones</strong><br/> promedio por clase 
@@ -54,9 +54,11 @@ function Reviews() {
                         <b>10 Minutos</b><br/>  por subtema de lección
                     </Grid>
                 </Grid> 
+                
+                
             </Grid>
                     
-               
+            </Fade> 
         </div>
 
     );

@@ -59,7 +59,7 @@ const global = {
     letterSpacing: '1px',
     color: 'gray'
   },
-  
+
   bSecondaryTitleFont: {
     margin: 0,
     padding: 0,
@@ -173,7 +173,8 @@ const global = {
     padding: '1.2em 4em',
     textDecoration: 'none',
     textTransform: 'uppercase',
-    letterSpacing: '1px'
+    letterSpacing: '1px',
+    outline: 'none',
   },
 
   solidButtonStyle: {
@@ -185,6 +186,7 @@ const global = {
     borderRadius: '1em',
     color: 'white',
     boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+    outline: 'none',
   },
 
   linkStyle: {

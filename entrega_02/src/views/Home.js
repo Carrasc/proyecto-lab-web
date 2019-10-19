@@ -13,8 +13,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import Tendencies from '../components/Tendencies';
 
-import Zoom from 'react-reveal/Zoom';
-
 
 
 const STYLE = {
@@ -79,11 +77,10 @@ function Home(props) {
         <IntroVideo />
         <Tendencies/>
         
-        <Zoom>
-          <Reviews/>
-        </Zoom>
+        <Reviews/>
 
         {/*Classes*/}
+        
         <a id="contenidos"> 	
         </a>
           <div style={global.mainContainer}>
@@ -92,7 +89,7 @@ function Home(props) {
                   {data.map((data,index) =>{
                       return(
                         <Grid item xs = {12} sm={6} style = {STYLE.clase} key= {index} >
-                          <Clases  row = {data} size={STYLE.clase.height}></Clases>
+                            <Clases  row = {data} size={STYLE.clase.height}></Clases>
                         </Grid>
                           
                       )
