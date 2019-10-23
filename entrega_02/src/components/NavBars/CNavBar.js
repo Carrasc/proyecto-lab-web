@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './NavStyle.css';
+import logo from '../../images/logo.png';
 
 class CNavbar extends Component {
 
@@ -8,7 +9,7 @@ class CNavbar extends Component {
     <div class="topnav">
 
       <div class="topnav-centered">
-        <a href="#home" class="active">Home</a>
+        <img src={logo} style={{width:'40px', height:'40px', position:'absolute', top: '50%', right:'50%', transform: 'translate(-50%, -50%)'}}></img>
       </div>
 
       <a href="#news">News</a>

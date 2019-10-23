@@ -1,8 +1,11 @@
 /* Add a black background color to the top navigation */
 .topnav {
-  position: relative;
+  position: fixed;
   background-color: #333;
   overflow: hidden;
+  width:100%;
+  top: 0;
+  z-index: 100;
 }
 
 /* Style the links inside the navigation bar */

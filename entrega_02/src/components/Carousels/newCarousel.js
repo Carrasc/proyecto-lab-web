@@ -20,58 +20,57 @@ class ReactSlickDemo extends React.Component {
     ];
     var settings = {
       centerMode: true,
-
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        variableWidth: true,
-        variableHeight: true,
-  centerPadding: '60px',
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      //variableWidth: true,
+      //variableHeight: true,
+      centerPadding: '60px',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
     }
-  ]
-}
   
-    const design = {
+    const designImg = {
       margin: '0 auto',
       paddingTop: "5em"
     };
-    const designImg = {
+    const design = {
       width:"100%",
       //paddingTop: "5em"
     };
 
     return (
-      <div style={{ padding:"5em", width:"100%"}} >
+      <div style={design}>
         <Slider {...settings}>
-          <div style={designImg}>
-            <img alt = ''  src="http://placekitten.com/g/400/200" style={design}/>
+          <div >
+            <img alt = ''  src="http://placekitten.com/g/400/200" />
           </div>
-          <div style={designImg} >
-            <img  alt = '' src="http://placekitten.com/g/400/200" style={design}/>
+          <div >
+            <img  alt = '' src="http://placekitten.com/g/400/200" />
           </div>
-          <div style={designImg}>
-            <img  alt = '' src="http://placekitten.com/g/400/200" style={design}/>
+          <div >
+            <img  alt = '' src="http://placekitten.com/g/400/200" />
           </div>
-          <div style={designImg}>
-            <img  alt = '' src="http://placekitten.com/g/400/200" style={design}/>
+          <div >
+            <img  alt = '' src="http://placekitten.com/g/400/200" />
           </div>
         </Slider>
       </div>
@@ -262,6 +261,67 @@ export default class Example extends Component {
           </div>
         </div>
       </div>
+      </div>
+    );
+  }
+}
+
+var settings = {
+      centerMode: true,
+
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        variableWidth: true,
+        variableHeight: true,
+  centerPadding: '60px',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+}
+  
+    const design = {
+      margin: '0 auto',
+      paddingTop: "5em"
+    };
+    const designImg = {
+      width:"100%",
+      //paddingTop: "5em"
+    };
+
+    return (
+      <div style={{ padding:"5em", width:"100%"}} >
+        <Slider {...settings}>
+          <div style={designImg}>
+            <img alt = ''  src="http://placekitten.com/g/400/200" style={design}/>
+          </div>
+          <div style={designImg} >
+            <img  alt = '' src="http://placekitten.com/g/400/200" style={design}/>
+          </div>
+          <div style={designImg}>
+            <img  alt = '' src="http://placekitten.com/g/400/200" style={design}/>
+          </div>
+          <div style={designImg}>
+            <img  alt = '' src="http://placekitten.com/g/400/200" style={design}/>
+          </div>
+        </Slider>
       </div>
     );
   }
