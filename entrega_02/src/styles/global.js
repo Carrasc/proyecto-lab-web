@@ -9,7 +9,7 @@ const global = {
     'margin': '2.5% 5% 0 5%',
   },
   footerContainer: {
-    'margin': '0% 10% 0 10%',
+    'margin': '0% 10% 2% 10%',
   },
   cardContainer: {
     'margin': '5% 20% 5% 20%',
@@ -129,7 +129,7 @@ const global = {
     padding: 0,
     fontSize: '.8em',
     fontWeight: '1em',
-    color: 'gray'
+    color: 'gray',
   },
   bmFont: {
     margin: 0,

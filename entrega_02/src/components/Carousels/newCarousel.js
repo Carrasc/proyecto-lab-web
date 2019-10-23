@@ -9,6 +9,9 @@ import styles from "./StyleCarousel.css"
 
 class ReactSlickDemo extends React.Component {
   render() {
+
+    
+
     const imagesCarousel = [
       require("../../images/2.jpg"),
       require("../../images/3.jpg"),
@@ -18,55 +21,29 @@ class ReactSlickDemo extends React.Component {
       //"https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       
     ];
-    var settings = {
-      centerMode: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+    const settings = {
+      centerMode:true,
+      slidesToShow: 3,
+      //slidesToScroll: 1,
       infinite: true,
       //variableWidth: true,
-      //variableHeight: true,
-      centerPadding: '60px',
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
-        }
-      ]
-    }
-  
-    const designImg = {
-      margin: '0 auto',
-      paddingTop: "5em"
+      variableHeight: true,
+      centerPadding: '50px',
+      
+      speed: 500,
+      variableWidth: false,
     };
-    const design = {
-      width:"100%",
-      //paddingTop: "5em"
-    };
-
     return (
-      <div style={design}>
+      <div className='content'>
+        <h2>Center Mode</h2>
         <Slider {...settings}>
-          <div >
+          <div>
             <img alt = ''  src="http://placekitten.com/g/400/200" />
           </div>
           <div >
             <img  alt = '' src="http://placekitten.com/g/400/200" />
           </div>
-          <div >
+          <div>
             <img  alt = '' src="http://placekitten.com/g/400/200" />
           </div>
           <div >
