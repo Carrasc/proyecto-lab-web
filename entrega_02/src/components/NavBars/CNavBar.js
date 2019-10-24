@@ -56,7 +56,7 @@ export default function CNavbar(props) {
           <a className="navbar-brand abs" href="#" >
             <img src={logo} style={{width: '50px', padding: '5px 5px 5px 5px',}}/>
           </a>
-          <button className="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+          <button className="navbar-toggler navbar-primary bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
               <span className="navbar-toggler-icon" className="nav-link"></span>
           </button>
           <div className="navbar-collapse collapse" id="collapsingNavbar">

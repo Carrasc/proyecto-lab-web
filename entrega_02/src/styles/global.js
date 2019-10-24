@@ -183,7 +183,6 @@ const global = {
     color: 'white',
     boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
     padding: '1.2em 4em',
-    textDecoration: 'none',
     textTransform: 'uppercase',
     letterSpacing: '1px',
     outline: 'none',
