@@ -8,6 +8,9 @@ const global = {
   mainContainer: {
     'margin': '2.5% 5% 0 5%',
   },
+  mainContainerSides: {
+    'margin': '0 5% 0 5%',
+  },
   footerContainer: {
     'margin': '0% 10% 2% 10%',
   },
@@ -114,6 +117,15 @@ const global = {
     fontSize: '1em',
     fontWeight: '1em',
     color: 'blue'
+  },
+  bnlFont: {
+    margin: '0',
+    padding: '0',
+    fontSize: '1em',
+    fontWeight: '1em',
+    color: 'blue',
+    textShadow: '0px .2px, .2px 0px, .2px .2px',
+    letterSpacing: '0.0625em',
   },
 
 
