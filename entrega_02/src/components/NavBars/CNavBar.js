@@ -53,20 +53,18 @@ export default function CNavbar(props) {
       <CssBaseline />
       <HideOnScroll {...props}>
       <nav className="navbar navbar-expand-lg  bg-white" style={navBarStyle}>
-          <a className="navbar-brand abs" href="#">
-            <img src={logo} style={{width: '50px', padding: '5px'}}/>
+          <a className="navbar-brand abs" href="#" >
+            <img src={logo} style={{width: '50px', padding: '5px 5px 5px 5px',}}/>
           </a>
-          <button className="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-              <span className="navbar-toggler-icon"></span>
+          <button className="navbar-toggler navbar-primary bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span className="navbar-toggler-icon" className="nav-link"></span>
           </button>
           <div className="navbar-collapse collapse" id="collapsingNavbar">
               <ul className="navbar-nav">
-                  <li className="nav-item active" style={linksStyleLeft}>
-                    <Link smooth to="/#contenidos"><h1 style={global.bnlFont}>CONTENIDOS</h1></Link>
+                    <Link smooth to="/#contenidos" className="nav-link"><h1 style={global.bnlFont}>CONTENIDOS</h1></Link>
                       
-                  </li>
                   <li className="nav-item" style={linksStyleLeft}>
-                      <a className="nav-link" href="#popo"><h1 style={global.bnlFont}>FUNCIONES</h1></a>
+                    <Link smooth to="/#contenidos" className="nav-link"><h1 style={global.bnlFont}>FUNCIONES</h1></Link>
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
                       <a className="nav-link" href="#myAlert" data-toggle="collapse"><h1 style={global.bnlFont}>PRECIOS</h1></a>

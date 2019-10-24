@@ -10,13 +10,45 @@ import { Image } from "semantic-ui-react";
 
 import 'react-multi-carousel/lib/styles.css';
 
+const cardStyle ={
+    margin:'20px',
+    //height:'800px'
+}
 
+const textDiv = {
+    padding:'0 0 0 2em',
+    position: 'absolute',
+    bottom: '0',
+    left: '0',
+    textAlign: 'left'
+}
 
+const titulo = {
+    size: '50px',
+    color: 'blue',
+    display: 'inline',
+    margin: 0,
+    padding: 0
+}
+
+const especialidad = {
+    color: 'gray',
+    margin: 0,
+    padding: 0
+}
+const gradiantDiv = {
+    position: 'absolute',
+    bottom: '12%',
+    width:'100%',
+    height:'20%',        
+    background:'linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 90%)',  
+
+}
  class Subclass extends Component{
       render(){
         //console.log("props",this.props.comps);
         return (
-            <Card>
+            <Card style={cardStyle}>
                 <CardActionArea>
                     <CardContent>
                         <Typography gutterBottom variant="p" component="h2">
@@ -26,7 +58,63 @@ import 'react-multi-carousel/lib/styles.css';
                     <CardMedia>
                         <Image
                         draggable={false}
-                        style={{ width: "90%", height: "100%" }}
+                        style={{ width: "100%", height: "500px" }}
+                        src={this.props.data[2]} />
+                        <div style={gradiantDiv}>
+
+                        </div>
+                    </CardMedia>
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                        <h1 style={global.bmFont}>{this.props.data[3]}</h1>
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                        <h1 style={global.gmFont}>{this.props.data[4]}</h1>
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        );
+            }
+    }
+
+export default Subclass;
+
+
+
+/*
+
+//LAST
+import React, {Component} from 'react';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+import global from '../../styles/global'
+import { Image } from "semantic-ui-react";
+
+import 'react-multi-carousel/lib/styles.css';
+
+const cardStyle ={
+    margin:'20px',
+}
+
+ class Subclass extends Component{
+      render(){
+        //console.log("props",this.props.comps);
+        return (
+            <Card style={cardStyle}>
+                <CardActionArea>
+                    <CardContent>
+                        <Typography gutterBottom variant="p" component="h2">
+                            <h1 style={global.gsFont}>Completadas {this.props.data[0]} de {this.props.data[1]}</h1>
+                        </Typography>
+                    </CardContent>
+                    <CardMedia>
+                        <Image
+                        draggable={false}
+                        style={{ width: "100%", height: "100%" }}
                         src={this.props.data[2]} />
                     </CardMedia>
                     <CardContent>
@@ -44,6 +132,8 @@ import 'react-multi-carousel/lib/styles.css';
     }
 
 export default Subclass;
+*/
+
 
 
 /*

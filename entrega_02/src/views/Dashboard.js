@@ -9,8 +9,6 @@ import Clases from '../components/Classes/Classes';
 import Footer from '../components/Footer';
 import Sticky from 'react-sticky-el';
 
-
-
 const STYLE = {
 	clase : {
 		padding: '0 1em 2em 1em',

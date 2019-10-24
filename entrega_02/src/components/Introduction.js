@@ -3,6 +3,7 @@ import React from 'react';
 
 import global from "../styles/global.js";
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 
 
 
@@ -28,7 +29,7 @@ class Introduction extends React.Component{
     return (
         <div style={global.mainContainerSides}>
             <Grid container={true} justify="flex-start" style={this.style}>
-                <Grid item xs={8} sm={7} style={this.textDiv}>
+                <Grid item xs={8} sm={7} md={5} style={this.textDiv}>
                     <h1 style={global.bMainTitleFont}>Medu Lectures</h1>
                     <p style={global.gSecondaryTitleFont}>Aprende medicina con los mejores médicos </p>
 
@@ -40,9 +41,9 @@ class Introduction extends React.Component{
                     <br></br>
                     <h3 style={{ fontSize: '1.5em', fontWeight: '1em', color: 'blue', letterSpacing: '1px'}}>Por solo $199.00 al mes.</h3>
 
-                    <button style={global.gradientButtonStyle} onClick={this.handleClick}>
+                    <Button variant="contained" style={global.gradientButtonStyle} onClick={this.handleClick}>
                         Iniciar ahora
-                    </button>
+                    </Button>
 
                 </Grid>
             </Grid>
