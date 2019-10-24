@@ -76,9 +76,9 @@ export default function Footer(props) {
 				<br/>
 				<br/>
 				<a href="/twitter" target="_blank">< TwitterIcon /></a>	
-				<a href="/twitter" target="_blank"><FacebookIcon/></a>
-				<a href="/twitter" target="_blank"><YouTubeIcon/></a>
-				<a href="/twitter" target="_blank"><InstagramIcon/></a>	
+				<a href="https://www.facebook.com/medu.mx/" target="_blank"><FacebookIcon/></a>
+				<a href="https://www.youtube.com/channel/UCECP_zwknlcKww39sOv6Tzw" target="_blank"><YouTubeIcon/></a>
+				<a href="https://www.instagram.com/medu.mx/?hl=es-la" target="_blank"><InstagramIcon/></a>	
 				
 			</div>
 		</Grid>

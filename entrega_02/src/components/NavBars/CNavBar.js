@@ -8,6 +8,8 @@ import './NavStyle.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import logo from '../../images/logo.png';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 import global from '../../styles/global';
 
@@ -60,10 +62,11 @@ export default function CNavbar(props) {
           <div className="navbar-collapse collapse" id="collapsingNavbar">
               <ul className="navbar-nav">
                   <li className="nav-item active" style={linksStyleLeft}>
-                      <a className="nav-link" href="#"><h1 style={global.bnlFont}>CONTENIDOS</h1></a>
+                    <Link smooth to="/#contenidos"><h1 style={global.bnlFont}>CONTENIDOS</h1></Link>
+                      
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
-                      <a className="nav-link" href="//codeply.com"><h1 style={global.bnlFont}>FUNCIONES</h1></a>
+                    <Link smooth to="/#contenidos"><h1 style={global.bnlFont}>FUNCIONES</h1></Link>
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
                       <a className="nav-link" href="#myAlert" data-toggle="collapse"><h1 style={global.bnlFont}>PRECIOS</h1></a>
