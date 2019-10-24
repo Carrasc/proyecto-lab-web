@@ -66,7 +66,7 @@ export default function CNavbar(props) {
                       
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#contenidos"><h1 style={global.bnlFont}>FUNCIONES</h1></Link>
+                      <a className="nav-link" href="#popo"><h1 style={global.bnlFont}>FUNCIONES</h1></a>
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
                       <a className="nav-link" href="#myAlert" data-toggle="collapse"><h1 style={global.bnlFont}>PRECIOS</h1></a>
