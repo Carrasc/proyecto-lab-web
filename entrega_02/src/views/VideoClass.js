@@ -64,8 +64,6 @@ function VideoClass () {
                         )})
                         
                 } />
-         
-
                 <div style={global.mainContainer}>
                     <div style={STYLE}>
                         <div style={topicStyle}></div>

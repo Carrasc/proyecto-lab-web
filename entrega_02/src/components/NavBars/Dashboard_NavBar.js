@@ -39,6 +39,15 @@ function DashboardNavBar() {
     borderBottom: '1px solid rgb(187, 187, 187)',
     zIndex:10001
   }
+
+  const bb= {
+    margin: 0,
+    padding: 0,
+    fontSize: '.8em',
+    fontWeight: '1em',
+    color: 'blue'
+  }
+
   return (
 
     <div style={barStyle} >
