@@ -1,0 +1,12 @@
+.clase {
+    padding: 0 1em 2em 1em;
+    height:25vw;
+    width:100%
+}
+
+@media (max-width: 959px) {
+.clase
+    {
+        height:50vw;
+    }
+}
