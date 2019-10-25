@@ -62,7 +62,8 @@ function Home(props) {
               </div>
           </div>
        
-        
+          <a href = '/'id="precios"> 	
+        </a>
         <Plan/>
 		{/*Comments*/}
         <div style = {global.cardContainer} >
