@@ -53,18 +53,19 @@ export default function CNavbar(props) {
       <CssBaseline />
       <HideOnScroll {...props}>
       <nav className="navbar navbar-expand-lg  bg-white" style={navBarStyle}>
-          <a className="navbar-brand abs" href="#" >
+          <a className="navbar-brand abs" href="#" style={{zIndex: '-1'}}>
             <img src={logo} style={{width: '50px', padding: '5px 5px 5px 5px',}}/>
           </a>
-          <button className="navbar-toggler navbar-primary bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+          <button className="navbar-toggler navbar-dark bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
               <span className="navbar-toggler-icon" className="nav-link"></span>
           </button>
           <div className="navbar-collapse collapse" id="collapsingNavbar">
               <ul className="navbar-nav">
-                    <Link smooth to="/#contenidos" className="nav-link"><h1 style={global.bnlFont}>CONTENIDOS</h1></Link>
-                      
                   <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#contenidos" className="nav-link"><h1 style={global.bnlFont}>FUNCIONES</h1></Link>
+                    <Link smooth to="/#contenidos" className="nav-link"><h1 style={global.bnlFont}>CONTENIDOS</h1></Link>
+                  </li>
+                  <li className="nav-item" style={linksStyleLeft}>
+                    <Link smooth to="/#precios" className="nav-link" ><h1 style={global.bnlFont}>FUNCIONES</h1></Link>
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
                     <Link smooth to="/#precios" className="nav-link"><h1 style={global.bnlFont}>PRECIOS</h1></Link>
@@ -72,7 +73,7 @@ export default function CNavbar(props) {
               </ul>
               <ul className="navbar-nav ml-auto">
                   <li className="nav-item" style={linksStyleRight}>
-                      <a className="nav-link" href="" data-target="#myModal" data-toggle="modal"><h1 style={global.bnlFont}>MI CUENTA</h1></a>
+                      <a className="nav-link" href="" data-target="/#myModal" data-toggle="modal"><h1 style={global.bnlFont}>MI CUENTA</h1></a>
                   </li>
               </ul>
           </div>

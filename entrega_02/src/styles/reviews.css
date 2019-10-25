@@ -1,0 +1,25 @@
+.clase {
+    padding: 0 1em 2em 1em;
+    height:25vw;
+    width:100%
+}
+
+@media (max-width: 1123px) {
+.paragraph
+    {
+        font-size:15px;
+    }
+}
+@media (max-width: 1077px) {
+    .paragraph
+        {
+            font-size:14px;
+        }
+    }
+
+@media (max-width: 1030px) {
+    .paragraph
+        {
+            font-size:13px;
+        }
+    }

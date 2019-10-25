@@ -11,24 +11,19 @@ import img from '../images/tendencies.jpg';
 
 import global from '../styles/global';
 
-const useStyles = makeStyles(theme => ({
-   
-    
-    avatar: {
-        backgroundColor: red[500],
-    },
-}));
 const cardStyle = {
     backgroundImage: 'linear-gradient(141deg, #0A14FF 20%, #00FAAA 100%)',
     borderRadius: '3em',
     padding: '10%',
+    width: '250px', 
+    height: '250px',
+    margin: '0 0.5em 2.5em 0.5em'
 }
 
 export default function RecipeReviewCard() {
-    const classes = useStyles();
 
     return (
-        <Card className={classes.card} style={cardStyle}>
+        <Card style={cardStyle}>
             <CardHeader
                 avatar={
                     <Avatar >
@@ -42,10 +37,10 @@ export default function RecipeReviewCard() {
             <CardContent>
                 <Typography style = {global.wsFont}>
                     EL CURSO DE LA DRA. MARIANA BILBAO ME ENCANTÓ.
-            MUY BUENAS CLASES, MUY BUEN CONTENIDO Y, SOBRE
-            TODO, UNA DOCTORA LLENA DE ENTUSIASMO Y GANAS DE
-            ENSEÑAR. COMPLETAMENTE RECOMENDABLE PARA LOS
-            QUE ASPIRAN A LA RESIDENCIA EN PEDIATRÍA.
+                    MUY BUENAS CLASES, MUY BUEN CONTENIDO Y, SOBRE
+                    TODO, UNA DOCTORA LLENA DE ENTUSIASMO Y GANAS DE
+                    ENSEÑAR. COMPLETAMENTE RECOMENDABLE PARA LOS
+                    QUE ASPIRAN A LA RESIDENCIA EN PEDIATRÍA.
         </Typography>
             </CardContent>
 
