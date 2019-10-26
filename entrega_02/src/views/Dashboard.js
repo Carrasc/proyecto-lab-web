@@ -9,6 +9,7 @@ import Clases from '../components/Classes/Classes';
 import Footer from '../components/Footer';
 import Sticky from 'react-sticky-el';
 import ContinueLesson from '../components/Classes/ContinueLesson';
+import DashboardTendencie from '../components/DashboardTendencie';
 import '../styles/css/Class.css';
 
   
@@ -39,6 +40,13 @@ const imagesCarousel = [
   
   ];
 
+  var tendencieData = [
+    'https://i.pinimg.com/564x/92/d9/1e/92d91edc5d19e552a12bb12383337465.jpg','Dra. Marisol García','CARDIOLOGÍA' ,'05:04','085. Placenta Previa: Tipos y Diagnósticos'
+    
+  
+  ];
+
+
 
 function Dashboard(props) {
   return (   
@@ -63,29 +71,27 @@ function Dashboard(props) {
 
 
 		{/*Classes*/}
-		<a href = '/'id="contenidos"> 	
-			</a>
-			<div  style= {{textAlign:"center"}}>
-				<h3 style = {global.bSecondaryTitleFont}>AHORA DISPONIBLE</h3>
-			</div>
-			<div style={global.mainContainer}>
-				<div style={{textAlign:"center"}}>
-					<Grid container = {true} >
-					{data.map((data,index) =>{
-						return(
-						<Grid item sm= {12} md={6} className = 'clase' key= {index} >
-							<Clases  row = {data} ></Clases>
-						</Grid>
-						
-						)
-					})}
-				</Grid>   
+		<div  style= {{textAlign:"center", marginTop:'3em'}}>
+			<h3 style = {global.bSecondaryTitleFont}>ESPECIALIDADES</h3>
+		</div>
+		<div style={global.mainContainer}>
+			<div style={{textAlign:"center"}}>
+				<Grid container = {true} >
+				{data.map((data,index) =>{
+					return(
+					<Grid item sm= {12} md={6} className = 'clase' key= {index} >
+						<Clases  row = {data} ></Clases>
+					</Grid>
+					
+					)
+				})}
+			</Grid>   
 			</div>
 		</div>
 
-      
-      
-  	<Footer/>
+		<DashboardTendencie tendencieData = {tendencieData}/>
+		
+		<Footer/>
   
       
     </div>

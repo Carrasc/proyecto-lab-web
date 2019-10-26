@@ -74,12 +74,12 @@ function Home(props) {
        
           <a href = '/'id="precios"> 	
         </a>
-		<div  style= {{textAlign:"center" ,margin:'3em 0 3em 0'}}>
-        	<h1 style = {global.bSecondaryTitleFont}>PLAN MEDU</h1>
-			<br/>
-			<h2 style = {global.blFont}>CANCELA CUANDO QUIERAS</h2>
-        </div>
-        <Plan/>
+      <div  style= {{textAlign:"center" ,margin:'3em 0 3em 0'}}>
+            <h1 style = {global.bSecondaryTitleFont}>PLAN MEDU</h1>
+        <br/>
+        <h2 style = {global.blFont}>CANCELA CUANDO QUIERAS</h2>
+          </div>
+          <Plan/>
 
 
 		{/*Comments*/}

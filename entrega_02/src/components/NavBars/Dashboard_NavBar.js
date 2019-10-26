@@ -1,12 +1,15 @@
 import React from 'react';
 import '../../styles/NavBar.scss';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
+import TextField from '@material-ui/core/TextField';
+
 
 //popup
 import Popup from "reactjs-popup";
 
 //styles
 import global from '../../styles/global'
+
 
 function DashboardNavBar() {
   const barStyle={
@@ -16,6 +19,9 @@ function DashboardNavBar() {
     zIndex: 10001,
   }
 
+  const textField = {
+    width: 200,
+  }
   const menu = {
     width: 'auto',
     display: 'flex',
@@ -141,6 +147,15 @@ function DashboardNavBar() {
             </li>
             <li style={{ float: 'right'}}>              
               <a href="/"><SearchOutlinedIcon>BUSCAR</SearchOutlinedIcon></a>
+            
+
+            <TextField
+              id="standard-search"
+              label="Search field"
+              type="search"
+              className={textField}
+              margin="small"
+            />
             </li>
           </div>
         </nav>

@@ -4,7 +4,6 @@ import global from '../../styles/global';
 import '../../styles/css/ContinueLesson.css';
 
 export default function ContinueLesson(props) {
-  
     
     return (
         <div>

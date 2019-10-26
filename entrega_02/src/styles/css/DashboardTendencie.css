@@ -1,0 +1,35 @@
+
+
+.dashboardTendencieLessonContainer {
+    position: relative; 
+    width: 60vw;
+    margin: 0 auto !important;
+    text-align:left;
+    text-transform: uppercase;
+}
+
+.dashboardTendencieLessonInfoDiv{
+    padding: '3em 1em';
+    padding: 15% 5% !important; 
+    position:absolute;
+    top:0;
+    float:left;
+
+}
+.dashboardTendencieLessonImage{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height:70%;        
+    background:linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 99%);
+}
+
+.dashboardTendencieLessonButtonDiv{
+    width: 300px ;
+    text-align: center;
+    margin:  0 auto ;
+    margin-top: -40px;
+    margin-bottom: 2em;
+    z-index: 10000000000;
+}
+

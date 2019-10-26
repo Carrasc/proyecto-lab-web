@@ -1,6 +1,5 @@
 .lessonContainer:hover {
     opacity: .8;
-    z-index:10000000;
   }
 
 .lessonContainer {
