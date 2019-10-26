@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from '../components/NavBars/NavBar';
 import Introduction from '../components/Introduction.js';
 import Reviews from '../components/Reviews';
 import Clases from '../components/Classes/Classes';
@@ -13,20 +12,8 @@ import Tendencies from '../components/Tendencies';
 import antdCarousel from '../components/Carousels/antdCarousel';
 import CNavbar from '../components/NavBars/CNavBar';
 
-import { makeStyles } from "@material-ui/core/styles";
-import './Home.css';
+import '../styles/css/Class.css';
 
-
-const styles = {
-	clase : {
-		padding: '0 1em 2em 1em',
-		height:'25vw',
-		width:'100%'
-	},
-}
-
-const useStyles = makeStyles(styles);
-  
 
   var data = [
 	['Luis Fernando Carrasco','Urologí', 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='],
@@ -50,7 +37,6 @@ const useStyles = makeStyles(styles);
 
 function Home(props) {
 
-  const classes = useStyles();
 
   return (
    

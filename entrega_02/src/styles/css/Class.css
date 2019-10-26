@@ -4,9 +4,11 @@
     width:100%
 }
 
+
 @media (max-width: 959px) {
 .clase
     {
         height:50vw;
     }
 }
+

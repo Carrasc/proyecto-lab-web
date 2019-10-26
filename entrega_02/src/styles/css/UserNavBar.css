@@ -1,0 +1,29 @@
+.logoNavBar{
+    padding: 5em 3em 5em 3em !important;
+    text-align: center ;
+}
+.nameNavBar{
+    padding:5em 3em 5em 3em !important;
+    text-align: center;
+}
+
+.photoNavBar{
+    padding:5em 3em !important;
+    text-align: center;
+}
+
+@media(max-width: 959px){ /*md -> sm*/
+    .logoNavBar{
+        padding: 2em 1em !important;
+    }
+    .nameNavBar{
+        padding:10em 1em 2em 1em !important;
+    }
+    .photoNavBar{
+        position: absolute;
+        top: 7em;
+        left: 40%;
+        text-align: center;
+        padding: 2em 1em !important;
+    }
+}

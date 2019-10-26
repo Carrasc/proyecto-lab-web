@@ -1,35 +1,58 @@
 import React from 'react';
 import global from "../../styles/global.js";
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
+import img from '../../images/1.jpg'
+import '../../styles/css/UserNavBar.css';
 
+const useStyles = makeStyles({
+    avatar: {
+      margin: 10,
+    },
+    bigAvatar: {
+      margin: 10,
+      width: 60,
+      height: 60,
+    },
+  });
 function UserNavBar() {
+    const classes = useStyles();
+
+    
 
     const style = { 
-        backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
-         height:'100%',
-         'backgroundSize': 'cover', 
-         verticalAlign: 'middle'        
+        backgroundImage: 'linear-gradient(141deg, #0A14FF 20%, #00FAAA 100%)',
+        height:'100%',
+        'backgroundSize': 'cover', 
+        verticalAlign: 'middle'        
     };
 
+    const main = {
+        margin:' 0 5%',
+        position: 'relative',
+    }
 
     return (
-        <div style ={global.mainContainer}>
-    
-            <Grid container= {true} style ={style}>
-                <Grid  item md = {2} sm={12} style= {{padding:'5em 3em 5em 3em', textAlign: 'center'}}>
-                    <div >
+        <div style = {main} >
+            <Grid container= {true} style ={style} alignItems = 'center' justify = 'center'>
+                <Grid  item  xs = {12} md={3} >
+                    <div className='logoNavBar'>
                         <h1  style = {global.wMainTitleFont} >MEDU</h1>
                         <p style= {global.wmFont}>DASHBOARD</p>
                     </div>
                 </Grid>
-                <Grid item md = {8} sm={12} style= {{padding:'5em 3em 5em 3em', textAlign: 'right', display: 'inline-block'}}>
-                    <div style={{width:'70%'}}>
+                <Grid item  xs = {12} md={6} >
+                    <div  className='nameNavBar'>
                         <h1  style = {global.wSecondaryTitleFont} >Luis Fernando Carrasco</h1>
-                        <p style= {global.wmFont}>Mi cuenta   Cerrar Sesion</p>
+                        <a href= '/' style= {global.wmFont}>Mi cuenta </a>
+                        <a href= '/' style= {global.wmFont}> Cerrar sesión</a>
                     </div>
                 </Grid>
-                <Grid style={{padding:'2em 0 2em 0'}}>
-                    <div style= {{width: '10em', height: '10em', borderRadius: '50%', backgroundColor: 'gray', textAlign:'center', }}></div>
+                <Grid  item  xs = {12} md={3} >
+                    <div className='photoNavBar'>
+                        <img style={{width:'100px', height:'100px', borderRadius: '50%'}}src ={img}/>
+                    </div>
                 </Grid>
                 
             </Grid>

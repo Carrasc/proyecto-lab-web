@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Home from './views/Home';
 import VideoClass from './views/VideoClass';
 import Dashboard from './views/Dashboard';

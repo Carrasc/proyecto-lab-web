@@ -32,16 +32,14 @@ export default class SectionCarousel extends Component {
         
       <Carousel
         itemClass="image-item"
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={5000}
+        infinite={false}
         responsive={responsive}
         focusOnSelect={false}
-        showDots={true}
+        showDots={false}
         arrows={true}
         //centerMode={true}
-        //partialVisbile
-        >       
+        //partialVisbile={false}
+        >
         {this.props.component}
       </Carousel>
       </div>

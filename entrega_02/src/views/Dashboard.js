@@ -8,14 +8,9 @@ import Grid from '@material-ui/core/Grid';
 import Clases from '../components/Classes/Classes';
 import Footer from '../components/Footer';
 import Sticky from 'react-sticky-el';
+import ContinueLesson from '../components/Classes/ContinueLesson';
+import '../styles/css/Class.css';
 
-const STYLE = {
-	clase : {
-		padding: '0 1em 2em 1em',
-		height:'25vw',
-		width:'100%'
-	},
-  }
   
 const imagesCarousel = [
 	require("../images/2.jpg"),
@@ -34,7 +29,15 @@ const imagesCarousel = [
 	['Alexandro Marcelo','Neurología','https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='],
 	['Romeo Varela','Cardiología', 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='],
   
-  ]
+  ];
+
+  var lessonData = [
+    ['https://i.pinimg.com/564x/92/d9/1e/92d91edc5d19e552a12bb12383337465.jpg','Dra. Marisol García','CARDIOLOGÍA' ,'05:04','085. Placenta Previa: Tipos y Diagnósticos'],
+    ['https://i.pinimg.com/564x/92/d9/1e/92d91edc5d19e552a12bb12383337465.jpg','Dra. Marisol García','CARDIOLOGÍA' ,'05:04','085. Placenta Previa: Tipos y Diagnósticos'],
+    ['https://i.pinimg.com/564x/92/d9/1e/92d91edc5d19e552a12bb12383337465.jpg','Dra. Marisol García','CARDIOLOGÍA' ,'05:04','085. Placenta Previa: Tipos y Diagnósticos'],
+
+  
+  ];
 
 
 function Dashboard(props) {
@@ -42,45 +45,47 @@ function Dashboard(props) {
     <div >
 		<UserNavBar/>
 		
-		
   		<Sticky style = {{zIndex: 10001}}><DashboardNavBar/></Sticky>
 	  	
 		<div style= {global.mainContainer}>
 			<h1 style={global.bMainTitleFont}>Medu Lectures</h1>
 			<h3 style={global.gSecondaryTitleFont}>Continuar Lección </h3>
 		</div>
+
+   
 		<Carousel component = {
-          imagesCarousel.map((img,index) =>{
+         lessonData.map((lessonData,index) =>{
             return (
-              <Image
-              draggable={false}
-              style={{ width: "90%", height: "100%" }}
-			  src={img} 
-              />
-              
+              <ContinueLesson lessonData = {lessonData}/>
               )})
             
           } /> 
 
-		<div style= {global.mainContainer}>
-			<h1 style={global.bMainTitleFont}>Especialidades</h1>
+
+		{/*Classes*/}
+		<a href = '/'id="contenidos"> 	
+			</a>
+			<div  style= {{textAlign:"center"}}>
+				<h3 style = {global.bSecondaryTitleFont}>AHORA DISPONIBLE</h3>
+			</div>
+			<div style={global.mainContainer}>
+				<div style={{textAlign:"center"}}>
+					<Grid container = {true} >
+					{data.map((data,index) =>{
+						return(
+						<Grid item sm= {12} md={6} className = 'clase' key= {index} >
+							<Clases  row = {data} ></Clases>
+						</Grid>
+						
+						)
+					})}
+				</Grid>   
+			</div>
 		</div>
 
-		<div style={global.mainContainer}>
-          <div style={{textAlign:"center"}}>
-            <Grid container = {true} >
-            {data.map((data,index) =>{
-                return(
-                  <Grid item xs = {12} sm={6} style = {STYLE.clase} key= {index} >
-                    <Clases  row = {data} size={STYLE.clase.height}></Clases>
-                  </Grid>
-                    
-                )
-            })}
-            </Grid>   
-          </div>
-        </div>
-		<Footer/>
+      
+      
+  	<Footer/>
   
       
     </div>

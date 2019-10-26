@@ -147,7 +147,10 @@ const global = {
     margin: 0,
     padding: 0,
     fontSize: '.8em',
-    fontWeight: '1em',
+    //fontWeight: '1em',
+    //textShadow: '0px .1px, .1px 0px, .1px .1px',
+    transform: 'scale(1, .9)',
+    fontWeight: 'bold',
     color: 'blue'
   },
 

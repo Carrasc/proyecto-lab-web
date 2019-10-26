@@ -10,48 +10,40 @@ import global from '../../styles/global'
 
 function DashboardNavBar() {
   const barStyle={
-    'margin': '0 5% 0 5%',
+    margin: '0 5% 0 5%',
     backgroundColor: 'rgba(248, 248, 255, 1)',
     height:'3em',
-    zIndex:10001
+    zIndex: 10001,
   }
+
   const menu = {
     width: 'auto',
     display: 'flex',
     flexDirection: 'column',
     'overflow-y': 'scroll',
     height:'12em',
-    zIndex:10001
     
   }
+
   const menuSub = {
     width: 'auto',
     display: 'flex',
     flexDirection: 'column',
     'overflow-y': 'scroll',
     height:'20em',
-    zIndex:10001
   }
+
   const menuItem ={
     cursor: 'pointer',
     padding: '1em',
     width: 'auto',
     borderBottom: '1px solid rgb(187, 187, 187)',
-    zIndex:10001
-  }
-
-  const bb= {
-    margin: 0,
-    padding: 0,
-    fontSize: '.8em',
-    fontWeight: '1em',
-    color: 'blue'
   }
 
   return (
 
     <div style={barStyle} >
-      <ul >
+      <ul className='d_ul'>
         <nav id="navbar">
           <div style={global.bmFont}>
           <li style={{ float: 'left',}}>
