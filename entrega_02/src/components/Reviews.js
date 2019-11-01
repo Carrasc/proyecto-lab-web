@@ -5,7 +5,6 @@ import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import OndemandVideoOutlinedIcon from '@material-ui/icons/OndemandVideoOutlined';
 import WatchLaterOutlinedIcon from '@material-ui/icons/WatchLaterOutlined';
 import Fade from 'react-reveal/Fade';
-import '../styles/reviews.css';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -30,14 +29,19 @@ function Reviews() {
     var text = {
         textAlign: 'left',
         color: 'blue',
-        fontSize:'18px',
+        fontSize:'1.5vw',
         width:'80%',
         margin:'auto',
         marginTop:'1%',
         marginBottom:'5%'
     };
+
+    var h5 ={
+        color: 'blue',
+        fontSize:'1.5vw',
+    }
     var icons = {
-        textAlign: 'left',
+        textAlign: 'center',
         color:'blue'
     };
     var title = {
@@ -55,13 +59,13 @@ function Reviews() {
         <div style ={global.mainContainer}>
             <Fade up delay={100}>
                 <Grid container= {true}  justify="center" style ={style}>
-                    <Grid container= {true}  justify="center" style ={text}>
+                    <Grid className= "internal-grid" container= {true}  justify="center" style ={text}>
                         <Grid item  xs = {12} sm = {4}>
-                            <ListItem >
+                            <ListItem  className= "internal-grid">
                                 <ListItemIcon>
                                     <LibraryBooksOutlinedIcon style = {icons} fontSize="large"/>
                                 </ListItemIcon>
-                                <ListItemText style ={text}><br/><h5 style = {{color:'blue'}}><strong> 300+ lecciones</strong></h5> 
+                                <ListItemText style ={text}><br/><h5 style = {h5}><strong> 300+ lecciones</strong></h5> 
                                     <p className = 'paragraph' style = {{marginTop:'-10px'}}>promedio por clase</p>
                                 </ListItemText>
                             </ListItem>
@@ -71,7 +75,7 @@ function Reviews() {
                                 <ListItemIcon>
                                     <OndemandVideoOutlinedIcon style = {icons} fontSize="large"/>
                                 </ListItemIcon>
-                                <ListItemText style ={text}><br/><h5 style = {{color:'blue'}}><strong>19+ clases</strong></h5> 
+                                <ListItemText style ={text}><br/><h5  style = {h5}><strong>19+ clases</strong></h5> 
                                     <p className = 'paragraph' style = {{marginTop:'-10px'}}>con los mejores médicos</p>
                                 </ListItemText>
                             </ListItem>
@@ -81,7 +85,7 @@ function Reviews() {
                                 <ListItemIcon>
                                     <WatchLaterOutlinedIcon style = {icons} fontSize="large"/>
                                 </ListItemIcon>
-                                <ListItemText style ={text}><br/><h5 style = {{color:'blue'}}><strong>10 Minutos</strong></h5> 
+                                <ListItemText style ={text}><br/><h5  style = {h5}><strong>10 Minutos</strong></h5> 
                                     <p className = 'paragraph' style = {{marginTop:'-10px'}}>por subtema de lección</p>
                                 </ListItemText>
                             </ListItem>

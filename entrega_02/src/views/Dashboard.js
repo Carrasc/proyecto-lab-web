@@ -10,6 +10,9 @@ import Footer from '../components/Footer';
 import Sticky from 'react-sticky-el';
 import ContinueLesson from '../components/Classes/ContinueLesson';
 import DashboardTendencie from '../components/DashboardTendencie';
+import Word from '../components/word/word';
+import Form from '../components/form/form';
+
 import '../styles/css/Class.css';
 
   
@@ -51,8 +54,7 @@ const imagesCarousel = [
 function Dashboard(props) {
   return (   
     <div >
-		<UserNavBar/>
-		
+		<UserNavBar/>		
   		<Sticky style = {{zIndex: 10001}}><DashboardNavBar/></Sticky>
 	  	
 		<div style= {global.mainContainer}>
@@ -90,7 +92,8 @@ function Dashboard(props) {
 		</div>
 
 		<DashboardTendencie tendencieData = {tendencieData}/>
-		
+		<Form/>
+        <Word/>
 		<Footer/>
   
       
