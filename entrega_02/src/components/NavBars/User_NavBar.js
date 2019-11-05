@@ -6,6 +6,13 @@ import Avatar from '@material-ui/core/Avatar';
 import img from '../../images/1.jpg'
 import '../../styles/css/UserNavBar.css';
 
+import { selectActiveWord } from '../../store/word/reducer';
+import { connect } from 'react-redux';
+
+const word =({word}) => <div>{word}</div>
+
+
+
 const useStyles = makeStyles({
     avatar: {
       margin: 10,
@@ -16,7 +23,7 @@ const useStyles = makeStyles({
       height: 60,
     },
   });
-function UserNavBar() {
+const UserNavBar = ({word}) => {
     const classes = useStyles();
 
     
@@ -44,7 +51,7 @@ function UserNavBar() {
                 </Grid>
                 <Grid item  xs = {12} md={6} >
                     <div  className='nameNavBar'>
-                        <h1  style = {global.wSecondaryTitleFont} >Luis Fernando Carrasco</h1>
+                        <h1  style = {global.wSecondaryTitleFont} >{word}</h1>
                         <a href= '/' style= {global.wmFont}>Mi cuenta </a>
                         <a href= '/' style= {global.wmFont}> Cerrar sesión</a>
                     </div>
@@ -63,6 +70,14 @@ function UserNavBar() {
     );
 
 }
-export default UserNavBar;
+
+
+const mapStateToProps = state =>{
+    return {
+        word:selectActiveWord(state)
+    }
+}
+{/*export default UserNavBar;*/}
+export default connect(mapStateToProps)(UserNavBar);
 
 

@@ -11,6 +11,9 @@ import IntroVideo from '../components/Videos/IntroVideo';
 import Tendencies from '../components/Tendencies';
 import antdCarousel from '../components/Carousels/antdCarousel';
 import CNavbar from '../components/NavBars/CNavBar';
+import Form from '../components/form/form';
+import Word from '../components/word/word';
+import Charts from '../components/Charts';
 
 import '../styles/css/Class.css';
 
@@ -41,8 +44,9 @@ function Home(props) {
   return (
    
     <div >
-
+       
         <CNavbar></CNavbar>
+        
         <Introduction />
         <IntroVideo />
         <Tendencies/>
@@ -74,12 +78,12 @@ function Home(props) {
        
           <a href = '/'id="precios"> 	
         </a>
-      <div  style= {{textAlign:"center" ,margin:'3em 0 3em 0'}}>
-            <h1 style = {global.bSecondaryTitleFont}>PLAN MEDU</h1>
-        <br/>
-        <h2 style = {global.blFont}>CANCELA CUANDO QUIERAS</h2>
-          </div>
-          <Plan/>
+        <div  style= {{textAlign:"center" ,margin:'3em 0 3em 0'}}>
+          <h1 style = {global.bSecondaryTitleFont}>PLAN MEDU</h1>
+          <br/>
+          <h2 style = {global.blFont}>CANCELA CUANDO QUIERAS</h2>
+        </div>
+        <Plan/>
 
 
 		{/*Comments*/}
@@ -109,6 +113,9 @@ function Home(props) {
             </Grid>
         </div>
         <Footer />
+        <Form/>
+        <Word/>
+        <Charts/>
 		<antdCarousel />
     </div>
   );
