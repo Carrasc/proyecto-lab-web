@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Toolbar from '@material-ui/core/Toolbar';
-import CssBaseline from '@material-ui/core/CssBaseline';
+//import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import './NavStyle.css';
@@ -50,7 +50,6 @@ const linksStyleRight ={
 export default function CNavbar(props) {
   return (
     <React.Fragment>
-      <CssBaseline />
       <HideOnScroll {...props}>
       <nav className="navbar navbar-expand-lg  bg-white" style={navBarStyle}>
           <a className="navbar-brand abs" href="#" style={{zIndex: '-1'}}>

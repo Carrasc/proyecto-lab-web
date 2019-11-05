@@ -33,13 +33,16 @@ class Introduction extends React.Component{
                     <h1 style={global.bMainTitleFont}>Medu Lectures</h1>
                     <p style={global.gSecondaryTitleFont}>Aprende medicina con los mejores médicos </p>
 
-                    <hr/><br></br><br></br>
+                    <hr/>
+                    <br/>
+                    
 
                     <p style={global.blFont}>Medu es tu compañero de estudios en medicina, tu tutor para el
                     ENARM y tu colega en la práctica médica. </p>
                     <br></br>
                     <br></br>
                     <h3 style={{ fontSize: '1.5em', fontWeight: '1em', color: 'blue', letterSpacing: '1px'}}>Por solo $199.00 al mes.</h3>
+                    <br/>
 
                     <Button variant="contained" style={global.gradientButtonStyle} onClick={this.handleClick}>
                         Iniciar ahora

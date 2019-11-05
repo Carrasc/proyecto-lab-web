@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import Sticky from 'react-sticky-el';
 import ContinueLesson from '../components/Classes/ContinueLesson';
 import DashboardTendencie from '../components/DashboardTendencie';
+import CDashboardNavBar from '../components/NavBars/CDashboardNavBar';
 import '../styles/css/Class.css';
 
   
