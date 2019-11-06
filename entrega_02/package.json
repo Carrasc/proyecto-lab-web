@@ -45,8 +45,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",   
+    "test": "set CI=true && react-scripts test",
+      
+    "test:watch": "react-scripts test",  
+    "test:coverage": "set CI=true && react-scripts test --coverage"  
   },
   "eslintConfig": {
     "extends": "react-app"
