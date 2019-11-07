@@ -114,8 +114,7 @@ function Home(props) {
         </div>
         <Charts width={300}/>
         <Footer />
-        <Form/>
-        <Word/>
+        
         
 		<antdCarousel />
     </div>

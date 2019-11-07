@@ -1,4 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, useRef} from 'react';
+import {connect} from "react-redux";
+
+//reducers
+import { selectActiveWord } from '../store/word/reducer';
+
+//actions
+import updateWord from '../store/word/action';
+
 
 //Bootstrap components
 import Modal from 'react-bootstrap/Modal'
@@ -17,32 +25,31 @@ import Logo from '../logos/Logo2.png'
 import '../styles/LogIn.scss';
 
 
+import Form from '../components/form/form'
+
 class LoginPage extends Component
 {  
-  constructor(props){
-    super(props);
+  constructor(props,{updateWord}){
+    super(props,{updateWord});
     this.state= {
       idUser:""
     };
     this.getUserInfo = this.getUserInfo.bind(this);
-  }
-  getInitialState= function() {
-    return {
-        textFieldValue: ''
-    };
-  }
-  getUserInfo(e){
-      e.preventDefault();
-      let user = this.refs.idUsers.input.getValue(); 
-
-      console.log(user)
+    this.handleTextFieldChange = this.handleTextFieldChange.bind(this);
   }
 
-  _handleTextFieldChange(e){
+  getUserInfo(e){      
+    console.log(this.state.idUser);
+    //updateWord(this.state.idUser)
+  }
+
+  handleTextFieldChange(e){
     this.setState({
       idUser: e.target.value  
     });
+    //console.log(this.state)
   }
+
   render(){
     return (
       <Modal
@@ -58,16 +65,15 @@ class LoginPage extends Component
               </div>
               <h2>Iniciar Sesión</h2>
               <div className="login_margin">
-                  <TextField
+                <Form></Form>
+                  {/*<TextField
                       id="email-input"
                       label="Correo"  
                       type="email"
                       name="email"
                       autoComplete="email"
                       variant="outlined"
-                      ref='idUsers'
-                      value = {this.state.textFieldValue}
-                      onChange={this._handleTextFieldChange}
+                      onChange={this.handleTextFieldChange}
                       fullWidth
                       InputProps={{
                           startAdornment: (
@@ -77,8 +83,9 @@ class LoginPage extends Component
                           ),
                         }}
                         
-                  />
+                      />*/}
               </div>
+              {/*
               <div className="login_margin">
                   <TextField
                       id="password-input"
@@ -97,12 +104,8 @@ class LoginPage extends Component
                           ),
                         }}
                   />
-              </div>
-              <div className="login_margin">
-                  <Button onClick={this.getUserInfo} variant="contained" color="primary" fullWidth size="large">
-                    Iniciar Sesión
-                  </Button>
-              </div>
+                      </div>*/}
+              
               <p className="login_margin">
                   ¿No tienes una cuenta Medu? <a href='/'>Registrar</a>
               </p>
@@ -121,4 +124,10 @@ class LoginPage extends Component
   }
 }
 
-export default LoginPage;
+const mapStateToProps = state =>{
+  return {
+      word:selectActiveWord(  )
+  }
+}
+
+export default connect(null,{updateWord}) (LoginPage)

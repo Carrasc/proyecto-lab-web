@@ -93,8 +93,6 @@ function Dashboard(props) {
 		</div>
 
 		<DashboardTendencie tendencieData = {tendencieData}/>
-		<Form/>
-        <Word/>
 		<Footer/>
   
       
