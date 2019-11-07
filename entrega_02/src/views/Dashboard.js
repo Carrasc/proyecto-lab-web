@@ -18,14 +18,17 @@ import '../styles/css/Class.css';
 
 import database from '../api/api';
 
-  var classes = database.classes;
+
  
   var lessonData = database.lessonData;
 
   var tendencieData = database.tendencieData;
 
+  var classes = database.classes;
+
 
 function Dashboard(props) {
+
   return (   
     <div >
 		<UserNavBar/>		

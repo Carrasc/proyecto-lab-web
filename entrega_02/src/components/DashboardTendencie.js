@@ -11,14 +11,14 @@ export default function DashboardTencencie(props) {
         <div style={global.mainContainer}>
             <div style={{width:'100%', position :'relative', textAlign:'center'}}>
                 <div className = 'dashboardTendencieLessonContainer'>
-                    <img src={props.tendencieData[0]} style={{width:'100%'}}/>
+                    <img src={props.tendencieData.img} style={{width:'100%'}}/>
                         <div className = 'dashboardTendencieLessonImage'> </div>
                         <div className = 'dashboardTendencieLessonInfoDiv'>
                             <h1 style = {global.bSecondaryTitleFont}>
-                                {props.tendencieData[1]}
+                                {props.tendencieData.name}
                             </h1>
                             <p style = {global.wSecondaryTitleFont}>
-                                {props.tendencieData[2]}
+                                {props.tendencieData.specialty}
                             </p>
                         </div>
                 

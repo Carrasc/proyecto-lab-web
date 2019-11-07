@@ -10,26 +10,26 @@ export default function ContinueLesson(props) {
              <a href = '/'>
             <div className = 'lessonContainer'>
                
-                <img src={props.lessonData[0]} style={{width:'100%'}}/>
+                <img src={props.lessonData.img} style={{width:'100%'}}/>
                
                     <div className = 'infoDiv'>
                         <h1 style = {global.bmFont}>
-                            {props.lessonData[1]}
+                            {props.lessonData.name}
                         </h1>
                         <p style = {global.wlFont}>
-                            {props.lessonData[2]}
+                            {props.lessonData.specialty}
                         </p>
                     </div>
                     <div className = 'minutesDiv'>
                         <p  style = {global.wmFont}>
-                            {props.lessonData[3]}
+                            {props.lessonData.currentTime}
                         </p>
                     </div>    
             
             </div>
             </a>
             <div className = 'topicDiv' style = {global.gmFont} >
-                {props.lessonData[4]}
+                {props.lessonData.topic}
             </div>
         </div>
     );

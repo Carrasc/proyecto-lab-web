@@ -65,7 +65,7 @@ class Classes extends Component {
   }
 
   img = { 
-    backgroundImage: `url(${this.props.row[2]})`,
+    backgroundImage: `url(${this.props.row.img})`,
     height:'100%',
     width:'100%',
     backgroundPosition:'center center',
@@ -101,8 +101,8 @@ render(){
           <div style={blurOverImage} onMouseOver={this.overClass.bind(this)} onMouseOut={this.outClass.bind(this)}>
             <div style={STYLE.gradiantDiv}>
                 <div style={STYLE.textDiv}>
-                    <h2 style={STYLE.titulo}>{this.props.row[0]}</h2>
-                    <p style={STYLE.especialidad}>{this.props.row[1]}</p>
+                    <h2 style={STYLE.titulo}>{this.props.row.name}</h2>
+                    <p style={STYLE.especialidad}>{this.props.row.title}</p>
                 </div>
             </div>
           </div>
