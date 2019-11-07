@@ -1,5 +1,5 @@
 import React from 'react';
-import global from "../styles/global.js";
+// import global from "../styles/global.js";
 import Grid from '@material-ui/core/Grid';
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import OndemandVideoOutlinedIcon from '@material-ui/icons/OndemandVideoOutlined';

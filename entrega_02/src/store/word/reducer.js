@@ -1,4 +1,4 @@
-const initialState = { word: "jasdh"};
+const initialState = { word: ""};
 
 export default (state = initialState, action) => {
     if(action.type === 'UPDATE_WORD'){
