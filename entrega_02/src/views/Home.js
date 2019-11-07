@@ -112,10 +112,11 @@ function Home(props) {
                 </Grid>
             </Grid>
         </div>
+        <Charts width={300}/>
         <Footer />
         <Form/>
         <Word/>
-        <Charts/>
+        
 		<antdCarousel />
     </div>
   );

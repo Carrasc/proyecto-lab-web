@@ -10,6 +10,9 @@ import 'bootstrap/dist/js/bootstrap.js';
 import logo from '../../images/logo.png';
 import { HashLink as Link } from 'react-router-hash-link';
 
+import Login from '../LoginPage';
+
+
 
 import global from '../../styles/global';
 
@@ -48,7 +51,9 @@ const linksStyleRight ={
   padding: '0 0 0 1.5em',
 }
 export default function CNavbar(props) {
+  const [modalShow, setModalShow] = React.useState(false);
   return (
+    <>
     <React.Fragment>
       <HideOnScroll {...props}>
       <nav className="navbar navbar-expand-lg  bg-white" style={navBarStyle}>
@@ -72,7 +77,7 @@ export default function CNavbar(props) {
               </ul>
               <ul className="navbar-nav ml-auto">
                   <li className="nav-item" style={linksStyleRight}>
-                      <a className="nav-link" href="" data-target="/#myModal" data-toggle="modal"><h1 style={global.bnlFont}>MI CUENTA</h1></a>
+                      <a className="nav-link" href="" data-target="/#myModal" data-toggle="modal" onClick={() => setModalShow(true)}><h1 style={global.bnlFont}>INICIAR SESIÓN</h1></a>
                   </li>
               </ul>
           </div>
@@ -80,5 +85,10 @@ export default function CNavbar(props) {
       </HideOnScroll>
       <Toolbar />
     </React.Fragment>
+    <Login
+    show={modalShow}
+    onHide={() => setModalShow(false)}
+    />
+    </>
   );
 }

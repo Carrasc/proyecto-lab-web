@@ -20,11 +20,13 @@ export default function Charts(props) {
         <div  style= {{textAlign:"center" ,margin:'3em 0 3em 0'}}>
             <h1 style = {global.bSecondaryTitleFont}>MEDU ESTADÍSTICAS</h1>
         </div>
-        <XYPlot margin={{bottom: 70}} xType="ordinal" width={300} height={300}>
+        <div style={{  width: props.width + 'px',margin:' 0 auto'}}>
+        <XYPlot margin={{bottom: 70}} xType="ordinal" width={props.width} height={props.width}>
             <VerticalGridLines />
             <HorizontalGridLines />
             <XAxis tickLabelAngle={-45} />
             <YAxis />
+           
             <VerticalBarSeries
                 data={[
                 {x: 'Pediatría', y: 10},
@@ -39,12 +41,15 @@ export default function Charts(props) {
                 {x: 'Neurología', y: 11}
                 ]}
             />
+           
         </XYPlot>
 
         <RadialChart
             data={myData}
-            width={300}
-            height={300} />
+            width={props.width}
+            height={props.width} />
+      </div>
+        
 
     </div>
   );
