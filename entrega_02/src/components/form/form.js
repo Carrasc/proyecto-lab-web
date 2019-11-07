@@ -1,13 +1,19 @@
 import React, {useRef} from 'react';
 import updateWord from '../../store/word/action';
 import {connect} from "react-redux";
+import global from '../../styles/global';
+import { HashLink as Link } from 'react-router-hash-link';
 
-const Form = ({updateWord}) =>{
+
+
+function Form ({updateWord}){
     const wordRef = useRef(null);
     return(
         <div>
             <input type = "text" ref={wordRef}/>
-            <button onClick = { () => {updateWord(wordRef.current.value)}} >Entrar</button>
+            <br/>
+            <input type = "text"/>
+            <Link to="/dashboard" className="nav-link">  <button style={global.solidButtonStyle} onClick = { () => {updateWord(wordRef.current.value)}} >Entrar</button></Link>
         </div>
     );
 }

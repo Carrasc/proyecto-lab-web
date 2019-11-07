@@ -1,7 +1,7 @@
 
 const updateWord = word =>
 {
-    console.log(word);
+    console.log("WORD",word);
     return {
         type: "UPDATE_WORD",
         payload: word
