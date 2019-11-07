@@ -9,7 +9,6 @@ import '../../styles/css/UserNavBar.css';
 import { selectActiveWord } from '../../store/word/reducer';
 import { connect } from 'react-redux';
 
-const word =({word}) => <div>{word}</div>
 
 
 
