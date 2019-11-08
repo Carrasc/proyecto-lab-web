@@ -14,12 +14,9 @@ import Login from '../LoginPage';
 //import global from '../../styles/global';
 
 
-<<<<<<< HEAD
 
 import globalStyles from  '../../styles/globalStyles';
 
-=======
->>>>>>> de9296369fa4106813ade53bfcd9e78ec6d8ce55
 function HideOnScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -76,15 +73,6 @@ export default function CNavbar(props) {
           <div className="navbar-collapse collapse" id="collapsingNavbar">
               <ul className="navbar-nav nav_ul">
                   <li className="nav-item" style={linksStyleLeft}>
-<<<<<<< HEAD
-                    <Link smooth to="/#contenidos" className="nav-link"><h1 style={globalStyles.bnlFont}>CONTENIDOS</h1></Link>
-                  </li>
-                  <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#precios" className="nav-link" ><h1 style={globalStyles.bnlFont}>FUNCIONES</h1></Link>
-                  </li>
-                  <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#precios" className="nav-link"><h1 style={globalStyles.bnlFont}>PRECIOS</h1></Link>
-=======
                     <Link smooth to="/#contenidos" className="nav-link">CONTENIDOS</Link>
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
@@ -92,16 +80,11 @@ export default function CNavbar(props) {
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
                     <Link smooth to="/#precios" className="nav-link">PRECIOS</Link>
->>>>>>> de9296369fa4106813ade53bfcd9e78ec6d8ce55
                   </li>
               </ul>
               <ul className="navbar-nav ml-auto nav_ul">
                   <li className="nav-item" style={linksStyleRight}>
-<<<<<<< HEAD
-                      <a className="nav-link" href="" data-target="/#myModal" data-toggle="modal" onClick={() => setModalShow(true)}><h1 style={globalStyles.bnlFont}>INICIAR SESIÓN</h1></a>
-=======
                       <a className="nav-link" href="" data-target="/#myModal" data-toggle="modal" onClick={() => setModalShow(true)}>INICIAR SESIÓN</a>
->>>>>>> de9296369fa4106813ade53bfcd9e78ec6d8ce55
                   </li>
               </ul>
           </div>

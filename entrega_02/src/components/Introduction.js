@@ -27,11 +27,7 @@ class Introduction extends React.Component{
 
     render(){
     return (
-<<<<<<< HEAD
         <div style={globalStyles.mainContainerSides}>
-=======
-        <div style={global.mainContainer}>
->>>>>>> de9296369fa4106813ade53bfcd9e78ec6d8ce55
             <Grid container={true} justify="flex-start" style={this.style}>
                 <Grid item xs={8} sm={7} md={5} style={this.textDiv}>
                     <h1 style={globalStyles.bMainTitleFont}>Medu Lectures</h1>
