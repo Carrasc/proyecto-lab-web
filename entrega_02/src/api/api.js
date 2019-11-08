@@ -9,14 +9,14 @@ var database = {
             img: "https://i.pinimg.com/564x/92/d9/1e/92d91edc5d19e552a12bb12383337465.jpg"
         },
         {
-            name: "Dra. Marisol García",
+            name: "Dr. Romeo Varela",
             specialty: "CARDIOLOGÍA",
             currentTime: "05:04",
             topic: "085. Placenta Previa: Tipos y Diagnósticos",
             img: "https://i.pinimg.com/564x/92/d9/1e/92d91edc5d19e552a12bb12383337465.jpg"
         },
         {
-            name: "Dra. Marisol García",
+            name: "Dr. Alexandro Marcelo",
             specialty: "CARDIOLOGÍA",
             currentTime: "05:04",
             topic: "085. Placenta Previa: Tipos y Diagnósticos",

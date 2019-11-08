@@ -1,5 +1,5 @@
 import React from 'react';
-import global from "../../styles/global.js";
+import globalStyles from  "../../styles/globalStyles.js";
 import Video from './Video'
 import Grid from '@material-ui/core/Grid';
 
@@ -21,7 +21,7 @@ function IntroVideo() {
 
 
     return (
-        <div style = {global.mainContainer}>
+        <div style = {globalStyles.mainContainer}>
                 <div style={{padding:'0 0 5em 0'}}>
                     <div style={styleblue} >
                         <Grid container={true} justify="center" >

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Carousel from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
-import global from "../../styles/global.js";
+import globalStyles from  "../../styles/globalStyles.js";
 
 
 
@@ -27,7 +27,7 @@ export default class SectionCarousel extends Component {
   render(){
   return (
 
-    <div style={global.mainContainer}>
+    <div style={globalStyles.mainContainer}>
       <div style={{textAlign:"center",}}>
         
       <Carousel

@@ -9,7 +9,7 @@ import { List, ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import logo from '../logos/LogoMedu1.png';
 import Grid from '@material-ui/core/Grid';
-import global from "../styles/global.js";
+import globalStyles from  "../styles/globalStyles.js";
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
@@ -46,7 +46,7 @@ export default function Footer(props) {
   });
   return (
 	
-    <footer style={global.footerContainer}>
+    <footer style={globalStyles.footerContainer}>
      <hr />
 	 <Grid
 		container
@@ -62,7 +62,7 @@ export default function Footer(props) {
 			</div>
 		</Grid>
 		<Grid item xs = {10} sm = {3}  >
-			<div className= 'textFooter' style ={global.gmFont}>
+			<div className= 'textFooter' style ={globalStyles.gmFont}>
 				<a href="/" target="_blank">
 					<strong>CONTÁCTANOS</strong>
 				</a>
@@ -82,7 +82,7 @@ export default function Footer(props) {
 				
 			</div>
 		</Grid>
-		<Grid xs = {10} sm = {5} item style ={global.gmFont} >
+		<Grid xs = {10} sm = {5} item style ={globalStyles.gmFont} >
 			<div className= 'textFooter' >
 			&copy; <strong>2018, Medu S.A de C.V.</strong>{" "} 
 				<br/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import global from "../../styles/global.js";
+import globalStyles from  "../../styles/globalStyles.js";
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
@@ -44,15 +44,15 @@ const UserNavBar = ({word}) => {
             <Grid container= {true} style ={style} alignItems = 'center' justify = 'center'>
                 <Grid  item  xs = {12} md={3} >
                     <div className='logoNavBar'>
-                        <h1  style = {global.wMainTitleFont} >MEDU</h1>
-                        <p style= {global.wmFont}>DASHBOARD</p>
+                        <h1  style = {globalStyles.wMainTitleFont} >MEDU</h1>
+                        <p style= {globalStyles.wmFont}>DASHBOARD</p>
                     </div>
                 </Grid>
                 <Grid item  xs = {12} md={6} >
                     <div  className='nameNavBar'>
-                        <h1  style = {global.wSecondaryTitleFont} >{word}</h1>
-                        <a href= '/' style= {global.wmFont}>Mi cuenta </a>
-                        <a href= '/' style= {global.wmFont}> Cerrar sesión</a>
+                        <h1  style = {globalStyles.wSecondaryTitleFont} >{word}</h1>
+                        <a href= '/' style= {globalStyles.wmFont}>Mi cuenta </a>
+                        <a href= '/' style= {globalStyles.wmFont}> Cerrar sesión</a>
                     </div>
                 </Grid>
                 <Grid  item  xs = {12} md={3} >

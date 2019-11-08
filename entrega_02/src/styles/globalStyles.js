@@ -1,5 +1,5 @@
 
-const global = {
+const globalStyles= {
   //MARGINS AND PADDINGS FOR THE CORRECT FORMAT OF THE APP
   mainFont: {
     fontWeight: "light",
@@ -214,4 +214,4 @@ const global = {
 
 
 };
-export default global;
+export default globalStyles;

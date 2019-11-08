@@ -9,7 +9,7 @@ import { red } from '@material-ui/core/colors';
 import {Image} from 'semantic-ui-react';
 import img from '../images/tendencies.jpg';
 
-import global from '../styles/global';
+import globalStyles from  '../styles/globalStyles';
 
 const cardStyle = {
     backgroundImage: 'linear-gradient(141deg, #0A14FF 20%, #00FAAA 100%)',
@@ -30,12 +30,12 @@ export default function RecipeReviewCard() {
                         <Image src={img} ></Image>                    
                     </Avatar>
                 }
-                style = {global.wmFont}
+                style = {globalStyles.wmFont}
                 title="Jessica Ramirez"
                 subheader="Tijuana, MEX"
             />
             <CardContent>
-                <Typography style = {global.wsFont}>
+                <Typography style = {globalStyles.wsFont}>
                     EL CURSO DE LA DRA. MARIANA BILBAO ME ENCANTÓ.
                     MUY BUENAS CLASES, MUY BUEN CONTENIDO Y, SOBRE
                     TODO, UNA DOCTORA LLENA DE ENTUSIASMO Y GANAS DE

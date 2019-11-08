@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import global from '../../styles/global';
+import globalStyles from  '../../styles/globalStyles';
 import '../../styles/css/ContinueLesson.css';
 
 export default function ContinueLesson(props) {
@@ -13,22 +13,22 @@ export default function ContinueLesson(props) {
                 <img src={props.lessonData.img} style={{width:'100%'}}/>
                
                     <div className = 'infoDiv'>
-                        <h1 style = {global.bmFont}>
+                        <h1 style = {globalStyles.bmFont}>
                             {props.lessonData.name}
                         </h1>
-                        <p style = {global.wlFont}>
+                        <p style = {globalStyles.wlFont}>
                             {props.lessonData.specialty}
                         </p>
                     </div>
                     <div className = 'minutesDiv'>
-                        <p  style = {global.wmFont}>
+                        <p  style = {globalStyles.wmFont}>
                             {props.lessonData.currentTime}
                         </p>
                     </div>    
             
             </div>
             </a>
-            <div className = 'topicDiv' style = {global.gmFont} >
+            <div className = 'topicDiv' style = {globalStyles.gmFont} >
                 {props.lessonData.topic}
             </div>
         </div>

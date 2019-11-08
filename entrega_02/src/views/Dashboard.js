@@ -1,5 +1,5 @@
 import React from 'react';
-import global from "../styles/global.js";
+import globalStyles from  "../styles/globalStyles.js";
 import UserNavBar from '../components/NavBars/User_NavBar';
 import DashboardNavBar from '../components/NavBars/Dashboard_NavBar.js';
 import Carousel from '../components/Carousels/Carousel';
@@ -34,9 +34,9 @@ function Dashboard(props) {
 		<UserNavBar/>		
   		<Sticky style = {{zIndex: 10001}}><DashboardNavBar/></Sticky>
 	  	
-		<div style= {global.mainContainer}>
-			<h1 style={global.bMainTitleFont}>Medu Lectures</h1>
-			<h3 style={global.gSecondaryTitleFont}>Continuar Lección </h3>
+		<div style= {globalStyles.mainContainer}>
+			<h1 style={globalStyles.bMainTitleFont}>Medu Lectures</h1>
+			<h3 style={globalStyles.gSecondaryTitleFont}>Continuar Lección </h3>
 		</div>
 
    
@@ -51,9 +51,9 @@ function Dashboard(props) {
 
 		{/*Classes*/}
 		<div  style= {{textAlign:"center", marginTop:'3em'}}>
-			<h3 style = {global.bSecondaryTitleFont}>ESPECIALIDADES</h3>
+			<h3 style = {globalStyles.bSecondaryTitleFont}>ESPECIALIDADES</h3>
 		</div>
-		<div style={global.mainContainer}>
+		<div style={globalStyles.mainContainer}>
 			<div style={{textAlign:"center"}}>
 				<Grid container = {true} >
 				{classes.map((classes,index) =>{

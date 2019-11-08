@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 
 //Styles
-import global from "../../styles/global";
+import globalStyles from  "../../styles/globalStyles";
 
 //Icons
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
@@ -26,16 +26,16 @@ class Classes_Topics extends Component {
         return(
             <Grid container = {true}  direction="row" justify="center" alignItems="center">
                 <Grid item xs = {3} alignItems = "center" direction="row" justify="center" >
-                    <h1 style={global.gNumberTopic}>
+                    <h1 style={globalStyles.gNumberTopic}>
                         {this.props.classes[0]}
                     </h1>
                 </Grid>
                 <Grid item xs = {6}>
                     <div style={{textAlign: 'left', verticalAlign:'center'}}>
-                        <h1 style={global.gSecondaryTitleFont}>
+                        <h1 style={globalStyles.gSecondaryTitleFont}>
                             {this.props.classes[1]}
                         </h1>
-                        <p style={global.gmFont}>
+                        <p style={globalStyles.gmFont}>
                             {this.props.classes[2]}
                         </p>
                     </div>

@@ -11,7 +11,7 @@ import {
   LineSeries
 } from 'react-vis';
 
-import global from '../styles/global'
+import globalStyles from  '../styles/globalStyles'
 
 export default function Charts(props) {
     const myData = [ {angle: 1, radius: 10}, {angle: 2, label: 'Super Custom label', subLabel: 'With annotation', radius: 20}, {angle: 5, radius: 5, label: 'Alt Label'}, {angle: 3, radius: 14}, {angle: 5, radius: 12, subLabel: 'Sub Label only', className: 'custom-class'} ];
@@ -25,9 +25,9 @@ export default function Charts(props) {
       data.push({color: i, key: i, data: series, opacity: 0.8});
     }
   return (
-    <div style = {global.mainContainer}>
+    <div style = {globalStyles.mainContainer}>
         <div  style= {{textAlign:"center" ,margin:'3em 0 3em 0'}}>
-            <h1 style = {global.bSecondaryTitleFont}>MEDU ESTADÍSTICAS</h1>
+            <h1 style = {globalStyles.bSecondaryTitleFont}>MEDU ESTADÍSTICAS</h1>
         </div>
         <div style={{width:'70%',  margin:' auto auto',display:'flex'}}>
         <XYPlot margin={{bottom: 70}} xType="ordinal" width={props.width} height={props.width}>

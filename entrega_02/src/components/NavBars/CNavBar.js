@@ -14,7 +14,7 @@ import Login from '../LoginPage';
 
 
 
-import global from '../../styles/global';
+import globalStyles from  '../../styles/globalStyles';
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -66,18 +66,18 @@ export default function CNavbar(props) {
           <div className="navbar-collapse collapse" id="collapsingNavbar">
               <ul className="navbar-nav">
                   <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#contenidos" className="nav-link"><h1 style={global.bnlFont}>CONTENIDOS</h1></Link>
+                    <Link smooth to="/#contenidos" className="nav-link"><h1 style={globalStyles.bnlFont}>CONTENIDOS</h1></Link>
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#precios" className="nav-link" ><h1 style={global.bnlFont}>FUNCIONES</h1></Link>
+                    <Link smooth to="/#precios" className="nav-link" ><h1 style={globalStyles.bnlFont}>FUNCIONES</h1></Link>
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#precios" className="nav-link"><h1 style={global.bnlFont}>PRECIOS</h1></Link>
+                    <Link smooth to="/#precios" className="nav-link"><h1 style={globalStyles.bnlFont}>PRECIOS</h1></Link>
                   </li>
               </ul>
               <ul className="navbar-nav ml-auto">
                   <li className="nav-item" style={linksStyleRight}>
-                      <a className="nav-link" href="" data-target="/#myModal" data-toggle="modal" onClick={() => setModalShow(true)}><h1 style={global.bnlFont}>INICIAR SESIÓN</h1></a>
+                      <a className="nav-link" href="" data-target="/#myModal" data-toggle="modal" onClick={() => setModalShow(true)}><h1 style={globalStyles.bnlFont}>INICIAR SESIÓN</h1></a>
                   </li>
               </ul>
           </div>

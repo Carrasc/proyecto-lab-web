@@ -1,7 +1,7 @@
 import React from 'react';
 //import Button from '@material-ui/core/Button';
 
-import global from "../styles/global.js";
+import globalStyles from '../styles/globalStyles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
@@ -27,24 +27,24 @@ class Introduction extends React.Component{
 
     render(){
     return (
-        <div style={global.mainContainerSides}>
+        <div style={globalStyles.mainContainerSides}>
             <Grid container={true} justify="flex-start" style={this.style}>
                 <Grid item xs={8} sm={7} md={5} style={this.textDiv}>
-                    <h1 style={global.bMainTitleFont}>Medu Lectures</h1>
-                    <p style={global.gSecondaryTitleFont}>Aprende medicina con los mejores médicos </p>
+                    <h1 style={globalStyles.bMainTitleFont}>Medu Lectures</h1>
+                    <p style={globalStyles.gSecondaryTitleFont}>Aprende medicina con los mejores médicos </p>
 
                     <hr/>
                     <br/>
                     
 
-                    <p style={global.blFont}>Medu es tu compañero de estudios en medicina, tu tutor para el
+                    <p style={globalStyles.blFont}>Medu es tu compañero de estudios en medicina, tu tutor para el
                     ENARM y tu colega en la práctica médica. </p>
                     <br></br>
                     <br></br>
                     <h3 style={{ fontSize: '1.5em', fontWeight: '1em', color: 'blue', letterSpacing: '1px'}}>Por solo $199.00 al mes.</h3>
                     <br/>
 
-                    <Button variant="contained" style={global.gradientButtonStyle} onClick={this.handleClick}>
+                    <Button variant="contained" style={globalStyles.gradientButtonStyle} onClick={this.handleClick}>
                         Iniciar ahora
                     </Button>
 

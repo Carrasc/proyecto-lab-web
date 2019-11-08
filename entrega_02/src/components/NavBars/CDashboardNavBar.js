@@ -11,7 +11,7 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 
 
 
-import global from '../../styles/global';
+import globalStyles from  '../../styles/globalStyles';
 
 const barStyle={
     margin: '0 5% 0 5%',

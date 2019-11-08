@@ -5,7 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import global from '../../styles/global'
+import globalStyles from  '../../styles/globalStyles'
 import { Image } from "semantic-ui-react";
 
 import 'react-multi-carousel/lib/styles.css';
@@ -52,7 +52,7 @@ const gradiantDiv = {
                 <CardActionArea>
                     <CardContent>
                         <Typography gutterBottom variant="p" component="h2">
-                            <h1 style={global.gsFont}>Completadas {this.props.data[0]} de {this.props.data[1]}</h1>
+                            <h1 style={globalStyles.gsFont}>Completadas {this.props.data[0]} de {this.props.data[1]}</h1>
                         </Typography>
                     </CardContent>
                     <CardMedia>
@@ -66,10 +66,10 @@ const gradiantDiv = {
                     </CardMedia>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                        <h1 style={global.bmFont}>{this.props.data[3]}</h1>
+                        <h1 style={globalStyles.bmFont}>{this.props.data[3]}</h1>
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                        <h1 style={global.gmFont}>{this.props.data[4]}</h1>
+                        <h1 style={globalStyles.gmFont}>{this.props.data[4]}</h1>
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -91,7 +91,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import global from '../../styles/global'
+import globalStyles from  '../../styles/global'
 import { Image } from "semantic-ui-react";
 
 import 'react-multi-carousel/lib/styles.css';
@@ -143,7 +143,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import global from '../../styles/global'
+import globalStyles from  '../../styles/global'
 import { Image } from "semantic-ui-react";
 
 import 'react-multi-carousel/lib/styles.css';
@@ -190,7 +190,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import global from '../../styles/global'
+import globalStyles from  '../../styles/global'
 
 import 'react-multi-carousel/lib/styles.css';
 
