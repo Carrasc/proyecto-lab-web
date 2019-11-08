@@ -25,7 +25,7 @@ const STYLE = {
     },
 
     titulo : {
-        size: '50px',
+        fontSize: '25px',
         color: 'blue',
         display: 'inline',
         margin: 0,
@@ -102,7 +102,7 @@ render(){
             <div style={STYLE.gradiantDiv}>
                 <div style={STYLE.textDiv}>
                     <h2 style={STYLE.titulo}>{this.props.row.name}</h2>
-                    <p style={STYLE.especialidad}>{this.props.row.title}</p>
+                    <p style={STYLE.especialidad}>{this.props.row.specialty}</p>
                 </div>
             </div>
           </div>

@@ -30,6 +30,8 @@ function Home(props) {
        
         <CNavbar></CNavbar>
         
+        <a href = '/'id="home"> 	
+        </a>
         <Introduction />
         <IntroVideo />
         <Tendencies/>

@@ -43,22 +43,22 @@ var database = {
     classes : [
         {
             name:'Luis Fernando Carrasco',
-            title:'Urologo',
+            specialty:'Urologo',
             img: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='
         },
         {
             name:'Alexandro Marcelo',
-            title:'Urologo',
+            specialty:'Urologo',
             img: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='
         },
         {
             name:'Mauricio Peon',
-            title:'Urologo',
+            specialty:'Urologo',
             img: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='
         },
         {
             name:'Romeo Varela',
-            title:'Urologo',
+            specialty:'Urologo',
             img: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='
         }
     ]
