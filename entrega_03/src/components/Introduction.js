@@ -21,7 +21,7 @@ class Introduction extends React.Component{
 
 
     textDiv = {
-        padding: '5em 0 5em 5em',
+        padding: '5em 0 5em 3em',
 
     };
 
@@ -29,7 +29,7 @@ class Introduction extends React.Component{
     return (
         <div style={globalStyles.mainContainer}>
             <Grid container={true} justify="flex-start" style={this.style}>
-                <Grid item xs={8} sm={7} md={5} style={this.textDiv}>
+                <Grid item xs={10} sm={7} md={5} style={this.textDiv}>
                     <h1 style={globalStyles.bMainTitleFont}>Medu Lectures</h1>
                     <p style={globalStyles.gSecondaryTitleFont}>Aprende medicina con los mejores médicos </p>
 

@@ -25,7 +25,7 @@ function IntroVideo() {
                 <div style={{padding:'0 0 5em 0'}}>
                     <div style={styleblue} >
                         <Grid container={true} justify="center" >
-                                <Grid item xs={6} sm={6} style={video}>
+                                <Grid item xs={10} sm={6} style={video}>
                                     <div style = {{boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '2em'}}>
                                         <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg'}></Video>
                                     </div>

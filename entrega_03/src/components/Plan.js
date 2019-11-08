@@ -31,7 +31,7 @@ function Plan () {
         return (
             <div>
                 <Grid container={true} justify="center" >
-                    <Grid item xs={8} sm={5} md={4} lg={3} xl={2} style={main}>
+                    <Grid item xs={10} sm={5} md={4} lg={3} xl={2} style={main}>
                         <div style = {top}>
                             <h1 style={globalStyles.wMainTitleFont}>1.</h1>
                             <br/>

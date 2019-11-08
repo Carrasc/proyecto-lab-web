@@ -97,7 +97,7 @@ function Home(props) {
                 </Grid>
             </Grid>
         </div>
-        <Charts width={300}/>
+        {/*<Charts width={300}/>*/}
         <Footer />
         
     </div>
