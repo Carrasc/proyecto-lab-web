@@ -1,0 +1,12 @@
+.textFooter{
+    text-align:justify;
+}
+hr {
+    border-top: 1px solid rgb(10, 20, 255);
+  }
+ 
+@media(max-width: 599px){
+    .textFooter{
+        text-align:center;
+    }
+}
