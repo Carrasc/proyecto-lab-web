@@ -25,7 +25,7 @@ const STYLE = {
     },
 
     titulo : {
-        size: '50px',
+        fontSize: '25px',
         color: 'blue',
         display: 'inline',
         margin: 0,

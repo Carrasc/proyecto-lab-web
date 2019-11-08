@@ -57,7 +57,7 @@ const global = {
   gSecondaryTitleFont: {
     margin: 0,
     padding: 0,
-    fontSize: '1.5em',
+    fontSize: '1.3em',
     fontWeight:'1em',
     letterSpacing: '1px',
     color: 'gray'
@@ -66,7 +66,7 @@ const global = {
   bSecondaryTitleFont: {
     margin: 0,
     padding: 0,
-    fontSize: '1.6em',
+    fontSize: '1.3em',
     textShadow: '0px 1px, 1px 0px, 1px 1px',
     letterSpacing: '0.0625em',
     color: 'blue'
@@ -74,7 +74,7 @@ const global = {
   wSecondaryTitleFont: {
     margin: 0,
     padding: 0,
-    fontSize: '1.5em',
+    fontSize: '1.3em',
     color: 'white',
     //textShadow: '0px 1px, 1px 0px, 1px 1px',
   },
@@ -100,28 +100,28 @@ const global = {
   wlFont: {
     margin: 0,
     padding: 0,
-    fontSize: '1em',
+    fontSize: '0.9em',
     fontWeight: '1em',
     color: 'white'
   },
   glFont: {
     margin: 0,
     padding: 0,
-    fontSize: '1em',
+    fontSize: '0.9em',
     fontWeight: '1em',
     color: 'gray'
   },
   blFont: {
     margin: 0,
     padding: 0,
-    fontSize: '1em',
+    fontSize: '0.9em',
     fontWeight: '1em',
     color: 'blue'
   },
   bnlFont: {
     margin: '0',
     padding: '0',
-    fontSize: '1em',
+    fontSize: '0.8em' ,
     fontWeight: '1em',
     color: 'blue',
     textShadow: '0px .2px, .2px 0px, .2px .2px',

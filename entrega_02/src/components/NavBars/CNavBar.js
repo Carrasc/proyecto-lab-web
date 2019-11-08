@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Toolbar from '@material-ui/core/Toolbar';
+//import Toolbar from '@material-ui/core/Toolbar';
 //import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
-import './NavStyle.css';
+import './NavStyle.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import logo from '../../images/logo.png';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import Login from '../LoginPage';
+//import global from '../../styles/global';
 
-
-
-import global from '../../styles/global';
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -41,6 +39,7 @@ HideOnScroll.propTypes = {
 const navBarStyle ={
   margin: '0% 5% 0 5%',
   position:'fixed', 
+  top: 0,
   width:'90%', 
   zIndex: '1000'
 }
@@ -57,33 +56,37 @@ export default function CNavbar(props) {
     <React.Fragment>
       <HideOnScroll {...props}>
       <nav className="navbar navbar-expand-lg  bg-white" style={navBarStyle}>
-          <a className="navbar-brand abs" href="#" style={{zIndex: '-1'}}>
-            <img src={logo} style={{width: '50px', padding: '5px 5px 5px 5px',}}/>
-          </a>
+
+          <div className="navbar-brand abs" style={{zIndex: '-1'}}>
+              <Link smooth to="/#home">
+                <img src={logo} style={{width: '50px', padding: '5px 5px 5px 5px'}} href='#'/>
+              </Link>
+          </div>
+
           <button className="navbar-toggler navbar-dark bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
               <span className="navbar-toggler-icon" className="nav-link"></span>
           </button>
+
           <div className="navbar-collapse collapse" id="collapsingNavbar">
-              <ul className="navbar-nav">
+              <ul className="navbar-nav nav_ul">
                   <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#contenidos" className="nav-link"><h1 style={global.bnlFont}>CONTENIDOS</h1></Link>
+                    <Link smooth to="/#contenidos" className="nav-link">CONTENIDOS</Link>
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#precios" className="nav-link" ><h1 style={global.bnlFont}>FUNCIONES</h1></Link>
+                    <Link smooth to="/#precios" className="nav-link" >FUNCIONES</Link>
                   </li>
                   <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#precios" className="nav-link"><h1 style={global.bnlFont}>PRECIOS</h1></Link>
+                    <Link smooth to="/#precios" className="nav-link">PRECIOS</Link>
                   </li>
               </ul>
-              <ul className="navbar-nav ml-auto">
+              <ul className="navbar-nav ml-auto nav_ul">
                   <li className="nav-item" style={linksStyleRight}>
-                      <a className="nav-link" href="" data-target="/#myModal" data-toggle="modal" onClick={() => setModalShow(true)}><h1 style={global.bnlFont}>INICIAR SESIÓN</h1></a>
+                      <a className="nav-link" href="" data-target="/#myModal" data-toggle="modal" onClick={() => setModalShow(true)}>INICIAR SESIÓN</a>
                   </li>
               </ul>
           </div>
       </nav>
       </HideOnScroll>
-      <Toolbar />
     </React.Fragment>
     <Login
     show={modalShow}
