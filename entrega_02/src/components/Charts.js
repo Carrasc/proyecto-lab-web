@@ -29,7 +29,7 @@ export default function Charts(props) {
         <div  style= {{textAlign:"center" ,margin:'3em 0 3em 0'}}>
             <h1 style = {globalStyles.bSecondaryTitleFont}>MEDU ESTADÍSTICAS</h1>
         </div>
-        <div style={{width:'70%',  margin:' auto auto',display:'flex'}}>
+        <div style={{width:'50%',  margin:' auto auto',display:'flex'}}>
         <XYPlot margin={{bottom: 70}} xType="ordinal" width={props.width} height={props.width}>
             <VerticalGridLines />
             <HorizontalGridLines />
@@ -58,21 +58,7 @@ export default function Charts(props) {
             width={props.width}
             height={props.width} />
 
-          <XYPlot
-                width={300}
-                height={300}
-                colorType="linear"
-                colorDomain={[0, 9]}
-                colorRange={['yellow', 'orange']}
-              >
-                <HorizontalGridLines />
-                <VerticalGridLines />
-                <XAxis />
-                <YAxis />
-                {data.map(props => (
-                  <LineSeries {...props} />
-                ))}
-              </XYPlot>
+
       </div>
         
 

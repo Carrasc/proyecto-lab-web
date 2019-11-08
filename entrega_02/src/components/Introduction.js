@@ -27,7 +27,7 @@ class Introduction extends React.Component{
 
     render(){
     return (
-        <div style={globalStyles.mainContainerSides}>
+        <div style={globalStyles.mainContainer}>
             <Grid container={true} justify="flex-start" style={this.style}>
                 <Grid item xs={8} sm={7} md={5} style={this.textDiv}>
                     <h1 style={globalStyles.bMainTitleFont}>Medu Lectures</h1>
@@ -41,7 +41,7 @@ class Introduction extends React.Component{
                     ENARM y tu colega en la práctica médica. </p>
                     <br></br>
                     <br></br>
-                    <h3 style={{ fontSize: '1.5em', fontWeight: '1em', color: 'blue', letterSpacing: '1px'}}>Por solo $199.00 al mes.</h3>
+                    <h3 style={{ fontSize: '1.5em', fontWeight: 'bold', color: 'blue', letterSpacing: '1px'}}>Por solo $199.00 al mes.</h3>
                     <br/>
 
                     <Button variant="contained" style={globalStyles.gradientButtonStyle} onClick={this.handleClick}>

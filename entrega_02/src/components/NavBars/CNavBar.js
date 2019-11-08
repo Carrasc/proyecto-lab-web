@@ -75,9 +75,7 @@ export default function CNavbar(props) {
                   <li className="nav-item" style={linksStyleLeft}>
                     <Link smooth to="/#contenidos" className="nav-link">CONTENIDOS</Link>
                   </li>
-                  <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#precios" className="nav-link" >FUNCIONES</Link>
-                  </li>
+
                   <li className="nav-item" style={linksStyleLeft}>
                     <Link smooth to="/#precios" className="nav-link">PRECIOS</Link>
                   </li>
