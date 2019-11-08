@@ -1,8 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 
 import Home from './Home';
 import TestRunner from 'jest-runner';
+import Adapter from 'enzyme-adapter-react-16'
+
+configure({adapter: new Adapter()});
+
 
 describe('Home', () => {
     test('Rendering the simple component', () => {

@@ -1,11 +1,4 @@
 import React, { Component, useRef} from 'react';
-import {connect} from "react-redux";
-
-//reducers
-import { selectActiveWord } from '../store/word/reducer';
-
-//actions
-import updateWord from '../store/word/action';
 
 
 //Bootstrap components
@@ -124,10 +117,5 @@ class LoginPage extends Component
   }
 }
 
-const mapStateToProps = state =>{
-  return {
-      word:selectActiveWord(  )
-  }
-}
 
-export default connect(null,{updateWord}) (LoginPage)
+export default LoginPage
