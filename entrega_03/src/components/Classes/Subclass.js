@@ -13,6 +13,7 @@ import 'react-multi-carousel/lib/styles.css';
 const cardStyle ={
     margin:'20px',
     //height:'800px'
+    boxShadow: 'none',
 }
 
 const textDiv = {

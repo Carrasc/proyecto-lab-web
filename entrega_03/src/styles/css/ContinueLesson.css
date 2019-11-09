@@ -24,7 +24,7 @@
     bottom:0;
     left:0;
     margin: 10% 10% !important;
-    background-color: #C0C0C0;
+    background-color: rgb(192, 192, 192, .8);
     border-radius: .6em;
     padding: 1% 4% !important;
 }

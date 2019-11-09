@@ -18,9 +18,11 @@ const classes = [
     ['03', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.']
 ]
 const data = [
-    ['57', '147', require("../images/2.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
+    ['57', '147', require("../images/7.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
     ['13', '153', require("../images/3.jpg"), 'LÓBULOS NEUROENCEFALÓGICOS', 'DEL SISTEMA NERVIOSO'],
-    ['0', '80', require("../images/4.jpg"), 'ESTOY MAMADÍSIMO', 'DEL SISTEMA NERVIOSO'],
+    ['0', '80', require("../images/7.jpg"), 'ESTOY MAMADÍSIMO', 'DEL SISTEMA NERVIOSO'],
+    ['57', '147', require("../images/4.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
+
   ]
   
   

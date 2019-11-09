@@ -3,8 +3,10 @@ import Carousel from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
 import globalStyles from  "../../styles/globalStyles.js";
 
+import style from './StyleCarousel.css'
 
-
+import rightArrow from "../../images/rightArrow.png";
+import leftArrow from "../../images/leftArrow.png"
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -23,24 +25,42 @@ const responsive = {
   }
 };
 
+
+
 export default class SectionCarousel extends Component {
   render(){
-  return (
+    const CustomRightArrow = ({ onClick, ...rest }) => {
+      // onMove means if dragging or swiping in progress.//style={{border:'2px', borderColor: 'coral'}}
+      return <img className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right" src={rightArrow} style={{width:'2vh'}} onClick={() => onClick()} ></img>;
 
+    };
+    const CustomLeftArrow = ({ onClick, ...rest }) => {
+      // onMove means if dragging or swiping in progress.//style={{border:'2px', borderColor: 'coral'}}
+      return <img className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left" src={leftArrow} style={{width:'2vh'}} onClick={() => onClick()} ></img>;
+
+    };
+  return (
+    
     <div style={globalStyles.mainContainer}>
       <div style={{textAlign:"center",}}>
         
       <Carousel
         itemClass="image-item"
-        infinite={false}
+        infinite={true}
         responsive={responsive}
         focusOnSelect={false}
         showDots={false}
         arrows={true}
         //centerMode={true}
         //partialVisbile={false}
+        customRightArrow={<CustomRightArrow />}
+        customLeftArrow={<CustomLeftArrow />}
+        autoPlay
+        autoPlaySpeed={5000}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
         >
         {this.props.component}
+        
       </Carousel>
       </div>
     </div>

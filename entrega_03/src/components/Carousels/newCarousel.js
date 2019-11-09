@@ -56,7 +56,7 @@ export default class Example extends Component {
 
   render() {
     return (
-      <div style={{height: '10px'}}>
+      <div style={{height: '700px'}}>
       <div style={{ width: "80%", height: "500px", margin: "0 auto" }}>
         <Carousel
           slides={slides}
