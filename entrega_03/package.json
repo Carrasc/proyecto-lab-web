@@ -19,6 +19,7 @@
     "react-dom": "^16.9.0",
     "react-google-font-loader": "^1.0.5",
     "react-multi-carousel": "^2.2.6",
+    "react-player": "^1.14.0",
     "react-prism": "^4.3.2",
     "react-redux": "^7.1.1",
     "react-reveal": "^1.2.2",

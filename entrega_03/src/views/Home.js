@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import Comments from '../components/Comments';
 import globalStyles from  "../styles/globalStyles";
 import IntroVideo from '../components/Videos/IntroVideo';
+import IntroVideoTest from '../components/Videos/IntroVideoTest';
 import Tendencies from '../components/Tendencies';
 import CNavbar from '../components/NavBars/CNavBar';
 //import Form from '../components/form/form';
@@ -34,6 +35,7 @@ function Home(props) {
         </a>
         <Introduction />
         <IntroVideo />
+        <IntroVideoTest />
         <Tendencies/>
         
         <Reviews/>
