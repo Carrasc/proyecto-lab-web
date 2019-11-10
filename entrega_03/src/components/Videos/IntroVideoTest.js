@@ -38,6 +38,8 @@ function IntroVideoTest() {
                                     style = {{position: 'absolute', top: '0', left: "0"}} 
                                     url='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4' 
                                     controls 
+                                    playing
+                                    light="'https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg'"
                                     width={"100%"} 
                                     height={"100%"} />
                                 </div>
