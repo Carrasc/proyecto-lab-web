@@ -6,34 +6,27 @@ import OndemandVideoOutlinedIcon from '@material-ui/icons/OndemandVideoOutlined'
 import WatchLaterOutlinedIcon from '@material-ui/icons/WatchLaterOutlined';
 import Fade from 'react-reveal/Fade';
 
-import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Divider from '@material-ui/core/Divider';
-import InboxIcon from '@material-ui/icons/Inbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
+
 
 
 function Reviews() {
 
     const style = { 
-        //backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,255,1), rgba(32,178,170,0.5))',
          height:'100%',
-         'backgroundSize': 'cover',
-         color: 'black'
-         
+         //backgroundColor: '#ededed',
+         margin:'0 5% 5% 5%',
+         width: '90%'
+
     };
     
 
     var text = {
-        textAlign: 'left',
         color: 'blue',
         fontSize:'1.5vw',
-        width:'80%',
-        margin:'auto',
-        marginTop:'1%',
-        marginBottom:'5%'
+
     };
 
     var h5 ={
@@ -44,23 +37,15 @@ function Reviews() {
         textAlign: 'center',
         color:'blue'
     };
-    var title = {
-        
-        display: 'block',
-       ' margin-block-start':' 0.83em',
-        'margin-block-end': '0.83em',
-        'margin-inline-start': '0px',
-        'margin-inline-end':' 0px',
-       ' font-weight':' bold'
-        
-    }
+
 
     return (
         <div style ={global.mainContainer}>
-            <Fade up delay={100}>
                 <Grid container= {true}  justify="center" style ={style}>
                     <Grid className= "internal-grid" container= {true}  justify="center" style ={text}>
-                        <Grid item  xs = {12} sm = {4}>
+
+                        <Fade bottom delay={100}>
+                        <Grid style={{padding: "0 3em"}}>
                             <ListItem  className= "internal-grid">
                                 <ListItemIcon>
                                     <LibraryBooksOutlinedIcon style = {icons} fontSize="large"/>
@@ -70,7 +55,10 @@ function Reviews() {
                                 </ListItemText>
                             </ListItem>
                         </Grid>
-                        <Grid item  xs = {12} sm = {4}>
+                        </Fade> 
+
+                        <Fade bottom delay={400}>
+                        <Grid style={{padding: "0 3em"}}>
                             <ListItem >
                                 <ListItemIcon>
                                     <OndemandVideoOutlinedIcon style = {icons} fontSize="large"/>
@@ -80,7 +68,10 @@ function Reviews() {
                                 </ListItemText>
                             </ListItem>
                         </Grid>
-                        <Grid item  xs = {12} sm = {4}>
+                        </Fade>
+
+                        <Fade bottom delay={700}>
+                        <Grid style={{padding: "0 3em"}}>
                             <ListItem >
                                 <ListItemIcon>
                                     <WatchLaterOutlinedIcon style = {icons} fontSize="large"/>
@@ -90,9 +81,10 @@ function Reviews() {
                                 </ListItemText>
                             </ListItem>
                         </Grid>
+                        </Fade>
+
                     </Grid> 
                 </Grid>   
-            </Fade> 
         </div>
 
     );
