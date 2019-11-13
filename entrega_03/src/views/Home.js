@@ -15,6 +15,7 @@ import CNavbar from '../components/NavBars/CNavBar';
 //import Word from '../components/word/word';
 import Charts from '../components/Charts';
 
+
 import '../styles/css/Class.css';
 
 import database from '../api/api';
