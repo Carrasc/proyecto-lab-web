@@ -125,7 +125,7 @@ render(){
               &times;
             </a>*/}
             <div className="content" >
-              <div style = {{boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '2em'}}>
+              <div style = {{boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '2em', overflow: 'hidden'}}>
                 <Video source={this.props.row.trailer} thumbnail = {this.props.row.thumbnail}></Video>
               </div>
             </div>
