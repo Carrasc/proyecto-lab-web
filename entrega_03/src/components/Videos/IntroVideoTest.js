@@ -31,7 +31,7 @@ function IntroVideoTest() {
                                 <div style={video}>
                                     <ReactPlayer 
                                     // Para que no puedan descargar el video 
-                                    config={{ file: { attributes: { controlsList: 'nodownload', preload: "auto" } } }}
+                                    config={{ file: { attributes: { controlsList: 'nodownload', preload: "auto", } } }}
                                     
                                     // Disable right click (para que tampoco puedan descargar con click derecho)
                                     onContextMenu={e => e.preventDefault()}

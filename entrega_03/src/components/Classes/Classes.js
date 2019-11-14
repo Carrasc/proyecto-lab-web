@@ -6,6 +6,8 @@ import Popup from "reactjs-popup";
 
 
 
+
+
 const sources = [
     'http://media.w3.org/2010/05/sintel/trailer.mp4'
 ];
@@ -97,6 +99,7 @@ render(){
     return (
         <Popup trigger={
         
+          
         <Grid item style = {this.img}>
           <div style={blurOverImage} onMouseOver={this.overClass.bind(this)} onMouseOut={this.outClass.bind(this)}>
             <div style={STYLE.gradiantDiv}>
@@ -107,6 +110,7 @@ render(){
             </div>
           </div>
         </Grid>
+        
         
         }
         lockScroll
@@ -121,7 +125,7 @@ render(){
               &times;
             </a>*/}
             <div className="content" >
-              <div style = {{boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '2em'}}>
+              <div style = {{boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '2em', overflow: 'hidden'}}>
                 <Video source={this.props.row.trailer} thumbnail = {this.props.row.thumbnail}></Video>
               </div>
             </div>
