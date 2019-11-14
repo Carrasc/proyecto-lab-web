@@ -36,10 +36,10 @@ function IntroVideoTest() {
                                     // Disable right click (para que tampoco puedan descargar con click derecho)
                                     onContextMenu={e => e.preventDefault()}
                                     style = {{position: 'absolute', top: '0', left: "0"}} 
-                                    url='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4' 
+                                    url='https://www.youtube.com/watch?v=yDTXfM1YEzw' 
                                     controls 
-                                    playing
-                                    light="'https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg'"
+                                    //playing
+                                    //light="'https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg'"
                                     width={"100%"} 
                                     height={"100%"} />
                                 </div>
