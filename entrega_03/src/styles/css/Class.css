@@ -1,13 +1,15 @@
 .clase {
     padding: 0 1em 2em 1em;
-    height:25vw;
-    width:100%
+    height: 25vw; 
+    max-height:375px; /*1500 * 0.25 (1500px is the max-width of the app) */
+    width:100%;
 }
 
 
 @media (max-width: 959px) {
 .clase
     {
+        max-height: 50vw; /**/ 
         height:50vw;
     }
 }

@@ -30,13 +30,13 @@ const responsive = {
 export default class SectionCarousel extends Component {
   render(){
     const CustomRightArrow = ({ onClick, ...rest }) => {
-      // onMove means if dragging or swiping in progress.//style={{border:'2px', borderColor: 'coral'}}
-      return <img className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right" src={rightArrow} style={{width:'2vh'}} onClick={() => onClick()} ></img>;
+      // onMove means if dragging or swiping in progress.//style={{border:'2px', borderColor: 'coral'}}react-multiple-carousel__arrow--right
+      return <img className="react-multiple-carousel__arrow " src={rightArrow} style={{width:'2vh', right:'0px'}} onClick={() => onClick()} ></img>;
 
     };
     const CustomLeftArrow = ({ onClick, ...rest }) => {
       // onMove means if dragging or swiping in progress.//style={{border:'2px', borderColor: 'coral'}}
-      return <img className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left" src={leftArrow} style={{width:'2vh'}} onClick={() => onClick()} ></img>;
+      return <img className="react-multiple-carousel__arrow" src={leftArrow} style={{width:'2vh', left:'0px'}} onClick={() => onClick()} ></img>;
 
     };
   return (

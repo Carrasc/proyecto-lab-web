@@ -36,7 +36,7 @@ function Home(props) {
         </a>
         <Introduction />
         <IntroVideo />
-        <IntroVideoTest />
+        {/*<IntroVideoTest />*/}
         <Tendencies/>
         
         <Reviews/>

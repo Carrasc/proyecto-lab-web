@@ -11,6 +11,7 @@ import logo from '../../images/logo.png';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import Login from '../LoginPage';
+import '../../styles/css/cNavBar.css';
 //import global from '../../styles/global';
 
 
@@ -40,11 +41,13 @@ HideOnScroll.propTypes = {
   window: PropTypes.func,
 };
 const navBarStyle ={
-  margin: '0% 5% 0 5%',
+  margin: '0 5% 0 5%',
   position:'fixed', 
   top: 0,
   width:'90%', 
-  zIndex: '1000'
+  //left: '20%',
+  zIndex: '1000',
+  //maxWidth:'1500px'
 }
 const linksStyleLeft ={
   padding: '0 1.5em 0 0',
@@ -56,7 +59,7 @@ export default function CNavbar(props) {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <>
-    <React.Fragment>
+    <React.Fragment className = "cNavBar">
       <HideOnScroll {...props}>
       <nav className="navbar navbar-expand-lg  bg-white" style={navBarStyle}>
 

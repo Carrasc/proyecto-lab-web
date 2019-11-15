@@ -13,7 +13,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 function App(props) {
   return (
-    <div id = "app">
+    <div id = "app" style={{maxWidth: '1500px', margin: '0 auto'}}>
     	<BrowserRouter>
 			<div style={{fontFamily:'Nunito'}}>
 				<Link to="/"></Link>

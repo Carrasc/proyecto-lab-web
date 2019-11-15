@@ -9,13 +9,75 @@ import Grid from '@material-ui/core/Grid';
 import Subclass from '../components/Classes/Subclass';
 import Carousel from '../components/Carousels/Carousel';
 import ReactSlickDemo from '../components/Carousels/newCarousel';
+import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
+import Sticky from 'react-sticky-el';
+import DashboardNavBar from '../components/NavBars/Dashboard_NavBar.js';
+
+
+
+import { makeStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import IconButton from '@material-ui/core/IconButton';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Collapse from '@material-ui/core/Collapse';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import SendIcon from '@material-ui/icons/Send';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
+import StarBorder from '@material-ui/icons/StarBorder';
+import { red } from '@material-ui/core/colors';
+
+
+const useStyles = makeStyles(theme => ({
+    card: {
+      maxWidth: 345,
+    },
+    media: {
+      height: 0,
+      paddingTop: '56.25%', // 16:9
+    },
+    expand: {
+        color: '#4169E1',
+        marginTop: '-50px',
+        backgroundColor: 'transparent' ,
+      outline: 'none',
+      borderStyle:'none',
+      transform: 'rotate(0deg)',
+      marginLeft: 'auto',
+      transition: theme.transitions.create('transform', {
+        duration: theme.transitions.duration.shortest,
+      }),
+    },
+    expandOpen: {
+        backgroundColor: 'transparent' ,
+        marginTop: '-50px',
+        color: '#4169E1',
+      outline: 'none',
+      borderStyle:'none',
+      transform: 'rotate(180deg)',
+    },
+    avatar: {
+      backgroundColor: red[500],
+    },
+  }))
+
 
 const titles = ['45 + CLASES', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ', '327 LECCIONES', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.'
 ]
 const classes = [
     ['01','Hemisferios Cerebrales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
     ['02', 'Núcles grises de la base','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-    ['03', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.']
+    ['03', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
+    ['04','Hemisferios Cerebrales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
+    ['05', 'Núcles grises de la base','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
+    ['06', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.']
+
 ]
 const data = [
     ['57', '147', require("../images/7.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
@@ -24,10 +86,17 @@ const data = [
     ['57', '147', require("../images/4.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
 
   ]
-  
-  
+
 
 function VideoClass () {
+    var size = 3;
+    const classes_1 = useStyles();
+    const [expanded, setExpanded] = React.useState(false);
+  
+    const handleExpandClick = () => {
+      setExpanded(!expanded);
+    };
+
 
     const STYLE = {
         backgroundColor: 'rgba(248, 248, 255, 1)',
@@ -44,6 +113,8 @@ function VideoClass () {
 
             <div>
                 <UserNavBar/>
+
+                <Sticky style = {{zIndex: 10001}}><DashboardNavBar/></Sticky>
                
                 <Grid container={true} justify="center" >
                     <Grid xs= {10} item style ={globalStyles.mainContainer}>
@@ -71,14 +142,33 @@ function VideoClass () {
                         <div style={topicStyle}></div>
                         <h1 style={globalStyles.gTopic}>TOPICS:</h1>
                         <div style={topicStyle}></div>
-                        {classes.map((classes) =>{
+                        {classes.slice(0,size).map((classes) =>{
                             return(
                                 <Topics classes={classes}/>
                             )
                         })}
+                       
+     
+                        <Collapse in={expanded} timeout="auto" unmountOnExit>
+                            {classes.slice(size,classes.length).map((classes) =>{
+                                return(
+                                    <Topics classes={classes}/>
+                                )
+                            })}
+                        </Collapse>
+                        <IconButton
+                            className={clsx(classes_1.expand, {
+                                [classes_1.expandOpen]: expanded,
+                            })}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
+                        <ExpandMoreIcon />
+                        </IconButton>
                     </div>
                 </div>
-                <ReactSlickDemo/>
+
                 <Footer />
                 
             </div>
