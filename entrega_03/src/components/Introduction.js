@@ -23,7 +23,7 @@ class Introduction extends React.Component{
     };
     render(){
     return (
-        <div style={globalStyles.mainContainer}>
+        <div style={globalStyles.mainContainerSides}>
             <Grid container={true} justify="flex-start" style={this.style}>
                 <Grid item xs={10} sm={7} md={5}>
                     <div style={this.textDiv}>

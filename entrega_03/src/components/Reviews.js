@@ -25,13 +25,12 @@ function Reviews() {
 
     var text = {
         color: 'blue',
-        fontSize:'1.5vw',
 
     };
 
     var h5 ={
         color: 'blue',
-        fontSize:'1.5vw',
+        fontSize:'24px',
     }
     var icons = {
         textAlign: 'center',

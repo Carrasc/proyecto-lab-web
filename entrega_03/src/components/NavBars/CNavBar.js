@@ -42,7 +42,7 @@ HideOnScroll.propTypes = {
 };
 const navBarStyle ={
   margin: '0 5% 0 5%',
-  position:'fixed', 
+  position:'sticky', 
   top: 0,
   width:'90%', 
   //left: '20%',
