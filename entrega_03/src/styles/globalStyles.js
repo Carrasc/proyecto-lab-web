@@ -1,5 +1,5 @@
 
-const globalStyles= {
+const globalStyles = {
   //MARGINS AND PADDINGS FOR THE CORRECT FORMAT OF THE APP
   mainFont: {
     fontWeight: "light",
@@ -7,6 +7,9 @@ const globalStyles= {
   },
   mainContainer: {
     'margin': '2.5% 5% 0 5%',
+  },
+  titleContainer: {
+    'margin': '0 auto',
   },
   mainContainerSides: {
     'margin': '0 5% 0 5%',
@@ -19,7 +22,7 @@ const globalStyles= {
   },
   videoContainer: {
     'margin': '0% 5% 0% 5%',
-    height:'50%'
+    height: '50%'
   },
 
   //FONTS
@@ -58,7 +61,7 @@ const globalStyles= {
     margin: 0,
     padding: 0,
     fontSize: '1.3em',
-    fontWeight:'1em',
+    fontWeight: '1em',
     letterSpacing: '1px',
     color: 'gray'
   },
@@ -121,7 +124,7 @@ const globalStyles= {
   bnlFont: {
     margin: '0',
     padding: '0',
-    fontSize: '0.8em' ,
+    fontSize: '0.8em',
     fontWeight: '1em',
     color: 'blue',
     textShadow: '0px .2px, .2px 0px, .2px .2px',

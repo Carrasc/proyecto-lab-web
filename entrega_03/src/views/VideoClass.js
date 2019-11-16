@@ -114,7 +114,7 @@ function VideoClass () {
             <div>
                 <UserNavBar/>
 
-                <Sticky style = {{zIndex: 10001}}><DashboardNavBar/></Sticky>
+                <DashboardNavBar/>
                
                 <Grid container={true} justify="center" >
                     <Grid xs= {10} item style ={globalStyles.mainContainer}>
@@ -125,18 +125,6 @@ function VideoClass () {
                 <ClassesInfo title={titles} />
 
 
-                <Carousel component = {
-                    
-                    data.map((data, index) =>{
-                        return (
-                        <div onClick={() => alert("Hello from here")}>    
-                        <Subclass data={data} />
-                        
-                        </div>
-                        
-                        )})
-                        
-                } />
                 <div style={globalStyles.mainContainer}>
                     <div style={STYLE}>
                         <div style={topicStyle}></div>
@@ -168,7 +156,7 @@ function VideoClass () {
                         </IconButton>
                     </div>
                 </div>
-
+                <ReactSlickDemo/>
                 <Footer />
                 
             </div>

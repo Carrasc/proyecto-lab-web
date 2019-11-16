@@ -8,12 +8,14 @@ import Typography from '@material-ui/core/Typography';
 import globalStyles from  '../../styles/globalStyles'
 import { Image } from "semantic-ui-react";
 
+import '../../styles/css/Subclass.css';
 import 'react-multi-carousel/lib/styles.css';
 
 const cardStyle ={
     margin:'20px',
     //height:'800px'
     boxShadow: 'none',
+    backgroundColor: 'transparent'
 }
 
 const textDiv = {
@@ -45,12 +47,30 @@ const gradiantDiv = {
     background:'linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 90%)',  
 
 }
+
+const styles = {
+    card: {
+      maxWidth: 345
+    },
+    media: {
+      // ⚠️ object-fit is not supported by IE 11.
+      objectFit: "cover"
+    },
+    actionArea: {
+      "&:hover $focusHighlight": {
+        opacity: 0
+      }
+    },
+    focusHighlight: {}
+  };
  class Subclass extends Component{
+     
       render(){
         //console.log("props",this.props.comps);
         return (
             <Card style={cardStyle}>
-                <CardActionArea>
+                <CardActionArea 
+                >
                     <CardContent>
                         <Typography gutterBottom variant="p" component="h2">
                             <h1 style={globalStyles.gsFont}>Completadas {this.props.data[0]} de {this.props.data[1]}</h1>
@@ -58,6 +78,7 @@ const gradiantDiv = {
                     </CardContent>
                     <CardMedia>
                         <Image
+                        className = 'hoverImageSubclass'
                         draggable={false}
                         style={{ width: "100%", height: "500px" }}
                         src={this.props.data[2]} />

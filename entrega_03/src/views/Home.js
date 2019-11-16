@@ -24,6 +24,7 @@ import database from '../api/api';
 var classes = database.classes;
 
 
+
 function Home(props) {
 
   return (
@@ -32,6 +33,7 @@ function Home(props) {
        
         <CNavbar></CNavbar>
         
+        
         <a href = '/'id="home"> 	
         </a>
         <Introduction />
@@ -39,7 +41,7 @@ function Home(props) {
         {/*<IntroVideoTest />*/}
         <Tendencies/>
         
-        <Reviews/>
+        <Reviews color={'#ffffff'}/>
 
        
 

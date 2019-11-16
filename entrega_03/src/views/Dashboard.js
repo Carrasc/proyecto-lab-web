@@ -10,7 +10,20 @@ import Footer from '../components/Footer';
 import Sticky from 'react-sticky-el';
 import ContinueLesson from '../components/Classes/ContinueLesson';
 import DashboardTendencie from '../components/DashboardTendencie';
-//import CDashboardNavBar from '../components/NavBars/CDashboardNavBar';
+import Tendencies from '../components/Tendencies';
+import Reviews from '../components/Reviews';
+import CDashboardNavBar from '../components/NavBars/CDashboardNavBar';
+import MDashboardNavBar from '../components/NavBars/MDashboardNavBar';
+
+import ClassesInfo from '../components/Classes/Classes_Info';
+import Video from '../components/Videos/Video'
+import Topics from '../components/Classes/Classes_Topics';
+import Subclass from '../components/Classes/Subclass';
+import ReactSlickDemo from '../components/Carousels/newCarousel';
+import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
+
+
+
 //import Word from '../components/word/word';
 //import Form from '../components/form/form';
 
@@ -26,13 +39,27 @@ import database from '../api/api';
 
   var classes = database.classes;
 
+  const data = [
+    ['57', '147', require("../images/7.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
+    ['13', '153', require("../images/7.jpg"), 'LÓBULOS NEUROENCEFALÓGICOS', 'DEL SISTEMA NERVIOSO'],
+    ['0', '80', require("../images/7.jpg"), 'ESTOY MAMADÍSIMO', 'DEL SISTEMA NERVIOSO'],
+    ['57', '147', require("../images/7.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
+
+  ]
+
 
 function Dashboard(props) {
 
   return (   
     <div >
 		<UserNavBar/>		
-  		<DashboardNavBar/>
+  		{/*<DashboardNavBar/>*/}
+		<CDashboardNavBar/>
+
+		<br/>
+		<br/>
+		<Tendencies/>
+        <Reviews color={'#f2f2f2'}/>
 	  	
 		<div style= {globalStyles.mainContainer}>
 			<h1 style={globalStyles.bMainTitleFont}>Medu Lectures</h1>
@@ -50,9 +77,10 @@ function Dashboard(props) {
 
 
 		{/*Classes*/}
-		<div  style= {{textAlign:"center", marginTop:'3em'}}>
+		<div  style= {{textAlign:"center", marginTop:'5em'}}>
 			<h3 style = {globalStyles.bSecondaryTitleFont}>ESPECIALIDADES</h3>
 		</div>
+
 		<div style={globalStyles.mainContainer}>
 			<div style={{textAlign:"center"}}>
 				<Grid container = {true} >
@@ -68,7 +96,25 @@ function Dashboard(props) {
 			</div>
 		</div>
 
-		<DashboardTendencie tendencieData = {tendencieData}/>
+		<DashboardTendencie tendencieData = {tendencieData} />
+
+		<div style= {globalStyles.titleContainer}>
+			<h1 style={globalStyles.bSecondaryTitleFont}>MIS CLASES</h1>
+		</div>
+		<Carousel component = {
+                    
+			data.map((data, index) =>{
+				return (
+				<div onClick={() => alert("Hello from here")}>    
+				<Subclass data={data} />
+				
+				</div>
+				
+				)})
+				
+		} />
+
+
 		<Footer/>
   
       
