@@ -32,7 +32,7 @@ function Dashboard(props) {
   return (   
     <div >
 		<UserNavBar/>		
-  		<Sticky style = {{zIndex: 10001}}><DashboardNavBar/></Sticky>
+  		<DashboardNavBar/>
 	  	
 		<div style= {globalStyles.mainContainer}>
 			<h1 style={globalStyles.bMainTitleFont}>Medu Lectures</h1>

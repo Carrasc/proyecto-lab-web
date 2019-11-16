@@ -17,6 +17,8 @@ function DashboardNavBar() {
     backgroundColor: 'rgba(248, 248, 255, 1)',
     height:'3em',
     zIndex: 10001,
+    position: 'sticky', 
+    top: 0
   }
 
   const textField = {
