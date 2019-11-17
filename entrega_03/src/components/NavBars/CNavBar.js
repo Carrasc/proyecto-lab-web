@@ -49,8 +49,8 @@ export default function CNavbar(props) {
               </Link>
           </div>
 
-          <button className="navbar-toggler navbar-dark bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-              <span className="navbar-toggler-icon" className="nav-link"></span>
+          <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="navbar-toggler-icon"></span>
           </button>
 
           <div className="navbar-collapse collapse text-center" id="collapsingNavbar">
