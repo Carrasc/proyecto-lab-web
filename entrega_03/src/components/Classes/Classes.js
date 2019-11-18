@@ -1,20 +1,8 @@
 import React, { Component } from "react";
 import Grid from '@material-ui/core/Grid';
 
-import Video from '../Videos/Video';
-import Popup from "reactjs-popup";
-
-
-
-
-
-const sources = [
-    'http://media.w3.org/2010/05/sintel/trailer.mp4'
-];
-
-const thumbnail = [
-'https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg'
-];
+//App components
+import ClassesModal from './ClassesModal'
 
 const STYLE = {
 
@@ -64,6 +52,8 @@ class Classes extends Component {
     };
     this.overClass = this.overClass.bind(this);
     this.outClass = this.outClass.bind(this);
+    this.handleModal = this.handleModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   img = { 
@@ -77,6 +67,18 @@ class Classes extends Component {
     cursor: 'pointer',
     };
 
+  handleModal(){
+    this.setState({
+      show : true
+    })
+  }
+  
+  handleCloseModal(){
+    this.setState({
+      show : false
+    })
+  }
+
   
   outClass(e){
     this.setState({
@@ -89,52 +91,33 @@ class Classes extends Component {
   });
   }
     
-render(){
-  var blurOverImage = {
-    position: 'absolute',
-    width:'100%',
-    height:'100%',
-    backgroundColor: this.state.blur
-  } 
+ render(){
+    var blurOverImage = {
+      position: 'absolute',
+      width:'100%',
+      height:'100%',
+      backgroundColor: this.state.blur
+    } 
     return (
-        <Popup trigger={
-        
-          
-        <Grid item style = {this.img}>
-          <div style={blurOverImage} onMouseOver={this.overClass.bind(this)} onMouseOut={this.outClass.bind(this)}>
-            <div style={STYLE.gradiantDiv}>
-                <div style={STYLE.textDiv}>
-                    <h2 style={STYLE.titulo}>{this.props.row.name}</h2>
-                    <p style={STYLE.especialidad}>{this.props.row.specialty}</p>
-                </div>
-            </div>
-          </div>
-        </Grid>
-        
-        
-        }
-        lockScroll
-        closeOnEscape
-        modal
-        contentStyle={STYLE.st}
-        >
-        {close => (
-          <div className="">
-            {/*
-            <a className="close" onClick={close} href='/#'>
-              &times;
-            </a>*/}
-            <div className="content" >
-              <div style = {{boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '2em', overflow: 'hidden'}}>
-                <Video source={this.props.row.trailer} thumbnail = {this.props.row.thumbnail}></Video>
+      <>
+          <Grid item style = {this.img}>
+            <div style={blurOverImage} onMouseOver={this.overClass.bind(this)} onMouseOut={this.outClass.bind(this)} onClick={this.handleModal}>
+              <div style={STYLE.gradiantDiv}>
+                  <div style={STYLE.textDiv}>
+                      <h2 style={STYLE.titulo}>{this.props.row[0]}</h2>
+                      <p style={STYLE.especialidad}>{this.props.row[1]}</p>
+                  </div>
               </div>
             </div>
-            
-          </div>
-        )}
-      </Popup>
+          </Grid>
+        
+          <ClassesModal
+            show={this.state.show}
+            onHide={this.handleCloseModal}
+          />
+      </>
     );
-    }
+  }
 }
 
 export default Classes;
