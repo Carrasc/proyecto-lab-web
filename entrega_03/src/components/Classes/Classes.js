@@ -3,6 +3,10 @@ import Grid from '@material-ui/core/Grid';
 
 //App components
 import ClassesModal from './ClassesModal'
+import Video from '../Videos/Video';
+import Popup from "reactjs-popup";
+
+import '../../styles/css/Class.css'
 
 const STYLE = {
 
@@ -27,20 +31,7 @@ const STYLE = {
         margin: 0,
         padding: 0
     },
-    gradiantDiv : {
-        position: 'absolute',
-        bottom: '0',
-        width:'100%',
-        height:'70%',        
-        background:'linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 90%)',  
 
-    },
-    st : {
-        width: '70%',
-        background: 'rgba(255,255,255,0)',
-        borderStyle: 'none',
-        
-    }
 }
 
 class Classes extends Component {
@@ -57,7 +48,7 @@ class Classes extends Component {
   }
 
   img = { 
-    backgroundImage: `url(${this.props.row.img})`,
+    backgroundImage: `linear-gradient(to top, rgba(255,255,255,1), rgba(0,0,0,0) 60%), url(${this.props.row.img})`,
     height:'100%',
     width:'100%',
     backgroundPosition:'center center',

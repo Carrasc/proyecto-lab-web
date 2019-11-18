@@ -15,6 +15,7 @@ class Introduction extends React.Component{
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
+        //backgroundSize: 'cover'
         
     };
     textDiv = {

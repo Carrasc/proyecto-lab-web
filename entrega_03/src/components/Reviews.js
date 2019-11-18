@@ -12,12 +12,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 
 
-function Reviews() {
+function Reviews(props) {
 
     const style = { 
          height:'100%',
-         //backgroundColor: '#ededed',
+         backgroundColor: props.color,
          margin:'0 5% 5% 5%',
+         padding: '2% 0 2% 0',
          width: '90%'
 
     };

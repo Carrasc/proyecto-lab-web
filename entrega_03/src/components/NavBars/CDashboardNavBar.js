@@ -3,8 +3,11 @@ import React from 'react';
 //import './NavStyle.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownButton from 'react-bootstrap/DropdownButton'
 
 import SearchIcon from '@material-ui/icons/Search';
+import MDashboardNavBar from './MDashboardNavBar';
 
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
@@ -17,7 +20,10 @@ const barStyle={
     margin: '0 5% 0 5%',
     height:'3em',
     zIndex: 10001,
+    position: 'sticky', 
+    top: 0
   }
+  
 
   const useStyles = makeStyles(theme => ({
     
@@ -64,13 +70,15 @@ const barStyle={
 
 export default function CNavbar(props) {
 
-    const classes = useStyles();
+
+  const classes = useStyles();
+  
   return (
         <nav class="navbar navbar-expand-lg bg-light" style={barStyle}>
             <div class="d-flex flex-grow-1">
                 <span class="w-100 d-lg-none d-block"></span>
                 <a class="navbar-brand" href="#">
-                    <h1 style={global.bnlFont}>MEDU LECTURES</h1>
+                    <h1 style={globalStyles.bnlFont}>MEDU LECTURES</h1>
                 </a>
                 <div class="w-100 text-right">
                     <button class="navbar-toggler navbar-dark bg-primary" type="button" data-toggle="collapse" data-target="#myNavbar7">
@@ -78,34 +86,34 @@ export default function CNavbar(props) {
                     </button>
                 </div>
             </div>
-            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <div class="collapse navbar-collapse text-center" id="myNavbar7">
                 <ul class="navbar-nav ml-auto flex-nowrap">
                     <li class="nav-item">
-                    <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Buscar"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
+                    	{/*<div className={classes.search}>
+							<div className={classes.searchIcon}>
+							<SearchIcon />
+							</div>
+							<InputBase
+							placeholder="Buscar"
+							classes={{
+								root: classes.inputRoot,
+								input: classes.inputInput,
+							}}
+							inputProps={{ 'aria-label': 'search' }}
+							/>
+						</div>*/}
+                    </li>
+					<li class="nav-item">
+						<MDashboardNavBar/>
+					</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><h1 style={globalStyles.bnlFont}>Mis Clases</h1></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><h1 style={global.bnlFont}>Categorias</h1></a>
+                        <a href="#" class="nav-link"><h1 style={globalStyles.bnlFont}>Medu Talks</h1></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><h1 style={global.bnlFont}>Mis Clases</h1></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><h1 style={global.bnlFont}>Medu Talks</h1></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><h1 style={global.bnlFont}>ENARM</h1></a>
+                        <a href="#" class="nav-link"><h1 style={globalStyles.bnlFont}>ENARM</h1></a>
                     </li>
                 </ul>
             </div>

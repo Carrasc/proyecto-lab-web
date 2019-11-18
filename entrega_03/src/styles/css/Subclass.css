@@ -1,0 +1,12 @@
+/* Slow-motion Zoom Container */
+.hoverImageSubclass {
+    transform-origin: 50% 65%;
+    transition: transform 3s;
+    
+  }
+  
+  /* The Transformation */
+  .hoverImageSubclass:hover {
+   
+    transform: scale(1.05);
+  }
