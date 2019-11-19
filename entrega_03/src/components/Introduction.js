@@ -35,8 +35,8 @@ class Introduction extends React.Component{
                         <br/>
                         
 
-                        <p style={globalStyles.blFont}>Medu es tu compañero de estudios en medicina, tu tutor para el
-                        ENARM y tu colega en la práctica médica. </p>
+                        <p style={globalStyles.glFont}>Medu es tu compañero de estudios en <strong>medicina</strong>, tu tutor para el
+                        ENARM y tu <strong>colega</strong> en la práctica médica. </p>
                         <br></br>
                         <br></br>
                         <h3 style={{ fontSize: '1.5em', fontWeight: 'bold', color: 'blue', letterSpacing: '1px'}}>Por solo $199.00 al mes.</h3>

@@ -11,7 +11,7 @@ import Carousel from '../components/Carousels/Carousel';
 import ReactSlickDemo from '../components/Carousels/newCarousel';
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
 import Sticky from 'react-sticky-el';
-import DashboardNavBar from '../components/NavBars/Dashboard_NavBar.js';
+import CDashboardNavBar from '../components/NavBars/CDashboardNavBar.js';
 
 
 
@@ -32,6 +32,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
 import { red } from '@material-ui/core/colors';
+import TitleClass from '../components/TitleClass';
 
 
 const useStyles = makeStyles(theme => ({
@@ -68,7 +69,7 @@ const useStyles = makeStyles(theme => ({
   }))
 
 
-const titles = ['45 + CLASES', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ', '327 LECCIONES', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.'
+const titles = ['LUIS FERNANDO CARRASCO', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ', '327 LECCIONES', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.'
 ]
 const classes = [
     ['01','Hemisferios Cerebrales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
@@ -101,7 +102,8 @@ function VideoClass () {
     const STYLE = {
         backgroundColor: 'rgba(248, 248, 255, 1)',
         //padding: '5em',
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: '5em'
     }
     const topicStyle = {
         width:'80%',
@@ -112,24 +114,32 @@ function VideoClass () {
         return (
 
             <div>
-                <UserNavBar/>
+                {/*<UserNavBar/>*/}
 
-                <DashboardNavBar/>
+                
+
+                <TitleClass class={'Neurología'} teacher={'LUIS FERNANDO CARRASCO'}></TitleClass>
+                <CDashboardNavBar/>
                
+               {/*
                 <Grid container={true} justify="center" >
                     <Grid xs= {10} item style ={globalStyles.mainContainer}>
                         <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
                     </Grid>
                 </Grid>
+               */}
 
                 <ClassesInfo title={titles} />
 
 
+
                 <div style={globalStyles.mainContainer}>
                     <div style={STYLE}>
+                    <div style={topicStyle}></div>
+                        <h1 style={globalStyles.gTopic}>TOPICS</h1>
+                        
                         <div style={topicStyle}></div>
-                        <h1 style={globalStyles.gTopic}>TOPICS:</h1>
-                        <div style={topicStyle}></div>
+                        
                         {classes.slice(0,size).map((classes) =>{
                             return(
                                 <Topics classes={classes}/>

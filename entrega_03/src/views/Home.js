@@ -48,7 +48,7 @@ function Home(props) {
         {/*Classes*/}
         <a href = '/'id="contenidos"> 	
         </a>
-        <div  style= {{textAlign:"center"}}>
+        <div  style= {{textAlign:"center", margin: '0 0 2em 0'}}>
         	<h1 style = {globalStyles.bSecondaryTitleFont}>AHORA DISPONIBLE</h1>
         </div>
           <div style={globalStyles.mainContainer}>
@@ -77,7 +77,7 @@ function Home(props) {
 
 
 		{/*Comments*/}
-		<div  style= {{textAlign:"center" ,marginTop:'5em '}}>
+		<div  style= {{textAlign:"center" ,margin: '5em 0 2em 0'}}>
         	<h1 style = {globalStyles.blFont}>LOS ESTUDIANTES COMENTAN</h1>
         </div>
         <div style = {globalStyles.cardContainer} >

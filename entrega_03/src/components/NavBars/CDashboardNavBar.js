@@ -1,19 +1,13 @@
 import React from 'react';
 
-//import './NavStyle.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import Dropdown from 'react-bootstrap/Dropdown'
-import DropdownButton from 'react-bootstrap/DropdownButton'
+//import Dropdown from 'react-bootstrap/Dropdown'
+//import DropdownButton from 'react-bootstrap/DropdownButton'
 
-import SearchIcon from '@material-ui/icons/Search';
 import MDashboardNavBar from './MDashboardNavBar';
 
-import InputBase from '@material-ui/core/InputBase';
-import { fade, makeStyles } from '@material-ui/core/styles';
-
-
-
+import './NavStyle.scss';
 import globalStyles from  '../../styles/globalStyles';
 
 const barStyle={
@@ -23,62 +17,21 @@ const barStyle={
     position: 'sticky', 
     top: 0
   }
+
+  const linksStyleRight ={
+    padding: '0 0 0 1.5em',
+  }
   
 
-  const useStyles = makeStyles(theme => ({
-    
-    search: {
-      position: 'relative',
-      borderRadius: theme.shape.borderRadius,
-      backgroundColor: fade('#0000FF', 0.05),
-        '&:hover': {
-        backgroundColor: fade('#0000FF', 0.1),
-        },
-      marginLeft: 0,
-      width: '100%',
-      [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(1),
-        width: 'auto',
-      },
-    },
-    searchIcon: {
-      width: theme.spacing(7),
-      height: '100%',
-      position: 'absolute',
-      pointerEvents: 'none',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: 'blue'
-    },
-    inputRoot: {
-      color: 'blue',
-    },
-    inputInput: {
-      padding: theme.spacing(1, 1, 1, 7),
-      transition: theme.transitions.create('width'),
-      width: '100%',
-      [theme.breakpoints.up('sm')]: {
-        width: 120,
-        '&:focus': {
-          width: 200,
-        },
-      },
-    },
-  }));
-
-
 export default function CNavbar(props) {
-
-
-  const classes = useStyles();
   
   return (
         <nav class="navbar navbar-expand-lg bg-light" style={barStyle}>
             <div class="d-flex flex-grow-1">
                 <span class="w-100 d-lg-none d-block"></span>
-                <a class="navbar-brand" href="#">
-                    <h1 style={globalStyles.bnlFont}>MEDU LECTURES</h1>
+
+                <a class="navbar-brand logoLetras" href="#">
+                    MEDU LECTURES
                 </a>
                 <div class="w-100 text-right">
                     <button class="navbar-toggler navbar-dark bg-primary" type="button" data-toggle="collapse" data-target="#myNavbar7">
@@ -87,7 +40,7 @@ export default function CNavbar(props) {
                 </div>
             </div>
             <div class="collapse navbar-collapse text-center" id="myNavbar7">
-                <ul class="navbar-nav ml-auto flex-nowrap">
+                <ul class="navbar-nav  ml-auto  nav_ul">
                     <li class="nav-item">
                     	{/*<div className={classes.search}>
 							<div className={classes.searchIcon}>
@@ -103,17 +56,17 @@ export default function CNavbar(props) {
 							/>
 						</div>*/}
                     </li>
-					<li class="nav-item">
+					<li class="nav-item" style={linksStyleRight}>
 						<MDashboardNavBar/>
 					</li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><h1 style={globalStyles.bnlFont}>Mis Clases</h1></a>
+                    <li class="nav-item" style={linksStyleRight}>
+                        <a href="#" class="nav-link" >MIS CLASES</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><h1 style={globalStyles.bnlFont}>Medu Talks</h1></a>
+                    <li class="nav-item" style={linksStyleRight}>
+                        <a href="#" class="nav-link">MEDU TALKS</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><h1 style={globalStyles.bnlFont}>ENARM</h1></a>
+                    <li class="nav-item" style={linksStyleRight}>
+                        <a href="#" class="nav-link" >ENARM</a>
                     </li>
                 </ul>
             </div>
