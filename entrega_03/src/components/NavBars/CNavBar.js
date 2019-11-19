@@ -59,37 +59,41 @@ export default function CNavbar(props) {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <>
-    <React.Fragment className = "cNavBar">
+    <React.Fragment >
       <HideOnScroll {...props}>
-      <nav className="navbar navbar-expand-lg  bg-white" style={navBarStyle}>
+        <div  className = "container">
 
-          <div className="navbar-brand abs" style={{zIndex: '-1'}}>
-              <Link smooth to="/#home">
-                <img src={logo} style={{width: '50px', padding: '5px 5px 5px 5px'}} href='#'/>
-              </Link>
-          </div>
+        
+			<nav className="navbar navbar-expand-lg bg-white cNavBar">
 
-          <button className="navbar-toggler navbar-dark bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-              <span className="navbar-toggler-icon" className="nav-link"></span>
-          </button>
+				<div className="navbar-brand abs" style={{zIndex: '-1'}}>
+					<Link smooth to="/#home">
+						<img src={logo} style={{width: '50px', padding: '5px 5px 5px 5px'}} href='#'/>
+					</Link>
+				</div>
 
-          <div className="navbar-collapse collapse" id="collapsingNavbar">
-              <ul className="navbar-nav nav_ul">
-                  <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#contenidos" className="nav-link">CONTENIDOS</Link>
-                  </li>
+				<button className="navbar-toggler navbar-dark bg-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+					<span className="navbar-toggler-icon" className="nav-link"></span>
+				</button>
 
-                  <li className="nav-item" style={linksStyleLeft}>
-                    <Link smooth to="/#precios" className="nav-link">PRECIOS</Link>
-                  </li>
-              </ul>
-              <ul className="navbar-nav ml-auto nav_ul">
-                  <li className="nav-item" style={linksStyleRight}>
-                      <a className="nav-link" href="" data-target="/#myModal" data-toggle="modal" onClick={() => setModalShow(true)}>INICIAR SESIÓN</a>
-                  </li>
-              </ul>
-          </div>
-      </nav>
+				<div className="navbar-collapse collapse" id="collapsingNavbar">
+					<ul className="navbar-nav nav_ul">
+						<li className="nav-item" style={linksStyleLeft}>
+							<Link smooth to="/#contenidos" className="nav-link">CONTENIDOS</Link>
+						</li>
+
+						<li className="nav-item" style={linksStyleLeft}>
+							<Link smooth to="/#precios" className="nav-link">PRECIOS</Link>
+						</li>
+					</ul>
+					<ul className="navbar-nav ml-auto nav_ul">
+						<li className="nav-item" style={linksStyleRight}>
+							<a className="nav-link" href="" data-target="/#myModal" data-toggle="modal" onClick={() => setModalShow(true)}>INICIAR SESIÓN</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
       </HideOnScroll>
     </React.Fragment>
     <Login
