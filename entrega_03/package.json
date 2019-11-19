@@ -1,5 +1,5 @@
 {
-  "name": "entrega_01",
+  "name": "entrega_03",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -27,6 +27,7 @@
     "react-router-dom": "^5.1.2",
     "react-router-hash-link": "^1.2.2",
     "react-scripts": "3.1.1",
+    "react-select": "^3.0.8",
     "react-slick": "^0.25.2",
     "react-spring-3d-carousel": "^1.1.4",
     "react-sticky": "^6.0.3",

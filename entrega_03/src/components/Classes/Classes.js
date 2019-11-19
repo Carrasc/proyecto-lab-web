@@ -1,20 +1,11 @@
 import React, { Component } from "react";
 import Grid from '@material-ui/core/Grid';
 
-import Video from '../Videos/Video';
-import Popup from "reactjs-popup";
+//App components
+import ClassesModal from './ClassesModal'
 
 
-
-
-
-const sources = [
-    'http://media.w3.org/2010/05/sintel/trailer.mp4'
-];
-
-const thumbnail = [
-'https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg'
-];
+import '../../styles/css/Class.css'
 
 const STYLE = {
 
@@ -39,20 +30,7 @@ const STYLE = {
         margin: 0,
         padding: 0
     },
-    gradiantDiv : {
-        position: 'absolute',
-        bottom: '0',
-        width:'100%',
-        height:'70%',        
-        background:'linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 90%)',  
 
-    },
-    st : {
-        width: '70%',
-        background: 'rgba(255,255,255,0)',
-        borderStyle: 'none',
-        
-    }
 }
 
 class Classes extends Component {
@@ -64,10 +42,12 @@ class Classes extends Component {
     };
     this.overClass = this.overClass.bind(this);
     this.outClass = this.outClass.bind(this);
+    this.handleModal = this.handleModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   img = { 
-    backgroundImage: `url(${this.props.row.img})`,
+    backgroundImage: `linear-gradient(to top, rgba(255,255,255,1), rgba(0,0,0,0) 60%), url(${this.props.row.img})`,
     height:'100%',
     width:'100%',
     backgroundPosition:'center center',
@@ -76,6 +56,18 @@ class Classes extends Component {
     position: 'relative',
     cursor: 'pointer',
     };
+
+  handleModal(){
+    this.setState({
+      show : true
+    })
+  }
+  
+  handleCloseModal(){
+    this.setState({
+      show : false
+    })
+  }
 
   
   outClass(e){
@@ -89,52 +81,26 @@ class Classes extends Component {
   });
   }
     
-render(){
-  var blurOverImage = {
-    position: 'absolute',
-    width:'100%',
-    height:'100%',
-    backgroundColor: this.state.blur
-  } 
+ render(){
+
     return (
-        <Popup trigger={
-        
-          
-        <Grid item style = {this.img}>
-          <div style={blurOverImage} onMouseOver={this.overClass.bind(this)} onMouseOut={this.outClass.bind(this)}>
-            <div style={STYLE.gradiantDiv}>
-                <div style={STYLE.textDiv}>
-                    <h2 style={STYLE.titulo}>{this.props.row.name}</h2>
-                    <p style={STYLE.especialidad}>{this.props.row.specialty}</p>
-                </div>
-            </div>
-          </div>
-        </Grid>
-        
-        
-        }
-        lockScroll
-        closeOnEscape
-        modal
-        contentStyle={STYLE.st}
-        >
-        {close => (
-          <div className="">
-            {/*
-            <a className="close" onClick={close} href='/#'>
-              &times;
-            </a>*/}
-            <div className="content" >
-              <div style = {{boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '2em', overflow: 'hidden'}}>
-                <Video source={this.props.row.trailer} thumbnail = {this.props.row.thumbnail}></Video>
+      <>
+          <div style={{height:'100%', overflow: 'hidden', position: 'relative'}} onClick={this.handleModal}>
+              <Grid item style = {this.img} className='hoverImage'></Grid>
+
+              <div style={STYLE.textDiv}>
+                  <h2 style={STYLE.titulo}>{this.props.row.name}</h2>
+                  <p style={STYLE.especialidad}>{this.props.row.specialty}</p>
               </div>
-            </div>
-            
           </div>
-        )}
-      </Popup>
+        
+          <ClassesModal
+            show={this.state.show}
+            onHide={this.handleCloseModal}
+          />
+      </>
     );
-    }
+  }
 }
 
 export default Classes;

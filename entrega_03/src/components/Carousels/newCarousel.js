@@ -1,3 +1,4 @@
+/*
 import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
 import uuidv4 from "uuid";
@@ -144,48 +145,60 @@ export default class Example extends Component {
 
 
 
-/*
-
+*/
 import React from "react";
 import ReactDOM from "react-dom";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import img1 from '../../images/5.jpg'
+import img2 from '../../images/6.jpg'
 
 class ReactSlickDemo extends React.Component {
   render() {
     var settings = {
-      dots: true
+      dots: true,
+      infinite: true,
+      speed: 500,
+      centerMode: true,
+      centerPadding:'10%',
+      focusOnChange: true,
     };
 
     const containere = {
+      textAlign: 'center',
       padding: '40px',
-      background: '#419be0'
+      background: '#f2f2f2'
     }
     
     
 
     return (
-      <div style={containere}>
-        <Slider {...settings}>
-          <div>
-            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
-          </div>
-          <div>
-            <img style={{margin:'auto'}}src="http://placekitten.com/g/400/200" />
-          </div>
-          <div>
-            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
-          </div>
-          <div>
-            <img style={{margin:'auto'}} src="http://placekitten.com/g/400/200" />
-          </div>
-        </Slider>
+      <div style={{margin: '2.5% 5% 0 5%',}}>
+          <div style={containere}>
+          <Slider {...settings}>
+            <div>
+              <img style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img1} />
+            </div>
+            <div>
+              <img style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img2} />
+            </div>
+            <div>
+              <img style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img1} />
+            </div>
+            <div>
+              <img style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img2} />
+            </div>
+          </Slider>
+        </div>
       </div>
     );
   }
 }
 
 export default ReactSlickDemo;
-
+/*
 
 import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";

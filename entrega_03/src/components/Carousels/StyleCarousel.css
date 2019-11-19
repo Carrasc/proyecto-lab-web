@@ -1,3 +1,11 @@
+.slick-list {
+  /*filter: blur(5px) brightness(0.5);*/
+}
+.slick-current img{
+  filter: blur(0px) brightness(1);
+
+}
+/*
 .slick-container
 {
  position: relative;
@@ -38,3 +46,4 @@
       background-color: black;
     }
   }
+  */

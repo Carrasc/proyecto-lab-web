@@ -5,6 +5,24 @@
     width:100%;
 }
 
+/* Slow-motion Zoom Container */
+.hoverImage{
+    -webkit-transition:all 1.5s ease; /* Safari y Chrome */
+    -moz-transition:all 1.5s ease; /* Firefox */
+    -o-transition:all 1.5s ease; /* IE 9 */
+    -ms-transition:all 1.5s ease; /* Opera */
+    transition:all 1.5s;
+    transform-origin: center center;
+  }
+  
+  /* The Transformation */
+  .hoverImage:hover{
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform: scale(1.25);
+  }
 
 @media (max-width: 959px) {
 .clase
