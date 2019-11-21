@@ -54,6 +54,9 @@ const useStyles = makeStyles(theme => ({
       transition: theme.transitions.create('transform', {
         duration: theme.transitions.duration.shortest,
       }),
+      '&:focus':{
+        outline: 'none',
+    }
     },
     expandOpen: {
         backgroundColor: 'transparent' ,
@@ -62,6 +65,9 @@ const useStyles = makeStyles(theme => ({
       outline: 'none',
       borderStyle:'none',
       transform: 'rotate(180deg)',
+      '&:focus':{
+          outline: 'none',
+      }
     },
     avatar: {
       backgroundColor: red[500],

@@ -21,7 +21,7 @@ import '../styles/css/Class.css';
 import database from '../api/api';
 
 
-var classes = database.classes;
+var courses = database.courses;
 
 
 
@@ -54,10 +54,10 @@ function Home(props) {
           <div style={globalStyles.mainContainer}>
               <div style={{textAlign:"center"}}>
                   <Grid container = {true} >
-                  {classes.map((classes,index) =>{
+                  {courses.map((courses,index) =>{
                       return(
                         <Grid item sm= {12} md={6} className = 'clase' key= {index} >
-                            <Clases  row = {classes} ></Clases>
+                            <Clases  row = {courses} ></Clases>
                         </Grid>
                           
                       )

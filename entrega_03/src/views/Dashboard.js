@@ -37,7 +37,7 @@ import database from '../api/api';
 
   var tendencieData = database.tendencieData;
 
-  var classes = database.classes;
+  var courses = database.courses;
 
   const data = [
     ['57', '147', require("../images/7.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
@@ -76,7 +76,7 @@ function Dashboard(props) {
           } /> 
 
 
-		{/*Classes*/}
+		{/*Courses*/}
 		<div  style= {{textAlign:"center", marginTop:'5em'}}>
 			<h3 style = {globalStyles.bSecondaryTitleFont}>ESPECIALIDADES</h3>
 		</div>
@@ -84,10 +84,10 @@ function Dashboard(props) {
 		<div style={globalStyles.mainContainer}>
 			<div style={{textAlign:"center"}}>
 				<Grid container = {true} >
-				{classes.map((classes,index) =>{
+				{courses.map((courses,index) =>{
 					return(
 					<Grid item sm= {12} md={6} className = 'clase' key= {index} >
-						<Clases  row = {classes} ></Clases>
+						<Clases  row = {courses} ></Clases>
 					</Grid>
 					
 					)

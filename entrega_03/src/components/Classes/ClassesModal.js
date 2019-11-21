@@ -57,14 +57,14 @@ function ClassesModal(props){
                   <Video source={sources[0]} thumbnail = {thumbnail[0]}></Video>
                     
                 </div>
-                <div className="classes-below">
-                    <div className="classes-tx">
+                <div>
+                    <div >
                         <p>
                             The good news is that asynchronous JavaScript is a lot easier than it used to be. Before ES6, we were dependent on callback functions. If multiple callbacks were necessary (and they often were).
                         </p>
                     </div>
-                    <div className="classes-right">
-                        <div className="classes-info">
+                    <div>
+                        <div >
                             <ListItem  className= "internal-grid">
                                 <ListItemIcon>
                                     <LibraryBooksOutlinedIcon style = {icons} fontSize="large"/>
