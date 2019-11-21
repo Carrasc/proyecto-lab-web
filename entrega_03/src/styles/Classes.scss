@@ -1,5 +1,5 @@
 .classes_modal{
-    max-width: 700px!important;
+    max-width: 650px!important;
     
 }
 
@@ -16,40 +16,29 @@
 }
 
 .classes-below{
-    display: block;
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.classes-txt{
+    display: flex;
+    align-items:center;
     
-}
 
-.classes-tx{
-    display: inline-block;
-    margin: 0 auto;
-    width: 50%;
-}
-
-.classes-tx p{
-    display: inline;
-    position: center;
-      
-}
-
-.classes-right{
-    display: inline-block;
-    width: 50%;
+    p{
+       padding: 1rem;
+    }
     
-}
-
-.classes-info{
-    display: block;
 }
 
 .classes-btn{
-    display: block;
     
-}
+    padding: 1rem;
 
-.classes-btn button{
-    
-    width: 100%;
+    button{
+       width: 100%;
+    }
     
 }
 
