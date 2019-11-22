@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Grid from '@material-ui/core/Grid';
 
 //Bootstrap components
 import Modal from 'react-bootstrap/Modal'
@@ -9,6 +10,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 //Media
 import Video from '../Videos/Video';
+import IntroVideo from '../Videos/IntroVideo';
 //App components
 import Button from '@material-ui/core/Button';
 
@@ -43,6 +45,14 @@ var h5 ={
     textAlign:'center',
 }
 
+const video = {
+    position: "relative",
+    //paddingTop: "56.25%", /* Player ratio: 100 / (1280 / 720) */
+    boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '1.5em', 
+    overflow: "hidden"
+   
+}
+
 function ClassesModal(props){
     return (
         <Modal
@@ -53,18 +63,23 @@ function ClassesModal(props){
         >
 
             <div className="classes-content" >
-                <div className="classes-above">
-                  <Video source={sources[0]} thumbnail = {thumbnail[0]}></Video>
+                <Grid container spacing={3} className="classes-below">
+                
+                    <Grid item xs={12}>
+                        <div style={video}>
+                            <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg'}></Video>
+                        </div>
                     
-                </div>
-                <div>
-                    <div >
+                    </Grid>
+                    <Grid item xs={12} sm={6} className="classes-txt">
+
                         <p>
                             The good news is that asynchronous JavaScript is a lot easier than it used to be. Before ES6, we were dependent on callback functions. If multiple callbacks were necessary (and they often were).
                         </p>
-                    </div>
-                    <div>
-                        <div >
+                          
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <Grid item xs={12}>
                             <ListItem  className= "internal-grid">
                                 <ListItemIcon>
                                     <LibraryBooksOutlinedIcon style = {icons} fontSize="large"/>
@@ -77,14 +92,14 @@ function ClassesModal(props){
                                 </ListItemIcon>
                                 <ListItemText style ={text}><br/><h5 style = {h5}><strong> 300+ lecciones</strong></h5></ListItemText>
                             </ListItem>
-                        </div>
-                        <div className="classes-btn">
+                        </Grid>
+                        <Grid item xs={12} className="classes-btn" >
                             <Button variant="contained" style={globalStyles.gradientButtonStyle}>
                                 TOMAR CLASE
-                            </Button>
-                        </div>
-                    </div>
-                </div>
+                            </Button> 
+                        </Grid>
+                    </Grid>
+                </Grid>
             </div>
 
         </Modal>
