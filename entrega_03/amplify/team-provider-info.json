@@ -1,0 +1,33 @@
+{
+    "lectures": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-amplifyauthmedu-lectures-120602-authRole",
+            "UnauthRoleArn": "arn:aws:iam::686180442179:role/amplify-amplifyauthmedu-lectures-120602-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::686180442179:role/amplify-amplifyauthmedu-lectures-120602-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-amplifyauthmedu-lectures-120602-deployment",
+            "UnauthRoleName": "amplify-amplifyauthmedu-lectures-120602-unauthRole",
+            "StackName": "amplify-amplifyauthmedu-lectures-120602",
+            "StackId": "arn:aws:cloudformation:us-east-1:686180442179:stack/amplify-amplifyauthmedu-lectures-120602/eacfe360-0e1b-11ea-beb8-12a619bb25d0"
+        },
+        "categories": {
+            "function": {
+                "amplifyauthmeduade27321DefineAuthChallenge": {},
+                "amplifyauthmeduade27321CreateAuthChallenge": {},
+                "amplifyauthmeduade27321VerifyAuthChallengeResponse": {
+                    "RECAPTCHASECRET": "meduLecturesalmr25112601"
+                },
+                "amplifyauthmeduade27321CustomMessage": {
+                    "REDIRECTURL": "http://localhost:3000/dashboard",
+                    "EMAILSUBJECT": "Por favor confirme su correo electrónico.",
+                    "EMAILMESSAGE": "Para terminar confirme su correo"
+                }
+            },
+            "auth": {
+                "amplifyauthmeduade27321": {
+                    "hostedUIProviderCreds": "[]"
+                }
+            }
+        }
+    }
+}

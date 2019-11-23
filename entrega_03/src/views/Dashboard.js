@@ -22,6 +22,8 @@ import Subclass from '../components/Classes/Subclass';
 import ReactSlickDemo from '../components/Carousels/newCarousel';
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
 
+import { withAuthenticator } from 'aws-amplify-react';
+
 
 
 //import Word from '../components/word/word';
@@ -122,4 +124,4 @@ function Dashboard(props) {
   );
 }
 
-export default Dashboard;
+export default withAuthenticator(Dashboard, true);

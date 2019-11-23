@@ -3,19 +3,14 @@ import React, { Component, useRef} from 'react';
 
 //Bootstrap components
 import Modal from 'react-bootstrap/Modal'
-// @material-ui/core components
-import InputAdornment from "@material-ui/core/InputAdornment";
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-// @material-ui/icons
-import Email from "@material-ui/icons/Email";
-import Lock from '@material-ui/icons/Lock';
 
 // core components
 import Logo from '../logos/Logo2.png'
 
 //Styles
 import '../styles/LogIn.scss';
+import {Auth} from 'aws-amplify';
+
 
 
 import Form from '../components/form/form'
@@ -51,6 +46,7 @@ class LoginPage extends Component
           centered
           aria-labelledby="login_modal"
       >
+        
           
           <div className="login_content">
               <div className="login_margin">
@@ -58,7 +54,7 @@ class LoginPage extends Component
               </div>
               <h2>Iniciar Sesión</h2>
               <div className="login_margin">
-                <Form></Form>
+                <Form> </Form>
                   {/*<TextField
                       id="email-input"
                       label="Correo"  
@@ -98,7 +94,7 @@ class LoginPage extends Component
                         }}
                   />
                       </div>*/}
-              
+              {/*
               <p className="login_margin">
                   ¿No tienes una cuenta Medu? <a href='/'>Registrar</a>
               </p>
@@ -111,7 +107,9 @@ class LoginPage extends Component
               <p className="login_margin">     
                   <a href='/'>Términos y Condiciones</a>    
               </p>  
-          </div>  
+            */} 
+          </div> 
+        
         </Modal>
     );
   }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 import Home from './views/Home';
 import VideoClass from './views/VideoClass';
 import Dashboard from './views/Dashboard';
@@ -11,7 +11,38 @@ import Charts from './components/Charts';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 //import GoogleFontLoader from 'react-google-font-loader';
 
+import {Auth, Hub} from 'aws-amplify';
+import { withAuthenticator } from 'aws-amplify-react';
+
+
+function checkUser() {
+	Auth.currentAuthenticatedUser()
+	  .then(user => console.log({ user }))
+	  .catch(err => console.log(err))
+  }
+  
+  function signOut() {
+	Auth.signOut()
+	  .then(data => console.log(data))
+	  .catch(err => console.log(err))
+  }
+  
+  
+
 function App(props) {
+	 // in useEffect, we create the listener
+	 useEffect(() => {
+		Hub.listen('auth', (data) => {
+		  const { payload } = data
+		  console.log('A new auth event has happened: ', data)
+		   if (payload.event === 'signIn') {
+			 console.log('a user has signed in!')
+		   }
+		   if (payload.event === 'signOut') {
+			 console.log('a user has signed out!')
+		   }
+		})
+	  }, [])
   return (
     <div id = "app" style={{maxWidth: '1500px', margin: '0 auto'}}>
     	<BrowserRouter>
@@ -27,6 +58,10 @@ function App(props) {
 				<Route exact path="/stats" component={Charts} />
 			</div>
     	</BrowserRouter>
+        <button onClick={() => Auth.federatedSignIn()}>Sign In</button>
+		<button onClick={checkUser}>Check User</button>
+		<button onClick={signOut}>Sign Out</button>
+
     </div>
  
   );

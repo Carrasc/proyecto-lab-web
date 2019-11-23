@@ -1,8 +1,6 @@
 import React from 'react';
 import globalStyles from  "../../styles/globalStyles.js";
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import img from '../../images/1.jpg'
 import '../../styles/css/UserNavBar.css';
 
@@ -10,38 +8,11 @@ import { selectActiveWord } from '../../store/word/reducer';
 import { connect } from 'react-redux';
 
 
-
-
-const useStyles = makeStyles({
-    avatar: {
-      margin: 10,
-    },
-    bigAvatar: {
-      margin: 10,
-      width: 60,
-      height: 60,
-    },
-  });
 const UserNavBar = ({word}) => {
-    const classes = useStyles();
-
-    
-
-    const style = { 
-        backgroundImage: 'linear-gradient(141deg, #0A14FF 20%, #00FAAA 100%)',
-        height:'100%',
-        'backgroundSize': 'cover', 
-        verticalAlign: 'middle'        
-    };
-
-    const main = {
-        margin:' 0 5%',
-        position: 'relative',
-    }
 
     return (
-        <div style = {main} >
-            <Grid container= {true} style ={style} alignItems = 'center' justify = 'center'>
+        <div className='user_nav_mainContainer'>
+            <Grid container= {true} className='colorStyle' alignItems = 'center' justify = 'center'>
                 <Grid  item  xs = {12} md={3} >
                     <div className='logoNavBar'>
                         <h1  style = {globalStyles.wMainTitleFont} >MEDU</h1>
