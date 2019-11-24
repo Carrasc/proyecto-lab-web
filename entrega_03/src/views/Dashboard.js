@@ -26,6 +26,7 @@ import { withAuthenticator } from 'aws-amplify-react';
 
 
 
+
 //import Word from '../components/word/word';
 //import Form from '../components/form/form';
 
@@ -54,6 +55,7 @@ function Dashboard(props) {
 
   return (   
     <div >
+		
 		<UserNavBar/>		
   		{/*<DashboardNavBar/>*/}
 		<CDashboardNavBar/>
@@ -119,9 +121,9 @@ function Dashboard(props) {
 
 		<Footer/>
   
-      
+		
     </div>
   );
 }
 
-export default withAuthenticator(Dashboard, true);
+export default Dashboard;

@@ -13,13 +13,14 @@ import Tendencies from '../components/Tendencies';
 import CNavbar from '../components/NavBars/CNavBar';
 //import Form from '../components/form/form';
 //import Word from '../components/word/word';
-import Charts from '../components/Charts';
+//import Charts from '../components/Charts';
 
 
 import '../styles/css/Class.css';
 
 import database from '../api/api';
 
+import { SignIn } from "aws-amplify-react";
 
 var courses = database.courses;
 
@@ -108,5 +109,7 @@ function Home(props) {
     </div>
   );
 }
+
+
 
 export default Home;

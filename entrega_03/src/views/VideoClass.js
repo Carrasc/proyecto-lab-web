@@ -27,6 +27,7 @@ import { withAuthenticator } from 'aws-amplify-react';
 
 
 
+
 const useStyles = makeStyles(theme => ({
     card: {
       maxWidth: 345,
@@ -109,68 +110,68 @@ function VideoClass () {
         borderBottom: '1px solid rgba(248, 248, 255, 1)',
     }
     
-        return (
+    return (
 
-            <div>
-                {/*<UserNavBar/>*/}
+        <div>
+            {/*<UserNavBar/>*/}
 
-                
+            
 
-                <TitleClass class={'Neurología'} teacher={'LUIS FERNANDO CARRASCO'}></TitleClass>
-                <CDashboardNavBar/>
-               
-               {/*
-                <Grid container={true} justify="center" >
-                    <Grid xs= {10} item style ={globalStyles.mainContainer}>
-                        <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
-                    </Grid>
+            <TitleClass class={'Neurología'} teacher={'LUIS FERNANDO CARRASCO'}></TitleClass>
+            <CDashboardNavBar/>
+            
+            {/*
+            <Grid container={true} justify="center" >
+                <Grid xs= {10} item style ={globalStyles.mainContainer}>
+                    <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
                 </Grid>
-               */}
+            </Grid>
+            */}
 
-                <ClassesInfo title={titles} />
+            <ClassesInfo title={titles} />
 
 
 
-                <div style={globalStyles.mainContainer}>
-                    <div style={STYLE}>
+            <div style={globalStyles.mainContainer}>
+                <div style={STYLE}>
+                <div style={topicStyle}></div>
+                    <h1 style={globalStyles.gTopic}>TOPICS</h1>
+                    
                     <div style={topicStyle}></div>
-                        <h1 style={globalStyles.gTopic}>TOPICS</h1>
-                        
-                        <div style={topicStyle}></div>
-                        
-                        {classes.slice(0,size).map((classes) =>{
+                    
+                    {classes.slice(0,size).map((classes) =>{
+                        return(
+                            <Topics classes={classes}/>
+                        )
+                    })}
+                    
+    
+                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        {classes.slice(size,classes.length).map((classes) =>{
                             return(
                                 <Topics classes={classes}/>
                             )
                         })}
-                       
-     
-                        <Collapse in={expanded} timeout="auto" unmountOnExit>
-                            {classes.slice(size,classes.length).map((classes) =>{
-                                return(
-                                    <Topics classes={classes}/>
-                                )
-                            })}
-                        </Collapse>
-                        <IconButton
-                            className={clsx(classes_1.expand, {
-                                [classes_1.expandOpen]: expanded,
-                            })}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                        >
-                        <ExpandMoreIcon />
-                        </IconButton>
-                    </div>
+                    </Collapse>
+                    <IconButton
+                        className={clsx(classes_1.expand, {
+                            [classes_1.expandOpen]: expanded,
+                        })}
+                        onClick={handleExpandClick}
+                        aria-expanded={expanded}
+                        aria-label="show more"
+                    >
+                    <ExpandMoreIcon />
+                    </IconButton>
                 </div>
-                <ReactSlickDemo/>
-                <Footer />
-                
             </div>
-        )
+            <ReactSlickDemo/>
+            <Footer />
+            
+        </div>
+    )
 
 }
 
 
-export default withAuthenticator(VideoClass);
+export default VideoClass;

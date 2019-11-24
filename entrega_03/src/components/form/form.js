@@ -3,7 +3,7 @@ import React, { useState, useReducer } from 'react'
 import { Auth } from 'aws-amplify'
 
 const initialFormState = {
-  username: '', password: '', email: '', confirmationCode: ''
+  username: '', password: '', email: '', confirmationCode: '', name: ''
 }
 
 function reducer(state, action) {
@@ -17,10 +17,10 @@ function reducer(state, action) {
   }
 }
 
-async function signUp({ username, password, email }, updateFormType) {
+async function signUp({ username, password, email, name }, updateFormType) {
   try {
     await Auth.signUp({
-      username, password, attributes: { email }
+      username, password, attributes: { email, name }
     })
     console.log('sign up success!')
     updateFormType('confirmSignUp')
@@ -49,7 +49,7 @@ async function signIn({ username, password }) {
 }
 
 export default function Form() {
-  const [formType, updateFormType] = useState('signUp')
+  const [formType, updateFormType] = useState('signIn')
   const [formState, updateFormState] = useReducer(reducer, initialFormState)
   function renderForm() {
     switch(formType) {
@@ -131,6 +131,12 @@ function SignUp(props) {
         style={styles.input}
         placeholder='email'
       />
+      <input 
+        name='name'
+        onChange={e => {e.persist();props.updateFormState(e)}}
+        style={styles.input}
+        placeholder='name'
+      />
       <button onClick={props.signUp} style={styles.button}>
         Sign Up
       </button>
@@ -181,7 +187,7 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    marginTop: 150,
+    //marginTop: 150,
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -197,7 +203,7 @@ const styles = {
     borderBottom: '2px solid rgba(0, 0, 0, .3)'
   },
   button: {
-    backgroundColor: '#006bfc',
+    backgroundColor: '#0000FF',
     color: 'white',
     width: 316,
     height: 45,
@@ -207,7 +213,7 @@ const styles = {
     cursor: 'pointer',
     border:'none',
     outline: 'none',
-    borderRadius: 3,
+    borderRadius: '28px',
     boxShadow: '0px 1px 3px rgba(0, 0, 0, .3)',
   },
   footer: {

@@ -53,8 +53,7 @@ class LoginPage extends Component
                 <img alt = '' src={Logo}></img>
               </div>
               <h2>Iniciar Sesión</h2>
-              <div className="login_margin">
-                <Form> </Form>
+              <Form> </Form>
                   {/*<TextField
                       id="email-input"
                       label="Correo"  
@@ -73,7 +72,6 @@ class LoginPage extends Component
                         }}
                         
                       />*/}
-              </div>
               {/*
               <div className="login_margin">
                   <TextField
