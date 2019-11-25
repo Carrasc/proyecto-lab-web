@@ -12,6 +12,18 @@
     text-align: center;
 }
 
+.colorStyle{
+    background-image: linear-gradient(141deg, #0A14FF 20%, #00FAAA 100%);
+    height: 100%;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+.user_nav_mainContainer{
+    margin: 0 5%;
+    position: relative;
+}
+
 @media(max-width: 959px){ /*md -> sm*/
     .logoNavBar{
         padding: 2em 1em !important;

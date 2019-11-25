@@ -11,11 +11,12 @@ class Introduction extends React.Component{
     //url(" + "../images/1.jpg" + ")
 
     style = {
-        background: `linear-gradient(to bottom, rgba(255,255,255,1), rgba(0,0,0,0) 70%), url(${require('../images/info.jpg')})`,
-        backgroundPosition: 'center top',
+        background: `linear-gradient(to right, rgba(255, 255, 255, 1), rgba(0, 0, 255, 0)), 
+                     url(${require('../images/info.jpg')})`,
+        backgroundPosition: '15% center',
         backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
-        //backgroundSize: 'cover'
+        //backgroundAttachment: 'fixed',
+        //backgroundSize: 'cover', 
         
     };
     textDiv = {

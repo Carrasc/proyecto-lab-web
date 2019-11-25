@@ -1,0 +1,14 @@
+{
+    "trigger": true,
+    "modules": [
+        "captcha-verify"
+    ],
+    "parentResource": "amplifyauthmeduade27321",
+    "functionName": "amplifyauthmeduade27321VerifyAuthChallengeResponse",
+    "parentStack": "auth",
+    "triggerEnvs": "[]",
+    "triggerTemplate": "VerifyAuthChallengeResponse.json.ejs",
+    "roleName": "amplifyauthmeduade27321VerifyAuthChallengeResponse",
+    "skipEdit": true,
+    "resourceName": "amplifyauthmeduade27321VerifyAuthChallengeResponse"
+}

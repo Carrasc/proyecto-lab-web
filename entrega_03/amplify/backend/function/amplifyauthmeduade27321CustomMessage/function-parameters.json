@@ -1,0 +1,14 @@
+{
+    "trigger": true,
+    "modules": [
+        "verification-link"
+    ],
+    "parentResource": "amplifyauthmeduade27321",
+    "functionName": "amplifyauthmeduade27321CustomMessage",
+    "parentStack": "auth",
+    "triggerEnvs": "[{\"key\":\"RESOURCENAME\",\"value\":\"resourceName\"}]",
+    "triggerTemplate": "CustomMessage.json.ejs",
+    "roleName": "amplifyauthmeduade27321CustomMessage",
+    "skipEdit": true,
+    "resourceName": "amplifyauthmeduade27321CustomMessage"
+}

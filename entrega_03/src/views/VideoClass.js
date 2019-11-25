@@ -6,11 +6,9 @@ import Video from '../components/Videos/Video'
 import UserNavBar from '../components/NavBars/User_NavBar';
 import Topics from '../components/Classes/Classes_Topics';
 import Grid from '@material-ui/core/Grid';
-import Subclass from '../components/Classes/Subclass';
-import Carousel from '../components/Carousels/Carousel';
+
 import ReactSlickDemo from '../components/Carousels/newCarousel';
-import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
-import Sticky from 'react-sticky-el';
+
 import CDashboardNavBar from '../components/NavBars/CDashboardNavBar.js';
 
 
@@ -19,20 +17,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import IconButton from '@material-ui/core/IconButton';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+
 import Collapse from '@material-ui/core/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import StarBorder from '@material-ui/icons/StarBorder';
+
 import { red } from '@material-ui/core/colors';
 import TitleClass from '../components/TitleClass';
+
+import { withAuthenticator } from 'aws-amplify-react';
+
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -54,6 +47,9 @@ const useStyles = makeStyles(theme => ({
       transition: theme.transitions.create('transform', {
         duration: theme.transitions.duration.shortest,
       }),
+      '&:focus':{
+        outline: 'none',
+    }
     },
     expandOpen: {
         backgroundColor: 'transparent' ,
@@ -62,6 +58,9 @@ const useStyles = makeStyles(theme => ({
       outline: 'none',
       borderStyle:'none',
       transform: 'rotate(180deg)',
+      '&:focus':{
+          outline: 'none',
+      }
     },
     avatar: {
       backgroundColor: red[500],
@@ -111,66 +110,66 @@ function VideoClass () {
         borderBottom: '1px solid rgba(248, 248, 255, 1)',
     }
     
-        return (
+    return (
 
-            <div>
-                {/*<UserNavBar/>*/}
+        <div>
+            {/*<UserNavBar/>*/}
 
-                
+            
 
-                <TitleClass class={'Neurología'} teacher={'LUIS FERNANDO CARRASCO'}></TitleClass>
-                <CDashboardNavBar/>
-               
-               {/*
-                <Grid container={true} justify="center" >
-                    <Grid xs= {10} item style ={globalStyles.mainContainer}>
-                        <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
-                    </Grid>
+            <TitleClass class={'Neurología'} teacher={'LUIS FERNANDO CARRASCO'}></TitleClass>
+            <CDashboardNavBar/>
+            
+            {/*
+            <Grid container={true} justify="center" >
+                <Grid xs= {10} item style ={globalStyles.mainContainer}>
+                    <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
                 </Grid>
-               */}
+            </Grid>
+            */}
 
-                <ClassesInfo title={titles} />
+            <ClassesInfo title={titles} />
 
 
 
-                <div style={globalStyles.mainContainer}>
-                    <div style={STYLE}>
+            <div style={globalStyles.mainContainer}>
+                <div style={STYLE}>
+                <div style={topicStyle}></div>
+                    <h1 style={globalStyles.gTopic}>TOPICS</h1>
+                    
                     <div style={topicStyle}></div>
-                        <h1 style={globalStyles.gTopic}>TOPICS</h1>
-                        
-                        <div style={topicStyle}></div>
-                        
-                        {classes.slice(0,size).map((classes) =>{
+                    
+                    {classes.slice(0,size).map((classes) =>{
+                        return(
+                            <Topics classes={classes}/>
+                        )
+                    })}
+                    
+    
+                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        {classes.slice(size,classes.length).map((classes) =>{
                             return(
                                 <Topics classes={classes}/>
                             )
                         })}
-                       
-     
-                        <Collapse in={expanded} timeout="auto" unmountOnExit>
-                            {classes.slice(size,classes.length).map((classes) =>{
-                                return(
-                                    <Topics classes={classes}/>
-                                )
-                            })}
-                        </Collapse>
-                        <IconButton
-                            className={clsx(classes_1.expand, {
-                                [classes_1.expandOpen]: expanded,
-                            })}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                        >
-                        <ExpandMoreIcon />
-                        </IconButton>
-                    </div>
+                    </Collapse>
+                    <IconButton
+                        className={clsx(classes_1.expand, {
+                            [classes_1.expandOpen]: expanded,
+                        })}
+                        onClick={handleExpandClick}
+                        aria-expanded={expanded}
+                        aria-label="show more"
+                    >
+                    <ExpandMoreIcon />
+                    </IconButton>
                 </div>
-                <ReactSlickDemo/>
-                <Footer />
-                
             </div>
-        )
+            <ReactSlickDemo/>
+            <Footer />
+            
+        </div>
+    )
 
 }
 

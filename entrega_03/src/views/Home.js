@@ -13,15 +13,16 @@ import Tendencies from '../components/Tendencies';
 import CNavbar from '../components/NavBars/CNavBar';
 //import Form from '../components/form/form';
 //import Word from '../components/word/word';
-import Charts from '../components/Charts';
+//import Charts from '../components/Charts';
 
 
 import '../styles/css/Class.css';
 
 import database from '../api/api';
 
+import { SignIn } from "aws-amplify-react";
 
-var classes = database.classes;
+var courses = database.courses;
 
 
 
@@ -54,10 +55,10 @@ function Home(props) {
           <div style={globalStyles.mainContainer}>
               <div style={{textAlign:"center"}}>
                   <Grid container = {true} >
-                  {classes.map((classes,index) =>{
+                  {courses.map((courses,index) =>{
                       return(
                         <Grid item sm= {12} md={6} className = 'clase' key= {index} >
-                            <Clases  row = {classes} ></Clases>
+                            <Clases  row = {courses} ></Clases>
                         </Grid>
                           
                       )
@@ -108,5 +109,7 @@ function Home(props) {
     </div>
   );
 }
+
+
 
 export default Home;
