@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import globalStyles from  "../../styles/globalStyles.js";
 import Grid from '@material-ui/core/Grid';
 import img from '../../images/1.jpg'
@@ -7,8 +7,21 @@ import '../../styles/css/UserNavBar.css';
 import { selectActiveWord } from '../../store/word/reducer';
 import { connect } from 'react-redux';
 
+import {Auth} from 'aws-amplify';
+
+function signOut() {
+	Auth.signOut()
+	  .then(data => console.log(data))
+	  .catch(err => console.log(err))
+}
 
 const UserNavBar = ({word}) => {
+
+    const [username, setUsername] = useState('');
+	
+	Auth.currentAuthenticatedUser()
+		.then(user => { setUsername(user.attributes.name); })
+		.catch(err => console.log(err));
 
     return (
         <div className='user_nav_mainContainer'>
@@ -21,9 +34,9 @@ const UserNavBar = ({word}) => {
                 </Grid>
                 <Grid item  xs = {12} md={6} >
                     <div  className='nameNavBar'>
-                        <h1  style = {globalStyles.wSecondaryTitleFont} >{word}</h1>
+                        <h1  style = {globalStyles.wSecondaryTitleFont} >{username}</h1>
                         <a href= '/' style= {globalStyles.wmFont}>Mi cuenta </a>
-                        <a href= '/' style= {globalStyles.wmFont}> Cerrar sesión</a>
+                        <a href= '/' style= {globalStyles.wmFont} onClick={signOut}> Cerrar sesión</a>
                     </div>
                 </Grid>
                 <Grid  item  xs = {12} md={3} >

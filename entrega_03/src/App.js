@@ -1,4 +1,4 @@
-import React, { useEffect }  from 'react';
+import React, { useEffect, useState }  from 'react';
 import Home from './views/Home';
 import VideoClass from './views/VideoClass';
 import Dashboard from './views/Dashboard';
@@ -31,6 +31,13 @@ function checkUser() {
 
 
 function App(props) {
+
+	const [username, setUsername] = useState('');
+	
+	Auth.currentAuthenticatedUser()
+		.then(user => { setUsername(user.attributes.name); })
+		.catch(err => console.log(err));
+
 	 // in useEffect, we create the listener
 	 useEffect(() => {
 		Hub.listen('auth', (data) => {
@@ -58,7 +65,7 @@ function App(props) {
 			</div>
     	</BrowserRouter>
         {/*<button onClick={() => Auth.federatedSignIn()}>Sign In</button>*/}
-		<button onClick={checkUser}>Check User</button>
+		<button onClick={checkUser}>Hello {username}</button>
 		<button onClick={signOut}>Sign Out</button>
 
     </div>
