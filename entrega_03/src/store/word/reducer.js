@@ -3,7 +3,7 @@ const initialState = { word: ""};
 export default (state = initialState, action) => {
     if(action.type === 'UPDATE_WORD'){
         return{
-            ... state,
+            ...state,
             word: action.payload
         }
     }

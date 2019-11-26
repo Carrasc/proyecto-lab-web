@@ -8,7 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import Popup from "reactjs-popup";
 
 //styles
-import globalStyles from  '../../styles/globalStyles'
+//import globalStyles from  '../../styles/globalStyles'
 
 
 function DashboardNavBar() {

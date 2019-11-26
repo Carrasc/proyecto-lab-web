@@ -2,10 +2,9 @@ import React from 'react';
 import Footer from '../components/Footer';
 import ClassesInfo from '../components/Classes/Classes_Info';
 import globalStyles from  '../styles/globalStyles'
-import Video from '../components/Videos/Video'
-import UserNavBar from '../components/NavBars/User_NavBar';
+//import Video from '../components/Videos/Video'
+//import UserNavBar from '../components/NavBars/User_NavBar';
 import Topics from '../components/Classes/Classes_Topics';
-import Grid from '@material-ui/core/Grid';
 
 import ReactSlickDemo from '../components/Carousels/newCarousel';
 
@@ -79,13 +78,7 @@ const classes = [
     ['06', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.']
 
 ]
-const data = [
-    ['57', '147', require("../images/7.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
-    ['13', '153', require("../images/3.jpg"), 'LÓBULOS NEUROENCEFALÓGICOS', 'DEL SISTEMA NERVIOSO'],
-    ['0', '80', require("../images/7.jpg"), 'ESTOY MAMADÍSIMO', 'DEL SISTEMA NERVIOSO'],
-    ['57', '147', require("../images/4.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
 
-  ]
 
 
 function VideoClass () {

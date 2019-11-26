@@ -1,4 +1,4 @@
-import React, { Component, useRef} from 'react';
+import React, { Component} from 'react';
 
 //Bootstrap components
 import Modal from 'react-bootstrap/Modal';

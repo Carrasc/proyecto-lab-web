@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import globalStyles from  '../styles/globalStyles';
 import Button from '@material-ui/core/Button';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
@@ -11,7 +11,7 @@ export default function DashboardTencencie(props) {
         <div style={globalStyles.mainContainer}>
             <div style={{width:'100%', position :'relative', textAlign:'center'}}>
                 <div className = 'dashboardTendencieLessonContainer'>
-                    <img src={props.tendencieData.img} style={{width:'100%'}}/>
+                    <img alt={props.tendencieData.specialty} src={props.tendencieData.img} style={{width:'100%'}}/>
                         <div className = 'dashboardTendencieLessonImage'> </div>
                         <div className = 'dashboardTendencieLessonInfoDiv'>
                             <h1 style = {globalStyles.bSecondaryTitleFont}>

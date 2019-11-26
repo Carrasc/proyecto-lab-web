@@ -1,26 +1,26 @@
 import React from 'react';
 import globalStyles from  "../styles/globalStyles.js";
 import UserNavBar from '../components/NavBars/User_NavBar';
-import DashboardNavBar from '../components/NavBars/Dashboard_NavBar.js';
+//import DashboardNavBar from '../components/NavBars/Dashboard_NavBar.js';
 import Carousel from '../components/Carousels/Carousel';
 //import { Image } from "semantic-ui-react";
 import Grid from '@material-ui/core/Grid';
 import Clases from '../components/Classes/Classes';
 import Footer from '../components/Footer';
-import Sticky from 'react-sticky-el';
+//import Sticky from 'react-sticky-el';
 import ContinueLesson from '../components/Classes/ContinueLesson';
 import DashboardTendencie from '../components/DashboardTendencie';
 import Tendencies from '../components/Tendencies';
 import Reviews from '../components/Reviews';
 import CDashboardNavBar from '../components/NavBars/CDashboardNavBar';
-import MDashboardNavBar from '../components/NavBars/MDashboardNavBar';
+//import MDashboardNavBar from '../components/NavBars/MDashboardNavBar';
 
-import ClassesInfo from '../components/Classes/Classes_Info';
-import Video from '../components/Videos/Video'
-import Topics from '../components/Classes/Classes_Topics';
+//import ClassesInfo from '../components/Classes/Classes_Info';
+//import Video from '../components/Videos/Video'
+//import Topics from '../components/Classes/Classes_Topics';
 import Subclass from '../components/Classes/Subclass';
-import ReactSlickDemo from '../components/Carousels/newCarousel';
-import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
+//import ReactSlickDemo from '../components/Carousels/newCarousel';
+//import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
 
 import { withAuthenticator } from 'aws-amplify-react';
 
