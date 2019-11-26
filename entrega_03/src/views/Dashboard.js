@@ -126,4 +126,62 @@ function Dashboard(props) {
   );
 }
 
-export default Dashboard;
+const MyTheme = {
+
+	// Esconder el boton de login con amazon
+	oAuthSignInButton: { display: 'none' },
+
+	// El boton principal de sign in y sign up 
+	button: {   background: 'linear-gradient(to bottom right, rgba(0,0,255), rgba(32,178,170))',
+				borderRadius: '28px',
+				color: 'white',
+				boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', 
+				fontWeight: 'bold',
+				textTransform: 'uppercase',
+				letterSpacing: '1px',
+				outline: 'none',},
+
+	//signInButtonIcon: { display: "none" }, 
+
+	// El contenedor de solo la forma 
+	formSection: {background: 'linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8))', }, 
+
+	// El contenedor globla de la forma 
+	formContainer: {backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.pexels.com/photos/48604/pexels-photo-48604.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")',
+					backgroundPosition: 'center',
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: 'cover',
+					position: 'relative', 
+					height: '100vh', 
+					margin: '0', 
+					paddingTop: '5em',
+					fontFamily: "Nunito",}, 
+
+	// La separacion entre el login con amazon y el login normal (la quitamos porque no hay login con amazon)
+	strike: { display: 'none' },
+
+	a: {color: 'blue'}, 
+	sectionHeader: {fontFamily: "Nunito",
+					fontWeight: 'bold',
+					letterSpacing: '1px',
+					outline: 'none',
+					fontSize: '20px'},
+	
+
+	// Lo que aparece arriba si pones algo mal
+	//toast: {backgroundColor: '#e0e0e0', color: 'black'}
+  };
+
+export default withAuthenticator(Dashboard, 
+	{
+	includeGreetings: false, 
+	usernameAttributes: 'email', 
+	theme: MyTheme,
+	signUpConfig: {
+			hiddenDefaults: ["phone_number"],
+			signUpFields: [
+			{ label: "Nombre", key: "name", required: true, type: "string" }
+			]
+		}
+	}
+);

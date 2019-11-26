@@ -1,15 +1,10 @@
 import React, { Component, useRef} from 'react';
 
-
 //Bootstrap components
-import Modal from 'react-bootstrap/Modal'
-
-// core components
-import Logo from '../logos/Logo2.png'
+import Modal from 'react-bootstrap/Modal';
 
 //Styles
 import '../styles/LogIn.scss';
-import {Auth} from 'aws-amplify';
 
 
 
@@ -49,10 +44,7 @@ class LoginPage extends Component
         
           
           <div className="login_content">
-              <div className="login_margin">
-                <img alt = '' src={Logo}></img>
-              </div>
-              <h2>Iniciar Sesión</h2>
+              <h2>Iniciar sesión</h2>
               <Form> </Form>
                   {/*<TextField
                       id="email-input"

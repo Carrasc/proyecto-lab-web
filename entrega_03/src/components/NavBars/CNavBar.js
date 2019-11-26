@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 //import Toolbar from '@material-ui/core/Toolbar';
 //import CssBaseline from '@material-ui/core/CssBaseline';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+//import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import './NavStyle.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
@@ -12,7 +12,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import Login from '../LoginPage';
 import '../../styles/css/cNavBar.css';
 
-import AppBar from '@material-ui/core/AppBar';
 
 const navBarStyle ={
   margin: '0 5% 0 5%',

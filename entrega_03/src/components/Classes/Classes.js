@@ -47,7 +47,7 @@ class Classes extends Component {
   }
 
   img = { 
-    backgroundImage: `linear-gradient(to top, rgba(255,255,255,1), rgba(0,0,0,0) 60%), url(${this.props.row.img})`,
+    backgroundImage: `linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0) 60%), url(${this.props.row.img})`,
     height:'100%',
     width:'100%',
     backgroundPosition:'center center',

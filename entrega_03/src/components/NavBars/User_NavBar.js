@@ -11,7 +11,10 @@ import {Auth} from 'aws-amplify';
 
 function signOut() {
 	Auth.signOut()
-	  .then(data => console.log(data))
+	  .then(
+          data => console.log(data),
+          window.location.reload()
+        )
 	  .catch(err => console.log(err))
 }
 
@@ -35,8 +38,7 @@ const UserNavBar = ({word}) => {
                 <Grid item  xs = {12} md={6} >
                     <div  className='nameNavBar'>
                         <h1  style = {globalStyles.wSecondaryTitleFont} >{username}</h1>
-                        <a href= '/' style= {globalStyles.wmFont}>Mi cuenta </a>
-                        <a href= '/' style= {globalStyles.wmFont} onClick={signOut}> Cerrar sesión</a>
+                        <a  style= {globalStyles.wmFont} onClick={signOut}> Cerrar sesión</a>
                     </div>
                 </Grid>
                 <Grid  item  xs = {12} md={3} >

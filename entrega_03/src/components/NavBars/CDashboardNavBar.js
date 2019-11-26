@@ -8,12 +8,12 @@ import 'bootstrap/dist/js/bootstrap.js';
 import MDashboardNavBar from './MDashboardNavBar';
 
 import './NavStyle.scss';
-import globalStyles from  '../../styles/globalStyles';
+//import globalStyles from  '../../styles/globalStyles';
 
 const barStyle={
     margin: '0 5% 0 5%',
     height:'3em',
-    zIndex: 10001,
+    zIndex: '1000',
     position: 'sticky', 
     top: 0
   }
