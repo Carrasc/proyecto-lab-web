@@ -1,6 +1,10 @@
 import React, { useState, useReducer } from 'react'
 
-import { Auth } from 'aws-amplify'
+import { Auth } from 'aws-amplify';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const initialFormState = {
   username: '', password: '', email: '', confirmationCode: '', name: ''
@@ -22,29 +26,50 @@ async function signUp({ username, password, email, name }, updateFormType) {
     await Auth.signUp({
       username, password, attributes: { email, name }
     })
-    console.log('sign up success!')
+    //console.log('sign up success!')
+    toast.success("Confirme el correo para terminar la creación de la cuenta", {
+      position: toast.POSITION.TOP_CENTER, 
+      pauseOnHover: false
+    });
     updateFormType('confirmSignUp')
   } catch (err) {
-    console.log('error signing up..', err)
+    toast.error(err.message, {
+      position: toast.POSITION.TOP_CENTER, 
+      pauseOnHover: false
+    });
   }
 }
 
 async function confirmSignUp({ username, confirmationCode }, updateFormType) {
   try {
     await Auth.confirmSignUp(username, confirmationCode)
-    console.log('confirm sign up success!')
+    //console.log('confirm sign up success!')
+    toast.success("Exito! Bienvenido a Medu Lectures!", {
+      position: toast.POSITION.TOP_CENTER
+    });
     updateFormType('signIn')
   } catch (err) {
-    console.log('error signing up..', err)
+    toast.error(err.message, {
+      position: toast.POSITION.TOP_CENTER, 
+      pauseOnHover: false
+    });
   }
 }
+
 
 async function signIn({ username, password }) {
   try {
     await Auth.signIn(username, password)
-    console.log('sign in success!')
+    //console.log('sign in success!')
+    
+    // Recarga la pagina si se autentico el usuario
+    window.location.reload();
+
   } catch (err) {
-    console.log('error signing up..', err)
+    toast.error(err.message, {
+      position: toast.POSITION.TOP_CENTER,
+      pauseOnHover: false
+    });
   }
 }
 
@@ -97,14 +122,23 @@ export default function Form() {
       }
       {
         formType === 'signIn' && (
+          <>
           <p style={styles.footer}>
             Need an account? <span
               style={styles.anchor}
               onClick={() => updateFormType('signUp')}
             >Sign Up</span>
           </p>
+          <p style={styles.footer}>
+            Olvido su contraseña? <span
+              style={styles.anchor}
+            >Recuperar</span>
+          </p>
+          <p style={styles.footer}> Al iniciar sesión, acepta los terminos y condiciones de MeduLectures.</p>
+          </>
         )
       }
+      <ToastContainer autoClose={5000} />
     </div>
   )
 }
@@ -112,30 +146,31 @@ export default function Form() {
 function SignUp(props) {
   return (
     <div style={styles.container}>
+      
       <input 
         name='username'
         onChange={e => {e.persist();props.updateFormState(e)}}
         style={styles.input}
-        placeholder='username'
+        placeholder='Usuario'
       />
       <input
         type='password'
         name='password'
         onChange={e => {e.persist();props.updateFormState(e)}}
         style={styles.input}
-        placeholder='password'
+        placeholder='Contraseña'
       />
       <input 
         name='email'
         onChange={e => {e.persist();props.updateFormState(e)}}
         style={styles.input}
-        placeholder='email'
+        placeholder='Correo'
       />
       <input 
         name='name'
         onChange={e => {e.persist();props.updateFormState(e)}}
         style={styles.input}
-        placeholder='name'
+        placeholder='Nombre'
       />
       <button onClick={props.signUp} style={styles.button}>
         Sign Up
@@ -151,14 +186,14 @@ function SignIn(props) {
         name='username'
         onChange={e => {e.persist();props.updateFormState(e)}}
         style={styles.input}
-        placeholder='username'
+        placeholder='Correo'
       />
       <input
         type='password'
         name='password'
         onChange={e => {e.persist();props.updateFormState(e)}}
         style={styles.input}
-        placeholder='password'
+        placeholder='Contraseña'
       />
       <button style={styles.button} onClick={props.signIn}>
         Sign In
@@ -189,32 +224,32 @@ const styles = {
     flexDirection: 'column',
     //marginTop: 150,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingBottom: '1em'
   },
   input: {
     height: 45,
     marginTop: 8,
-    width: 300,
-    maxWidth: 300,
-    padding: '0px 8px',
+    width: '90%',
+    padding: '0 8px',
     fontSize: 16,
     outline: 'none',
-    border: 'none',
-    borderBottom: '2px solid rgba(0, 0, 0, .3)'
+    border: '1.5px solid rgba(0, 0, 0, 0.3)', 
+    borderRadius: '.5em',
   },
   button: {
-    backgroundColor: '#0000FF',
+    background: 'linear-gradient(to bottom right, rgba(0,0,255), rgba(32,178,170))',
     color: 'white',
-    width: 316,
+    width: '90%',
     height: 45,
-    marginTop: 10,
+    marginTop: 25,
     fontWeight: '600',
     fontSize: 14,
     cursor: 'pointer',
     border:'none',
     outline: 'none',
     borderRadius: '28px',
-    boxShadow: '0px 1px 3px rgba(0, 0, 0, .3)',
+    boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', 
   },
   footer: {
     fontWeight: '600',

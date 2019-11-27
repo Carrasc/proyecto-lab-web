@@ -166,16 +166,17 @@
 }
 
 .login_content{
-    padding: 1rem;
+    padding: 0 1rem;
     text-align: center; 
 
 }
 
 .login_content h2{
     margin-block-start: 1em;
-    margin-bottom: 2em;
     font-family: Nunito;
     color: blue;
+    letter-spacing: 1px;
+    font-size: 1.5em;
 }
 
 .login_content img{
@@ -193,5 +194,5 @@
 }
 
 .login_modal{
-    max-width: 375px!important;
+    max-width: 350px !important;
 }

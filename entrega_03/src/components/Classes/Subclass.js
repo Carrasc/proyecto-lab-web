@@ -18,27 +18,6 @@ const cardStyle ={
     backgroundColor: 'transparent'
 }
 
-const textDiv = {
-    padding:'0 0 0 2em',
-    position: 'absolute',
-    bottom: '0',
-    left: '0',
-    textAlign: 'left'
-}
-
-const titulo = {
-    size: '50px',
-    color: 'blue',
-    display: 'inline',
-    margin: 0,
-    padding: 0
-}
-
-const especialidad = {
-    color: 'gray',
-    margin: 0,
-    padding: 0
-}
 const gradiantDiv = {
     position: 'absolute',
     bottom: '12%',
@@ -47,22 +26,6 @@ const gradiantDiv = {
     background:'linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 90%)',  
 
 }
-
-const styles = {
-    card: {
-      maxWidth: 345
-    },
-    media: {
-      // ⚠️ object-fit is not supported by IE 11.
-      objectFit: "cover"
-    },
-    actionArea: {
-      "&:hover $focusHighlight": {
-        opacity: 0
-      }
-    },
-    focusHighlight: {}
-  };
  class Subclass extends Component{
      
       render(){

@@ -11,7 +11,7 @@ class Introduction extends React.Component{
     //url(" + "../images/1.jpg" + ")
 
     style = {
-        background: `linear-gradient(to right, rgba(255, 255, 255, 1), rgba(0, 0, 255, 0)), 
+        background: `linear-gradient(to right, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 80%),
                      url(${require('../images/info.jpg')})`,
         backgroundPosition: '15% center',
         backgroundRepeat: 'no-repeat',

@@ -75,12 +75,23 @@ const globalStyles = {
     color: 'blue',
     lineHeight: '1.75em'
   },
+
+  bSecondaryTitleFont2: {
+    margin: 0,
+    padding: 0,
+    fontSize: '1.3em',
+    letterSpacing: '0.08em',
+    color: 'blue',
+    lineHeight: '1.75em', 
+    fontWeight: '600',
+  },
+
   wSecondaryTitleFont: {
     margin: 0,
     padding: 0,
     fontSize: '1.3em',
     color: 'white',
-    letterSpacing: '0.15em',
+    letterSpacing: '0.0625em',
     lineHeight: '1.75em'
     //textShadow: '0px 1px, 1px 0px, 1px 1px',
   },

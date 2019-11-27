@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import globalStyles from  '../../styles/globalStyles';
 import '../../styles/css/ContinueLesson.css';
 
@@ -10,7 +10,7 @@ export default function ContinueLesson(props) {
              <a href = '/'>
             <div className = 'lessonContainer'>
                
-                <img src={props.lessonData.img} style={{width:'100%'}}/>
+                <img alt={props.lessonData.specialty} src={props.lessonData.img} style={{width:'100%'}}/>
                
                     <div className = 'infoDiv'>
                         <h1 style = {globalStyles.bmFont}>

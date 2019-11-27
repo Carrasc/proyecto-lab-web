@@ -147,7 +147,6 @@ export default class Example extends Component {
 
 */
 import React from "react";
-import ReactDOM from "react-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -179,16 +178,16 @@ class ReactSlickDemo extends React.Component {
           <div style={containere}>
           <Slider {...settings}>
             <div>
-              <img style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img1} />
+              <img alt= 'img1' style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img1} />
             </div>
             <div>
-              <img style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img2} />
+              <img alt= 'img1' style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img2} />
             </div>
             <div>
-              <img style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img1} />
+              <img alt= 'img1' style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img1} />
             </div>
             <div>
-              <img style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img2} />
+              <img alt= 'img1' style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img2} />
             </div>
           </Slider>
         </div>

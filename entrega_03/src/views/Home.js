@@ -8,7 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import Comments from '../components/Comments';
 import globalStyles from  "../styles/globalStyles";
 import IntroVideo from '../components/Videos/IntroVideo';
-import IntroVideoTest from '../components/Videos/IntroVideoTest';
+//import IntroVideoTest from '../components/Videos/IntroVideoTest';
 import Tendencies from '../components/Tendencies';
 import CNavbar from '../components/NavBars/CNavBar';
 //import Form from '../components/form/form';
@@ -20,7 +20,7 @@ import '../styles/css/Class.css';
 
 import database from '../api/api';
 
-import { SignIn } from "aws-amplify-react";
+//import { SignIn } from "aws-amplify-react";
 
 var courses = database.courses;
 
@@ -70,7 +70,7 @@ function Home(props) {
           <a href = '/'id="precios"> 	
         </a>
         <div  style= {{textAlign:"center" ,margin:'3em 0 3em 0'}}>
-          <h1 style = {globalStyles.bSecondaryTitleFont}>PLAN MEDU</h1>
+          <h1 style = {globalStyles.bSecondaryTitleFont2}>PLAN MEDU</h1>
           <br/>
           <h2 style = {globalStyles.blFont}>CANCELA CUANDO QUIERAS</h2>
         </div>

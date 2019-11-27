@@ -8,25 +8,60 @@
     transition: 0.3s;
 }
 
-.logoLetras{
-    font-size: 0.8125em ;
-    font-weight: 400;
-    color: #0A14FF;
-    letter-spacing: 0.0300em;
-    transition: 0.3s;
-}
-
 .nav_ul a:hover {
     color: #00FAAA;
 }
+
+.button_iniciar{
+    background-color: transparent;
+    border: none;
+    padding: 0; 
+    margin: 0;
+    color: #0a14FF;
+    font-weight: 600;
+    font-size: 0.8125em;
+    letter-spacing: 0.135em;
+    transition: 0.3s;
+
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        color: #00FAAA;
+    }
+}
+
+.navBarStyle{
+    margin: 0 5% 0 5%;
+    position: sticky;
+    top: 0;
+    width: 90%;
+    z-index: '1000';
+}
+
+.logoImg{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1000000
+}
+
+.linksStyleLeft{
+    padding: 0 1.5em 0 0;
+}
+
+.linksStyleRight{
+    padding: 0;
+}
     
 @media (min-width: 992px) {
-  .navbar-brand.abs
-      {
+    .navbar-brand.abs {
           position: absolute;
           width: 100%;
           left: 0;
           text-align: center;
       }
+
   }
   

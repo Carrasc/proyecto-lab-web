@@ -8,12 +8,12 @@ import 'bootstrap/dist/js/bootstrap.js';
 import MDashboardNavBar from './MDashboardNavBar';
 
 import './NavStyle.scss';
-import globalStyles from  '../../styles/globalStyles';
+//import globalStyles from  '../../styles/globalStyles';
 
 const barStyle={
     margin: '0 5% 0 5%',
     height:'3em',
-    zIndex: 10001,
+    zIndex: '1000',
     position: 'sticky', 
     top: 0
   }
@@ -30,7 +30,7 @@ export default function CNavbar(props) {
             <div class="d-flex flex-grow-1">
                 <span class="w-100 d-lg-none d-block"></span>
 
-                <a class="navbar-brand logoLetras" href="#">
+                <a class="navbar-brand logoLetras" href="/">
                     MEDU LECTURES
                 </a>
                 <div class="w-100 text-right">
@@ -60,13 +60,13 @@ export default function CNavbar(props) {
 						<MDashboardNavBar/>
 					</li>
                     <li class="nav-item" style={linksStyleRight}>
-                        <a href="#" class="nav-link" >MIS CLASES</a>
+                        <a href="/" class="nav-link" >MIS CLASES</a>
                     </li>
                     <li class="nav-item" style={linksStyleRight}>
-                        <a href="#" class="nav-link">MEDU TALKS</a>
+                        <a href="/" class="nav-link">MEDU TALKS</a>
                     </li>
                     <li class="nav-item" style={linksStyleRight}>
-                        <a href="#" class="nav-link" >ENARM</a>
+                        <a href="/" class="nav-link" >ENARM</a>
                     </li>
                 </ul>
             </div>

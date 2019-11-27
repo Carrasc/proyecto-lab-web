@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Grid from '@material-ui/core/Grid';
 
 //Bootstrap components
@@ -10,7 +10,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 //Media
 import Video from '../Videos/Video';
-import IntroVideo from '../Videos/IntroVideo';
 //App components
 import Button from '@material-ui/core/Button';
 
@@ -20,13 +19,6 @@ import '../../styles/LogIn.scss';
 import '../../styles/Classes.scss';
 import globalStyles from '../../styles/globalStyles';
 
-const sources = [
-    'http://media.w3.org/2010/05/sintel/trailer.mp4'
-];
-
-const thumbnail = [
-'https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg'
-];
 
 var icons = {
     textAlign: 'center',
