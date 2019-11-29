@@ -2,7 +2,15 @@
 	"AWSTemplateFormatVersion": "2010-09-09",
 	"Description": "Lambda resource stack creation using Amplify CLI",
 	"Parameters": {
-		"CHALLENGEANSWER": {
+		"REDIRECTURL": {
+			"Type": "String",
+			"Default": ""
+		},
+		"EMAILMESSAGE": {
+			"Type": "String",
+			"Default": ""
+		},
+		"EMAILSUBJECT": {
 			"Type": "String",
 			"Default": ""
 		},
@@ -61,12 +69,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"amplifyauthmeduade27321CreateAuthChallenge",
+						"medulectures2bd3656dCustomMessage",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"amplifyauthmeduade27321CreateAuthChallenge",
+									"medulectures2bd3656dCustomMessage",
 									"-",
 									{
 										"Ref": "env"
@@ -87,8 +95,17 @@
 						"REGION": {
 							"Ref": "AWS::Region"
 						},
-						"CHALLENGEANSWER": {
-							"Ref": "CHALLENGEANSWER"
+						"REDIRECTURL": {
+							"Ref": "REDIRECTURL"
+						},
+						"EMAILSUBJECT": {
+							"Ref": "EMAILSUBJECT"
+						},
+						"EMAILMESSAGE": {
+							"Ref": "EMAILMESSAGE"
+						},
+						"RESOURCENAME": {
+							"Ref": "resourceName"
 						}
 					}
 				},
@@ -101,8 +118,8 @@
 				"Runtime": "nodejs8.10",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "amplify-amplifyauthmedu-lectures-120602-deployment",
-					"S3Key": "amplify-builds/amplifyauthmeduade27321CreateAuthChallenge-6155776c6e6851347543-build.zip"
+					"S3Bucket": "amplify-medu-lectures-dev-101933-deployment",
+					"S3Key": "amplify-builds/medulectures2bd3656dCustomMessage-78302f373348334c6a62-build.zip"
 				}
 			}
 		},
@@ -112,12 +129,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"amplifyauthmeduade27321CreateAuthChallenge",
+						"medulectures2bd3656dCustomMessage",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"amplifyauthmeduade27321CreateAuthChallenge",
+									"medulectures2bd3656dCustomMessage",
 									"-",
 									{
 										"Ref": "env"
