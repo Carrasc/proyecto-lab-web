@@ -1,30 +1,25 @@
 {
-    "lectures": {
+    "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-amplifyauthmedu-lectures-120602-authRole",
-            "UnauthRoleArn": "arn:aws:iam::686180442179:role/amplify-amplifyauthmedu-lectures-120602-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::686180442179:role/amplify-amplifyauthmedu-lectures-120602-authRole",
+            "AuthRoleName": "amplify-medu-lectures-dev-101933-authRole",
+            "UnauthRoleArn": "arn:aws:iam::686180442179:role/amplify-medu-lectures-dev-101933-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::686180442179:role/amplify-medu-lectures-dev-101933-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-amplifyauthmedu-lectures-120602-deployment",
-            "UnauthRoleName": "amplify-amplifyauthmedu-lectures-120602-unauthRole",
-            "StackName": "amplify-amplifyauthmedu-lectures-120602",
-            "StackId": "arn:aws:cloudformation:us-east-1:686180442179:stack/amplify-amplifyauthmedu-lectures-120602/eacfe360-0e1b-11ea-beb8-12a619bb25d0"
+            "DeploymentBucketName": "amplify-medu-lectures-dev-101933-deployment",
+            "UnauthRoleName": "amplify-medu-lectures-dev-101933-unauthRole",
+            "StackName": "amplify-medu-lectures-dev-101933",
+            "StackId": "arn:aws:cloudformation:us-east-1:686180442179:stack/amplify-medu-lectures-dev-101933/09616810-12c4-11ea-9bbe-0a90b7832da7"
         },
         "categories": {
             "function": {
-                "amplifyauthmeduade27321DefineAuthChallenge": {},
-                "amplifyauthmeduade27321CreateAuthChallenge": {},
-                "amplifyauthmeduade27321VerifyAuthChallengeResponse": {
-                    "RECAPTCHASECRET": "meduLecturesalmr25112601"
-                },
-                "amplifyauthmeduade27321CustomMessage": {
-                    "REDIRECTURL": "http://localhost:3000/dashboard",
-                    "EMAILSUBJECT": "Por favor confirme su correo electrónico.",
-                    "EMAILMESSAGE": "Para terminar confirme su correo"
+                "medulectures2bd3656dCustomMessage": {
+                    "REDIRECTURL": "http://localhost:3000/",
+                    "EMAILSUBJECT": "Please confirm your email",
+                    "EMAILMESSAGE": "We need to confirm your email before account can be created"
                 }
             },
             "auth": {
-                "amplifyauthmeduade27321": {
+                "medulectures2bd3656d": {
                     "hostedUIProviderCreds": "[]"
                 }
             }

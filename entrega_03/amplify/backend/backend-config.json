@@ -1,61 +1,19 @@
 {
 	"function": {
-		"amplifyauthmeduade27321DefineAuthChallenge": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true
-		},
-		"amplifyauthmeduade27321CreateAuthChallenge": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true
-		},
-		"amplifyauthmeduade27321VerifyAuthChallengeResponse": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true
-		},
-		"amplifyauthmeduade27321CustomMessage": {
+		"medulectures2bd3656dCustomMessage": {
 			"service": "Lambda",
 			"providerPlugin": "awscloudformation",
 			"build": true
 		}
 	},
 	"auth": {
-		"amplifyauthmeduade27321": {
+		"medulectures2bd3656d": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [
 				{
 					"category": "function",
-					"resourceName": "amplifyauthmeduade27321DefineAuthChallenge",
-					"triggerProvider": "Cognito",
-					"attributes": [
-						"Arn",
-						"Name"
-					]
-				},
-				{
-					"category": "function",
-					"resourceName": "amplifyauthmeduade27321CreateAuthChallenge",
-					"triggerProvider": "Cognito",
-					"attributes": [
-						"Arn",
-						"Name"
-					]
-				},
-				{
-					"category": "function",
-					"resourceName": "amplifyauthmeduade27321VerifyAuthChallengeResponse",
-					"triggerProvider": "Cognito",
-					"attributes": [
-						"Arn",
-						"Name"
-					]
-				},
-				{
-					"category": "function",
-					"resourceName": "amplifyauthmeduade27321CustomMessage",
+					"resourceName": "medulectures2bd3656dCustomMessage",
 					"triggerProvider": "Cognito",
 					"attributes": [
 						"Arn",

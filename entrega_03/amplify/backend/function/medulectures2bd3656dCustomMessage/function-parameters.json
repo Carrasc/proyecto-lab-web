@@ -3,12 +3,12 @@
     "modules": [
         "verification-link"
     ],
-    "parentResource": "amplifyauthmeduade27321",
-    "functionName": "amplifyauthmeduade27321CustomMessage",
+    "parentResource": "medulectures2bd3656d",
+    "functionName": "medulectures2bd3656dCustomMessage",
     "parentStack": "auth",
     "triggerEnvs": "[{\"key\":\"RESOURCENAME\",\"value\":\"resourceName\"}]",
     "triggerTemplate": "CustomMessage.json.ejs",
-    "roleName": "amplifyauthmeduade27321CustomMessage",
+    "roleName": "medulectures2bd3656dCustomMessage",
     "skipEdit": true,
-    "resourceName": "amplifyauthmeduade27321CustomMessage"
+    "resourceName": "medulectures2bd3656dCustomMessage"
 }
