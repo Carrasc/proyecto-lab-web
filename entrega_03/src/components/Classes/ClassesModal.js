@@ -13,6 +13,8 @@ import Video from '../Videos/Video';
 //App components
 import Button from '@material-ui/core/Button';
 
+import {Link} from 'react-router-dom';
+
 
 //Styles
 import '../../styles/LogIn.scss';
@@ -46,6 +48,7 @@ const video = {
 }
 
 function ClassesModal(props){
+    const url = '/cursos/'+ props.id;
     return (
         <Modal
             dialogClassName="classes_modal"
@@ -87,7 +90,8 @@ function ClassesModal(props){
                         </Grid>
                         <Grid item xs={12} className="classes-btn" >
                             <Button variant="contained" style={globalStyles.gradientButtonStyle}>
-                                TOMAR CLASE
+
+                                <Link to={url} className="nav-link">TOMAR CLASE</Link>
                             </Button> 
                         </Grid>
                     </Grid>

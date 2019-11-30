@@ -52,25 +52,16 @@ import database from '../api/api';
 
 
 function Dashboard(props) {
-
   return (   
     <div >
 		
 		<UserNavBar/>		
   		{/*<DashboardNavBar/>*/}
 		<CDashboardNavBar/>
-
-		<br/>
-		<br/>
-		<Tendencies/>
-        <Reviews color={'#f2f2f2'}/>
-	  	
 		<div style= {globalStyles.mainContainer}>
 			<h1 style={globalStyles.bMainTitleFont}>Medu Lectures</h1>
 			<h3 style={globalStyles.gSecondaryTitleFont}>Continuar Lección </h3>
 		</div>
-
-   
 		<Carousel component = {
          lessonData.map((lessonData,index) =>{
             return (
@@ -80,9 +71,26 @@ function Dashboard(props) {
           } /> 
 
 
+		<div style= {globalStyles.mainContainer}>
+			<h1 style={globalStyles.bSecondaryTitleFont}>MIS CURSOS</h1>
+		</div>
+		<Carousel component = {
+                    
+			data.map((data, index) =>{
+				return (
+				<div onClick={() => alert("Hello from here")}>    
+				<Subclass data={data} />
+				
+				</div>
+				
+				)})
+				
+		} />
+
+
 		{/*Courses*/}
-		<div  style= {{textAlign:"center", marginTop:'5em'}}>
-			<h3 style = {globalStyles.bSecondaryTitleFont}>ESPECIALIDADES</h3>
+		<div  style= {{textAlign:"center", marginTop:'2em'}}>
+			<h3 style = {globalStyles.bSecondaryTitleFont}>CURSOS</h3>
 		</div>
 
 		<div style={globalStyles.mainContainer}>
@@ -102,21 +110,7 @@ function Dashboard(props) {
 
 		<DashboardTendencie tendencieData = {tendencieData} />
 
-		<div style= {globalStyles.titleContainer}>
-			<h1 style={globalStyles.bSecondaryTitleFont}>MIS CLASES</h1>
-		</div>
-		<Carousel component = {
-                    
-			data.map((data, index) =>{
-				return (
-				<div onClick={() => alert("Hello from here")}>    
-				<Subclass data={data} />
-				
-				</div>
-				
-				)})
-				
-		} />
+		
 
 
 		<Footer/>
@@ -125,6 +119,8 @@ function Dashboard(props) {
     </div>
   );
 }
+
+//export default Dashboard;
 
 const MyTheme = {
 

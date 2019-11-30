@@ -27,16 +27,16 @@ class Classes_Topics extends Component {
             <Grid container = {true}  direction="row" justify="center" alignItems="center">
                 <Grid item xs = {3} alignItems = "center" direction="row" justify="center" >
                     <h1 style={globalStyles.gNumberTopic}>
-                        {this.props.classes[0]}
+                        {this.props.classes.numClass}
                     </h1>
                 </Grid>
                 <Grid item xs = {6}>
                     <div style={{textAlign: 'left', verticalAlign:'center'}}>
                         <h1 style={globalStyles.gSecondaryTitleFont}>
-                            {this.props.classes[1]}
+                            {this.props.classes.title}
                         </h1>
                         <p style={globalStyles.gmFont}>
-                            {this.props.classes[2]}
+                            {this.props.classes.tags}
                         </p>
                     </div>
                 </Grid>

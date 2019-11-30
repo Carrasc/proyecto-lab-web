@@ -1,6 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import Home from './views/Home';
-import VideoClass from './views/VideoClass';
+import Courses from './views/Courses';
 import Dashboard from './views/Dashboard';
 import Charts from './components/Charts';
 
@@ -49,7 +49,7 @@ function App(props) {
 				</Route>
 
 				<Route exact path="/dashboard" component={Dashboard} />
-				<Route exact path="/video_class" component={VideoClass} />
+				<Route exact path="/cursos/:idCurso" component={Courses} />
 				<Route exact path="/stats" component={Charts} />
 			</div>
     	</BrowserRouter>
