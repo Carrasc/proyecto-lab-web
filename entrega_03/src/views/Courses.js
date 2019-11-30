@@ -1,7 +1,9 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Footer from '../components/Footer';
 import ClassesInfo from '../components/Classes/Classes_Info';
-import globalStyles from  '../styles/globalStyles'
+import globalStyles from  '../styles/globalStyles';
+
+
 //import Video from '../components/Videos/Video'
 //import UserNavBar from '../components/NavBars/User_NavBar';
 import Topics from '../components/Classes/Classes_Topics';
@@ -10,19 +12,18 @@ import ReactSlickDemo from '../components/Carousels/newCarousel';
 
 import CDashboardNavBar from '../components/NavBars/CDashboardNavBar.js';
 
-
-
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import IconButton from '@material-ui/core/IconButton';
 
+
 import Collapse from '@material-ui/core/Collapse';
 
 import { red } from '@material-ui/core/colors';
 import TitleClass from '../components/TitleClass';
-
-import { withAuthenticator } from 'aws-amplify-react';
+import api from '../api/api';
+import { withAuthenticator, propStyle } from 'aws-amplify-react';
 
 
 
@@ -67,21 +68,30 @@ const useStyles = makeStyles(theme => ({
   }))
 
 
-const titles = ['LUIS FERNANDO CARRASCO', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ', '327 LECCIONES', 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.'
-]
-const classes = [
-    ['01','Hemisferios Cerebrales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-    ['02', 'Núcles grises de la base','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-    ['03', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-    ['04','Hemisferios Cerebrales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-    ['05', 'Núcles grises de la base','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-    ['06', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.']
 
-]
+// const classes = [
+//     ['01','Hemisferios Cerebrales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
+//     ['02', 'Núcles grises de la base','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
+//     ['03', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
+//     ['04','Hemisferios Cerebrales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
+//     ['05', 'Núcles grises de la base','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
+//     ['06', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.']
 
+// ]
 
 
-function VideoClass () {
+
+function Courses (props) {
+
+    let database;
+    let classes;
+    database = api.courses[props.match.params.idCurso];
+    console.log(props.match.params.idCurso.type);
+
+    if (parseInt(props.match.params.idCurso) < 4) {
+        classes = database.classes;
+    }
+    
     var size = 3;
     const classes_1 = useStyles();
     const [expanded, setExpanded] = React.useState(false);
@@ -105,12 +115,16 @@ function VideoClass () {
     
     return (
 
+        <>
+        {(props.match.params.idCurso < 4 ) ?
         <div>
+              
+
             {/*<UserNavBar/>*/}
 
             
 
-            <TitleClass class={'Neurología'} teacher={'LUIS FERNANDO CARRASCO'}></TitleClass>
+            <TitleClass class={database.specialty} teacher={database.name} ></TitleClass>
             <CDashboardNavBar/>
             
             {/*
@@ -120,8 +134,8 @@ function VideoClass () {
                 </Grid>
             </Grid>
             */}
-
-            <ClassesInfo title={titles} />
+          
+            <ClassesInfo title={database.name} description = {database.descTeacher} numClasses = {database.numClasses} descCourse = {database.descCourse}/>
 
 
 
@@ -162,6 +176,8 @@ function VideoClass () {
             <Footer />
             
         </div>
+        : <h1>404 Page Not Found</h1> } 
+        </>
     )
 
 }
@@ -213,7 +229,7 @@ const MyTheme = {
 	//toast: {backgroundColor: '#e0e0e0', color: 'black'}
   };
 
-export default withAuthenticator(VideoClass, 
+export default withAuthenticator(Courses, 
 	{
 	includeGreetings: false, 
 	usernameAttributes: 'email', 

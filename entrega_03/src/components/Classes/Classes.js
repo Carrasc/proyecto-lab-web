@@ -90,13 +90,14 @@ class Classes extends Component {
 
               <div style={STYLE.textDiv}>
                   <h2 style={STYLE.titulo}>{this.props.row.name}</h2>
-                  <p style={STYLE.especialidad}>{this.props.row.specialty}</p>
+                 <p style={STYLE.especialidad}>{this.props.row.specialty}</p>
               </div>
           </div>
         
           <ClassesModal
             show={this.state.show}
             onHide={this.handleCloseModal}
+            id = {this.props.row._id}
           />
       </>
     );

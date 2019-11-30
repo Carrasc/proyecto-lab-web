@@ -10,10 +10,10 @@ class ClassesInfo extends Component {
             <div style = {globalStyles.mainContainer}>
                 <Grid container = {true}  direction="row" justify="center" alignItems="center">
                     <Grid item xs = {12} sm = {6} style = {{padding: '2.5em 5% 2.5em 5%', textAlign: 'center', borderRight: '0.1em solid blue'}} >
-                        <h1 style = {globalStyles.bSecondaryTitleFont}><strong>{this.props.title[0]}</strong></h1>
+                        <h1 style = {globalStyles.bSecondaryTitleFont}><strong>{this.props.title}</strong></h1>
                     
                         <div style= {{marginTop:'5%',textAlign:'justify'}}>
-                            <p style = {globalStyles.gmFont} >{this.props.title[1]}
+                            <p style = {globalStyles.gmFont} >{this.props.description}
                             </p> 
                         </div>
                     </Grid>
@@ -21,9 +21,9 @@ class ClassesInfo extends Component {
 
                                      
                     <Grid item xs = {12} sm = {6} style = {{padding: '2.5em 5% 2.5em 5%',textAlign: 'center'}} >
-                            <h1 style = {globalStyles.bSecondaryTitleFont}><strong>{this.props.title[2]}</strong></h1>
+                            <h1 style = {globalStyles.bSecondaryTitleFont}><strong>{this.props.numClasses}</strong></h1>
                             <div style= {{marginTop:'5%',textAlign:'justify'}}>
-                                <p style = {globalStyles.gmFont} >{this.props.title[3]}
+                                <p style = {globalStyles.gmFont} >{this.props.descCourse}
                                 </p>
                             </div>
                         </Grid>
