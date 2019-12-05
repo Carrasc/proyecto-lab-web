@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import globalStyles from  "../styles/globalStyles.js";
 import UserNavBar from '../components/NavBars/User_NavBar';
 //import DashboardNavBar from '../components/NavBars/Dashboard_NavBar.js';
@@ -24,6 +24,9 @@ import Subclass from '../components/Classes/Subclass';
 
 import { withAuthenticator } from 'aws-amplify-react';
 
+import { API, graphqlOperation } from 'aws-amplify';
+import { listCourses as ListCourses } from '../graphql/queries';
+
 
 
 
@@ -40,7 +43,7 @@ import database from '../api/api';
 
   var tendencieData = database.tendencieData;
 
-  var courses = database.courses;
+  //var courses = database.courses;
 
   const data = [
     ['57', '147', require("../images/7.jpg"), 'BASES NEUROANATOMICAS', 'DEL SISTEMA NERVIOSO'],
@@ -52,6 +55,19 @@ import database from '../api/api';
 
 
 function Dashboard(props) {
+
+	const [courses, setCourses] = useState([])
+
+	useEffect(() => {
+		listCourses()
+	  }, [])
+
+	async function listCourses(){
+		const tempCourses = await API.graphql(graphqlOperation(ListCourses))
+		setCourses(tempCourses.data.listCourses.items)
+	}
+
+
   return (   
     <div >
 		

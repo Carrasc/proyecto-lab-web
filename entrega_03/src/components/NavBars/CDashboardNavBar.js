@@ -26,22 +26,22 @@ const barStyle={
 export default function CNavbar(props) {
   
   return (
-        <nav class="navbar navbar-expand-lg bg-light" style={barStyle}>
-            <div class="d-flex flex-grow-1">
-                <span class="w-100 d-lg-none d-block"></span>
+        <nav className="navbar navbar-expand-lg bg-light" style={barStyle}>
+            <div className="d-flex flex-grow-1">
+                <span className="w-100 d-lg-none d-block"></span>
 
-                <a class="navbar-brand logoLetras" href="/">
+                <a className="navbar-brand logoLetras" href="/">
                     MEDU LECTURES
                 </a>
-                <div class="w-100 text-right">
-                    <button class="navbar-toggler navbar-dark bg-primary" type="button" data-toggle="collapse" data-target="#myNavbar7">
-                        <span class="navbar-toggler-icon"></span>
+                <div className="w-100 text-right">
+                    <button className="navbar-toggler navbar-dark bg-primary" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
                 </div>
             </div>
-            <div class="collapse navbar-collapse text-center" id="myNavbar7">
-                <ul class="navbar-nav  ml-auto  nav_ul">
-                    <li class="nav-item">
+            <div className="collapse navbar-collapse text-center" id="myNavbar7">
+                <ul className="navbar-nav  ml-auto  nav_ul">
+                    <li className="nav-item">
                     	{/*<div className={classes.search}>
 							<div className={classes.searchIcon}>
 							<SearchIcon />
@@ -56,17 +56,17 @@ export default function CNavbar(props) {
 							/>
 						</div>*/}
                     </li>
-					<li class="nav-item" style={linksStyleRight}>
+					<li className="nav-item" style={linksStyleRight}>
 						<MDashboardNavBar/>
 					</li>
-                    <li class="nav-item" style={linksStyleRight}>
-                        <a href="/" class="nav-link" >MIS CLASES</a>
+                    <li className="nav-item" style={linksStyleRight}>
+                        <a href="/" className="nav-link" >MIS CLASES</a>
                     </li>
-                    <li class="nav-item" style={linksStyleRight}>
-                        <a href="/" class="nav-link">MEDU TALKS</a>
+                    <li className="nav-item" style={linksStyleRight}>
+                        <a href="/" className="nav-link">MEDU TALKS</a>
                     </li>
-                    <li class="nav-item" style={linksStyleRight}>
-                        <a href="/" class="nav-link" >ENARM</a>
+                    <li className="nav-item" style={linksStyleRight}>
+                        <a href="/" className="nav-link" >ENARM</a>
                     </li>
                 </ul>
             </div>

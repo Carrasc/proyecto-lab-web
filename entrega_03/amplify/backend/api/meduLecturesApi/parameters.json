@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "meduLecturesApi",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authmedulectures2bd3656d",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

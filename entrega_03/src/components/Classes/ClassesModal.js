@@ -62,14 +62,14 @@ function ClassesModal(props){
                 
                     <Grid item xs={12}>
                         <div style={video}>
-                            <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://ak1.picdn.net/shutterstock/videos/3374171/thumb/1.jpg'}></Video>
+                            <Video source={props.trailer} thumbnail={props.thumbnail}></Video>
                         </div>
                     
                     </Grid>
                     <Grid item xs={12} sm={6} className="classes-txt">
 
                         <p>
-                            The good news is that asynchronous JavaScript is a lot easier than it used to be. Before ES6, we were dependent on callback functions. If multiple callbacks were necessary (and they often were).
+                            {props.desc}
                         </p>
                           
                     </Grid>

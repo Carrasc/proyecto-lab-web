@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Introduction from '../components/Introduction.js';
 import Reviews from '../components/Reviews';
 import Clases from '../components/Classes/Classes';
@@ -20,6 +20,8 @@ import '../styles/css/Class.css';
 
 import database from '../api/api';
 
+
+
 //import { SignIn } from "aws-amplify-react";
 
 var courses = database.courses;
@@ -27,6 +29,8 @@ var courses = database.courses;
 
 
 function Home(props) {
+
+  
 
   return (
    

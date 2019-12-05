@@ -47,7 +47,7 @@ class Classes extends Component {
   }
 
   img = { 
-    backgroundImage: `linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0) 60%), url(${this.props.row.img})`,
+    backgroundImage: `linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0) 60%), url(${this.props.row.img.key})`,
     height:'100%',
     width:'100%',
     backgroundPosition:'center center',
@@ -95,9 +95,12 @@ class Classes extends Component {
           </div>
         
           <ClassesModal
+            thumbnail={this.props.row.thumbnail.key}
+            trailer={this.props.row.trailer.key}
+            desc={this.props.row.descCourse}
             show={this.state.show}
             onHide={this.handleCloseModal}
-            id = {this.props.row._id}
+            id = {this.props.row.id}
           />
       </>
     );
