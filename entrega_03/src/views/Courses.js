@@ -75,6 +75,8 @@ function Courses (props) {
 
     const [course, setCourse] = useState([])
     const [classes, setClasses] = useState([])
+    const [banner, setBanner] = useState([])
+
 
 	useEffect(() => {
 		getCourse()
@@ -84,11 +86,12 @@ function Courses (props) {
 		const tempCourse = await API.graphql(graphqlOperation(GetCourse, { id: props.match.params.idCurso }))
         
         setCourse(tempCourse.data.getCourse)
+        setBanner(tempCourse.data.getCourse.img.key)
+
         if (tempCourse.data.getCourse != null){
             setClasses(tempCourse.data.getCourse.classes.items)
         }
-        //console.log(tempCourse.data.getCourse)
-        console.log(props.match.params.idCurso)
+
 	}
     
     var size = 3;
@@ -111,7 +114,7 @@ function Courses (props) {
         margin:'3em 0',
         borderBottom: '1px solid rgba(248, 248, 255, 1)',
     }
-    
+
     return (
 
         <>
@@ -123,7 +126,7 @@ function Courses (props) {
 
             
 
-            <TitleClass class={course.specialty} teacher={course.name} ></TitleClass>
+            <TitleClass class={course.specialty} teacher={course.name} banner={banner}></TitleClass>
             <CDashboardNavBar/>
             
             {/*
@@ -171,7 +174,7 @@ function Courses (props) {
                     </IconButton>
                 </div>
             </div>
-            <ReactSlickDemo/>
+            {/*<ReactSlickDemo/>*/}
             <Footer />
             
         </div>

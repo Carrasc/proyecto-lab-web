@@ -36,7 +36,7 @@ var database = {
         {
             name: "Dra. Marisol García",
             specialty: "CARDIOLOGÍA",
-            img: "https://i.pinimg.com/564x/92/d9/1e/92d91edc5d19e552a12bb12383337465.jpg"
+            img: "https://0f14676b303fd91881eb-98dd17e178263eba3c55ca6434a72b9d.ssl.cf5.rackcdn.com/img/longform_content_images/doctor-productivity2.jpg"
 
         },
 
@@ -48,9 +48,10 @@ var database = {
             numClasses: '327 LECCIONES',
             descCourse: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.',
             descTeacher: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ',
-            img: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ=',
-            trailer: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-            thumbnail: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ=',
+            img: 
+             {key: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='},
+            trailer: {key: 'http://media.w3.org/2010/05/sintel/trailer.mp4'},
+            thumbnail: {key:  'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ='},
             classes: [
                 {
                     _id:'1',
@@ -247,9 +248,9 @@ var database = {
             numClasses: '327 LECCIONES',
             descCourse: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.',
             descTeacher: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ',
-            img: 'https://qtxasset.com/fiercehealthcare/1523481798/doctor-1149149_960_720.jpg/doctor-1149149_960_720.jpg?LLHXrY7jg7faKn7cHCQ2iRFY8Ccb.unw',
-            trailer: 'http://media.w3.org/2010/05/bunny/movie.mp4',
-            thumbnail: 'https://qtxasset.com/fiercehealthcare/1523481798/doctor-1149149_960_720.jpg/doctor-1149149_960_720.jpg?LLHXrY7jg7faKn7cHCQ2iRFY8Ccb.unw',
+            img: {key:  'https://qtxasset.com/fiercehealthcare/1523481798/doctor-1149149_960_720.jpg/doctor-1149149_960_720.jpg?LLHXrY7jg7faKn7cHCQ2iRFY8Ccb.unw'},
+            trailer: {key: 'http://media.w3.org/2010/05/bunny/movie.mp4'},
+            thumbnail: {key:'https://qtxasset.com/fiercehealthcare/1523481798/doctor-1149149_960_720.jpg/doctor-1149149_960_720.jpg?LLHXrY7jg7faKn7cHCQ2iRFY8Ccb.unw'},
             classes: [
                 {
                     _id:'1',
@@ -279,9 +280,9 @@ var database = {
             numClasses: '327 LECCIONES',
             descCourse: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.',
             descTeacher: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ',
-            img: 'https://media.istockphoto.com/photos/african-male-doctor-picture-id480562701?k=6&m=480562701&s=612x612&w=0&h=8gJEaSsTuLTLWXr4FdTx2yMnEc7zf3prinMMFSpbU6g=',
-            trailer: 'http://media.w3.org/2010/05/bunny/trailer.mp4',
-            thumbnail: 'https://media.istockphoto.com/photos/african-male-doctor-picture-id480562701?k=6&m=480562701&s=612x612&w=0&h=8gJEaSsTuLTLWXr4FdTx2yMnEc7zf3prinMMFSpbU6g=',
+            img: {key:  'https://media.istockphoto.com/photos/african-male-doctor-picture-id480562701?k=6&m=480562701&s=612x612&w=0&h=8gJEaSsTuLTLWXr4FdTx2yMnEc7zf3prinMMFSpbU6g='},
+            trailer: {key:  'http://media.w3.org/2010/05/bunny/trailer.mp4'},
+            thumbnail: {key: 'https://media.istockphoto.com/photos/african-male-doctor-picture-id480562701?k=6&m=480562701&s=612x612&w=0&h=8gJEaSsTuLTLWXr4FdTx2yMnEc7zf3prinMMFSpbU6g='},
             classes: [
                 {
                     _id:'1',
@@ -312,9 +313,9 @@ var database = {
             numClasses: '327 LECCIONES',
             descCourse: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.',
             descTeacher: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ',
-            img: 'https://img.freepik.com/free-photo/portrait-smiling-asian-medical-male-doctor-standing-front-blurred-interior-hospital_7191-974.jpg?size=626&ext=jpg',
-            trailer: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-            thumbnail: 'https://img.freepik.com/free-photo/portrait-smiling-asian-medical-male-doctor-standing-front-blurred-interior-hospital_7191-974.jpg?size=626&ext=jpg',
+            img: {key:  'https://img.freepik.com/free-photo/portrait-smiling-asian-medical-male-doctor-standing-front-blurred-interior-hospital_7191-974.jpg?size=626&ext=jpg'},
+            trailer: {key: 'http://media.w3.org/2010/05/sintel/trailer.mp4'},
+            thumbnail: {key: 'https://img.freepik.com/free-photo/portrait-smiling-asian-medical-male-doctor-standing-front-blurred-interior-hospital_7191-974.jpg?size=626&ext=jpg'},
             classes: [
                 {
                     _id:'1',

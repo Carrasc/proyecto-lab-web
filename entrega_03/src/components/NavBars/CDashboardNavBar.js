@@ -31,7 +31,7 @@ export default function CNavbar(props) {
                 <span className="w-100 d-lg-none d-block"></span>
 
                 <a className="navbar-brand logoLetras" href="/">
-                    MEDU LECTURES
+                    Home
                 </a>
                 <div className="w-100 text-right">
                     <button className="navbar-toggler navbar-dark bg-primary" type="button" data-toggle="collapse" data-target="#myNavbar7">

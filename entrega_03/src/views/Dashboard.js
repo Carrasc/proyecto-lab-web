@@ -74,10 +74,11 @@ function Dashboard(props) {
 		<UserNavBar/>		
   		{/*<DashboardNavBar/>*/}
 		<CDashboardNavBar/>
+
 		<div style= {globalStyles.mainContainer}>
-			<h1 style={globalStyles.bMainTitleFont}>Medu Lectures</h1>
-			<h3 style={globalStyles.gSecondaryTitleFont}>Continuar Lección </h3>
+			<h3 style={globalStyles.bSecondaryTitleFont2}>CONTINUAR LECCIÓN</h3>
 		</div>
+
 		<Carousel component = {
          lessonData.map((lessonData,index) =>{
             return (
@@ -87,7 +88,7 @@ function Dashboard(props) {
           } /> 
 
 
-		<div style= {globalStyles.mainContainer}>
+		<div  style= {{textAlign:"center", marginTop:'5em'}}>
 			<h1 style={globalStyles.bSecondaryTitleFont}>MIS CURSOS</h1>
 		</div>
 		<Carousel component = {
@@ -124,6 +125,10 @@ function Dashboard(props) {
 			</div>
 		</div>
 
+		<Tendencies></Tendencies>
+		<Reviews color={'#FFFFFF'}> </Reviews>
+
+		
 		<DashboardTendencie tendencieData = {tendencieData} />
 
 		
