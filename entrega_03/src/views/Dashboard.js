@@ -59,13 +59,14 @@ function Dashboard(props) {
 	const [courses, setCourses] = useState([])
 
 	useEffect(() => {
+		
+		async function listCourses(){
+			const tempCourses = await API.graphql(graphqlOperation(ListCourses))
+			setCourses(tempCourses.data.listCourses.items)
+		}
+
 		listCourses()
 	  }, [])
-
-	async function listCourses(){
-		const tempCourses = await API.graphql(graphqlOperation(ListCourses))
-		setCourses(tempCourses.data.listCourses.items)
-	}
 
 
   return (   

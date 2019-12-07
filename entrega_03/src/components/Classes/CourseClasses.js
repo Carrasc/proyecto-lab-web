@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import Grid from '@material-ui/core/Grid';
+import React from 'react';
+//import Grid from '@material-ui/core/Grid';
 
 //Styles
-import globalStyles from  "../../styles/globalStyles";
+//import globalStyles from  "../../styles/globalStyles";
 import { makeStyles } from '@material-ui/core/styles';
 
 

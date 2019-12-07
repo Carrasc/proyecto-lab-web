@@ -152,42 +152,51 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import img1 from '../../images/5.jpg'
-import img2 from '../../images/6.jpg'
+import img2 from '../../images/5.jpg'
+
+import './StyleCarousel.css';
 
 class ReactSlickDemo extends React.Component {
   render() {
     var settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 1000,
+      autoplay: true,
+      autoplaySpeed: 5000,
       centerMode: true,
-      centerPadding:'10%',
-      focusOnChange: true,
+      centerPadding:'15%',
     };
 
-    const containere = {
-      textAlign: 'center',
-      padding: '40px',
-      background: '#f2f2f2'
+    const imgStyle = {
+      margin: '0 auto', 
+      //width: '100%', 
+      width: '100%', 
+      height: '100%',
+     //height: '100%',
+      //minHeigh: '600px',
+
     }
-    
-    
+    const containere = {
+      backgroundColor: 'rgb(224,224,224, .2)',
+      padding:"0% 5% 8% 5%",
+    }
 
     return (
       <div style={{margin: '2.5% 5% 0 5%',}}>
-          <div style={containere}>
+        <div style={containere}>
           <Slider {...settings}>
             <div>
-              <img alt= 'img1' style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img1} />
+              <img alt= 'img1' style={imgStyle} src={img1} />
             </div>
             <div>
-              <img alt= 'img1' style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img2} />
+              <img alt= 'img1' style={imgStyle} src={img2} />
             </div>
             <div>
-              <img alt= 'img1' style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img1} />
+              <img alt= 'img1' style={imgStyle} src={img1} />
             </div>
             <div>
-              <img alt= 'img1' style={{margin:'0 auto', width:'100%', height: 'calc(100vh - 100px)'}} src={img2} />
+              <img alt= 'img1' style={imgStyle} src={img2} />
             </div>
           </Slider>
         </div>

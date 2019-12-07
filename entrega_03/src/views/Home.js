@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Introduction from '../components/Introduction.js';
 import Reviews from '../components/Reviews';
 import Clases from '../components/Classes/Classes';

@@ -20,9 +20,9 @@ const cardStyle ={
 
 const gradiantDiv = {
     position: 'absolute',
-    bottom: '12%',
+    bottom: '50px',
     width:'100%',
-    height:'20%',        
+    height:'35%',        
     background:'linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 90%)',  
 
 }
@@ -43,7 +43,8 @@ const gradiantDiv = {
                         <Image
                         className = 'hoverImageSubclass'
                         draggable={false}
-                        style={{ width: "100%", height: "500px" }}
+                        style={{ width: "100%", height: "auto", maxHeight: '800px' }}
+                        // style={{ width: "100%", height: "500px" }}
                         src={this.props.data[2]} />
                         <div style={gradiantDiv}>
 

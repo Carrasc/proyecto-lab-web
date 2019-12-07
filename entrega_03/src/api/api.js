@@ -272,8 +272,8 @@ var database = {
                     ]
                 }
             ]
-        },
-        "Neurologia":
+        }]
+        /*{"Neurologia":
             {
             _id: '3',
             name:'Mauricio Peon',
@@ -305,8 +305,8 @@ var database = {
                     ]
                 }
             ]
-        },
-        "4":{
+        }},
+        {"4":{
         
             _id: '4',
             name:'Romeo Varela',
@@ -340,7 +340,7 @@ var database = {
             ]
 
         }
-    }
+    }*/
 }
 
 

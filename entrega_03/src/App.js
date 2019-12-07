@@ -3,7 +3,7 @@ import Home from './views/Home';
 import Courses from './views/Courses';
 import Dashboard from './views/Dashboard';
 import Charts from './components/Charts';
-
+import Topics from './views/Topics';
 
 //import Example from './components/Example'
 
@@ -51,6 +51,7 @@ function App(props) {
 				<Route exact path="/dashboard" component={Dashboard} />
 				<Route exact path="/cursos/:idCurso" component={Courses} />
 				<Route exact path="/stats" component={Charts} />
+				<Route exact path="/clases" component={Topics} />
 			</div>
     	</BrowserRouter>
         {/*<button onClick={() => Auth.federatedSignIn()}>Sign In</button>*/}

@@ -1,39 +1,31 @@
 import React,{useEffect, useState} from 'react';
 import Footer from '../components/Footer';
-import ClassesInfo from '../components/Classes/Classes_Info';
-import globalStyles from  '../styles/globalStyles';
+
+//COMPONENTS
+import TopicsNavBar from '../components/NavBars/TopicsNavBar'
+import ClassesTopics from '../components/Classes/Classes_Topics'
+import Video from '../components/Videos/Video'
 
 
-//import Video from '../components/Videos/Video'
-//import UserNavBar from '../components/NavBars/User_NavBar';
-import Topics from '../components/Classes/Classes_Topics';
+//AMPLIFT
+import { withAuthenticator } from 'aws-amplify-react';
 
-import ReactSlickDemo from '../components/Carousels/newCarousel';
-
-import CDashboardNavBar from '../components/NavBars/CDashboardNavBar.js';
-
+//STYLES
+import globalStyles from  "../styles/globalStyles";
 import { makeStyles } from '@material-ui/core/styles';
+import { red } from '@material-ui/core/colors';
+
+//API
+import { API, graphqlOperation } from 'aws-amplify';
+import { getCourse as GetCourse } from '../graphql/queries';
+
+//DEPENDENCIES
 import clsx from 'clsx';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import IconButton from '@material-ui/core/IconButton';
 
 
 import Collapse from '@material-ui/core/Collapse';
-
-import { red } from '@material-ui/core/colors';
-import TitleClass from '../components/TitleClass';
-import { withAuthenticator } from 'aws-amplify-react';
-
-import { API, graphqlOperation } from 'aws-amplify';
-import { getCourse as GetCourse } from '../graphql/queries';
-
-import CourseClasses from '../components/Classes/CourseClasses';
-
-import Grid from '@material-ui/core/Grid';
-
-
-
-
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -74,25 +66,22 @@ const useStyles = makeStyles(theme => ({
     },
   }))
 
-
-function Courses (props) {
-
+function Topics (props) {
     const [course, setCourse] = useState([])
     const [classes, setClasses] = useState([])
-    const [banner, setBanner] = useState([])
 
 
 	useEffect(() => {
 
         async function getCourse(){
-            const tempCourse = await API.graphql(graphqlOperation(GetCourse, { id: props.match.params.idCurso }))
+            const tempCourse = await API.graphql(graphqlOperation(GetCourse, { id: '022e7867-28e7-4b1f-b916-36b214ba6819' }))
             
             setCourse(tempCourse.data.getCourse)
-            
+            console.log(tempCourse)
     
             if (tempCourse.data.getCourse != null){
-                setBanner(tempCourse.data.getCourse.img.key)
                 setClasses(tempCourse.data.getCourse.classes.items)
+                //console.log(tempCourse)
             }
     
         }
@@ -109,8 +98,6 @@ function Courses (props) {
     const handleExpandClick = () => {
       setExpanded(!expanded);
     };
-
-
     const STYLE = {
         backgroundColor: 'rgb(224,224,224, .2)',
         //padding: '5em',
@@ -122,48 +109,19 @@ function Courses (props) {
         margin:'3em 0',
         borderBottom: '1px solid rgba(248, 248, 255, 1)',
     }
-
+    const videoStyle = {
+        boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)', borderRadius: '1.5em', 
+        margin: '0 auto',
+        width: '80%',
+        overflow: "hidden"
+    }   
+    
     return (
-
-        <>
-        {(course != null ) ?
         <div>
-              
-
-            {/*<UserNavBar/>*/}
-
-            
-
-            <TitleClass class={course.specialty} teacher={course.name} banner={banner}></TitleClass>
-            <CDashboardNavBar/>
-            
-            {/*
-            <Grid container={true} justify="center" >
-                <Grid xs= {10} item style ={globalStyles.mainContainer}>
-                    <Video source={'http://media.w3.org/2010/05/sintel/trailer_hd.mp4'} thumbnail={'https://micarrerauniversitaria.com/wp-content/uploads/2018/03/neurologia-2-1024x516.jpg'}></Video>
-                </Grid>
-            </Grid>
-            */}
-          
-            <ClassesInfo title={course.name} description = {course.descTeacher} numClasses = {course.numClasses} descCourse = {course.descCourse}/>
-
-            {/*Comments*/}
-		<div  style= {{textAlign:"center" ,margin: '5em 0 2em 0'}}>
-        	<h1 style = {globalStyles.bSecondaryTitleFont}>CLASES</h1>
-        </div>
-        <div style = {globalStyles.mainContainer} >
-            <Grid container={true}  justify="center">
-                {classes.map((classes) =>{
-                    return(
-                        <Grid>
-                            <CourseClasses classes={classes}/>
-                        </Grid>
-                    )
-                })}
-            </Grid>
-        </div>
-            
-
+            <TopicsNavBar/>
+            <div style={videoStyle}>
+                <Video thumbnail='https://testmedu.s3.amazonaws.com/2.jpg' source= 'https://testmedu.s3.amazonaws.com/Welcome.mp4'/>
+            </div>
             <div style={globalStyles.mainContainer}>
                 <div style={STYLE}>
                 <div style={topicStyle}></div>
@@ -173,7 +131,7 @@ function Courses (props) {
                     
                     {classes.slice(0,size).map((classes) =>{
                         return(
-                            <Topics classes={classes}/>
+                            <ClassesTopics classes={classes}/>
                         )
                     })}
                     
@@ -181,7 +139,7 @@ function Courses (props) {
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
                         {classes.slice(size,classes.length).map((classes) =>{
                             return(
-                                <Topics classes={classes}/>
+                                <ClassesTopics classes={classes}/>
                             )
                         })}
                     </Collapse>
@@ -197,16 +155,12 @@ function Courses (props) {
                     </IconButton>
                 </div>
             </div>
-            <ReactSlickDemo/>
+
             <Footer />
-            
         </div>
-        : <h1>404 Page Not Found</h1> }
-        </>
     )
 
 }
-
 
 const MyTheme = {
 
@@ -254,7 +208,7 @@ const MyTheme = {
 	//toast: {backgroundColor: '#e0e0e0', color: 'black'}
   };
 
-export default withAuthenticator(Courses, 
+export default withAuthenticator(Topics, 
 	{
 	includeGreetings: false, 
 	usernameAttributes: 'email', 
