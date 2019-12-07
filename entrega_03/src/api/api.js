@@ -40,207 +40,209 @@ var database = {
 
         },
 
-    courses : [
-        {
-            _id: '1',
-            name:'Luis Fernando Carrasco',
-            specialty:'Urología',
-            numClasses: '327 LECCIONES',
-            descCourse: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.',
-            descTeacher: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ',
-            img: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ=',
-            trailer: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-            thumbnail: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ=',
-            classes: [
-                {
-                    _id:'1',
-                    title:'Urología Vaginal',
-                    numClass: '01',
-                    topics:[
-                        {
-                            _id: '1',
-                            numTopic: '01',
-                            title: 'Urología Vaginal 1',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        },
-                        {
-                            _id: '2',
-                            numTopic: '02',
-                            title: 'Urología Vaginal 2',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        }
-                    ]
-                },
-                
-                {
-                    _id:'1',
-                    title:'Urología Vaginal',
-                    numClass: '01',
-                    topics:[
-                        {
-                            _id: '1',
-                            numTopic: '01',
-                            title: 'Urología Vaginal 1',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        },
-                        {
-                            _id: '2',
-                            numTopic: '02',
-                            title: 'Urología Vaginal 2',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        }
-                    ]
-                },
-                {
-                    _id:'1',
-                    title:'Urología Vaginal',
-                    numClass: '01',
-                    topics:[
-                        {
-                            _id: '1',
-                            numTopic: '01',
-                            title: 'Urología Vaginal 1',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        },
-                        {
-                            _id: '2',
-                            numTopic: '02',
-                            title: 'Urología Vaginal 2',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        }
-                    ]
-                },
-                {
-                    _id:'1',
-                    title:'Urología Vaginal',
-                    numClass: '01',
-                    topics:[
-                        {
-                            _id: '1',
-                            numTopic: '01',
-                            title: 'Urología Vaginal 1',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        },
-                        {
-                            _id: '2',
-                            numTopic: '02',
-                            title: 'Urología Vaginal 2',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        }
-                    ]
-                },
-                {
-                    _id:'1',
-                    title:'Urología Vaginal',
-                    numClass: '01',
-                    topics:[
-                        {
-                            _id: '1',
-                            numTopic: '01',
-                            title: 'Urología Vaginal 1',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        },
-                        {
-                            _id: '2',
-                            numTopic: '02',
-                            title: 'Urología Vaginal 2',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        }
-                    ]
-                },
-                {
-                    _id:'1',
-                    title:'Urología Vaginal',
-                    numClass: '01',
-                    topics:[
-                        {
-                            _id: '1',
-                            numTopic: '01',
-                            title: 'Urología Vaginal 1',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        },
-                        {
-                            _id: '2',
-                            numTopic: '02',
-                            title: 'Urología Vaginal 2',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        }
-                    ]
-                },
-                {
-                    _id:'1',
-                    title:'Urología Vaginal',
-                    numClass: '01',
-                    topics:[
-                        {
-                            _id: '1',
-                            numTopic: '01',
-                            title: 'Urología Vaginal 1',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        },
-                        {
-                            _id: '2',
-                            numTopic: '02',
-                            title: 'Urología Vaginal 2',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        }
-                    ]
-                },
-                {
-                    _id:'1',
-                    title:'Urología Vaginal',
-                    numClass: '01',
-                    topics:[
-                        {
-                            _id: '1',
-                            numTopic: '01',
-                            title: 'Urología Vaginal 1',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        },
-                        {
-                            _id: '2',
-                            numTopic: '02',
-                            title: 'Urología Vaginal 2',
-                            tags: ['Lóbulo frontal', 'Lóbulo parietal'],
-                            video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                            
-                        }
-                    ]
-                }
-        
-            ]
-        },
-        {
+    courses : {
+        "1":
+            {
+                _id:'10',
+                name:'Luis Fernando Carrasco',
+                specialty:'Urología',
+                numClasses: '327 LECCIONES',
+                descCourse: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema.',
+                descTeacher: 'El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. El curso de Neurología se divide en cuarenta y cinco clases generales que abordan cada una de las subespecialidades del tema. ',
+                img: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ=',
+                trailer: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                thumbnail: 'https://media.istockphoto.com/photos/portrait-of-a-doctor-picture-id92347235?k=6&m=92347235&s=612x612&w=0&h=KEceEG1DUc4O8KR-wZw6KI2j2cw9b915CekSI414mQQ=',
+                classes: [
+                    {
+                        _id:'1',
+                        title:'Urología Vaginal',
+                        numClass: '01',
+                        topics:[
+                            {
+                                _id: '1',
+                                numTopic: '01',
+                                title: 'Urología Vaginal 1',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            },
+                            {
+                                _id: '2',
+                                numTopic: '02',
+                                title: 'Urología Vaginal 2',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            }
+                        ]
+                    },
+                    
+                    {
+                        _id:'1',
+                        title:'Urología Vaginal',
+                        numClass: '01',
+                        topics:[
+                            {
+                                _id: '1',
+                                numTopic: '01',
+                                title: 'Urología Vaginal 1',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            },
+                            {
+                                _id: '2',
+                                numTopic: '02',
+                                title: 'Urología Vaginal 2',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            }
+                        ]
+                    },
+                    {
+                        _id:'1',
+                        title:'Urología Vaginal',
+                        numClass: '01',
+                        topics:[
+                            {
+                                _id: '1',
+                                numTopic: '01',
+                                title: 'Urología Vaginal 1',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            },
+                            {
+                                _id: '2',
+                                numTopic: '02',
+                                title: 'Urología Vaginal 2',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            }
+                        ]
+                    },
+                    {
+                        _id:'1',
+                        title:'Urología Vaginal',
+                        numClass: '01',
+                        topics:[
+                            {
+                                _id: '1',
+                                numTopic: '01',
+                                title: 'Urología Vaginal 1',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            },
+                            {
+                                _id: '2',
+                                numTopic: '02',
+                                title: 'Urología Vaginal 2',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            }
+                        ]
+                    },
+                    {
+                        _id:'1',
+                        title:'Urología Vaginal',
+                        numClass: '01',
+                        topics:[
+                            {
+                                _id: '1',
+                                numTopic: '01',
+                                title: 'Urología Vaginal 1',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            },
+                            {
+                                _id: '2',
+                                numTopic: '02',
+                                title: 'Urología Vaginal 2',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            }
+                        ]
+                    },
+                    {
+                        _id:'1',
+                        title:'Urología Vaginal',
+                        numClass: '01',
+                        topics:[
+                            {
+                                _id: '1',
+                                numTopic: '01',
+                                title: 'Urología Vaginal 1',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            },
+                            {
+                                _id: '2',
+                                numTopic: '02',
+                                title: 'Urología Vaginal 2',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            }
+                        ]
+                    },
+                    {
+                        _id:'1',
+                        title:'Urología Vaginal',
+                        numClass: '01',
+                        topics:[
+                            {
+                                _id: '1',
+                                numTopic: '01',
+                                title: 'Urología Vaginal 1',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            },
+                            {
+                                _id: '2',
+                                numTopic: '02',
+                                title: 'Urología Vaginal 2',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            }
+                        ]
+                    },
+                    {
+                        _id:'1',
+                        title:'Urología Vaginal',
+                        numClass: '01',
+                        topics:[
+                            {
+                                _id: '1',
+                                numTopic: '01',
+                                title: 'Urología Vaginal 1',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            },
+                            {
+                                _id: '2',
+                                numTopic: '02',
+                                title: 'Urología Vaginal 2',
+                                tags: ['Lóbulo frontal', 'Lóbulo parietal'],
+                                video : 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                                
+                            }
+                        ]
+                    }
+            
+                ]
+            },
+        "56":
+            {
             _id: '2',
             name:'Alexandro Marcelo',
             specialty:'Urologo',
@@ -272,7 +274,8 @@ var database = {
                 }
             ]
         },
-        {
+        "Neurologia":
+            {
             _id: '3',
             name:'Mauricio Peon',
             specialty:'Urologo',
@@ -303,9 +306,9 @@ var database = {
                     ]
                 }
             ]
-
         },
-        {
+        "4":{
+        
             _id: '4',
             name:'Romeo Varela',
             specialty:'Urologo',
@@ -337,11 +340,11 @@ var database = {
                 }
             ]
 
-        },
-
-    ],
-
+        }
+    }
 }
+
+
 
 export default database;
 

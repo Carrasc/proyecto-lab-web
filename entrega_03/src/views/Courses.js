@@ -86,10 +86,10 @@ function Courses (props) {
     let database;
     let classes;
     database = api.courses[props.match.params.idCurso];
-    console.log(props.match.params.idCurso.type);
-
-    if (parseInt(props.match.params.idCurso) < 4) {
-        classes = database.classes;
+    console.log(api);
+    classes = database.classes;
+    if (parseInt(props.match.params.idCurso) < 100) {
+       
     }
     
     var size = 3;
@@ -116,7 +116,7 @@ function Courses (props) {
     return (
 
         <>
-        {(props.match.params.idCurso < 4 ) ?
+        {/*(props.match.params.idCurso < 100 ) ?*/
         <div>
               
 
@@ -176,7 +176,7 @@ function Courses (props) {
             <Footer />
             
         </div>
-        : <h1>404 Page Not Found</h1> } 
+        /*: <h1>404 Page Not Found</h1> */} 
         </>
     )
 
