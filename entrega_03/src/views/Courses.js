@@ -28,6 +28,11 @@ import { withAuthenticator, propStyle } from 'aws-amplify-react';
 import { API, graphqlOperation } from 'aws-amplify';
 import { getCourse as GetCourse } from '../graphql/queries';
 
+import CourseClasses from '../components/Classes/CourseClasses';
+
+import Grid from '@material-ui/core/Grid';
+
+
 
 
 
@@ -139,7 +144,22 @@ function Courses (props) {
           
             <ClassesInfo title={course.name} description = {course.descTeacher} numClasses = {course.numClasses} descCourse = {course.descCourse}/>
 
-
+            {/*Comments*/}
+		<div  style= {{textAlign:"center" ,margin: '5em 0 2em 0'}}>
+        	<h1 style = {globalStyles.bSecondaryTitleFont}>CLASES</h1>
+        </div>
+        <div style = {globalStyles.mainContainer} >
+            <Grid container={true}  justify="space-around"  alignItems="center" spacing={3} >
+                {classes.map((classes) =>{
+                    return(
+                        <Grid>
+                            <CourseClasses classes={classes}/>
+                        </Grid>
+                    )
+                })}
+            </Grid>
+        </div>
+            
 
             <div style={globalStyles.mainContainer}>
                 <div style={STYLE}>
