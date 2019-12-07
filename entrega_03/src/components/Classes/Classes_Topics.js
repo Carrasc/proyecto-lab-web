@@ -25,7 +25,7 @@ class Classes_Topics extends Component {
     render(){
         return(
             <Grid container = {true}  direction="row" justify="center" alignItems="center">
-                <Grid item xs = {3} alignItems = "center" direction="row" justify="center" >
+                <Grid item xs = {3} >
                     <h1 style={globalStyles.gNumberTopic}>
                         {this.props.classes.numClass}
                     </h1>

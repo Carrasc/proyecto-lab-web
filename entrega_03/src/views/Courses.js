@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect, useState} from 'react';
 import Footer from '../components/Footer';
 import ClassesInfo from '../components/Classes/Classes_Info';
 import globalStyles from  '../styles/globalStyles';
@@ -24,6 +24,14 @@ import { red } from '@material-ui/core/colors';
 import TitleClass from '../components/TitleClass';
 import api from '../api/api';
 import { withAuthenticator, propStyle } from 'aws-amplify-react';
+
+import { API, graphqlOperation } from 'aws-amplify';
+import { getCourse as GetCourse } from '../graphql/queries';
+
+import CourseClasses from '../components/Classes/CourseClasses';
+
+import Grid from '@material-ui/core/Grid';
+
 
 
 
@@ -68,29 +76,28 @@ const useStyles = makeStyles(theme => ({
   }))
 
 
-
-// const classes = [
-//     ['01','Hemisferios Cerebrales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-//     ['02', 'Núcles grises de la base','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-//     ['03', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-//     ['04','Hemisferios Cerebrales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-//     ['05', 'Núcles grises de la base','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.'],
-//     ['06', 'Nervios craneales y espinales','Lóbulo frontal, Lóbulo parietal, Lóbulo temporal, Lóbulo occipital, .Ínsula.']
-
-// ]
-
-
-
 function Courses (props) {
 
-    let database;
-    let classes;
-    database = api.courses[props.match.params.idCurso];
-    console.log(api);
-    classes = database.classes;
-    if (parseInt(props.match.params.idCurso) < 100) {
-       
-    }
+    const [course, setCourse] = useState([])
+    const [classes, setClasses] = useState([])
+    const [banner, setBanner] = useState([])
+
+
+	useEffect(() => {
+		getCourse()
+	  }, [])
+
+	async function getCourse(){
+		const tempCourse = await API.graphql(graphqlOperation(GetCourse, { id: props.match.params.idCurso }))
+        
+        setCourse(tempCourse.data.getCourse)
+        setBanner(tempCourse.data.getCourse.img.key)
+
+        if (tempCourse.data.getCourse != null){
+            setClasses(tempCourse.data.getCourse.classes.items)
+        }
+
+	}
     
     var size = 3;
     const classes_1 = useStyles();
@@ -112,11 +119,11 @@ function Courses (props) {
         margin:'3em 0',
         borderBottom: '1px solid rgba(248, 248, 255, 1)',
     }
-    
+
     return (
 
         <>
-        {/*(props.match.params.idCurso < 100 ) ?*/
+        {(course != null ) ?
         <div>
               
 
@@ -124,7 +131,7 @@ function Courses (props) {
 
             
 
-            <TitleClass class={database.specialty} teacher={database.name} ></TitleClass>
+            <TitleClass class={course.specialty} teacher={course.name} banner={banner}></TitleClass>
             <CDashboardNavBar/>
             
             {/*
@@ -135,9 +142,24 @@ function Courses (props) {
             </Grid>
             */}
           
-            <ClassesInfo title={database.name} description = {database.descTeacher} numClasses = {database.numClasses} descCourse = {database.descCourse}/>
+            <ClassesInfo title={course.name} description = {course.descTeacher} numClasses = {course.numClasses} descCourse = {course.descCourse}/>
 
-
+            {/*Comments*/}
+		<div  style= {{textAlign:"center" ,margin: '5em 0 2em 0'}}>
+        	<h1 style = {globalStyles.bSecondaryTitleFont}>CLASES</h1>
+        </div>
+        <div style = {globalStyles.mainContainer} >
+            <Grid container={true}  justify="space-around"  alignItems="center" spacing={3} >
+                {classes.map((classes) =>{
+                    return(
+                        <Grid>
+                            <CourseClasses classes={classes}/>
+                        </Grid>
+                    )
+                })}
+            </Grid>
+        </div>
+            
 
             <div style={globalStyles.mainContainer}>
                 <div style={STYLE}>
@@ -172,7 +194,7 @@ function Courses (props) {
                     </IconButton>
                 </div>
             </div>
-            <ReactSlickDemo/>
+            {/*<ReactSlickDemo/>*/}
             <Footer />
             
         </div>

@@ -54,6 +54,18 @@
 .linksStyleRight{
     padding: 0;
 }
+
+.logoLetras{
+    font-size: 0.8125em !important;
+    text-transform: uppercase;
+    color: #0A14FF;
+    letter-spacing: 0.135em;
+    transition: 0.3s;
+    font-weight: 600;
+    &:hover{
+        color: #00FAAA;
+    }
+}
     
 @media (min-width: 992px) {
     .navbar-brand.abs {

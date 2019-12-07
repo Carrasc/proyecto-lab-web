@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import globalStyles from  "../../styles/globalStyles.js";
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import img from '../../images/1.jpg'
 import '../../styles/css/UserNavBar.css';
 
@@ -38,7 +39,7 @@ const UserNavBar = ({word}) => {
                 <Grid item  xs = {12} md={6} >
                     <div  className='nameNavBar'>
                         <h1  style = {globalStyles.wSecondaryTitleFont} >{username}</h1>
-                        <button style= {globalStyles.solidButtonStyle} onClick={signOut}> Cerrar sesión</button>
+                        <Button style= {globalStyles.solidButtonStyle} onClick={signOut}> Cerrar sesión</Button>
                     </div>
                 </Grid>
                 <Grid  item  xs = {12} md={3} >

@@ -1,0 +1,33 @@
+type Course @model {
+  id: ID!
+  name: String!
+  specialty: String!
+  numClasses: String!
+  descCourse: String!
+  descTeacher: String!
+  img: S3Object!
+  trailer: S3Object!
+  thumbnail: S3Object!
+  classes: [Class] @connection(name: "ClassCourse")
+}
+type Class @model {
+  id: ID!
+  title: String!
+  numClass: String!
+  course: Course @connection(name: "ClassCourse")
+  topics: [Topic] @connection(name: "TopicClass")
+}
+type Topic @model {
+  id: ID!
+  numTopic: String!
+  title: String!
+  tags: [String]
+  video: S3Object!
+  class: Class @connection(name: "TopicClass")
+}
+
+type S3Object {
+    bucket: String!
+    key: String!
+    region: String!
+}

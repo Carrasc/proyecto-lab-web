@@ -1,19 +1,5 @@
 import React from 'react';
 
-const imgStyle = {
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://thousanddays.org/wp-content/uploads/brain-development-header.jpg")',
-
-    /* Set a specific height */
-    height: '50vh',
-  
-    /* Position and center the image to scale nicely on all screens */
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    position: 'relative',
-    
-};
-
 const textDiv = {
     textAlign: 'center',
     position: 'absolute',
@@ -26,6 +12,20 @@ const textDiv = {
 };
 
 function TitleClass (props) {
+
+    const imgStyle = {
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${props.banner})`,
+    
+        /* Set a specific height */
+        height: '50vh',
+      
+        /* Position and center the image to scale nicely on all screens */
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        position: 'relative',
+        
+    };
     
     return (
 
